@@ -49,7 +49,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "6.4.2",
     "sass": "^1.55.0",
-    "titian-h5-react": "workspace:0.1.2"
+    "@titian-design/react": "workspace:0.1.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",
