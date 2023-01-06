@@ -1,0 +1,43 @@
+@import '../common/static/var.less';
+@import '../common/static/utils.less';
+@import '../common/static/mixins/index.less';
+@rate: ~'@{project}-rate';
+
+.@{rate} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &-item {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-right: @rate-gap;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &-star-half {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  &-filled {
+    --icon-color: @rate-color;
+  }
+
+  &-empty {
+    --icon-color: @rate-empty-color;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@textarea:~ '@{project}-textarea';
+
+.@{textarea} {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  height: var(--textarea-height, 220px);
+  padding: var(--textarea-padding-v, @gap-24) var(--textarea-padding-h, @gap-28);
+
+  &-autoHeight {
+    display: block;
+    height: auto;
+    .@{textarea}-box {
+      min-height: var(--textarea-min-height, 172px);
+
+      &::-webkit-scrollbar {
+        overflow: hidden;
+
+        resize: none;
+      }
+    }
+  }
+
+  &-box {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: @neutral-color-1;
+    font-size: @T28;
+    line-height: 42px;
+
+    resize: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .placeholder-class {
+    color: @neutral-color-3;
+    line-height: 42px;
+  }
+
+  &-count {
+    margin-top: 12px;
+
+    color: @neutral-color-3;
+    font-size: @T24;
+    line-height: 28px;
+    text-align: right;
+  }
+}

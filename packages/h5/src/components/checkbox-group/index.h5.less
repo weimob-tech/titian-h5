@@ -1,0 +1,16 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+
+@checkboxGroup: ~'@{project}-checkbox-group';
+
+:host {
+  display: contents;
+}
+
+.@{checkboxGroup} {
+  &-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}

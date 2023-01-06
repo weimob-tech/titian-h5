@@ -1,0 +1,121 @@
+---
+title: 颜色
+sidebar_custom_props:
+  suffix: Color
+hide_title: true
+pagination_prev: null
+pagination_next: null
+---
+
+import "./index.scss";
+
+# 颜色 _Color_
+
+**色彩体系主要定义了常用色板、主题色、中性色以及功能色。我们倾向于采用 HSB 色彩模式进行色彩定义。在自定义色彩时，原则上需平衡美观度、识别度以及可读性、可用性。**
+
+## 色彩映射原理
+
+**颜色有三个视觉通道，分别是色相（H）、饱和度（S）、明度（B），对应关系如下图所示。**
+
+export const hue = [
+  "#FF0000",
+  "#FF4000",
+  "#FF8000",
+  "#FFBF00",
+  "#F8F819",
+  "#40FF00",
+  "#00FF80",
+  "#00BFFF",
+  "#0000FF",
+  "#8000FF",
+  "#FF00FF",
+  "#FF0080",
+];
+
+<div className="flex justify_between align_center">
+<div className="hues">
+
+### 1）色相（H）
+
+<div className="flex">
+  {hue.map((item) => (
+    <div key={item} className="hue_items" style={{ background: item }}></div>
+  ))}
+</div>
+<div className="hue"></div>
+<div className="flex justify_between">
+  <strong style={{ fontSize: 12 }}>H：100</strong>
+  <strong style={{ fontSize: 12 }}>H：0</strong>
+</div>
+
+### 2）饱和度（S）
+
+<div className="saturated"></div>
+<div className="flex justify_between">
+  <strong style={{ fontSize: 12 }}>S：100</strong>
+  <strong style={{ fontSize: 12 }}>S：0</strong>
+</div>
+
+### 3）明度（B）
+
+<div className="lightness"></div>
+<div className="flex justify_between">
+  <strong style={{ fontSize: 12 }}>B：100</strong>
+  <strong style={{ fontSize: 12 }}>B：0</strong>
+</div>
+
+</div>
+<img width="40%" height="auto" src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/Color-a.png" />
+</div>
+
+## 常用色板
+
+### 1）前言
+
+**色彩源于自然，且具有象征意义，它的性质可直接影响人类的情感。单个色彩没有美丑之分，但当色彩相互搭配时便有了美观度，在彰显个性化的同时合理运用色彩搭配，可让视觉表达具备美观度，甚至艺术性。以下已经量化的常用色板，从基础色板的由来至典型配色方案的算法，均有例举可直接使用。当然您也可以完全自定义色板，但强烈建议您遵循色彩体系中的原则以及色板逻辑。**
+
+### 2）基础色板
+
+**H 在递增得到的色环颜色分布不均，所以基于伊登十二色环，将三原色位置均分。S&B 均为 100 的高纯度色彩，人眼识别时会存在“明暗”变化，例如柠檬黄（#FFFF00）湖蓝（00FFFF）所以在十二色色相环抽取关键节点色彩后，基于同一“明暗”，并结合色彩的识别度、可读性、可用性，在调整 S&B 得出一套通用型极高的常用色板，如下图所示。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-b.png)
+
+## 主题色
+
+**基于色彩体系，我们预设了 10 种常用的主题色（品牌色），在您确定主题色后，我们会在组件中会为您自动生成衍生色（S&B-10%）。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-d.png)
+
+## 中性色
+
+### 1）取值依据与原则
+
+**以 HSB 色彩模式，从#000B+5 作为步进单位；当到达 B=95 时，转换为 B+1 作为步进单位。得出明度梯度作为中性色的取值范围，如下图所示。HSB 中的 B 与透明度的对应关系，举例 B=5 为 95%不透明度；B=90 为 5%不透明度。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-e.png)
+
+### 2）基于人眼亮度感知范围
+
+**人眼能感受的亮度范围约为 10-3—106cd/m2。当平均亮度适中时(亮度范围约为 10—104 cd/m2)，能分辨的最大和最小亮度比为 1000:1(当亮度为 1000 cd/m2 时，识别能力最高，最小可识别黑度差 ΔDmin≈0.08; 当平均亮度很低时，能分辨的最大和最小亮度比不到 10:1。如下图所示，以人眼识别度将中性色梯度分为三大阈。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-f.png)
+
+### 3）取色原则
+
+**避免在“低敏感明度阈”中选择 2 种或以上中性色，原则上仅选择 1 种作为“最高对比度中性色”（简称 Black）用于强调信息。因长久阅读高对比信息会更快的造成视觉疲劳，故请警惕选择#000 来定义 Black；基于“人眼亮度感知范围”能被人眼顺畅感知，原则上在“易感知明度阈”中的明度选取梯度为 B+(≥10)（当跨阈时 B+(≥10\*2)作为梯度，固定比值 1:2），以及选择少于 5（含）种作为“灰度对比中性色”（简称 Grey）；在“高敏感明度阈中，因步进单位为 B+1，所取中性色值需定义清晰，并尽可能的简化使用场景。**
+
+### 4）微调与偏移原则
+
+**避免在“低敏感明度阈”中选择 2 种或以上中性色，原则上仅选择 1 种作为“最高对比度中性色”（简称 Black）用于强调信息。因长久阅读高对比信息会更快的造成视觉疲劳，故请警惕选择#000 来定义 Black；基于“人眼亮度感知范围”能被人眼顺畅感知，原则上在“易感知明度阈”中的明度选取梯度为 B+(≥10)（当跨阈时 B+(≥10\*2)作为梯度，固定比值 1:2），以及选择少于 5（含）种作为“灰度对比中性色”（简称 Grey）；在“高敏感明度阈中，因步进单位为 B+1，所取中性色值需定义清晰，并尽可能的简化使用场景。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-c.png)
+
+### 5）定义原则
+
+**根据以上原则，对所取中性色值需定义清晰，并尽可能的简化使用场景。上图为组件库中使用的中性色推导过程，可使用或参考。**
+
+## 功能色
+
+**功能色代表了明确的信息以及状态，如成功、出错、失败、提醒、链接等。功能色的选取需要遵守用户对色彩的基本认知。我们建议在一套产品体系下，功能色需保持一致，不要有过多的自定义干扰用户的认知体验。基于色彩体系，我们已预设了 4 种功能色，并且赋予了它们场景和角色。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/color-g.png)

@@ -1,0 +1,14 @@
+pnpm-lock.yaml
+dist
+www
+build
+packages/h5/src/**/*.md
+*.ico
+*.svg
+*.snap
+.*
+
+components.d.ts
+docs
+packages/touch-emulator/tests/*
+packages/touch-emulator/touch-emulator.js

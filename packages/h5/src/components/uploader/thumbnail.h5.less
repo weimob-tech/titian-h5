@@ -1,0 +1,172 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@thum:~ '@{project}-thum';
+
+:host {
+  display: contents;
+}
+.@{thum} {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  background: #000;
+
+  word-break: break-all;
+
+  &-small {
+    width: @uploader-small-size;
+    height: @uploader-small-size;
+    margin: @uploader-small-margin;
+
+    border-radius: @uploader-small-radius;
+  }
+
+  &-large {
+    width: @uploader-large-size;
+    height: @uploader-large-size;
+    margin: @uploader-large-margin;
+
+    border-radius: @uploader-large-radius;
+  }
+
+  &-image,
+  &-video-box,
+  &-video {
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  &-video-box {
+    position: relative;
+  }
+
+  &-video {
+    display: block;
+  }
+
+  &-video-box::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    color: @uploader-name-color;
+    font-size: @uploader-name-font-size;
+  }
+
+  &-loading,
+  &-fail {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.7;
+  }
+
+  &-loading {
+    background: @uploader-loading-bg-color;
+
+    color: @uploader-loading-color;
+  }
+
+  &-fail {
+    background: @uploader-fail-bg-color;
+
+    color: @uploader-fail-color;
+  }
+
+  &-del {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    line-height: 1;
+  }
+
+  &-disabled &-uploader-fail-icon,
+  &-disabled &-icon,
+  &-disabled &-action-text,
+  &-disabled &-fail-text {
+    color: @uploader-disabled-color;
+  }
+
+  &-small &-action-text {
+    margin: 14px 0 0;
+
+    font-size: @T20;
+    line-height: @line-height;
+  }
+
+  &-small &-loading-text,
+  &-small &-fail {
+    font-size: @T22;
+    line-height: @line-height;
+  }
+
+  &-small &-fail-text,
+  &-small &-loading-text {
+    margin: 6px 0 0;
+  }
+
+  &-large &-action,
+  &-large &-thum {
+    width: @uploader-large-size;
+    height: @uploader-large-size;
+    margin: @uploader-large-margin;
+
+    border-radius: @uploader-large-radius;
+  }
+
+  &-large &-action-text {
+    margin: 12px 0 0;
+
+    font-size: @T22;
+    line-height: @line-height;
+  }
+
+  &-large &-loading-text,
+  &-large &-fail {
+    font-size: @T24;
+    line-height: @line-height;
+  }
+
+  &-large &-fail-text,
+  &-large &-loading-text {
+    margin: 8px 0 0;
+  }
+
+  &-progress {
+    position: absolute !important;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    margin: 0 10px !important;
+  }
+}

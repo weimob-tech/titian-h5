@@ -1,0 +1,58 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+@price: ~'@{project}-price';
+
+.@{price} {
+  display: inline-flex;
+  align-items: baseline;
+
+  color: @price-color;
+
+  &-label {
+    color: @price-label-color;
+    font-size: @price-label-font-size;
+    font-weight: @price-label-font-weight;
+    line-height: @price-label-line-height;
+  }
+
+  &-prefix {
+    color: @price-prefix-color;
+    font-size: @price-prefix-font-size;
+    font-weight: @price-prefix-font-weight;
+    line-height: @price-prefix-line-height;
+  }
+
+  &-suffix {
+    color: @price-suffix-color;
+    font-size: @price-suffix-font-size;
+    font-weight: @price-suffix-font-weight;
+    line-height: @price-suffix-line-height;
+  }
+
+  &-unit {
+    margin-right: @price-unit-margin-right;
+    margin-left: @price-unit-margin-left;
+
+    color: @price-unit-color;
+    font-size: @price-unit-font-size;
+    font-weight: @price-integer-font-weight;
+    line-height: @price-integer-line-height;
+  }
+
+  &-integer {
+    color: @price-integer-color;
+    font-family: @price-integer-font-family;
+    font-size: @price-integer-font-size;
+    font-weight: @price-integer-font-weight;
+    line-height: @price-integer-line-height;
+  }
+
+  &-fraction {
+    color: @price-fraction-color;
+    font-family: @price-fraction-font-family;
+    font-size: @price-fraction-font-size;
+    font-weight: @price-fraction-font-weight;
+    line-height: @price-fraction-line-height;
+  }
+}

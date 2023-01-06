@@ -1,0 +1,58 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+:host {
+  display: contents;
+}
+@empty:~ '@{project}-empty';
+
+.@{empty} {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: @empty-width;
+  min-width: @empty-min-width;
+  height: @empty-height;
+  min-height: @empty-min-height;
+
+  &-title,
+  &-sub-title {
+    padding: 0 28px;
+
+    line-height: @line-height;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  &-title {
+    margin-top: @empty-medium-title-margin-top;
+
+    color: @empty-title-color;
+    font-size: @T28;
+  }
+
+  &-big &-title {
+    margin-top: @empty-big-title-margin-top;
+  }
+
+  &-sub-title {
+    margin-top: 12px;
+
+    color: @empty-sub-title-color;
+    font-size: @T24;
+  }
+
+  &-image {
+    width: @empty-medium-image-size;
+    height: @empty-medium-image-size;
+  }
+
+  &&-big &-image {
+    width: @empty-big-image-size;
+    height: @empty-big-image-size;
+  }
+}

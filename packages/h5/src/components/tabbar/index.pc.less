@@ -1,0 +1,40 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@tabbar:~ '@{project}-tab-bar';
+
+.@{tabbar} {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  flex: 1;
+  padding: @tabbar-padding-v @tabbar-padding-h;
+
+  background: var(--tabbar-background, #fff);
+
+  --safe-bg-color: var(--tabbar-background, #fff);
+
+  &-box {
+    display: flex;
+  }
+
+  &-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: @tabbar-shadow-height;
+
+    transform: translateY(-100%);
+
+    opacity: 0.02;
+    background: @tabbar-shadow-bg;
+  }
+
+  &-border {
+    border-top: @tabbar-border-top;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "extends": ["plugin:@titian/recommended"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^h|Fragment$" }],
+    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^h|Fragment$" }],
+    "react/jsx-props-no-spreading": "off",
+    "no-cond-assign": "warn",
+    "no-nested-ternary": "warn",
+    "class-methods-use-this": "warn",
+    "no-inner-declarations": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": ["class", "onSlotchange", "date-src"]
+      }
+    ],
+    "no-underscore-dangle": "warn",
+    "@titian/no-more-args": "warn",
+    "@typescript-eslint/no-explicit-any":"off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsx-a11y/no-autofocus": "off",
+    "rules/require-default-props":"off"
+  }
+}

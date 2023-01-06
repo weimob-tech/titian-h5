@@ -1,0 +1,52 @@
+{
+  "name": "titian-h5-react",
+  "version": "0.1.0",
+  "description": "react h5 component with webcomponent",
+  "keywords": [
+    "h5",
+    "react component",
+    "webcomponent"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/h5-react"
+  },
+  "author": "",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "scripts": {
+    "build": "rimraf dist && rollup -c scripts/rollup.config.ts --configPlugin typescript && rimraf types",
+    "prepublish": "npm run build",
+    "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w"
+  },
+  "dependencies": {
+    "titian-h5": "workspace:0.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/lodash-es": "^4.14.182",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.0",
+    "lodash-es": "^4.17.21",
+    "magic-string": "^0.26.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.72.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  }
+}

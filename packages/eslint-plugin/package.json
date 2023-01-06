@@ -1,0 +1,56 @@
+{
+  "name": "@titian/eslint-plugin",
+  "version": "0.1.0",
+  "description": "eslint plugin for titian UI",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "titian"
+  ],
+  "bugs": {
+    "url": "https://github.com/weimob-tech/titian-h5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "beibei.luo",
+    "email": "beibei.luo01@weimob.com"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "run-p build",
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/eslint": "^8.4.2",
+    "@types/estree": "^0.0.51",
+    "@types/node": "17.0.29",
+    "eslint": "8.14.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.72.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@titian/compiler",
+  "version": "0.1.0",
+  "description": "Titian compiler basic",
+  "keywords": [
+    "titian",
+    "compiler"
+  ],
+  "license": "MIT",
+  "author": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.ts --configPlugin typescript",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@pnpm/find-workspace-packages": "^4.0.5",
+    "@pnpm/logger": "^4.0.0",
+    "@titian/cli": "workspace:0.1.1",
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "esbuild": "^0.14.39",
+    "execa": "5.1.1",
+    "find-workspace-root": "^1.0.1",
+    "find-yarn-workspace-root": "^2.0.0",
+    "open": "^8.4.0",
+    "prompts": "^2.4.2",
+    "read-pkg-up": "^7.0.1",
+    "semver": "^7.3.7",
+    "sort-package-json": "^1.57.0",
+    "tiny-glob": "^0.2.9"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/node": "17.0.29",
+    "@types/prompts": "^2.0.14",
+    "@types/semver": "^7.3.9",
+    "rollup": "^2.72.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.4"
+  }
+}

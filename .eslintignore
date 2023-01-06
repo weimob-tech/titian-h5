@@ -1,0 +1,14 @@
+dist
+test
+tests
+www
+bin
+packages/examples/*
+packages/h5-vue/src/components.ts
+packages/h5-vue/src/vue-component-lib/*
+packages/h5/loader/*
+packages/h5-react/src/components.ts
+packages/h5-react/src/react-component-lib/*
+*.md
+docs
+packages/touch-emulator/tests/*

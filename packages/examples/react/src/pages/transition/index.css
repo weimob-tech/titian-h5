@@ -1,0 +1,12 @@
+/* .custom-container ti-transition::part(placeholder) {
+  width: 100px;
+  height: 100px;
+
+  background-color: #fa2c19;
+} */
+.transition-placeholder {
+  width: 100px;
+  height: 100px;
+
+  background-color: #fa2c19;
+}

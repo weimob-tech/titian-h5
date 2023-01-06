@@ -1,0 +1,40 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+
+@checkboxButton: ~'@{project}-checkbox-button';
+
+:host {
+  display: contents;
+}
+
+.@{checkboxButton} {
+  display: inline-flex;
+  padding: @checkbox-button-padding-v @checkbox-button-padding-h;
+  overflow: hidden;
+
+  --tag-background-color: @checkbox-button-bg-color;
+  --tag-text-color: @checkbox-button-text-color;
+  --tag-padding: @checkbox-button-padding;
+  --tag-font-size: @T26;
+  --tag-height: @checkbox-button-height;
+  --tag-radius: @checkbox-button-radius;
+  --tag-border-width: 2px;
+  --tag-border-color: transparent;
+
+  &-checked {
+    --tag-border-color: @checkbox-button-checked-border-color;
+    --tag-background-color: @checkbox-button-checked-bg-color;
+    --tag-text-color: @checkbox-button-checked-text-color;
+  }
+
+  &-disabled {
+    pointer-events: none;
+
+    --tag-text-color: rgba(117, 117, 117, 40%);
+  }
+
+  &-disabled.@{checkboxButton}-checked {
+    --tag-text-color: @checkbox-button-disabled-text-color;
+    --tag-border-color: @checkbox-button-disabled-border-color;
+  }
+}

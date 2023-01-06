@@ -1,0 +1,62 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+
+@gridItem: ~'@{project}-grid-item';
+
+.@{gridItem} {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+
+  &-host {
+    display: contents;
+  }
+
+  &-square {
+    height: 0;
+  }
+
+  &-content {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: @grid-item-padding-v @grid-item-padding-h;
+
+    background-color: @grid-item-bg-color;
+
+    &-square {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &::before {
+      .hairline(right);
+    }
+
+    &::after {
+      .hairline(bottom);
+    }
+
+    &-gutter,
+    &-borderless {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &-text {
+    padding: @grid-text-padding-v @grid-text-padding-h;
+
+    color: @grid-item-text-color;
+    font-size: @grid-item-text-font-size;
+    line-height: @grid-item-text-line-height;
+  }
+}

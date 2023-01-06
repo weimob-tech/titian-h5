@@ -1,0 +1,33 @@
+{
+  "name": "@titian/touchemulator",
+  "version": "1.0.0",
+  "description": "Emulate touch input on your desktop.",
+  "keywords": [
+    "touch",
+    "hammerjs",
+    "input",
+    "emulator",
+    "simulator"
+  ],
+  "homepage": "https://github.com/weimob-tech/titian-h5",
+  "bugs": {
+    "url": "https://github.com/weimob-tech/titian-h5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/touch-emulator"
+  },
+  "license": "MIT",
+  "main": "touch-emulator.js",
+  "files": [
+    "README.md",
+    "touch-emulator.js"
+  ],
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "devDependencies": {
+    "vite": "^3.2.4"
+  }
+}

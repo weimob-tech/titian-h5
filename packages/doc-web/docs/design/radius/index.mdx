@@ -1,0 +1,36 @@
+---
+title: 圆角
+sidebar_custom_props:
+  suffix: Radius
+hide_title: true
+pagination_prev: null
+pagination_next: null
+---
+
+# 圆角 _Radius_
+
+**圆角，在现今的 UI 设计中，扮演了举足轻重的角色。大到页面分割布局，小到具体的按钮、标签，都能通过圆角来传递设计语言，表现风格调性。**
+
+## 梯度原则
+
+**以【8 像素原则】作为基准，圆角数值都是 8 的倍数，但考虑到组件自身灵活性以及视觉呈现效果，具体圆角数值支持 4 像素 上下浮动。下图给出一个圆角梯度的示例，组件库支持的圆角样式远不止于此，具体数值由每个业务自身品牌调性决定。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/radius-a.png)
+
+## 具体应用
+
+### 1）同层级圆角度数统一
+
+**页面中同一视觉层级，对应的元素保持相同的圆角数值，其中的元素包括：列表卡片、图片、按钮、标签等等。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/radius-b.png)
+
+### 2）圆角中的圆角
+
+**当最外层卡片使用了圆角时，内部圆角不可大于卡片圆角。为使卡片载体更具包含性，视觉间距更和谐，此处组件库的处理方式是： 内层圆角 = 外层圆角 - 4px**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/radius-c.png)
+
+## 圆角主题
+
+**Titian 组件库针对圆角这一属性，专门制定了主题的概念。将每一个组件使用到的圆角数值串联起来，通过全局变量做到一键切换圆角风格。并且提供了多种默认的圆角主题风格，让用户自由选择搭配，构建产品品牌的视觉调性。**

@@ -1,0 +1,171 @@
+---
+title: 规格
+sidebar_custom_props:
+  suffix: Sku
+hide_title: true
+pagination_prev: null
+pagination_next: null
+---
+
+# 规格 _Sku_
+
+# sku
+
+## 组件引入方式
+
+```json showLineNumbers
+{
+  // 原生小程序
+  "usingComponents": {
+    "ti-sku": "titian-mp/sku/index"
+  },
+  // titan-cli搭建的项目
+  "usingComponents": {
+    "ti-sidebar": "platform://titian-mp/ti-sku"
+  }
+}
+```
+
+## 基本使用方式
+
+### sku 基本使用
+
+```html showLineNumbers
+<ti-sku
+  bind:close="onClose"
+  bind:subaction="onSubAction"
+  bind:mainaction="onMainAction"
+  skus="{{ attrs.skus }}"
+  visible="{{ visible }}"
+  value="{{ attrs.value }}"
+  price-unit="$"
+  count="{{5}}"
+  specs="{{ attrs.specs }}"
+  main-action-text="立即购买"
+  has-sub-action="{{ true }}"
+  sub-action-text="加入购物车"
+/>
+```
+
+## API
+
+### sku
+
+#### 属性（props）
+
+| 名称              | 类型   | 必填 | 默认值 | 说明                                                    | 备注 |
+| ----------------- | ------ | ---- | ------ | ------------------------------------------------------- | ---- |
+| skus              | array  | 是   | []     | 商品的 SKU。单规格商品/多规格商品，都需要用数组包起来。 | -    |
+| specs             | array  | 是   | []     | 商品的规格。单规格可以传空数组。                        | -    |
+| default-dispay-info | object | 是   | []     | 当没有选中项目时，展示的信息，如：图片，价格，库存等。  | -    |
+| value             | number | 否   | -      | 默认选中的商品的 id，不填则取 `skus` 数组的第一项。     | -    |
+| visible           | number | 否   | false  | 弹窗是否展示                                            | -    |
+| price-unit         | string | 否   | -      | 商品价格单位                                            | -    |
+| main-action-text    | string | 否   | -      | 主按钮文案；即右侧按钮                                  | -    |
+| has-sub-action      | string | 否   | false  | 是否使用副按钮                                          | -    |
+| sub-action-text     | string | 否   | -      | 副按钮文案；即左侧按钮；需要配合`hasSubAction`使用      | -    |
+| ext-style         | string | 否   | -      | 根节点样式                                              | -    |
+
+#### 方法（methods）/ 事件（events）
+
+| 名称            | 参数列表               | 描述           | 备注 |
+| --------------- | ---------------------- | -------------- | ---- |
+| bind:subaction  | {sku: {...}, count: 5} | 点击主按钮触发 | -    |
+| bind:mainaction | {sku: {...}, count: 5} | 点击副按钮触发 | -    |
+| bind:close      | -                      | 点击关闭时触发 | -    |
+
+#### 插槽列表（slots）
+
+| 名称    | 说明     | 备注                   |
+| ------- | -------- | ---------------------- |
+| default | 默认插槽 | 在数量的下面           |
+| action  | 操作插槽 | 底部固定定位的按钮左侧 |
+
+#### 可扩展样式类名（class）
+
+| 名称      | 说明         | 备注 |
+| --------- | ------------ | ---- |
+| ext-class | 根节点样式类 | -    |
+
+#### CSS 变量
+
+| CSS 变量              | 默认值 | 说明                                                                     |
+| --------------------- | ------ | ------------------------------------------------------------------------ |
+| `--custom-nav-height` | `0`    | 自定义导航栏的高度；通常是 `wx.getSystemInfoSync().statusBarHeight + 44` |
+
+#### 商品规格数组 specs 字段举例
+
+请按照以下约束，传入 skus 字段。
+
+```javascript
+[
+  {
+    label: "套餐",
+    specId: 2,
+    options: [
+      { optionId: 3, label: "套餐一" },
+      { optionId: 4, label: "套餐二" },
+    ],
+  },
+  {
+    label: "颜色",
+    specId: 1,
+    options: [
+      { optionId: 1, label: "红色" },
+      { optionId: 2, label: "紫色" },
+    ],
+  },
+
+  {
+    label: "内存",
+    specId: 3,
+    options: [
+      { optionId: 5, label: "64G" },
+      { optionId: 6, label: "128G" },
+      { optionId: 7, label: "256G" },
+    ],
+  },
+];
+```
+
+#### 商品 SKU 数组 skus 字段举例
+
+请按照以下约束，传入 skus 字段。
+
+```javascript
+[
+    {
+      id: 1,
+      specOptionDesc: ['紫色', '套餐一', '64G'],
+      specOptionIds: [2, 3, 5],
+      price: 123.12,
+      priceLabel: '价格',
+      subPrice: 99.99,
+      subPriceLabel: '会员价',
+      stock: 10,
+      initCount: 2,
+      imageUrl: 'https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/placeholder.jpg'
+    },
+    {
+      id: 2,
+      specOptionDesc: ['紫色', '套餐一', '128G'],
+      specOptionIds: [2, 3, 6],
+      price: 3456.11,
+      priceLabel: '价格',
+      subPrice: 3000,
+      initCount: 2,
+      imageUrl: 'https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/placeholder.jpg'
+    },
+    {
+      id: 3,
+      specOptionDesc: ['紫色', '套餐二', '128G'],
+      specOptionIds: [2, 4, 6],
+      price: 12.0,
+      priceLabel: '价格',
+      subPrice: 9.99,
+      subPriceLabel: '会员价',
+      stock: 10,
+      initCount: 2,
+      imageUrl: 'https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/placeholder.jpg'
+    },
+```

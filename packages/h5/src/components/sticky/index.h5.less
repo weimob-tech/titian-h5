@@ -1,0 +1,19 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@sticky:~ '@{project}-sticky';
+
+:host {
+  display: contents;
+}
+.@{sticky} {
+  position: relative;
+  z-index: var(--sticky-z-index, 99);
+
+  &-fixed {
+    position: fixed;
+    z-index: var(--sticky-z-index, 99);
+    top: 0;
+    width: 100%;
+  }
+}

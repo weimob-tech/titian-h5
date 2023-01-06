@@ -1,0 +1,68 @@
+{
+  "name": "@titian/cli",
+  "version": "0.1.0",
+  "description": "titian common cli",
+  "keywords": [
+    "titian",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "author": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "titian-cli": "bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "prepublishOnly": "run-p build-*",
+    "build": "run-p build-*",
+    "build-bundle": "rollup -c rollup.config.ts --configPlugin typescript",
+    "watch": "rollup -c rollup.config.ts --configPlugin typescript -w",
+    "build-types": "tsc -p src --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-spinner": "^0.2.10",
+    "commander": "^9.2.0",
+    "esbuild": "^0.14.39",
+    "execa": "5.1.1",
+    "fs-extra": "^10.1.0",
+    "import-local": "^3.1.0",
+    "log4js": "^6.4.6",
+    "minimist": "^1.2.6",
+    "npminstall": "^6.1.0",
+    "read-pkg-up": "^7.0.1",
+    "registry-url": "5.1.0",
+    "semver": "^7.3.7",
+    "source-map-support": "^0.5.21",
+    "tapable": "^2.2.1",
+    "user-home": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/cli-spinner": "^0.2.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/minimist": "^1.2.2",
+    "@types/semver": "^7.3.9",
+    "@types/user-home": "^2.0.0",
+    "@types/uuid": "^8.3.4",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.72.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=14.19"
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 407px;
+
+  &.top {
+    height: 178px;
+    padding: 136px 0 57px;
+  }
+
+  &.bottom {
+    height: 178px;
+    padding: 57px 0 94px;
+  }
+}
+
+.img {
+  width: 60px;
+  height: auto;
+}
+
+.title {
+  margin-top: 24px;
+
+  color: #212121;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.desc {
+  margin-top: 10px;
+
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+@import './hairline.less';
+@import '../utils.less';
+@import './ellipsis.less';
+@import './clearfix.less';
+@import './position.less';
+@import './expand-click.less';
+
+// 1px border
+@hairline: ~'@{project}-hairline';
+@position: top, left, right, bottom, all;
+each(@position, {
+  .@{hairline}-@{value} {
+    position: relative;
+    &::before {
+      .hairline(@value);
+    }
+  }
+});
+
+.@{hairline}-tb {
+  position: relative;
+
+  &::before {
+    z-index: 1;
+    .hairline(top);
+  }
+
+  &::after {
+    content: '';
+    .hairline(bottom);
+  }
+}
