@@ -7,7 +7,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { TiCollapse } from 'titian-h5-vue';
+import { TiCollapse } from '@titian-design/vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 

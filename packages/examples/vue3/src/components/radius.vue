@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiSlider } from 'titian-h5-vue';
+import { TiSlider } from '@titian-design/vue';
 
 const { max, min, value } = defineProps({
   max: Number,

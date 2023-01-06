@@ -26,7 +26,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiBadge, TiBadgeProps } from 'titian-h5-vue';
+import { TiBadge, TiBadgeProps } from '@titian-design/vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 const options: IOptionType[] = [

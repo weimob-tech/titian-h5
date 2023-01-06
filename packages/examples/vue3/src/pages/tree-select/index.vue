@@ -16,7 +16,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiTreeSelect, TiTreeSelectProps } from 'titian-h5-vue';
+import { TiTreeSelect, TiTreeSelectProps } from '@titian-design/vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 import { addUnit } from '../../utils';

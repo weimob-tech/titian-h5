@@ -30,7 +30,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { TiScrollView } from 'titian-h5-vue';
+import { TiScrollView } from '@titian-design/vue';
 const upper = () => {
   console.log('到达头部');
 };

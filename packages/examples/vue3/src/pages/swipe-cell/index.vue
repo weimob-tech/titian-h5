@@ -82,7 +82,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSwipeCell, TiCellGroup, TiCell, TiButton, TiCheckbox, TiImage, TiTag } from 'titian-h5-vue';
+import { TiSwipeCell, TiCellGroup, TiCell, TiButton, TiCheckbox, TiImage, TiTag } from '@titian-design/vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 

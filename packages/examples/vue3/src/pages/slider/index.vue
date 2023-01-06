@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiSliderProps, TiSlider } from 'titian-h5-vue';
+import { TiSliderProps, TiSlider } from '@titian-design/vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

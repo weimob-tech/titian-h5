@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import CustomPage from '../../components/page.vue';
-import { TiCascade, TiButton, TiPopup } from 'titian-h5-vue';
+import { TiCascade, TiButton, TiPopup } from '@titian-design/vue';
 import { ref } from 'vue';
 import { OptionType } from '../../components/page.interface';
 import city from './city';
