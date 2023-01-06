@@ -20,7 +20,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -45,7 +45,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -58,7 +58,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -71,7 +71,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -84,7 +84,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -97,7 +97,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 
@@ -109,7 +109,7 @@ import { TiEmpty } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 </script>
 ```
 

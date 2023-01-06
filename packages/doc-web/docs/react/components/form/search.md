@@ -12,7 +12,7 @@ side_iframe_path: "#/search"
 **适用于搜索场景**
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSearch } from 'titian-h5-react'
+import { TiSearch } from '@titian-design/react'
 ```
 
 ## 用法示例

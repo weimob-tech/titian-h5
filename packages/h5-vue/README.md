@@ -36,7 +36,7 @@ yarn add @titian-design/vue
 
 ```typescript
 import { createApp } from 'vue';
-import { TitianUI } from 'titian-h5-vue';
+import { TitianUI } from '@titian-design/vue';
 import App from './App.vue';
 
 const app = createApp(App);

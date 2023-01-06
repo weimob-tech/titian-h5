@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript tsx showLineNumbers
-import { BackTop } from 'titian-h5-vue';
+import { BackTop } from '@titian-design/vue';
 ```
 
 ## 基本用法
@@ -32,7 +32,7 @@ import { BackTop } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from 'titian-h5-vue';
+import { TiBackTop } from '@titian-design/vue';
 </script>
 ```
 
@@ -44,7 +44,7 @@ import { TiBackTop } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from 'titian-h5-vue';
+import { TiBackTop } from '@titian-design/vue';
 </script>
 ```
 
@@ -56,7 +56,7 @@ import { TiBackTop } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from 'titian-h5-vue';
+import { TiBackTop } from '@titian-design/vue';
 </script>
 ```
 
@@ -68,7 +68,7 @@ import { TiBackTop } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from 'titian-h5-vue';
+import { TiBackTop } from '@titian-design/vue';
 
 const handleClick = () => {
   console.log('回到顶部')

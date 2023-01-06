@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiTransition } from 'titian-h5-vue';
+import { TiTransition } from '@titian-design/vue';
 ```
 
 ## 用法示例

@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPrice } from 'titian-h5-vue';
+import { TiPrice } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -38,7 +38,7 @@ import { TiPrice } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-  import { TiPrice } from 'titian-h5-vue';
+  import { TiPrice } from '@titian-design/vue';
 </script>
 ```
 

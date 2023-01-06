@@ -35,7 +35,7 @@ yarn add @titian-design/react
 ### 使用
 
 ```typescript
-import { TiButton } from 'titian-h5-react';
+import { TiButton } from '@titian-design/react';
 
 const App = () => (
   <div className="App">

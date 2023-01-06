@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSidebar, TiSidebarItem } from 'titian-h5-vue'
+import { TiSidebar, TiSidebarItem } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiSidebar, TiSidebarItem } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSidebar , TiSidebarItem } from 'titian-h5-vue';
+import { TiSidebar , TiSidebarItem } from '@titian-design/vue';
 </script>
 ```
 ## TiSidebar API

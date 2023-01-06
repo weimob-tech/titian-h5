@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -44,7 +44,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -56,7 +56,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -68,7 +68,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -80,7 +80,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -92,7 +92,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -104,7 +104,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -116,7 +116,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 
@@ -128,7 +128,7 @@ import { TiCalendar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from 'titian-h5-vue';
+import { TiCalendar } from '@titian-design/vue';
 </script>
 ```
 

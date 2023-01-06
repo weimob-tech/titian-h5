@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiLoading } from 'titian-h5-vue'
+import { TiLoading } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -31,7 +31,7 @@ import { TiLoading } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiLoading } from 'titian-h5-vue';
+import { TiLoading } from '@titian-design/vue';
 </script>
 ```
 
@@ -46,7 +46,7 @@ import { TiLoading } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiLoading } from 'titian-h5-vue';
+import { TiLoading } from '@titian-design/vue';
 </script>
 ```
 
@@ -61,7 +61,7 @@ import { TiLoading } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiLoading } from 'titian-h5-vue';
+import { TiLoading } from '@titian-design/vue';
 </script>
 ```
 
@@ -77,7 +77,7 @@ import { TiLoading } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiLoading } from 'titian-h5-vue';
+import { TiLoading } from '@titian-design/vue';
 </script>
 ```
 

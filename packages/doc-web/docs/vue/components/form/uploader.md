@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiUploader } from 'titian-h5-vue'
+import { TiUploader } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -38,7 +38,7 @@ import { TiUploader } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiUploader } from 'titian-h5-vue';
+import { TiUploader } from '@titian-design/vue';
 </script>
 ```
 
@@ -61,7 +61,7 @@ import { TiUploader } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiUploader } from 'titian-h5-vue';
+import { TiUploader } from '@titian-design/vue';
 
 const beforeUpload = (event: any) => {
   console.log("beforeUpload", event);

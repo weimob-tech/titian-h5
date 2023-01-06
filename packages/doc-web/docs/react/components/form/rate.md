@@ -15,7 +15,7 @@ side_iframe_path: "#/rate"
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRate } from 'titian-h5-react';
+import { TiRate } from '@titian-design/react';
 ```
 
 ## 用法示例

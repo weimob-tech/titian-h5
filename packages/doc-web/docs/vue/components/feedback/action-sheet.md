@@ -13,7 +13,7 @@ side_iframe_path: "#/action-sheet"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiActionSheet } from 'titian-h5-vue'
+import { TiActionSheet } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -25,7 +25,7 @@ import { TiActionSheet } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiActionSheet } from 'titian-h5-vue';
+import { TiActionSheet } from '@titian-design/vue';
 const actions = [
   { name: '选项1', description: '描述1' },
   { name: '选项1', description: '描述1', icon: 'home' },

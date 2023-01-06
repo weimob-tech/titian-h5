@@ -13,7 +13,7 @@ side_iframe_path: "#/input"
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiInput } from 'titian-h5-vue'
+import { TiInput } from '@titian-design/vue'
 ```
 ## 用法示例
 
@@ -30,7 +30,7 @@ import { TiInput } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 
@@ -44,7 +44,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 #### 键盘类型
@@ -55,7 +55,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 #### 输入对齐方式
@@ -66,7 +66,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 
@@ -79,7 +79,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 #### label左侧搭配图标
@@ -89,7 +89,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 
@@ -105,7 +105,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 #### 错误提示
@@ -116,7 +116,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 #### 键盘确认按钮文字
@@ -130,7 +130,7 @@ import { TiInput } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from 'titian-h5-vue';
+import { TiInput } from '@titian-design/vue';
 </script>
 ```
 ## TiInput API

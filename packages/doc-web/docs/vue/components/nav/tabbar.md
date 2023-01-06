@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTabbar } from 'titian-h5-vue'
+import { TiTabbar } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiTabbar } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTabbar } from 'titian-h5-vue';
+import { TiTabbar } from '@titian-design/vue';
 const options = [
   { icon: "home", title: "首页", value: "first" },
   { icon: "arrange", title: "分类", value: "second" },
@@ -43,7 +43,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTabbar } from 'titian-h5-vue';
+import { TiTabbar } from '@titian-design/vue';
 const options = [
   { icon: "home", title: "首页", value: "first" },
   { icon: "arrange", title: "分类", value: "second" },
@@ -57,7 +57,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTabbar } from 'titian-h5-vue';
+import { TiTabbar } from '@titian-design/vue';
 const options = [
   { icon: "home", title: "首页", value: "first" },
   { icon: "arrange", title: "分类", value: "second" },
@@ -76,7 +76,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTabbar } from 'titian-h5-vue';
+import { TiTabbar } from '@titian-design/vue';
 </script>
 ```
 #### 图标设置
@@ -94,7 +94,7 @@ import { TiTabbar } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTabbar , TiIcon } from 'titian-h5-vue';
+import { TiTabbar , TiIcon } from '@titian-design/vue';
 </script>
 ```
 ## TiTabbar API

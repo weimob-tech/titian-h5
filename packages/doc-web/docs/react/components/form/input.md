@@ -13,7 +13,7 @@ side_iframe_path: "#/input"
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiInput } from 'titian-h5-react'
+import { TiInput } from '@titian-design/react'
 ```
 ## 用法示例
 

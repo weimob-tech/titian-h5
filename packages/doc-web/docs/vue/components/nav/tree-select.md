@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTreeSelect } from 'titian-h5-vue'
+import { TiTreeSelect } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiTreeSelect } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect } from 'titian-h5-vue';
+import { TiTreeSelect } from '@titian-design/vue';
 const options = [
   {
     label: "侧边导航",
@@ -49,7 +49,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect } from 'titian-h5-vue';
+import { TiTreeSelect } from '@titian-design/vue';
 const alias = { label: 'name', value: 'id', children: 'list' };
 const options = [
   {
@@ -73,7 +73,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect , ref } from 'titian-h5-vue';
+import { TiTreeSelect , ref } from '@titian-design/vue';
 const options = [
   { label: "侧边导航1", value: "a1" },
   { label: "侧边导航2", value: "a2" }

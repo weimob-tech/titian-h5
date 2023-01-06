@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiDropdownMenu, TiDropdownItem } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -43,7 +43,7 @@ import { TiDropdownMenu, TiDropdownItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -63,7 +63,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -88,7 +88,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -123,7 +123,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -148,7 +148,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -168,7 +168,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -189,7 +189,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem, TiDropdownItemProps } from '@titian-design/vue';
 
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
@@ -216,7 +216,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 </template>
 
 <script lang="ts" setup>
-import { TiDropdownMenu, TiDropdownItem } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem } from '@titian-design/vue';
 
 const handleClose = (e: CustomEvent<never>) => {
   console.log(e);
@@ -255,7 +255,7 @@ const dropMenuOptions: TiDropdownItemProps['options'] = [
 
 <script lang="ts" setup>
 import {  ref } from 'vue';
-import { TiDropdownMenu, TiDropdownItem } from 'titian-h5-vue';
+import { TiDropdownMenu, TiDropdownItem } from '@titian-design/vue';
 const dropMenuOptions: TiDropdownItemProps['options'] = [
   { title: "选项1", value: "1" },
   { title: "选项2", value: "2" }
