@@ -1,0 +1,85 @@
+{
+  "name": "titian-ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "titian h5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "commit": "cz",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "npm run build:lint && npm run build:cli && npm run build:compiler && pnpm run build:h5 && pnpm run build:react && pnpm run build:vue",
+    "pre-commit": "lint-staged -c .lintstagedrc.mjs",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write **/*",
+    "lint": "eslint . --fix --quiet",
+    "stylelint": "stylelint  **/*.{css,less}",
+    "stylelint:fix": "stylelint  **/*.{css,less} --fix",
+    "release": "titian-cli release",
+    "start": "run-p start:h5 start:react start:eg:react",
+    "start-vue": "run-p start:h5 start:vue start:eg:vue",
+    "start:h5": "pnpm --filter titian-h5 run start",
+    "start:react": "pnpm --filter titian-h5-react run start",
+    "start:vue": "pnpm --filter titian-h5-vue run start",
+    "start:docs": "env-cmd -f ./.env pnpm --filter titian-doc start",
+    "build": "pnpm run build:h5 && pnpm run build:react && pnpm run build:vue",
+    "build:lint": "pnpm --filter @titian-design/eslint-plugin build",
+    "build:cli": "pnpm --filter @titian-design/cli build",
+    "build:compiler": "pnpm --filter @titian-design/compiler build",
+    "build:h5": "pnpm --filter titian-h5 build",
+    "build:react": "pnpm --filter titian-h5-react build",
+    "build:vue": "pnpm --filter titian-h5-vue build",
+    "build:docs": "pnpm --filter titian-doc build",
+    "start:eg:h5": "pnpm --filter example-h5 run start",
+    "start:eg:react": "pnpm --filter example-h5-react run start",
+    "start:eg:vue": "pnpm --filter example-h5-vue run start",
+    "build:eg:h5": "pnpm --filter example-h5 build",
+    "build:eg:react": "pnpm --filter example-h5-react build",
+    "build:eg:vue": "pnpm --filter example-h5-vue build",
+    "test:h5": "pnpm --filter titian-h5 run test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "cz-customizable.config.js"
+    }
+  },
+  "devDependencies": {
+    "@titian-design/cli": "workspace:0.1.0",
+    "@titian-design/eslint-plugin": "workspace:0.1.0",
+    "@types/node": "^18.11.3",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.3.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "8.14.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "stylelint": "^14.0.0",
+    "stylelint-config-prettier": "^9.0.0",
+    "stylelint-config-property-sort-order-smacss": "^8.0.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14.14"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "issue": {
+    "url": "https://github.com/weimob-tech/titian-h5/issues"
+  }
+}

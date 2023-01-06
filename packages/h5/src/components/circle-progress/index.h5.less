@@ -1,0 +1,27 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+
+@circleProgress: ~'@{project}-circle-progress';
+
+:host {
+  display: contents;
+}
+.@{circleProgress} {
+  position: relative;
+  overflow: hidden;
+
+  &-canvas {
+    color: @brand-color;
+  }
+
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 28px;
+  }
+}

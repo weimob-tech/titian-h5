@@ -1,0 +1,439 @@
+body {
+  margin: 0;
+  overflow: hidden;
+
+  color: #212121;
+  font-family: 'PingFang SC', HarmonyOSSansSC, 'HarmonyOS Sans SC', 'Noto Sans SC', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Microsoft YaHei', '微软雅黑', MicrosoftJhengHei, '华文细黑', Helvetica, Arial, sans-serif,
+    'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+@font-face {
+  font-family: font-wemo;
+  src: url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.eot'),
+    url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.woff2'),
+    url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.ttf');
+}
+
+/* 新dome样式 */
+.container {
+  width: calc(100% - 56px);
+  margin: 0 28px;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #fff;
+}
+
+.body::-webkit-scrollbar,
+.html::-webkit-scrollbar,
+.container::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 0;
+
+  background: transparent;
+}
+
+.hairline-all {
+  position: relative;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.hairline-all::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+
+  transform: scale(0.5);
+  transform-origin: left top;
+
+  border: 2px solid #f2f2f2;
+  border-radius: 40px;
+}
+
+@font-face {
+  font-family: weimob-icon;
+  src: url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.eot?t=1669700415255'); /* IE9 */
+  src: url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.eot?t=1669700415255#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */
+      url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.woff2?t=1669700415255')
+      format('woff2'),
+    url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.woff?t=1669700415255')
+      format('woff'),
+    url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.ttf?t=1669700415255')
+      format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+      url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.svg?t=1669700415255#weimob-icon')
+      format('svg'); /* iOS 4.1- */
+}
+
+.weimob-icon {
+  font-family: weimob-icon !important;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+.weimob-icon-add-plain::before {
+  content: '\ea01';
+}
+
+.weimob-icon-address::before {
+  content: '\ea02';
+}
+
+.weimob-icon-addressreceiving::before {
+  content: '\ea03';
+}
+
+.weimob-icon-addressright::before {
+  content: '\ea04';
+}
+
+.weimob-icon-alipay::before {
+  content: '\ea05';
+}
+
+.weimob-icon-arrange::before {
+  content: '\ea06';
+}
+
+.weimob-icon-arrow-down::before {
+  content: '\ea07';
+}
+
+.weimob-icon-arrow-right::before {
+  content: '\ea08';
+}
+
+.weimob-icon-arrow-up::before {
+  content: '\ea09';
+}
+
+.weimob-icon-baidu::before {
+  content: '\ea0a';
+}
+
+.weimob-icon-camera-point::before {
+  content: '\ea0b';
+}
+
+.weimob-icon-cart::before {
+  content: '\ea0c';
+}
+
+.weimob-icon-category::before {
+  content: '\ea0d';
+}
+
+.weimob-icon-checkbox-hollow::before {
+  content: '\ea0e';
+}
+
+.weimob-icon-checkbox::before {
+  content: '\ea0f';
+}
+
+.weimob-icon-checked::before {
+  content: '\ea10';
+}
+
+.weimob-icon-clear::before {
+  content: '\ea11';
+}
+
+.weimob-icon-clock-alarm::before {
+  content: '\ea12';
+}
+
+.weimob-icon-close::before {
+  content: '\ea13';
+}
+
+.weimob-icon-colon::before {
+  content: '\ea14';
+}
+
+.weimob-icon-connect::before {
+  content: '\ea15';
+}
+
+.weimob-icon-default-pic::before {
+  content: '\ea16';
+}
+
+.weimob-icon-delete::before {
+  content: '\ea17';
+}
+
+.weimob-icon-delivery::before {
+  content: '\ea18';
+}
+
+.weimob-icon-douyin::before {
+  content: '\ea19';
+}
+
+.weimob-icon-error::before {
+  content: '\ea1a';
+}
+
+.weimob-icon-filter::before {
+  content: '\ea1b';
+}
+
+.weimob-icon-go-to-top::before {
+  content: '\ea1c';
+}
+
+.weimob-icon-goods::before {
+  content: '\ea1d';
+}
+
+.weimob-icon-home::before {
+  content: '\ea1e';
+}
+
+.weimob-icon-info::before {
+  content: '\ea1f';
+}
+
+.weimob-icon-intracity::before {
+  content: '\ea20';
+}
+
+.weimob-icon-kuaishou::before {
+  content: '\ea21';
+}
+
+.weimob-icon-link::before {
+  content: '\ea22';
+}
+
+.weimob-icon-list::before {
+  content: '\ea23';
+}
+
+.weimob-icon-location::before {
+  content: '\ea24';
+}
+
+.weimob-icon-mine-to-pay::before {
+  content: '\ea25';
+}
+
+.weimob-icon-minus::before {
+  content: '\ea26';
+}
+
+.weimob-icon-nav-back::before {
+  content: '\ea27';
+}
+
+.weimob-icon-notice::before {
+  content: '\ea28';
+}
+
+.weimob-icon-phone-plain::before {
+  content: '\ea29';
+}
+
+.weimob-icon-phone::before {
+  content: '\ea2a';
+}
+
+.weimob-icon-picture::before {
+  content: '\ea2b';
+}
+
+.weimob-icon-play-plain::before {
+  content: '\ea2c';
+}
+
+.weimob-icon-plus::before {
+  content: '\ea2d';
+}
+
+.weimob-icon-positioning::before {
+  content: '\ea2e';
+}
+
+.weimob-icon-profile::before {
+  content: '\ea2f';
+}
+
+.weimob-icon-qq::before {
+  content: '\ea30';
+}
+
+.weimob-icon-qrcode::before {
+  content: '\ea31';
+}
+
+.weimob-icon-question::before {
+  content: '\ea32';
+}
+
+.weimob-icon-rate-star-highlight::before {
+  content: '\ea33';
+}
+
+.weimob-icon-rate-star::before {
+  content: '\ea34';
+}
+
+.weimob-icon-recommend::before {
+  content: '\ea35';
+}
+
+.weimob-icon-required::before {
+  content: '\ea36';
+}
+
+.weimob-icon-right-custom::before {
+  content: '\e103';
+}
+
+.weimob-icon-right::before {
+  content: '\ea37';
+}
+
+.weimob-icon-save::before {
+  content: '\ea38';
+}
+
+.weimob-icon-scan::before {
+  content: '\ea39';
+}
+
+.weimob-icon-search::before {
+  content: '\ea3a';
+}
+
+.weimob-icon-selected::before {
+  content: '\ea3b';
+}
+
+.weimob-icon-share-hwq::before {
+  content: '\ea3c';
+}
+
+.weimob-icon-share-wechat-moments::before {
+  content: '\ea3d';
+}
+
+.weimob-icon-share::before {
+  content: '\ea3e';
+}
+
+.weimob-icon-sort-inactive::before {
+  content: '\ea3f';
+}
+
+.weimob-icon-speaker::before {
+  content: '\ea40';
+}
+
+.weimob-icon-stepper-minus::before {
+  content: '\ea41';
+}
+
+.weimob-icon-stepper-plus::before {
+  content: '\ea42';
+}
+
+.weimob-icon-store::before {
+  content: '\ea43';
+}
+
+.weimob-icon-tabbar-cart-highlight::before {
+  content: '\ea44';
+}
+
+.weimob-icon-tabbar-cart::before {
+  content: '\ea45';
+}
+
+.weimob-icon-tabbar-category-highlight::before {
+  content: '\ea46';
+}
+
+.weimob-icon-tabbar-category::before {
+  content: '\ea47';
+}
+
+.weimob-icon-tabbar-home-highlight::before {
+  content: '\ea48';
+}
+
+.weimob-icon-tabbar-home::before {
+  content: '\ea49';
+}
+
+.weimob-icon-tabbar-mine-highlight::before {
+  content: '\ea4a';
+}
+
+.weimob-icon-tabbar-mine::before {
+  content: '\ea4b';
+}
+
+.weimob-icon-tabbar-vip-highlight::before {
+  content: '\ea4c';
+}
+
+.weimob-icon-tabbar-vip::before {
+  content: '\ea4d';
+}
+
+.weimob-icon-to-comment::before {
+  content: '\ea4e';
+}
+
+.weimob-icon-to-deliver::before {
+  content: '\ea4f';
+}
+
+.weimob-icon-to-receive::before {
+  content: '\ea50';
+}
+
+.weimob-icon-to-refund::before {
+  content: '\ea51';
+}
+
+.weimob-icon-user-account-setting::before {
+  content: '\ea52';
+}
+
+.weimob-icon-view::before {
+  content: '\ea53';
+}
+
+.weimob-icon-vip::before {
+  content: '\ea54';
+}
+
+.weimob-icon-warning::before {
+  content: '\ea55';
+}
+
+.weimob-icon-wechat::before {
+  content: '\ea56';
+}
+
+.weimob-icon-weibo::before {
+  content: '\ea57';
+}
+
+.weimob-icon-xiaohongshu::before {
+  content: '\ea58';
+}

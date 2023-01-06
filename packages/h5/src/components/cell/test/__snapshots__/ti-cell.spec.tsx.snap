@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ti-cell renders 1`] = `
+<ti-cell clickable="" divider="" title="标题">
+  <!---->
+  <div class="titian-cell titian-cell-clickable titian-cell-divider">
+    <div class="titian-cell-title-wrap">
+      <div>
+        <div class="titian-cell-title">
+          标题
+        </div>
+      </div>
+    </div>
+    <div class="titian-cell-desc-wrap">
+      <div class="titian-cell-desc-content">
+      </div>
+    </div>
+  </div>
+</ti-cell>
+`;

@@ -1,0 +1,21 @@
+@import '../common/static/utils.less';
+
+:host {
+  display: block;
+}
+
+@row: ~'@{project}-row';
+
+.@{row} {
+  &-flex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &::after {
+    content: '';
+
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+@goods: ~'@{project}-goods';
+
+.@{goods} {
+  display: flex;
+  padding: 28px;
+
+  &-title {
+    flex-grow: 1;
+    max-width: 434px;
+    height: 42px;
+    overflow: hidden;
+
+    font-size: 28px;
+    line-height: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 24px;
+  }
+
+  &-stock,
+  &-selected {
+    margin-top: 12px;
+
+    color: #9e9e9e;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

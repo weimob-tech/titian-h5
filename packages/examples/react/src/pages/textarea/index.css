@@ -1,0 +1,29 @@
+.page {
+  min-height: 100vh;
+
+  background: #f9f9f9;
+}
+
+.test {
+  color: red !important;
+}
+
+.box {
+  padding: 28px;
+}
+
+.ext-class {
+  margin: 28px;
+
+  border-radius: 12px;
+
+  background: #f5f5f5;
+}
+
+/* ti-textarea::part(ext) {
+  margin: 28px;
+
+  border-radius: 12px;
+
+  background: #f5f5f5;
+} */

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ti-row renders 1`] = `
+<ti-row>
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex" style="margin-left: -0px; margin-right: -0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-row>
+`;
+
+exports[`ti-row renders gutter success 1`] = `
+<ti-row gutter="16">
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex" style="margin-left: -8px; margin-right: -8px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-row>
+`;

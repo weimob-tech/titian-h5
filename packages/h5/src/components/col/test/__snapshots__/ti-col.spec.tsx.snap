@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ti-col render row with col 1`] = `
+<ti-row gutter="16">
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex" style="margin-left: -8px; margin-right: -8px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-col gutter="16" span="6">
+    <mock:shadow-root>
+      <div class="titian-col titian-col-6 titian-col-flex-6 titian-col-offset-0" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-col>
+  <ti-col gutter="16" span="6">
+    <mock:shadow-root>
+      <div class="titian-col titian-col-6 titian-col-flex-6 titian-col-offset-0" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-col>
+  <ti-col gutter="16" span="6">
+    <mock:shadow-root>
+      <div class="titian-col titian-col-6 titian-col-flex-6 titian-col-offset-0" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-col>
+  <ti-col gutter="16" span="6">
+    <mock:shadow-root>
+      <div class="titian-col titian-col-6 titian-col-flex-6 titian-col-offset-0" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-col>
+</ti-row>
+`;
+
+exports[`ti-col renders basic success 1`] = `
+<ti-col>
+  <mock:shadow-root>
+    <div class="titian-col titian-col-0 titian-col-flex-0 titian-col-offset-0" style="padding-left: 0px; padding-right: 0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-col>
+`;
+
+exports[`ti-col renders offset attribute success 1`] = `
+<ti-col offset="4">
+  <mock:shadow-root>
+    <div class="titian-col titian-col-0 titian-col-flex-0 titian-col-offset-4" style="padding-left: 0px; padding-right: 0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-col>
+`;
+
+exports[`ti-col renders span attribute success 1`] = `
+<ti-col span="4">
+  <mock:shadow-root>
+    <div class="titian-col titian-col-4 titian-col-flex-4 titian-col-offset-0" style="padding-left: 0px; padding-right: 0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-col>
+`;

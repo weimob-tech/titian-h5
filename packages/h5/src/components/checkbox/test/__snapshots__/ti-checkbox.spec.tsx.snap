@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ti-checkbox renders 1`] = `
+<ti-checkbox>
+  <mock:shadow-root>
+    <div class="titian-checkbox titian-checkbox-row">
+      <div class="titian-checkbox-icon-wrap">
+        <ti-icon ext-class="titian-checkbox-icon titian-checkbox-icon-zoom-out" name="checkbox-hollow"></ti-icon>
+      </div>
+      <div class="titian-checkbox-label">
+        <slot></slot>
+        <slot name="label"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-checkbox>
+`;

@@ -1,0 +1,185 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@tag:~ '@{project}-tag';
+
+:host {
+  display: contents;
+}
+.@{tag} {
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  height: var(--tag-height, 32px);
+  margin: var(--tag-margin, initial);
+  padding: var(--tag-padding, 0 8px);
+
+  border-width: @tag-border-width;
+  border-style: @tag-border-style;
+  border-radius: @tag-radius;
+  border-color: @tag-border-color;
+
+  background-color: var(--tag-background-color, var(--tag-color, @tag-theme));
+
+  color: var(--tag-text-color, #fff);
+  font-size: var(--tag-font-size, 20px);
+  font-weight: var(--tag-font-weight, 400);
+  line-height: normal;
+  word-break: keep-all;
+  vertical-align: middle;
+
+  &-text {
+    &-left {
+      margin-left: var(--tag-text-icon-gap, 4px);
+    }
+
+    &-right {
+      margin-right: var(--tag-text-icon-gap, 4px);
+    }
+  }
+
+  slot[name='prefix']::slotted(*) {
+    margin-right: var(--tag-text-slot-gap, 4px);
+  }
+
+  slot[name='suffix']::slotted(*) {
+    margin-left: var(--tag-text-slot-gap, 4px);
+  }
+
+  // 尺寸 size
+  &-size-small {
+    height: var(--tag-height, 28px);
+
+    font-size: var(--tag-font-size, 20px);
+  }
+
+  &-size-medium {
+    height: var(--tag-height, 32px);
+
+    font-size: var(--tag-font-size, 20px);
+  }
+
+  &-size-big {
+    height: var(--tag-height, 36px);
+
+    font-size: var(--tag-font-size, 22px);
+    font-weight: var(--tag-font-weight, 400);
+  }
+
+  // 种类 variant
+  &-variant-contained {
+    border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
+
+    background-color: var(--tag-background-color, var(--tag-color, @tag-theme));
+
+    color: var(--tag-text-color, #fff);
+  }
+
+  &-variant-outlined {
+    border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
+
+    background-color: var(--tag-background-color, transparent);
+
+    color: var(--tag-text-color, var(--tag-color, @tag-theme));
+  }
+
+  &-variant-outlined&-size-small::before,
+  &-variant-outlined&-size-medium::before,
+  &-variant-outlined&-size-big::before {
+    .hairline(all, var(--tag-border-color, var(--tag-color, @tag-theme)));
+    border-radius: @tag-radius-hairline;
+
+    opacity: 0.7;
+  }
+
+  &-variant-filled {
+    border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
+
+    background-color: var(--tag-background-color, var(--tag-color-10, rgba(@tag-r, @tag-g, @tag-b, 10%)));
+
+    color: var(--tag-text-color, var(--tag-color, @tag-theme));
+  }
+
+  // 形状 shape
+
+  &-shape-normal {
+    // border-radius: @tag-radius-hairline;
+  }
+
+  // 优惠券
+  &-shape-coupon {
+    padding: var(--tag-padding, 0 16px);
+
+    background: radial-gradient(
+          circle at center left,
+          transparent 0 var(--coupon-side-radius),
+          var(--coupon-border-color) var(--coupon-side-radius)
+            calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px)),
+          var(--coupon-background-color) calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px) + 0.5px)
+        )
+        border-box,
+      radial-gradient(
+          circle at center right,
+          transparent 0 var(--coupon-side-radius),
+          var(--coupon-border-color) var(--coupon-side-radius)
+            calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px)),
+          var(--coupon-background-color) calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px) + 0.5px)
+        )
+        border-box;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 100%, 100% 100%;
+    background-size: 50% 100%, 50% 100%;
+
+    mask-image: radial-gradient(
+        circle at center left,
+        transparent 0,
+        transparent var(--coupon-side-radius),
+        #fff calc(var(--coupon-side-radius) + 0.5px)
+      ),
+      radial-gradient(
+        circle at center right,
+        transparent 0,
+        transparent var(--coupon-side-radius),
+        #fff calc(var(--coupon-side-radius) + 0.5px)
+      );
+    mask-size: 50% 100%, 50% 100%;
+    mask-position: 0% 100%, 100% 100%;
+    mask-repeat: no-repeat, no-repeat;
+  }
+
+  &-shape-coupon&-variant-outlined {
+    --coupon-background-color: var(--tag-background-color, transparent);
+    --coupon-border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
+    --coupon-border-width: 0.3px;
+  }
+
+  &-shape-coupon&-variant-contained {
+    --coupon-background-color: var(--tag-background-color, var(--tag-color, @tag-theme));
+    --coupon-border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
+    --coupon-border-width: 1px;
+  }
+
+  &-shape-coupon&-variant-filled {
+    --coupon-background-color: var(--tag-background-color, var(--tag-color-10, rgba(@tag-r, @tag-g, @tag-b, 10%)));
+    --coupon-border-color: var(--tag-background-color, var(--tag-color-10, rgba(@tag-r, @tag-g, @tag-b, 10%)));
+    --coupon-border-width: 1px;
+  }
+
+  &-shape-coupon&-size-small {
+    --coupon-side-radius: 4px;
+    padding: var(--tag-padding, 0 12px);
+  }
+
+  &-shape-coupon&-size-medium {
+    --coupon-side-radius: 5px;
+    padding: var(--tag-padding, 0 14px);
+  }
+
+  &-shape-coupon&-size-big {
+    --coupon-side-radius: 6px;
+    padding: var(--tag-padding, 0 16px);
+  }
+}

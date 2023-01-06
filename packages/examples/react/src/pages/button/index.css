@@ -1,0 +1,13 @@
+.container.button {
+  overflow: visible;
+
+  border-radius: 0;
+
+  background-color: transparent;
+
+  text-align: center;
+}
+
+/* ::part(loading-class) {
+  margin-right: 0;
+} */
