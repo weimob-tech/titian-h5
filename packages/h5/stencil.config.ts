@@ -4,10 +4,23 @@ import { postcss } from '@stencil/postcss';
 import { reactOutputTarget as react } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 import autoprefixer from 'autoprefixer';
+import path from 'path';
+import fs from 'fs-extra';
 // @ts-ignore
 import pxToViewport from 'postcss-px-to-viewport';
 // @ts-ignore
 import px2unitsExtra from 'postcss-px2units-extra';
+
+function copyFiles(from: string, to: string) {
+  return {
+    name: 'copy-files',
+    buildEnd() {
+      const source = path.join(__dirname, from);
+      const target = path.join(__dirname, to);
+      fs.copySync(source, target, { overwrite: true });
+    },
+  };
+}
 
 export const config: Config = {
   namespace: 'titian-h5',
@@ -25,7 +38,7 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      copy: [{ src: 'global/locale', dest: '../../locale' }],
+      // copy: [{ src: 'global/locale', dest: '../../locale' }],
     },
     {
       type: 'dist-custom-elements',
@@ -55,6 +68,7 @@ export const config: Config = {
         }),
       ],
     }),
+    copyFiles('src/global/locale', 'locale'),
   ],
   extras: {
     experimentalImportInjection: true,
