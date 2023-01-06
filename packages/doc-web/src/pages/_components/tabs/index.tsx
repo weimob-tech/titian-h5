@@ -22,22 +22,22 @@ function Tabs() {
     {
       tab: 'React',
       content: `
-      npm install titian-react <br />
+      npm install @titian-design/react <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-react'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
     `,
-      text: `npm i titian-react`,
+      text: `npm i @titian-design/react`,
     },
     {
       tab: 'Vue',
       content: `
-      npm install titian-vue <br />
+      npm install @titian-design/vue <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Vue</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-vue/es/style/index.css'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue/es/style/index.css'</span><br />
       <span style="color: #fff">Vue.</span><span style="color: ${green}">use</span><span style="color: #fff">(Titian);</span>
     `,
-      text: `npm i titian-vue`,
+      text: `npm i @titian-design/vue`,
     },
     // {
     //   tab: 'H5',
