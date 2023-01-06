@@ -15,7 +15,7 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       format,
       sourcemap: true,
       ...(format === 'umd' ? { name: 'TitianH5Vue', inlineDynamicImports: true } : {}),
-      banner: `console.log('%c titian-h5-vue: ${packageJSON.version}', 'background: #222; color: #bada55');`,
+      banner: `console.log('%c @titian-design/vue: ${packageJSON.version}', 'background: #222; color: #bada55');`,
     },
     external: ['vue'],
     plugins: [

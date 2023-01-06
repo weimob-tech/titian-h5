@@ -29,7 +29,7 @@ Titian React 是以 Web Components 为基础的 React 组件库，同时与小�
 npm i @titian-design/react --save
 
 # 通过 yarn 安装
-yarn add titian-h5-react
+yarn add @titian-design/react
 ```
 
 ### 使用
