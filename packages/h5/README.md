@@ -27,7 +27,7 @@
 npm i @titian-design/h5 --save
 
 # 通过 yarn 安装
-yarn add titian-h5
+yarn add @titian-design/h5
 ```
 
 ### 使用

@@ -46,7 +46,7 @@ function Tabs() {
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
     // `,
-    //   text: `npm i titian-h5`
+    //   text: `npm i @titian-design/h5`
     // }
   ];
   const copy = () => {
