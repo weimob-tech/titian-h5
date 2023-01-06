@@ -1,5 +1,5 @@
 import { FC, useRef, useState } from 'react';
-import { TiImage, TiPreview, TiPreviewProps } from 'titian-h5-react';
+import { TiImage, TiPreview, TiPreviewProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 const options: OptionType[] = [

@@ -1,7 +1,7 @@
 import useIsBrowser from '@docusaurus/useIsBrowser';
+import { TiDivider, setupTitianReact } from '@titian-design/react';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { TiDivider, setupTitianReact } from 'titian-h5-react';
 import CellExample from './cell';
 import CheckboxExample from './checkbox';
 import CollapseExample from './collapse';
@@ -35,9 +35,9 @@ function Home() {
   const changeRadius = radius => {
     setStyle({
       ...style,
-      '--capsule-radius-size': `${radius  }px`,
-      '--base-radius-size': `${radius  }px`,
-      '--checkbox-radius': `${radius  }px`,
+      '--capsule-radius-size': `${radius}px`,
+      '--base-radius-size': `${radius}px`,
+      '--checkbox-radius': `${radius}px`,
     });
   };
   return (

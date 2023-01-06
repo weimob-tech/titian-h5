@@ -1,6 +1,6 @@
+import { TiCheckbox } from '@titian-design/react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiCheckbox } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 export default function CheckboxExample(): JSX.Element {

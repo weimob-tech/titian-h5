@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useState } from 'react';
-import { TiImage, TiRadio, TiRadioButton, TiRadioGroup } from 'titian-h5-react';
+import { TiImage, TiRadio, TiRadioButton, TiRadioGroup } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import { addUnit } from '../../util';
 

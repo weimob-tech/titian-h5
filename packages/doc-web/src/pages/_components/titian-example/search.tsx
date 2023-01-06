@@ -1,6 +1,6 @@
+import { TiSearch } from '@titian-design/react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiSearch } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 export default function SearchExample(): JSX.Element {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiButton, TiPopup, TiDatetimePicker, TiDatetimePickerProps } from 'titian-h5-react';
+import { TiButton, TiPopup, TiDatetimePicker, TiDatetimePickerProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 

@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiRate } from 'titian-h5-react';
+import { TiRate } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 
 const options: OptionType[] = [

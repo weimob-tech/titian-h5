@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
-import { TiButton, TiSticky, TiStickyProps } from 'titian-h5-react';
+import { TiButton, TiSticky, TiStickyProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

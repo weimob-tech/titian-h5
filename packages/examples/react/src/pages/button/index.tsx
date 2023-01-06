@@ -1,4 +1,4 @@
-import { TiButton } from 'titian-h5-react';
+import { TiButton } from '@titian-design/react';
 import { useCallback, useState } from 'react';
 import Page, { OptionType } from '../../components/page';
 import './index.css';

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { TiTabs } from 'titian-h5-react';
+import { TiTabs } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 

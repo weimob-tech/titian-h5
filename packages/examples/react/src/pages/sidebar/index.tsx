@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiSidebar, TiSidebarItem } from 'titian-h5-react';
+import { TiSidebar, TiSidebarItem } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 

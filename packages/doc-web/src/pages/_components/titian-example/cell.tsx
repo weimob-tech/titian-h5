@@ -1,6 +1,6 @@
+import { TiButton, TiCell, TiSwitch, TiImage, TiIcon } from '@titian-design/react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiButton, TiCell, TiSwitch, TiImage, TiIcon } from 'titian-h5-react';
 
 import styles from './index.module.scss';
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiCalendar, TiButton } from 'titian-h5-react';
+import { TiCalendar, TiButton } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface IAttrsProps {

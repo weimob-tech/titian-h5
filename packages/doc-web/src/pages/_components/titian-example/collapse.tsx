@@ -1,7 +1,7 @@
 import { UserContext } from '@site/src/pages/index';
+import { TiCollapse, TiCollapseItem, TiTextarea } from '@titian-design/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
-import { TiCollapse, TiCollapseItem, TiTextarea } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 export default function CollapseExample(): JSX.Element {

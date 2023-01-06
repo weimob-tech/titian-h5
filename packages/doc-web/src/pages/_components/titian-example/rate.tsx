@@ -1,6 +1,6 @@
+import { TiRate } from '@titian-design/react';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { TiRate } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 export default function RateExample(): JSX.Element {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Page, { OptionType } from '../../components/page';
-import { TiLoading, TiLoadingProps } from 'titian-h5-react';
+import { TiLoading, TiLoadingProps } from '@titian-design/react';
 
 const options: OptionType[] = [
   {

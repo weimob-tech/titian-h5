@@ -1,4 +1,4 @@
-import { TiInput, TiInputProps, TiIcon, TiImage } from 'titian-h5-react';
+import { TiInput, TiInputProps, TiIcon, TiImage } from '@titian-design/react';
 import { useState } from 'react';
 import Page, { OptionType } from '../../components/page';
 import './index.css';

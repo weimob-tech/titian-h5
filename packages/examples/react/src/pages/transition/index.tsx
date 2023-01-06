@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { TiTransition, TiTransitionProps } from 'titian-h5-react';
+import { TiTransition, TiTransitionProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.css';

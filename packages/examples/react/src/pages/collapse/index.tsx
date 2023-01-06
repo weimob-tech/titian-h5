@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiCollapse } from 'titian-h5-react';
+import { TiCollapse } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface CollapseAttrsProps {

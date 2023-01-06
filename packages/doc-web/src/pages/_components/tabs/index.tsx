@@ -1,7 +1,7 @@
+import { TiDivider } from '@titian-design/react';
 import ClipboardJS from 'clipboard';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { TiDivider } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 function Tabs() {

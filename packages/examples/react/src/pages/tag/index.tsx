@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { TiTag } from 'titian-h5-react';
+import { TiTag } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface TagAttrsProps {

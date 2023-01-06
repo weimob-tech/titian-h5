@@ -1,5 +1,15 @@
 import { useCallback, useState } from 'react';
-import { TiCell, TiIcon, TiCellProps, TiDivider, TiCheckbox, TiTag, TiSwitch, TiImage, TiBadge } from 'titian-h5-react';
+import {
+  TiCell,
+  TiIcon,
+  TiCellProps,
+  TiDivider,
+  TiCheckbox,
+  TiTag,
+  TiSwitch,
+  TiImage,
+  TiBadge,
+} from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import { addUnit } from '../../util';
 

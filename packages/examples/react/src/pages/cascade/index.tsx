@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { TiCascade, TiPopup, TiButton } from 'titian-h5-react';
+import { TiCascade, TiPopup, TiButton } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import city from './city';
 
