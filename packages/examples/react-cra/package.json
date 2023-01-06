@@ -2,8 +2,8 @@
   "name": "example-h5-react-cra",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "homepage": "https://github.com/weimob-tech/titian-h5/blob/master/readme.md",
+  "license": "MIT",
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
@@ -26,7 +26,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "titian-h5-react": "workspace:0.1.0",
+    "titian-h5-react": "workspace:0.1.2",
     "typescript": "^4.6.3",
     "web-vitals": "^2.1.4"
   },
