@@ -22,17 +22,17 @@
     "release": "titian-cli release",
     "start": "run-p start:h5 start:react start:eg:react",
     "start-vue": "run-p start:h5 start:vue start:eg:vue",
-    "start:h5": "pnpm --filter titian-h5 run start",
-    "start:react": "pnpm --filter titian-h5-react run start",
-    "start:vue": "pnpm --filter titian-h5-vue run start",
+    "start:h5": "pnpm --filter @titian-design/h5 run start",
+    "start:react": "pnpm --filter @titian-design/react run start",
+    "start:vue": "pnpm --filter @titian-design/vue run start",
     "start:docs": "env-cmd -f ./.env pnpm --filter titian-doc start",
     "build": "pnpm run build:h5 && pnpm run build:react && pnpm run build:vue",
     "build:lint": "pnpm --filter @titian-design/eslint-plugin build",
     "build:cli": "pnpm --filter @titian-design/cli build",
     "build:compiler": "pnpm --filter @titian-design/compiler build",
-    "build:h5": "pnpm --filter titian-h5 build",
-    "build:react": "pnpm --filter titian-h5-react build",
-    "build:vue": "pnpm --filter titian-h5-vue build",
+    "build:h5": "pnpm --filter @titian-design/h5 build",
+    "build:react": "pnpm --filter @titian-design/react build",
+    "build:vue": "pnpm --filter @titian-design/vue build",
     "build:docs": "pnpm --filter titian-doc build",
     "start:eg:h5": "pnpm --filter example-h5 run start",
     "start:eg:react": "pnpm --filter example-h5-react run start",
@@ -40,7 +40,7 @@
     "build:eg:h5": "pnpm --filter example-h5 build",
     "build:eg:react": "pnpm --filter example-h5-react build",
     "build:eg:vue": "pnpm --filter example-h5-vue build",
-    "test:h5": "pnpm --filter titian-h5 run test"
+    "test:h5": "pnpm --filter @titian-design/h5 run test"
   },
   "config": {
     "commitizen": {

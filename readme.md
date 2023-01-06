@@ -38,7 +38,7 @@ Vue 组件包代码
 第一种方式：在根目录创建
 
 ```bash
-pnpm --filter titian-h5 run generate
+pnpm --filter @titian-design/h5 run generate
 ```
 
 第二种方式：在 `packages/h5` 目录下创建

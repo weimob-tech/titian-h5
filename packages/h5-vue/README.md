@@ -20,16 +20,16 @@
 
 源自微盟移动端核心业务，我们的目标是通过 Titian 组件库，帮助广大开发者，并不断的完善与努力打造良好的移动端产品体验。
 
-Titian Vue 是以 Web Components 为基础的 Vue 组件库，同时与小程序组件库的 API 基本一致，打造一致的开发体验。
+Titian Vue 是以 Web Components 为基础的 Vue 3 组件库，同时与小程序组件库的 API 基本一致，打造一致的开发体验。
 
 ### 安装
 
 ```shell
 # 通过 npm 安装
-npm i titian-mp --save
+npm i @titian-design/vue --save
 
 # 通过 yarn 安装
-yarn add titian-mp
+yarn add @titian-design/vue
 ```
 
 ### 使用

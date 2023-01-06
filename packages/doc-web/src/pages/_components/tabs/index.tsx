@@ -12,12 +12,12 @@ function Tabs() {
   const menus = [
     {
       tab: 'MiniProgram',
-      content: `npm install titian-mp <br />
+      content: `npm install @titian-design/weapp <br />
       <span style="color: #fff">"usingComponents": {</span><br />
         <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"titian-mp/button/index"</span><br />
       <span style="color: #fff">}</span><br />
     `,
-      text: `npm i titian-mp\nimport Vue from 'vue'`,
+      text: `npm i @titian-design/weapp \nimport Vue from 'vue'`,
     },
     {
       tab: 'React',
@@ -42,7 +42,7 @@ function Tabs() {
     // {
     //   tab: 'H5',
     //   content: `
-    //   npm install titian-h5-react <br />
+    //   npm install @titian-design/react <br />
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-h5-react'</span><br />
     // `,

@@ -24,7 +24,7 @@
 
 ```shell
 # 通过 npm 安装
-npm i titian-h5 --save
+npm i @titian-design/h5 --save
 
 # 通过 yarn 安装
 yarn add titian-h5
