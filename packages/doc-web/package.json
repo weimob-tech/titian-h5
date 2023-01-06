@@ -2,6 +2,12 @@
   "name": "titian-doc",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/doc-web"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "docusaurus build",
     "clear": "docusaurus clear",
@@ -13,12 +19,6 @@
     "typecheck": "tsc",
     "write-heading-ids": "docusaurus write-heading-ids",
     "write-translations": "docusaurus write-translations"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/weimob-tech/titian-h5.git",
-    "directory": "packages/doc-web"
   },
   "browserslist": {
     "production": [
@@ -49,7 +49,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "6.4.2",
     "sass": "^1.55.0",
-    "titian-h5-react": "workspace:0.1.0"
+    "titian-h5-react": "workspace:0.1.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",
