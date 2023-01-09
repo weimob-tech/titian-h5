@@ -25,13 +25,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-progress": "titian-mp/progress/index",
+    "ti-progress": "@titian-design/weapp/progress/index",
     "ti-circle-progress": "titan-weapp/circle-progress/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-progress": "platform://titian-mp/ti-progress",
-    "ti-circle-progress": "platform://titian-mp/ti-circle-progress",
+    "ti-progress": "platform://titian-weapp/ti-progress",
+    "ti-circle-progress": "platform://titian-weapp/ti-circle-progress",
   }
 }
 ```

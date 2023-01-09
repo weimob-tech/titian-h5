@@ -25,15 +25,15 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-checkbox-group": "titian-mp/checkbox-group/index",
-    "ti-checkbox-button": "titian-mp/checkbox-button/index",
-    "ti-checkbox": "titian-mp/checkbox/index"
+    "ti-checkbox-group": "@titian-design/weapp/checkbox-group/index",
+    "ti-checkbox-button": "@titian-design/weapp/checkbox-button/index",
+    "ti-checkbox": "@titian-design/weapp/checkbox/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-checkbox-group": "platform://titian-mp/ti-checkbox-group",
-    "ti-checkbox-button": "platform://titian-mp/ti-checkbox-button",
-    "ti-checkbox": "platform://titian-mp/ti-checkbox"
+    "ti-checkbox-group": "platform://titian-weapp/ti-checkbox-group",
+    "ti-checkbox-button": "platform://titian-weapp/ti-checkbox-button",
+    "ti-checkbox": "platform://titian-weapp/ti-checkbox"
   }
 }
 ```

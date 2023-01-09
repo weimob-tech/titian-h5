@@ -23,13 +23,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-row": "titian-mp/row/index",
-    "ti-col": "titian-mp/col/index"
+    "ti-row": "@titian-design/weapp/row/index",
+    "ti-col": "@titian-design/weapp/col/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-row": "platform://titian-mp/ti-row",
-    "ti-col": "platform://titian-mp/ti-col"
+    "ti-row": "platform://titian-weapp/ti-row",
+    "ti-col": "platform://titian-weapp/ti-col"
   }
 }
 ```

@@ -16,11 +16,11 @@ side_iframe_path: "#/notice-bar"
 {
   // 原生小程序
   "usingComponents": {
-    "ti-notice-bar": "titian-mp/notice-bar/index"
+    "ti-notice-bar": "@titian-design/weapp/notice-bar/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-notice-bar": "platform://titian-mp/ti-notice-bar"
+    "ti-notice-bar": "platform://titian-weapp/ti-notice-bar"
   }
 }
 ```

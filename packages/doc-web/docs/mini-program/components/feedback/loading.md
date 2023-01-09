@@ -22,12 +22,12 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-loading": "titian-mp/loading/index"
+    "ti-loading": "@titian-design/weapp/loading/index"
   },
 
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-loading": "platform://titian-mp/ti-loading"
+    "ti-loading": "platform://titian-weapp/ti-loading"
   }
 }
 ```

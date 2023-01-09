@@ -21,11 +21,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
    // 原生小程序
   "usingComponents": {
-    "ti-tooltip": "titian-mp/tooltip/index"
+    "ti-tooltip": "@titian-design/weapp/tooltip/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-tooltip": "platform://titian-mp/ti-tooltip"
+    "ti-tooltip": "platform://titian-weapp/ti-tooltip"
   }
 }
 ```

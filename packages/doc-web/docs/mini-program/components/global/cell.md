@@ -29,7 +29,7 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-cell": "platform://titian-mp/ti-cell"
+    "ti-cell": "platform://titian-weapp/ti-cell"
   }
 }
 ```

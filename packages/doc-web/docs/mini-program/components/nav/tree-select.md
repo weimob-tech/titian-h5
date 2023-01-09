@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-tree-select": "titian-mp/tree-select/index"
+    "ti-tree-select": "@titian-design/weapp/tree-select/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-tree-select": "platform://titian-mp/ti-tree-select"
+    "ti-tree-select": "platform://titian-weapp/ti-tree-select"
   }
 }
 ```

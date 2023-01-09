@@ -20,11 +20,11 @@ import IconCollection from '@site/src/components/iconCollection';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-icon": "titian-mp/icon/index"
+    "ti-icon": "@titian-design/weapp/icon/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-icon": "platform://titian-mp/ti-icon"
+    "ti-icon": "platform://titian-weapp/ti-icon"
   }
 }
 ```

@@ -17,11 +17,11 @@ pagination_next: null
 {
   // 原生小程序
   "usingComponents": {
-    "ti-sku": "titian-mp/sku/index"
+    "ti-sku": "@titian-design/weapp/sku/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-sidebar": "platform://titian-mp/ti-sku"
+    "ti-sidebar": "platform://titian-weapp/ti-sku"
   }
 }
 ```

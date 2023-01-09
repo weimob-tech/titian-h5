@@ -21,11 +21,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-textarea": "titian-mp/textarea/index"
+    "ti-textarea": "@titian-design/weapp/textarea/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-textarea": "platform://titian-mp/ti-textarea"
+    "ti-textarea": "platform://titian-weapp/ti-textarea"
   }
 }
 ```

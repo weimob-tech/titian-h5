@@ -30,11 +30,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-uploader": "titian-mp/uploader/index"
+    "ti-uploader": "@titian-design/weapp/uploader/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-uploader": "platform://titian-mp/ti-uploader"
+    "ti-uploader": "platform://titian-weapp/ti-uploader"
   }
 }
 ```

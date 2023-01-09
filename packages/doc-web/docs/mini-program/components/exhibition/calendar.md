@@ -26,7 +26,7 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-calendar": "platform://titian-mp/ti-calendar"
+    "ti-calendar": "platform://titian-weapp/ti-calendar"
   }
 }
 ```

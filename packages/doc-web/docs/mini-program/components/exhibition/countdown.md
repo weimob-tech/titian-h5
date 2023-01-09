@@ -18,11 +18,11 @@ import TabItem from '@theme/TabItem';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-countdown": "titian-mp/countdown/index"
+    "ti-countdown": "@titian-design/weapp/countdown/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-countdown": "platform://titian-mp/ti-countdown"
+    "ti-countdown": "platform://titian-weapp/ti-countdown"
   }
 }
 ```

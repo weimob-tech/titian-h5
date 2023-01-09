@@ -18,11 +18,11 @@ side_iframe_path: '#/divider'
 {
   // 原生小程序
   "usingComponents": {
-    "ti-divider": "titian-mp/divider/index"
+    "ti-divider": "@titian-design/weapp/divider/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-divider": "platform://titian-mp/ti-divider"
+    "ti-divider": "platform://titian-weapp/ti-divider"
   }
 }
 ```

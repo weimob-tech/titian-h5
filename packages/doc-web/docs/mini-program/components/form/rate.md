@@ -25,11 +25,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-rate": "titian-mp/rate/index"
+    "ti-rate": "@titian-design/weapp/rate/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-rate": "platform://titian-mp/ti-rate"
+    "ti-rate": "platform://titian-weapp/ti-rate"
   }
 }
 ```

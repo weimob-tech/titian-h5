@@ -15,11 +15,11 @@ side_iframe_path: "#/search"
 {
   // 原生小程序
   "usingComponents": {
-    "ti-search": "titian-mp/search/index"
+    "ti-search": "@titian-design/weapp/search/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-search": "platform://titian-mp/ti-search"
+    "ti-search": "platform://titian-weapp/ti-search"
   }
 }
 ```

@@ -14,7 +14,7 @@ function Tabs() {
       tab: 'MiniProgram',
       content: `npm install @titian-design/weapp <br />
       <span style="color: #fff">"usingComponents": {</span><br />
-        <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"titian-mp/button/index"</span><br />
+        <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"@titian-design/weapp/button/index"</span><br />
       <span style="color: #fff">}</span><br />
     `,
       text: `npm i @titian-design/weapp \nimport Vue from 'vue'`,

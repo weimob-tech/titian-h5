@@ -15,11 +15,11 @@ side_iframe_path: "#/input-number"
 {
   // 原生小程序
   "usingComponents": {
-    "ti-input-number": "titian-mp/input-number/index"
+    "ti-input-number": "@titian-design/weapp/input-number/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-input-number": "platform://titian-mp/ti-input-number"
+    "ti-input-number": "platform://titian-weapp/ti-input-number"
   }
 }
 ```
