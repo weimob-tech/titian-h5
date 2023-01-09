@@ -22,7 +22,7 @@
     "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w"
   },
   "dependencies": {
-    "@titian-design/h5": "workspace:0.1.2"
+    "@titian-design/h5": "workspace:0.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
