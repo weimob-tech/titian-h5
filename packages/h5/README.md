@@ -33,7 +33,7 @@ yarn add @titian-design/h5
 ### 使用
 
 ```typescript
-import { applyPolyfills, defineCustomElements } from 'titian-h5/loader';
+import { applyPolyfills, defineCustomElements } from '@titian-design/h5/loader';
 
 const App = () => (
   <div className="App">

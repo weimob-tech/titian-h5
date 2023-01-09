@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-import { applyPolyfills, defineCustomElements, JSX as LocalJSX } from 'titian-h5/loader';
+import { applyPolyfills, defineCustomElements, JSX as LocalJSX } from '@titian-design/h5/loader';
 import { HTMLAttributes } from 'react';
 
 type StencilToReact<T> = {

@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 
-import { applyPolyfills, defineCustomElements, JSX as LocalJSX } from 'titian-h5/loader';
+import { applyPolyfills, defineCustomElements, JSX as LocalJSX } from '@titian-design/h5/loader';
 import { HTMLAttributes } from 'react';
 
 type StencilToReact<T> = {

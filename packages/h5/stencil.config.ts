@@ -1,10 +1,10 @@
+import path from 'path';
 import { Config } from '@stencil/core';
 import { less } from '@stencil/less';
 import { postcss } from '@stencil/postcss';
 import { reactOutputTarget as react } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 import autoprefixer from 'autoprefixer';
-import path from 'path';
 import fs from 'fs-extra';
 // @ts-ignore
 import pxToViewport from 'postcss-px-to-viewport';
@@ -23,15 +23,15 @@ function copyFiles(from: string, to: string) {
 }
 
 export const config: Config = {
-  namespace: 'titian-h5',
+  namespace: 'titian-design',
   outputTargets: [
     react({
-      componentCorePackage: 'titian-h5',
+      componentCorePackage: '@titian-design/h5',
       proxiesFile: '../h5-react/src/components.ts',
       includeDefineCustomElements: true,
     }),
     vueOutputTarget({
-      componentCorePackage: 'titian-h5', // i.e.: stencil-library
+      componentCorePackage: '@titian-design/h5', // i.e.: stencil-library
       proxiesFile: '../h5-vue/src/components.ts',
       includeDefineCustomElements: true,
     }),

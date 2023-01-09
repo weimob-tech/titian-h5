@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { applyPolyfills, defineCustomElements } from 'titian-h5/loader';
+import { applyPolyfills, defineCustomElements } from '@titian-design/h5/loader';
 import { routes } from './router';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
