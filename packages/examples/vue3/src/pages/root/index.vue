@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TiCellGroup, TiCell } from 'titian-h5-vue';
+import { TiCellGroup, TiCell } from '@titian-design/vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 

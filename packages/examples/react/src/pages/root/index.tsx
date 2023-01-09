@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Pages } from '../../router';
-import { TiBackTop, TiCell, TiCellGroup, TiSafeArea } from 'titian-h5-react';
+import { TiBackTop, TiCell, TiCellGroup, TiSafeArea } from '@titian-design/react';
 
 import './index.less';
 

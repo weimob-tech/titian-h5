@@ -24,7 +24,7 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-switch": "platform://titian-mp/ti-switch"
+    "ti-switch": "platform://titian-weapp/ti-switch"
   }
 }
 ```

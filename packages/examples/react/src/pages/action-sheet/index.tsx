@@ -1,6 +1,6 @@
 import React from 'react';
 import Page, { OptionType } from '../../components/page';
-import { TiActionSheet, TiActionSheetProps, TiButton } from 'titian-h5-react';
+import { TiActionSheet, TiActionSheetProps, TiButton } from '@titian-design/react';
 
 const options: OptionType[] = [
   {

@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
-import { TiDropdownItemProps, TiDropdownMenuProps, TiDropdownMenu, TiDropdownItem } from 'titian-h5-vue';
+import { TiDropdownItemProps, TiDropdownMenuProps, TiDropdownMenu, TiDropdownItem } from '@titian-design/vue';
 import { ref } from 'vue';
 
 const options: IOptionType[] = [

@@ -1,6 +1,6 @@
+import { TiDivider } from '@titian-design/react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiDivider } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 export default function DialogExample(): JSX.Element {

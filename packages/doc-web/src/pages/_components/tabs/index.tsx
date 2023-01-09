@@ -1,7 +1,7 @@
+import { TiDivider } from '@titian-design/react';
 import ClipboardJS from 'clipboard';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { TiDivider } from 'titian-h5-react';
 import styles from './index.module.scss';
 
 function Tabs() {
@@ -12,41 +12,41 @@ function Tabs() {
   const menus = [
     {
       tab: 'MiniProgram',
-      content: `npm install titian-mp <br />
+      content: `npm install @titian-design/weapp <br />
       <span style="color: #fff">"usingComponents": {</span><br />
-        <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"titian-mp/button/index"</span><br />
+        <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"@titian-design/weapp/button/index"</span><br />
       <span style="color: #fff">}</span><br />
     `,
-      text: `npm i titian-mp\nimport Vue from 'vue'`,
+      text: `npm i @titian-design/weapp \nimport Vue from 'vue'`,
     },
     {
       tab: 'React',
       content: `
-      npm install titian-react <br />
+      npm install @titian-design/react <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-react'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
     `,
-      text: `npm i titian-react`,
+      text: `npm i @titian-design/react`,
     },
     {
       tab: 'Vue',
       content: `
-      npm install titian-vue <br />
+      npm install @titian-design/vue <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Vue</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-vue/es/style/index.css'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue/es/style/index.css'</span><br />
       <span style="color: #fff">Vue.</span><span style="color: ${green}">use</span><span style="color: #fff">(Titian);</span>
     `,
-      text: `npm i titian-vue`,
+      text: `npm i @titian-design/vue`,
     },
     // {
     //   tab: 'H5',
     //   content: `
-    //   npm install titian-h5-react <br />
+    //   npm install @titian-design/react <br />
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'titian-h5-react'</span><br />
+    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
     // `,
-    //   text: `npm i titian-h5`
+    //   text: `npm i @titian-design/h5`
     // }
   ];
   const copy = () => {

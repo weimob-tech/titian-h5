@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSwiper, TiSwiperItem } from 'titian-h5-vue'
+import { TiSwiper, TiSwiperItem } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -37,7 +37,7 @@ import { TiSwiper, TiSwiperItem } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSwiper, TiSwiperItem, TiImage } from 'titian-h5-vue';
+import { TiSwiper, TiSwiperItem, TiImage } from '@titian-design/vue';
 
 const images = [
     "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png",
@@ -64,7 +64,7 @@ const images = [
 </template>
 
 <script lang="ts" setup>
-import { TiSwiper, TiSwiperItem, TiImage } from 'titian-h5-vue';
+import { TiSwiper, TiSwiperItem, TiImage } from '@titian-design/vue';
 
 const images = [
     "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png",
@@ -90,7 +90,7 @@ const images = [
 </template>
 
 <script lang="ts" setup>
-import { TiSwiper, TiSwiperItem, TiImage } from 'titian-h5-vue';
+import { TiSwiper, TiSwiperItem, TiImage } from '@titian-design/vue';
 
 const images = [
     "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png",
@@ -117,7 +117,7 @@ const images = [
 </template>
 
 <script lang="ts" setup>
-import { TiSwiper, TiSwiperItem, TiImage } from 'titian-h5-vue';
+import { TiSwiper, TiSwiperItem, TiImage } from '@titian-design/vue';
 
 const images = [
     "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png",

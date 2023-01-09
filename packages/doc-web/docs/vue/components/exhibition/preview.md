@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript jsx showLineNumbers
-import { TiPreview } from 'titian-h5-vue';
+import { TiPreview } from '@titian-design/vue';
 ```
 
 ## 基本使用方式
@@ -33,7 +33,7 @@ import { TiPreview } from 'titian-h5-vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPreview, TiButton } from "titian-h5-vue";
+import { TiPreview, TiButton } from '@titian-design/vue';
 
 const previewPreview = ref<HTMLElement | null>(null);
 
@@ -61,7 +61,7 @@ const handlePreviewImage = async () => {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPreview, TiButton } from "titian-h5-vue";
+import { TiPreview, TiButton } from '@titian-design/vue';
 
 const previewPreview = ref<HTMLElement | null>(null);
 

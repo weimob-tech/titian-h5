@@ -14,7 +14,7 @@ side_iframe_path: '#/image'
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiImage } from 'titian-h5-react'
+import { TiImage } from '@titian-design/react'
 ```
 
 ## 用法示例

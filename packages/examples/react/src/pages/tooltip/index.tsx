@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiTooltip } from 'titian-h5-react';
+import { TiTooltip } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface TooltipAttrsProps {

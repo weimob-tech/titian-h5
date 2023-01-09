@@ -15,7 +15,7 @@ side_iframe_path: '#/divider'
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiDivider } from 'titian-h5-react'
+import { TiDivider } from '@titian-design/react'
 ```
 
 ## 用法示例

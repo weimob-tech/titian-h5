@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript tsx showLineNumbers
-import { BackTop } from 'titian-h5-react';
+import { BackTop } from '@titian-design/react';
 ```
 
 ## 基本用法

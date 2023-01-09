@@ -17,7 +17,7 @@
   </CustomPage>
 </template>
 <script setup lang="ts">
-import { TiGridItemProps, TiGridProps, TiGridItem, TiGrid } from 'titian-h5-vue';
+import { TiGridItemProps, TiGridProps, TiGridItem, TiGrid } from '@titian-design/vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

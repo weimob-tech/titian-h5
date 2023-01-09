@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiCol, TiRow, TiRowProps, TiColProps } from 'titian-h5-react';
+import { TiCol, TiRow, TiRowProps, TiColProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.css';

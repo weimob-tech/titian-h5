@@ -13,7 +13,7 @@ side_iframe_path: "#/sku"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSku } from 'titian-h5-vue'
+import { TiSku } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -22,7 +22,7 @@ import { TiSku } from 'titian-h5-vue'
 
 ```tsx showLineNumbers
 import type { FC } from 'react';
-import { TiSku } from 'titian-h5-vue'
+import { TiSku } from '@titian-design/vue'
 import { mockSkuData } from './mockData.js';
 
 const App:FC = () => {

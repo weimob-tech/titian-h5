@@ -172,6 +172,7 @@ importers:
       '@mdx-js/react': ^1.6.22
       '@splinetool/react-spline': ^2.2.3
       '@splinetool/runtime': ^0.9.132
+      '@titian-design/react': workspace:0.1.0
       '@tsconfig/docusaurus': ^1.0.6
       '@types/react': ^18.0.21
       '@types/react-dom': ^18.0.6
@@ -185,7 +186,6 @@ importers:
       react-router-dom: 6.4.2
       sass: ^1.55.0
       sass-loader: ^13.1.0
-      titian-h5-react: workspace:0.1.0
     dependencies:
       '@docusaurus/core': 2.2.0_zneentkx4scexj4pzosurqq55y
       '@docusaurus/preset-classic': 2.2.0_yqqarjzm4nnoetch7z7xn2dea4
@@ -195,6 +195,7 @@ importers:
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@splinetool/react-spline': 2.2.5_iwpzlrxnnsa4niioq6kzxi7gly
       '@splinetool/runtime': 0.9.155
+      '@titian-design/react': link:../h5-react
       clipboard: 2.0.11
       clsx: 1.2.1
       docusaurus-plugin-sass: 0.2.2_2vtlv7xam7t3slvexkool6um3a
@@ -203,7 +204,6 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       react-router-dom: 6.4.2_sfoxds7t5ydpegc3knd667wn6m
       sass: 1.56.2
-      titian-h5-react: link:../h5-react
     devDependencies:
       '@docusaurus/module-type-aliases': 2.1.0_sfoxds7t5ydpegc3knd667wn6m
       '@docusaurus/types': 2.2.0_sfoxds7t5ydpegc3knd667wn6m
@@ -256,6 +256,7 @@ importers:
 
   packages/examples/h5:
     specifiers:
+      '@titian-design/h5': workspace:0.1.0
       '@types/react': ^18.0.0
       '@types/react-dom': ^18.0.0
       '@vitejs/plugin-react': ^1.3.0
@@ -264,15 +265,14 @@ importers:
       react: ^18.0.0
       react-dom: ^18.0.0
       react-router-dom: ^6.3.0
-      titian-h5: workspace:0.1.0
       typescript: ^4.6.3
       vite: ^2.9.5
     dependencies:
+      '@titian-design/h5': link:../../h5
       normalize.css: 8.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-router-dom: 6.4.5_biqbaboplfbrettd7655fr4n2y
-      titian-h5: link:../../h5
     devDependencies:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.9
@@ -283,19 +283,19 @@ importers:
 
   packages/examples/h5-cra:
     specifiers:
+      '@titian-design/h5': workspace:0.1.0
       '@types/react': ^18.0.7
       '@types/react-dom': ^18.0.0
       react: ^18.0.0
       react-dom: ^18.0.0
       react-scripts: 5.0.1
-      titian-h5: workspace:0.1.0
       typescript: ^4.6.3
       web-vitals: ^2.1.4
     dependencies:
+      '@titian-design/h5': link:../../h5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_o77wnou4wwnegu5woljtklrzru
-      titian-h5: link:../../h5
       typescript: 4.9.4
       web-vitals: 2.1.4
     devDependencies:
@@ -304,6 +304,7 @@ importers:
 
   packages/examples/h5-next-ssr:
     specifiers:
+      '@titian-design/h5': workspace:0.1.0
       '@types/node': 17.0.29
       '@types/react': 18.0.8
       '@types/react-dom': ^18.0.0
@@ -312,13 +313,12 @@ importers:
       next: 12.1.5
       react: ^18.0.0
       react-dom: ^18.0.0
-      titian-h5: workspace:0.1.0
       typescript: ^4.6.3
     dependencies:
+      '@titian-design/h5': link:../../h5
       next: 12.1.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      titian-h5: link:../../h5
     devDependencies:
       '@types/node': 17.0.29
       '@types/react': 18.0.8
@@ -329,6 +329,7 @@ importers:
 
   packages/examples/react:
     specifiers:
+      '@titian-design/react': workspace:0.1.0
       '@titian-design/touchemulator': workspace:1.0.0
       '@types/react': ^18.0.0
       '@types/react-dom': ^18.0.0
@@ -339,17 +340,16 @@ importers:
       react: ^18.0.0
       react-dom: ^18.0.0
       react-router-dom: ^6.3.0
-      titian-h5-react: workspace:0.1.0
       typescript: ^4.6.3
       vite: ^2.9.5
     dependencies:
+      '@titian-design/react': link:../../h5-react
       '@titian-design/touchemulator': link:../../touch-emulator
       less: 4.1.3
       normalize.css: 8.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-router-dom: 6.4.5_biqbaboplfbrettd7655fr4n2y
-      titian-h5-react: link:../../h5-react
     devDependencies:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.9
@@ -360,19 +360,19 @@ importers:
 
   packages/examples/react-cra:
     specifiers:
+      '@titian-design/react': workspace:0.1.0
       '@types/react': ^18.0.7
       '@types/react-dom': ^18.0.0
       react: ^18.0.0
       react-dom: ^18.0.0
       react-scripts: 5.0.1
-      titian-h5-react: workspace:0.1.0
       typescript: ^4.6.3
       web-vitals: ^2.1.4
     dependencies:
+      '@titian-design/react': link:../../h5-react
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_o77wnou4wwnegu5woljtklrzru
-      titian-h5-react: link:../../h5-react
       typescript: 4.9.4
       web-vitals: 2.1.4
     devDependencies:
@@ -381,6 +381,7 @@ importers:
 
   packages/examples/react-next-ssr:
     specifiers:
+      '@titian-design/react': workspace:0.1.0
       '@types/node': 17.0.29
       '@types/react': 18.0.8
       '@types/react-dom': ^18.0.0
@@ -389,13 +390,12 @@ importers:
       next: 12.1.5
       react: ^18.0.0
       react-dom: ^18.0.0
-      titian-h5-react: workspace:0.1.0
       typescript: ^4.6.3
     dependencies:
+      '@titian-design/react': link:../../h5-react
       next: 12.1.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      titian-h5-react: link:../../h5-react
     devDependencies:
       '@types/node': 17.0.29
       '@types/react': 18.0.8
@@ -406,20 +406,20 @@ importers:
 
   packages/examples/vue3:
     specifiers:
+      '@titian-design/vue': workspace:0.1.0
       '@vitejs/plugin-vue': ^3.1.0
       less: ^4.1.3
       normalize.css: ^8.0.1
       postcss-px-to-viewport: ^1.1.1
-      titian-h5-vue: workspace:0.1.0
       typescript: ^4.6.4
       vite: ^3.1.0
       vue: ^3.2.37
       vue-router: ^4.1.2
       vue-tsc: ^0.40.4
     dependencies:
+      '@titian-design/vue': link:../../h5-vue
       less: 4.1.3
       normalize.css: 8.0.1
-      titian-h5-vue: link:../../h5-vue
       vue: 3.2.45
       vue-router: 4.1.6_vue@3.2.45
     devDependencies:
@@ -440,6 +440,7 @@ importers:
       '@types/autoprefixer': ^10.2.0
       '@types/jest': ^27.0.3
       autoprefixer: ^10.4.7
+      fs-extra: ^10.1.0
       jest: ^27.4.5
       jest-cli: ^27.4.5
       postcss: ^8.1.0
@@ -459,6 +460,7 @@ importers:
       '@types/autoprefixer': 10.2.0_postcss@8.4.20
       '@types/jest': 27.5.2
       autoprefixer: 10.4.13_postcss@8.4.20
+      fs-extra: 10.1.0
       jest: 27.5.1
       jest-cli: 27.5.1
       postcss: 8.4.20
@@ -473,6 +475,7 @@ importers:
       '@rollup/plugin-commonjs': ^22.0.0
       '@rollup/plugin-node-resolve': ^13.3.0
       '@rollup/plugin-typescript': ^8.3.2
+      '@titian-design/h5': workspace:0.1.0
       '@types/lodash-es': ^4.14.182
       '@types/react': ^18.0.9
       '@types/react-dom': ^18.0.0
@@ -482,11 +485,10 @@ importers:
       react-dom: ^18.0.0
       rimraf: ^3.0.2
       rollup: ^2.72.0
-      titian-h5: workspace:0.1.0
       tslib: ^2.4.0
       typescript: ^4.5.5
     dependencies:
-      titian-h5: link:../h5
+      '@titian-design/h5': link:../h5
     devDependencies:
       '@rollup/plugin-commonjs': 22.0.2_rollup@2.79.1
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
@@ -508,16 +510,16 @@ importers:
       '@rollup/plugin-commonjs': ^22.0.0
       '@rollup/plugin-node-resolve': ^13.3.0
       '@rollup/plugin-typescript': ^8.3.2
+      '@titian-design/h5': workspace:0.1.0
       '@vue/tsconfig': ^0.1.3
       rimraf: ^3.0.2
       rollup: ^2.79.0
       rollup-plugin-dts: ^4.2.1
-      titian-h5: workspace:0.1.0
       tslib: ^2.4.0
       typescript: ^4.8.3
       vue: ^3.2.37
     dependencies:
-      titian-h5: link:../h5
+      '@titian-design/h5': link:../h5
     devDependencies:
       '@rollup/plugin-commonjs': 22.0.2_rollup@2.79.1
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
@@ -2844,7 +2846,7 @@ packages:
     dev: false
 
   /@docusaurus/react-loadable/5.5.2_react@17.0.2:
-    resolution: {integrity: sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==, tarball: http://npm.weimob.com/@docusaurus%2freact-loadable/-/react-loadable-5.5.2.tgz}
+    resolution: {integrity: sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==}
     peerDependencies:
       react: '*'
     dependencies:
@@ -7027,7 +7029,7 @@ packages:
       sprintf-js: 1.0.3
 
   /argparse/2.0.1:
-    resolution: {integrity: sha1-JG9Q88p4oyQPbJl+ipvR6sSeSzg=}
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
   /aria-query/4.2.2:
     resolution: {integrity: sha1-DSymyazrVriXfp/tau1+FbvS+Ds=}
@@ -11226,7 +11228,6 @@ packages:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
       universalify: 2.0.0
-    dev: false
 
   /fs-extra/7.0.1:
     resolution: {integrity: sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=}
@@ -13968,7 +13969,7 @@ packages:
       mime-db: 1.52.0
 
   /mime/1.6.0:
-    resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=}
+    resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
     hasBin: true
 

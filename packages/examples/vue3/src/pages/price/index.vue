@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiPrice } from 'titian-h5-vue';
+import { TiPrice } from '@titian-design/vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

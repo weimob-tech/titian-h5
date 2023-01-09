@@ -12,7 +12,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSwitch } from 'titian-h5-vue';
+import { TiSwitch } from '@titian-design/vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

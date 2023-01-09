@@ -628,7 +628,7 @@ export default class Release extends Command {
           if (pkg.publish) {
             await this.genChangelog(pkg);
             const { stdout } = await this.exec('git', ['diff'], { stdio: 'pipe' });
-            const tag = pkgName === 'titian-mp' ? `v${pkg.nextVersion}` : `${pkgName}@${pkg.nextVersion}`;
+            const tag = pkgName === '@titian-design/weapp' ? `v${pkg.nextVersion}` : `${pkgName}@${pkg.nextVersion}`;
             if (this.allTags.includes(tag)) {
               this.logger.warn(`${tag} 已经存在了，将删除原先的 tag`);
               await this.exec('git', ['tag', '-d', tag], { stdio: 'pipe' });

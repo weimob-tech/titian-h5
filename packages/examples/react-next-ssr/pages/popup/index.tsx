@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiButton, TiPopup } from 'titian-h5-react';
+import { TiButton, TiPopup } from '@titian-design/react';
 
 export default function () {
   const [visible, setVisible] = useState<boolean>(false);

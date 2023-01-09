@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiTooltip, TiIcon } from 'titian-h5-vue';
+import { TiTooltip, TiIcon } from '@titian-design/vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

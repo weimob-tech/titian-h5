@@ -27,7 +27,7 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-share-sheet": "platform://titian-mp/ti-share-sheet"
+    "ti-share-sheet": "platform://titian-weapp/ti-share-sheet"
   }
 }
 ```

@@ -16,11 +16,11 @@ side_iframe_path: "#/badge"
 {
   // 原生小程序
   "usingComponents": {
-    "ti-badge": "titian-mp/badge/index"
+    "ti-badge": "@titian-design/weapp/badge/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-badge": "platform://titian-mp/ti-badge"
+    "ti-badge": "platform://titian-weapp/ti-badge"
   }
 }
 ```

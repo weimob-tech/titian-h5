@@ -1,5 +1,5 @@
 {
-  "name": "titian-h5-react",
+  "name": "@titian-design/react",
   "version": "0.1.2",
   "description": "react h5 component with webcomponent",
   "keywords": [
@@ -27,7 +27,7 @@
     "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w"
   },
   "dependencies": {
-    "titian-h5": "workspace:0.1.2"
+    "@titian-design/h5": "workspace:0.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",

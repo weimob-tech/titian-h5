@@ -1,4 +1,4 @@
-import { TiGrid, TiGridItem, TiIcon, TiDivider } from 'titian-h5-react';
+import { TiGrid, TiGridItem, TiIcon, TiDivider } from '@titian-design/react';
 import list from './iconfont.json';
 
 import './index.less';

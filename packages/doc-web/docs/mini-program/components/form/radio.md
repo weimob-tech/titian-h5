@@ -31,9 +31,9 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-radio": "platform://titian-mp/ti-radio",
-    "ti-radio-button": "platform://titian-mp/ti-radio-button",
-    "ti-radio-group": "platform://titian-mp/ti-radio-group"
+    "ti-radio": "platform://titian-weapp/ti-radio",
+    "ti-radio-button": "platform://titian-weapp/ti-radio-button",
+    "ti-radio-group": "platform://titian-weapp/ti-radio-group"
   }
 }
 ```

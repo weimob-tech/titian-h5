@@ -18,11 +18,11 @@ side_iframe_path: '/#/button'
 {
   // 原生小程序
   "usingComponents": {
-    "ti-button": "titian-mp/button/index"
+    "ti-button": "@titian-design/weapp/button/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-button": "platform://titian-mp/ti-button"
+    "ti-button": "platform://titian-weapp/ti-button"
   }
 }
 ```

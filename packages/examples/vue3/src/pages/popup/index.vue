@@ -17,7 +17,7 @@
   </CustomPage>
 </template>
 <script lang="ts" setup>
-import { TiButtonProps, TiButton, TiPopup } from 'titian-h5-vue';
+import { TiButtonProps, TiButton, TiPopup } from '@titian-design/vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

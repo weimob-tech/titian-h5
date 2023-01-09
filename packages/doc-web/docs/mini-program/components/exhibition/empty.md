@@ -27,7 +27,7 @@ import TabsLink from '@site/src/components/tabsLink';
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-empty": "platform://titian-mp/ti-empty"
+    "ti-empty": "platform://titian-weapp/ti-empty"
   }
 }
 ```

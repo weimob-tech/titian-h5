@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { TiTabbar, TiTabbarItem, TiTabbarItemProps } from 'titian-h5-react';
+import { TiTabbar, TiTabbarItem, TiTabbarItemProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface TabbarAttrsProps {

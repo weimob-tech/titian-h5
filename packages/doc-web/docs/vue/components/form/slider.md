@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSlider } from 'titian-h5-vue'
+import { TiSlider } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -39,7 +39,7 @@ import { TiSlider } from 'titian-h5-vue'
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSlider } from 'titian-h5-vue';
+import { TiSlider } from '@titian-design/vue';
 
 const value = ref<number>(10);
   
@@ -65,7 +65,7 @@ const onChangeHandler = (event) => {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSlider } from 'titian-h5-vue';
+import { TiSlider } from '@titian-design/vue';
 
 const value = ref<number[]>([10, 20]);
   

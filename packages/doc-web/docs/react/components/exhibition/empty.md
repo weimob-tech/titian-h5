@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiEmpty } from 'titian-h5-react';
+import { TiEmpty } from '@titian-design/react';
 ```
 
 ## 用法示例

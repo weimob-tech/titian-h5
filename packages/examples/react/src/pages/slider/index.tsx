@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiSlider, TiSliderProps } from 'titian-h5-react';
+import { TiSlider, TiSliderProps } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import { mergeOptionIntoAttrs } from '../../util/index';
 

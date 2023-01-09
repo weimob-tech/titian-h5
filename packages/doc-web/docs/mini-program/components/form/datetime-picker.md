@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-datetime-picker": "platform://titian-mp/ti-datetime-picker"
+    "ti-datetime-picker": "platform://titian-weapp/ti-datetime-picker"
   }
 }
 ```

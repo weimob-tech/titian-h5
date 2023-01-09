@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript jsx showLineNumbers
-import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
+import { TiProgress, TiCircleProgress } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -34,7 +34,7 @@ import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>  
-  import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
+  import { TiProgress, TiCircleProgress } from '@titian-design/vue';
 </script>
 ```
 
@@ -47,7 +47,7 @@ import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
+import { TiProgress, TiCircleProgress } from '@titian-design/vue';
 </script>
 ```
 
@@ -60,7 +60,7 @@ import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
+import { TiProgress, TiCircleProgress } from '@titian-design/vue';
 </script>
 ```
 
@@ -78,7 +78,7 @@ import { TiProgress, TiCircleProgress } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress } from 'titian-h5-vue';
+import { TiProgress } from '@titian-design/vue';
 const gradientColor = {
   from: "#108ee9",
   to: "#87d068"

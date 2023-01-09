@@ -34,11 +34,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-dialog": "titian-mp/dialog/index"
+    "ti-dialog": "@titian-design/weapp/dialog/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-dialog": "platform://titian-mp/ti-dialog"
+    "ti-dialog": "platform://titian-weapp/ti-dialog"
   }
 }
 ```
@@ -48,10 +48,10 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```typescript tsx showLineNumbers
 // 原生小程序
-import { $tiDialog } from "titian-mp/index";
+import { $tiDialog } from "@titian-design/weapp/index";
 
 // titan-cli 搭建的项目
-const { $tiDialog } = requirePlatform("titian-mp").main;
+const { $tiDialog } = requirePlatform("@titian-design/weapp").main;
 ```
 
  </TabItem>

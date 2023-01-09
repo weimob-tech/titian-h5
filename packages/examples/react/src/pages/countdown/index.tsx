@@ -1,5 +1,5 @@
 import { createRef, useCallback, useMemo, useRef, useState } from 'react';
-import { TiCountdown, TiCountdownProps, TiIcon, TimeGroup } from 'titian-h5-react';
+import { TiCountdown, TiCountdownProps, TiIcon, TimeGroup } from '@titian-design/react';
 import type { OptionType } from '../../components/page';
 import Page from '../../components/page';
 

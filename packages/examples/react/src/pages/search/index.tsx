@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiSearch, TiSearchProps, TiIcon } from 'titian-h5-react';
+import { TiSearch, TiSearchProps, TiIcon } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.css';
 interface SearchAttrsProps extends TiSearchProps {

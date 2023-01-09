@@ -16,11 +16,11 @@ side_iframe_path: "#/input"
 {
   // 原生小程序
   "usingComponents": {
-    "ti-input": "titian-mp/input/index"
+    "ti-input": "@titian-design/weapp/input/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-input": "platform://titian-mp/ti-input"
+    "ti-input": "platform://titian-weapp/ti-input"
   }
 }
 ```

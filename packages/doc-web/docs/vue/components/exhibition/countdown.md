@@ -13,7 +13,7 @@ side_iframe_path: "#/countdown"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiCountdown } from 'titian-h5-vue'
+import { TiCountdown } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -25,7 +25,7 @@ import { TiCountdown } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 </script>
 ```
 #### 格式化时间
@@ -37,7 +37,7 @@ import { TiCountdown } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 </script>
 ```
 
@@ -50,7 +50,7 @@ import { TiCountdown } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 </script>
 ```
 
@@ -66,7 +66,7 @@ import { TiCountdown } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 </script>
 ```
 #### 启动、暂停、重置
@@ -77,7 +77,7 @@ import { TiCountdown } from 'titian-h5-vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 const countdownRef = ref();
 const onStart = () => ref.value.$el.start()
 const onPause = () => ref.value.$el.pause()
@@ -102,7 +102,7 @@ const onReset = () => ref.value.$el.reset()
 </template>
 
 <script lang="ts" setup>
-import { TiCountdown } from 'titian-h5-vue';
+import { TiCountdown } from '@titian-design/vue';
 </script>
 ```
 ## TiCountdown API

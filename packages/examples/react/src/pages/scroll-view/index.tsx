@@ -1,6 +1,6 @@
 //@ts-nocheck
 // import { useState, useRef, useEffect } from 'react';
-import { TiScrollView } from 'titian-h5-react';
+import { TiScrollView } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 

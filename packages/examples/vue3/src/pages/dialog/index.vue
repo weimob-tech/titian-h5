@@ -19,7 +19,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { TiDialog, $tiDialog, TiButton } from 'titian-h5-vue';
+import { TiDialog, $tiDialog, TiButton } from '@titian-design/vue';
 import { OptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 import { mergeOptionIntoAttrs } from '../../utils/index';

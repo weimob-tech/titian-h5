@@ -26,16 +26,16 @@ Titian React 是以 Web Components 为基础的 React 组件库，同时与小�
 
 ```shell
 # 通过 npm 安装
-npm i titian-h5-react --save
+npm i @titian-design/react --save
 
 # 通过 yarn 安装
-yarn add titian-h5-react
+yarn add @titian-design/react
 ```
 
 ### 使用
 
 ```typescript
-import { TiButton } from 'titian-h5-react';
+import { TiButton } from '@titian-design/react';
 
 const App = () => (
   <div className="App">
@@ -54,6 +54,6 @@ export default App;
 - [React 组件文档](https://titian.design.weimob.com/docs/react/components/start/quick-start)
 - [changelog 更新日志](https://github.com/weimob-tech/titian-h5/blob/master/packages/h5-react/CHANGELOG.md)
 - [issue 提出问题](https://github.com/weimob-tech/titian-h5/issues)
-- [小程序组件库](https://www.npmjs.com/package/titian-mp)
-- [Vue 组件库](https://www.npmjs.com/package/titian-h5-vue)
-- [React 组件库](https://www.npmjs.com/package/titian-h5-react)
+- [小程序组件库](https://www.npmjs.com/package/@titian-design/weapp)
+- [Vue 组件库](https://www.npmjs.com/package/@titian-design/vue)
+- [React 组件库](https://www.npmjs.com/package/@titian-design/react)

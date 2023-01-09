@@ -17,11 +17,11 @@ side_iframe_path: '#/image'
 {
   // 原生小程序
   "usingComponents": {
-    "ti-image": "titian-mp/image/index"
+    "ti-image": "@titian-design/weapp/image/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-image": "platform://titian-mp/ti-image"
+    "ti-image": "platform://titian-weapp/ti-image"
   }
 }
 ```

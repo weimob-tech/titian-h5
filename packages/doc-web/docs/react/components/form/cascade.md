@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCascade } from 'titian-h5-react';
+import { TiCascade } from '@titian-design/react';
 ```
 
 

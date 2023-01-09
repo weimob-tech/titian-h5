@@ -14,12 +14,12 @@ pnpm install
 
 ## packages
 
-| 代码路径          | npm 包名          | 说明                                 | 依赖于            |
-| ----------------- | ----------------- | ------------------------------------ | ----------------- |
-| packages/h5       | `titian-h5`       | 基于 stencil.js 搭建的 h5 组件库     | `@stencil/core`   |
-| packages/h5-react | `titian-h5-react` | 基于 `titian-h5` 搭建的 react 组件库 | `titian-h5`       |
-| packages/h5-vue   | `titian-h5-vue`   | 基于 `titian-h5` 搭建的 vue 3 组件库 | `titian-h5`       |
-| packages/doc-web  | -                 | 基于 `docusaurus` 搭建的 API 文档    | `titian-h5-react` |
+| 代码路径          | npm 包名               | 说明                                         | 依赖于                 |
+| ----------------- | ---------------------- | -------------------------------------------- | ---------------------- |
+| packages/h5       | `@titian-design/h5`    | 基于 stencil.js 搭建的 h5 组件库             | `@stencil/core`        |
+| packages/h5-react | `@titian-design/react` | 基于 `@titian-design/h5` 搭建的 react 组件库 | `@titian-design/h5`    |
+| packages/h5-vue   | `@titian-design/vue`   | 基于 `@titian-design/h5` 搭建的 vue 3 组件库 | `@titian-design/h5`    |
+| packages/doc-web  | -                      | 基于 `docusaurus` 搭建的 API 文档            | `@titian-design/react` |
 
 #### packages/h5
 
@@ -38,7 +38,7 @@ Vue 组件包代码
 第一种方式：在根目录创建
 
 ```bash
-pnpm --filter titian-h5 run generate
+pnpm --filter @titian-design/h5 run generate
 ```
 
 第二种方式：在 `packages/h5` 目录下创建

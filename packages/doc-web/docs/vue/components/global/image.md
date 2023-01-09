@@ -14,7 +14,7 @@ side_iframe_path: '#/image'
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiImage } from 'titian-h5-vue'
+import { TiImage } from '@titian-design/vue'
 ```
 
 ## 用法示例
@@ -27,7 +27,7 @@ import { TiImage } from 'titian-h5-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -43,7 +43,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -58,7 +58,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -70,7 +70,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -83,7 +83,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -98,7 +98,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 const iconName = 'default-pic'
 </script>
@@ -114,7 +114,7 @@ const iconName = 'default-pic'
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from 'titian-h5-vue';
+import { TiImage } from '@titian-design/vue';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 const iconName = 'default-pic'
 </script>

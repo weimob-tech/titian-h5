@@ -13,7 +13,7 @@ side_iframe_path: "#/tabs"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTabs } from 'titian-h5-react'
+import { TiTabs } from '@titian-design/react'
 ```
 
 import TabsLink from '@site/src/components/tabsLink';

@@ -1,4 +1,4 @@
-import { TiShareSheet, TiShareSheetProps } from 'titian-h5-react';
+import { TiShareSheet, TiShareSheetProps } from '@titian-design/react';
 import { useState } from 'react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';

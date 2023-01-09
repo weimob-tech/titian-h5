@@ -21,7 +21,7 @@
 </template>
 <script lang="ts" setup>
 import CustomPage from '../../components/page.vue';
-import { TiProgressProps, TiProgress, TiCircleProgress } from 'titian-h5-vue';
+import { TiProgressProps, TiProgress, TiCircleProgress } from '@titian-design/vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 

@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import CustomPage from '../../components/page.vue';
-import { TiEmpty } from 'titian-h5-vue';
+import { TiEmpty } from '@titian-design/vue';
 import { ref } from 'vue';
 import { OptionType } from '../../components/page.interface';
 

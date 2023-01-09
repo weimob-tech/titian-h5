@@ -14,7 +14,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiTextarea, TiTextareaProps } from 'titian-h5-vue';
+import { TiTextarea, TiTextareaProps } from '@titian-design/vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

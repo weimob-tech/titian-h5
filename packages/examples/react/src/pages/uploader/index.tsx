@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiUploader } from 'titian-h5-react';
+import { TiUploader } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface UploaderAttrsProps {

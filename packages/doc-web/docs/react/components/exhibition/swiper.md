@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSwiper, TiSwiperItem } from 'titian-h5-react'
+import { TiSwiper, TiSwiperItem } from '@titian-design/react'
 ```
 
 ## 用法示例

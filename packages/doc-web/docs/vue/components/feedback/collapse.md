@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 ```
 
 ## 用法示例
@@ -39,7 +39,7 @@ import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 </script>
 ```
 
@@ -53,7 +53,7 @@ import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 </script>
 ```
 
@@ -87,7 +87,7 @@ import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 </script>
 ```
 
@@ -106,7 +106,7 @@ import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 </script>
 ```
 
@@ -117,7 +117,7 @@ import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 
 const options = [
   { title: "标题文字A", content: "- 标题A下的内容 -" },
@@ -151,7 +151,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiCollapse, TiCollapseItem } from 'titian-h5-vue';
+import { TiCollapse, TiCollapseItem } from '@titian-design/vue';
 const handleChange = (e: CustomEvent<string | number | Array<string | number>>) => {
   console.log("切换", e.detail);
 };

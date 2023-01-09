@@ -1,9 +1,9 @@
-import { JSX, initialize, TimeGroup as TimeGroup$0 } from 'titian-h5';
-import type { Locale } from 'titian-h5/locale/interface';
+import { JSX, initialize, TimeGroup as TimeGroup$0 } from '@titian-design/h5';
+import type { Locale } from '@titian-design/h5/locale/interface';
 import { DefineComponent, h, ref, Teleport } from 'vue';
 import * as components from './components';
 
-export { $tiToast, $tiDialog, EDividerPosition, EDividerOrientation } from 'titian-h5';
+export { $tiToast, $tiDialog, EDividerPosition, EDividerOrientation } from '@titian-design/h5';
 
 export const setupTitianReact = (config: any = {}) => {
   initialize({

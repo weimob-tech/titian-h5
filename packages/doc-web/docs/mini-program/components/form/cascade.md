@@ -26,11 +26,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-cascade": "titian-mp/cascade/index"
+    "ti-cascade": "@titian-design/weapp/cascade/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-cascade": "platform://titian-mp/ti-cascade"
+    "ti-cascade": "platform://titian-weapp/ti-cascade"
   }
 }
 ```

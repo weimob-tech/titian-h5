@@ -1,13 +1,13 @@
+import { JSX, TimeGroup as TimeGroup$0, initialize } from '@titian-design/h5';
 import React, { CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 
-import { JSX, TimeGroup as TimeGroup$0, initialize } from 'titian-h5';
 import * as components from './components';
 
 // eslint-disable-next-line no-restricted-globals
 const $window = typeof globalThis !== 'undefined' ? globalThis : global || self;
 
-export { $tiToast, $tiDialog, EDividerPosition, EDividerOrientation } from 'titian-h5';
+export { $tiToast, $tiDialog, EDividerPosition, EDividerOrientation } from '@titian-design/h5';
 
 export const setupTitianReact = (config: any = {}) => {
   initialize({

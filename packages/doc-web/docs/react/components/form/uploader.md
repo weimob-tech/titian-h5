@@ -14,7 +14,7 @@ side_iframe_path: "#/uploader"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiUploader } from 'titian-h5-react'
+import { TiUploader } from '@titian-design/react'
 ```
 
 ## 用法示例

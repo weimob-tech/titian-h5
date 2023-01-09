@@ -20,7 +20,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiActionSheet, TiActionSheetProps, TiButton } from 'titian-h5-vue';
+import { TiActionSheet, TiActionSheetProps, TiButton } from '@titian-design/vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 const options: IOptionType[] = [

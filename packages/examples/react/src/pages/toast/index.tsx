@@ -1,4 +1,4 @@
-import { $tiToast } from 'titian-h5-react';
+import { $tiToast } from '@titian-design/react';
 import Page, { OptionType } from '../../components/page';
 import { useState, useId, useCallback, memo, useEffect, useRef } from 'react';
 import './index.less';

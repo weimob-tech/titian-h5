@@ -17,7 +17,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { TiTag } from 'titian-h5-vue';
+import { TiTag } from '@titian-design/vue';
 import { CSSProperties, ref, StyleValue } from 'vue';
 import { OptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

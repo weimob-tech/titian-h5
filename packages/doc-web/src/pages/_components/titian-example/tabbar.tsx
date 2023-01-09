@@ -1,6 +1,6 @@
+import { TiTabbar, TiTabbarItem } from '@titian-design/react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiTabbar, TiTabbarItem } from 'titian-h5-react';
 
 import styles from './index.module.scss';
 

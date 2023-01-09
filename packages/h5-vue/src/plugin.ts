@@ -1,4 +1,4 @@
-import { applyPolyfills, defineCustomElements } from 'titian-h5/loader';
+import { applyPolyfills, defineCustomElements } from '@titian-design/h5/loader';
 import type { Plugin } from 'vue';
 
 const convertEventName = eventName => {

@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiScrollView } from 'titian-h5-react';
+import { TiScrollView } from '@titian-design/react';
 ```
 
 ## 用法示例

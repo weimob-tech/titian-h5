@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Page, { OptionType } from '../../components/page';
-import { TiButton, TiNoticeBarProps, TiNoticeBar } from 'titian-h5-react';
+import { TiButton, TiNoticeBarProps, TiNoticeBar } from '@titian-design/react';
 
 const options: OptionType[] = [
   {
