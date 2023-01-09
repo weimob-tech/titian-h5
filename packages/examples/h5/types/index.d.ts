@@ -1,1 +1,1 @@
-///<reference types="titian-h5" />
+///<reference types="@titian-design/h5" />
