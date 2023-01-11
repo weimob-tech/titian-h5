@@ -1,0 +1,797 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 swiper 基本渲染+移动: 第三页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-620px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 基本渲染+移动: 第二页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-310px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 无缝滚动: 第4页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-0px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 无缝滚动: 第一页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-310px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 无缝滚动: 第三页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-930px); transition-property: none;">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="">
+            <img class="titian-image-img titian-image-img-fill" loading="eager">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 自动滚动: 第4页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-0px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 自动滚动: 第一页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-0px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;
+
+exports[`渲染 swiper 自动滚动: 第三页 1`] = `
+<ti-swiper>
+  <mock:shadow-root>
+    <div part="" style="height: 100%; width: 100%; min-width: 0;">
+      <div class="titian-swiper-wrap titian-swiper-wrap-horizontal">
+        <div class="titian-swiper titian-swiper-horizontal" part="" style="transform: translateX(-0px);">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+  <ti-swiper-item class="titian-swiper-item">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <div class="swiper-item">
+      <ti-image>
+        <mock:shadow-root>
+          <div aria-hidden="true" class="titian-image" part="" style="width: 100%; height: 100px;">
+            <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png">
+            <div class="titian-image-notice">
+              <ti-icon name="default-pic" size="72"></ti-icon>
+            </div>
+            <slot></slot>
+          </div>
+        </mock:shadow-root>
+      </ti-image>
+    </div>
+  </ti-swiper-item>
+</ti-swiper>
+`;

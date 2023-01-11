@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-divider 分割线厚度 1`] = `
+<test-container>
+  <!---->
+  <ti-divider border-width="6">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-width: 3px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    分割线厚度
+  </ti-divider>
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider- titian-divider-center titian-divider-empty titian-divider-horizontal undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    分割线厚度
+  </ti-divider>
+</test-container>
+`;
+
+exports[`渲染 ti-divider 分割线方向 1`] = `
+<test-container>
+  <!---->
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    横向
+  </ti-divider>
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider- titian-divider-center titian-divider-thick titian-divider-vertical undefined" style="--divider-width: 1px;"></div>
+    </mock:shadow-root>
+    纵向
+  </ti-divider>
+</test-container>
+`;
+
+exports[`渲染 ti-divider 分割线颜色 1`] = `
+<test-container>
+  <!---->
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="color: red; --divider-color: red; --divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    整体红色
+  </ti-divider>
+  <ti-divider border-color="blue">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-color: blue; --divider-background: blue; --divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    分割线蓝色
+  </ti-divider>
+  <ti-divider border-color="blue">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="color: red; --divider-color: blue; --divider-background: blue; --divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    文字红色、分割线蓝色
+  </ti-divider>
+  <ti-divider border-color="linear-gradient(to right, #fff 0%, #FFBE70 100%)" border-width="6">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-color: linear-gradient(to right, #fff 0%, #FFBE70 100%); --divider-background: linear-gradient(to right, #fff 0%, #FFBE70 100%); --divider-width: 3px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    线性渐变（默认对称）
+  </ti-divider>
+</test-container>
+`;
+
+exports[`渲染 ti-divider 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    实线
+  </ti-divider>
+  <ti-divider>
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-style: dashed; --divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    虚线
+  </ti-divider>
+</test-container>
+`;
+
+exports[`渲染 ti-divider 文字对齐方式 1`] = `
+<test-container>
+  <!---->
+  <ti-divider text-align="left">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-empty titian-divider-horizontal titian-divider-left titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    居左
+  </ti-divider>
+  <ti-divider text-align="center">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-center titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    居中
+  </ti-divider>
+  <ti-divider text-align="right">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider-empty titian-divider-horizontal titian-divider-right titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    居右
+  </ti-divider>
+  <ti-divider text-align="">
+    <mock:shadow-root>
+      <div class="titian-divider titian-divider- titian-divider-empty titian-divider-horizontal titian-divider-thick undefined" style="--divider-width: 1px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    居右
+  </ti-divider>
+</test-container>
+`;

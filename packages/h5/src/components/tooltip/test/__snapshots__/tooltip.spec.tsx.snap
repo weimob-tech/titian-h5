@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-tooltip 基本渲染 1`] = `
+<ti-tooltip>
+  <mock:shadow-root>
+    <div class="titian-tooltip" part="">
+      <slot></slot>
+      <div class="titian-tooltip- titian-tooltip-content" part="" style="top: 0px; left: 0px; border-top-left-radius: 0;">
+        <ti-svg-path-view class="titian-tooltip-arrow titian-tooltip-arrow-up titian-tooltip-half" use-mask="" viewbox="0 0 18 12" style="left: 0; top: 0.5px;"></ti-svg-path-view>
+        <div class="titian-tooltip-inner" part="">
+          提示文字提示文字提示文字
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <span>
+    按钮
+  </span>
+</ti-tooltip>
+`;
+
+exports[`渲染 ti-tooltip 提示方向 1`] = `
+<test-container>
+  <!---->
+  <ti-tooltip>
+    <mock:shadow-root>
+      <div class="titian-tooltip" part="">
+        <slot></slot>
+        <div class="titian-tooltip- titian-tooltip-content" part="" style="top: 0px; left: 0px; border-bottom-left-radius: 0;">
+          <ti-svg-path-view class="titian-tooltip-arrow titian-tooltip-arrow-down titian-tooltip-half" use-mask="" viewbox="0 0 18 12" style="bottom: 0.5px; left: 0;"></ti-svg-path-view>
+          <div class="titian-tooltip-inner" part="">
+            提示文字提示文字提示文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <span>
+      按钮
+    </span>
+  </ti-tooltip>
+  <ti-tooltip>
+    <mock:shadow-root>
+      <div class="titian-tooltip" part="">
+        <slot></slot>
+        <div class="titian-tooltip- titian-tooltip-content" part="" style="top: 0px; left: 0px; border-top-left-radius: 0;">
+          <ti-svg-path-view class="titian-tooltip-arrow titian-tooltip-arrow-up titian-tooltip-half" use-mask="" viewbox="0 0 18 12" style="left: 0; top: 0.5px;"></ti-svg-path-view>
+          <div class="titian-tooltip-inner" part="">
+            提示文字提示文字提示文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <span>
+      按钮
+    </span>
+  </ti-tooltip>
+</test-container>
+`;
+
+exports[`渲染 ti-tooltip 提示点击关闭 1`] = `
+<ti-tooltip>
+  <mock:shadow-root>
+    <div class="titian-tooltip" part="">
+      <slot></slot>
+      <div class="titian-tooltip- titian-tooltip-content" part="" style="top: 0px; left: 0px; border-top-left-radius: 0;">
+        <ti-svg-path-view class="titian-tooltip-arrow titian-tooltip-arrow-up titian-tooltip-half" use-mask="" viewbox="0 0 18 12" style="left: 0; top: 0.5px;"></ti-svg-path-view>
+        <div aria-hidden="true" class="titian-tooltip-mask"></div>
+        <div class="titian-tooltip-inner" part="">
+          提示文字提示文字提示文字
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <span>
+    按钮
+  </span>
+</ti-tooltip>
+`;

@@ -1,0 +1,37 @@
+.mark {
+  display: flex;
+  position: absolute;
+  right: 56px;
+  bottom: 92px;
+  left: 56px;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #000;
+  font-size: 12px;
+}
+
+.number {
+  margin-right: 2px;
+
+  color: #212121;
+  font-family: font-wemo;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.tip {
+  display: flex;
+  justify-content: space-between;
+  width: 22px;
+}
+
+.block {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 2px;
+
+  background: #212121;
+}

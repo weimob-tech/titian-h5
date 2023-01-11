@@ -1,0 +1,1032 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染collapse 主动切换: 主动切换前 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 主动切换: 主动切换后，关闭第一个面板 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 200px;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 主动切换: 主动切换后，打开第一个面板 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 主动切换手风琴模式: 主动切换前 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 主动切换手风琴模式: 主动切换后，打开第一个面板 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 单独使用collapse item 1`] = `
+<ti-collapse-item>
+  <mock:shadow-root>
+    <div class="titian-collapse-item" part="">
+      <ti-cell class="titian-collapse-item-cell" clickable="" divider="" title="标题文字A">
+        <slot name="title" slot="title"></slot>
+        <slot name="icon" slot="icon"></slot>
+        <slot name="desc" slot="desc"></slot>
+        <slot name="label" slot="label"></slot>
+        <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+        <slot name="sub-desc" slot="sub-desc"></slot>
+      </ti-cell>
+      <div class="titian-collapse-item- titian-collapse-item-wrap" style="height: 0;">
+        <div class="titian-collapse-item-box" part="">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  - 标题A下的内容 -
+</ti-collapse-item>
+`;
+
+exports[`渲染collapse 单独设置右图标 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="share-wechat-moments" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 单独设置图标 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" icon="share-wechat-moments" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 基本展开渲染 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item titian-collapse-item-dilation" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 200px;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 基本渲染 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 基本渲染 手风琴 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 展开多个 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item titian-collapse-item-dilation" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 200px;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item titian-collapse-item-dilation" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 200px;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 手风琴模式下，当value为数组时，选第一个 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item titian-collapse-item-dilation" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 200px;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 有分割线 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" divider="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 点击标题切换: 点击打开 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell">
+          <mock:shadow-root>
+            <div aria-hidden="true" class="titian-cell titian-cell-clickable titian-cell-divider">
+              <div aria-hidden="true" class="titian-cell-title-wrap">
+                <div class="titian-cell-icon-box">
+                  <slot name="icon"></slot>
+                </div>
+                <div>
+                  <div style="display: flex;">
+                    <div class="titian-cell-title undefined">
+                      标题文字A
+                    </div>
+                  </div>
+                  <slot name="label"></slot>
+                </div>
+              </div>
+              <div class="titian-cell-desc-wrap">
+                <div aria-hidden="true" class="titian-cell-desc-content">
+                  <slot name="desc"></slot>
+                  <slot name="right-icon"></slot>
+                </div>
+                <slot name="sub-desc"></slot>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell">
+          <mock:shadow-root>
+            <div aria-hidden="true" class="titian-cell titian-cell-clickable titian-cell-divider">
+              <div aria-hidden="true" class="titian-cell-title-wrap">
+                <div class="titian-cell-icon-box">
+                  <slot name="icon"></slot>
+                </div>
+                <div>
+                  <div style="display: flex;">
+                    <div class="titian-cell-title undefined">
+                      标题文字B
+                    </div>
+                  </div>
+                  <slot name="label"></slot>
+                </div>
+              </div>
+              <div class="titian-cell-desc-wrap">
+                <div aria-hidden="true" class="titian-cell-desc-content">
+                  <slot name="desc"></slot>
+                  <slot name="right-icon"></slot>
+                </div>
+                <slot name="sub-desc"></slot>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 禁用全部面板 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" disabled="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" disabled="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 禁用单个面板 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" disabled="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 禁用点击无效: 点击打开 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell">
+          <mock:shadow-root>
+            <div aria-hidden="true" class="titian-cell titian-cell-clickable titian-cell-disabled titian-cell-divider">
+              <div aria-hidden="true" class="titian-cell-title-wrap">
+                <div class="titian-cell-icon-box">
+                  <slot name="icon"></slot>
+                </div>
+                <div>
+                  <div style="display: flex;">
+                    <div class="titian-cell-title undefined">
+                      标题文字A
+                    </div>
+                  </div>
+                  <slot name="label"></slot>
+                </div>
+              </div>
+              <div class="titian-cell-desc-wrap">
+                <div aria-hidden="true" class="titian-cell-desc-content">
+                  <slot name="desc"></slot>
+                  <slot name="right-icon"></slot>
+                </div>
+                <slot name="sub-desc"></slot>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell">
+          <mock:shadow-root>
+            <div aria-hidden="true" class="titian-cell titian-cell-clickable titian-cell-divider">
+              <div aria-hidden="true" class="titian-cell-title-wrap">
+                <div class="titian-cell-icon-box">
+                  <slot name="icon"></slot>
+                </div>
+                <div>
+                  <div style="display: flex;">
+                    <div class="titian-cell-title undefined">
+                      标题文字B
+                    </div>
+                  </div>
+                  <slot name="label"></slot>
+                </div>
+              </div>
+              <div class="titian-cell-desc-wrap">
+                <div aria-hidden="true" class="titian-cell-desc-content">
+                  <slot name="desc"></slot>
+                  <slot name="right-icon"></slot>
+                </div>
+                <slot name="sub-desc"></slot>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 统一设置右图标 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="share-wechat-moments" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="share-wechat-moments" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;
+
+exports[`渲染collapse 统一设置图标 1`] = `
+<ti-collapse>
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" icon="share-wechat-moments" title="标题文字A">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item>
+    <mock:shadow-root>
+      <div class="titian-collapse-item" part="">
+        <ti-cell class="titian-collapse-item-cell" clickable="" icon="share-wechat-moments" title="标题文字B">
+          <slot name="title" slot="title"></slot>
+          <slot name="icon" slot="icon"></slot>
+          <slot name="desc" slot="desc"></slot>
+          <slot name="label" slot="label"></slot>
+          <ti-icon ext-class="titian-collapse-item-icon titian-collapse-item-icon-transition" name="arrow-up" rotate="180deg" slot="right-icon"></ti-icon>
+          <slot name="sub-desc" slot="sub-desc"></slot>
+        </ti-cell>
+        <div class="titian-collapse-item-wrap titian-collapse-item-wrap-transition" style="height: 0;">
+          <div class="titian-collapse-item-box" part="">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+    - 标题B下的内容 -
+  </ti-collapse-item>
+</ti-collapse>
+`;

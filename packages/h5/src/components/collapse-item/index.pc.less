@@ -1,0 +1,52 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@collapseitem:~ '@{project}-collapse-item';
+
+@nature-time-consuming: 300ms;
+
+.@{collapseitem} {
+  overflow: hidden;
+
+  &-cell {
+    --protected-cell-padding-v: @collapse-item-cell-padding-v;
+    --protected-cell-padding-h: @collapse-item-cell-padding-h;
+    --protected-cell-text-color: @collapse-item-cell-text-color;
+    --protected-cell-title-text-color: @collapse-item-cell-title-text-color;
+    --protected-cell-label-text-color: @collapse-item-cell-label-text-color;
+    --protected-cell-desc-text-color: @collapse-item-cell-desc-text-color;
+    --protected-cell-bg-color: @collapse-item-cell-bg-color;
+    --protected-cell-right-icon-color: @collapse-item-cell-right-icon-color;
+    --protected-cell-text-disabled-color: @collapse-item-cell-text-disabled-color;
+    --protected-cell-hover-bg-color: @collapse-item-cell-hover-bg-color;
+    --protected-cell-required-color: @collapse-item-cell-required-color;
+    cursor: pointer;
+  }
+
+  &-box {
+    padding: @collapse-item-padding-v @collapse-item-padding-h;
+
+    color: @collapse-item-text-color;
+    font-size: @collapse-item-font-size;
+    font-weight: @collapse-item-font-weight;
+    line-height: @collapse-item-line-height;
+  }
+
+  &-wrap {
+    overflow: hidden;
+  }
+
+  &-wrap-transition {
+    transition: height @nature-time-consuming @collapse-item-cubic-bezier,
+      opacity @nature-time-consuming @collapse-item-cubic-bezier 100ms;
+  }
+
+  & &-icon {
+    color: @collapse-item-icon-color;
+  }
+
+  &-icon-transition {
+    transition: transform @nature-time-consuming @collapse-item-cubic-bezier;
+  }
+}

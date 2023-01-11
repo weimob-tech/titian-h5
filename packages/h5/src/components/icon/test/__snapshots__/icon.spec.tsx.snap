@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-icon 图标加载 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-close"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus"></ti-icon>
+</test-container>
+`;
+
+exports[`渲染 ti-icon 图标圆角 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="transform: rotate(20deg);"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="transform: rotate(40deg);"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="transform: rotate(60deg);"></ti-icon>
+</test-container>
+`;
+
+exports[`渲染 ti-icon 图标大小 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="font-size: 10px;"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="font-size: 20px;"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="font-size: 30px;"></ti-icon>
+</test-container>
+`;
+
+exports[`渲染 ti-icon 图标颜色 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="color: red;"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" style="color: blue;"></ti-icon>
+</test-container>
+`;
+
+exports[`渲染 ti-icon 图标风格 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" icon-style="lovely" style="--icon-family: titian-icon-lovely,titian-icon;"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus" icon-style="popular" style="--icon-family: titian-icon-popular,titian-icon;"></ti-icon>
+</test-container>
+`;
+
+exports[`渲染 ti-icon 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-icon class="titian-icon titian-icon-base titian-icon-close"></ti-icon>
+  <ti-icon class="titian-icon titian-icon-base titian-icon-plus"></ti-icon>
+</test-container>
+`;

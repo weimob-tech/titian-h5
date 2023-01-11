@@ -1,0 +1,149 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@steps:~ '@{project}-steps';
+
+.@{steps} {
+  &-item {
+    display: flex;
+    padding: 0 var(--steps-padding-h, @gap-28);
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: var(--steps-icon-margin-right, @gap-36);
+    }
+
+    &-line {
+      flex: 1;
+      width: var(--steps-line-width, 2px);
+
+      transform: scaleX(0.5);
+
+      background-color: var(--steps-line-color, @neutral-color-5);
+    }
+
+    &-icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--steps-icon-size, @T40);
+      height: var(--steps-icon-size, @T40);
+
+      --protected-icon-font-size: var(--steps-icon-size, @T40);
+    }
+
+    &-dot {
+      width: var(--steps-dot-size, @T16);
+      height: var(--steps-dot-size, @T16);
+
+      border-radius: 100%;
+
+      background-color: var(--steps-dot-color, @neutral-color-5);
+    }
+
+    &-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding-bottom: var(--steps-padding-bottom, @gap-40);
+    }
+
+    &-title-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--steps-text-vertical-gap, @gap-8);
+    }
+
+    &-title {
+      color: var(--steps-title-color, @neutral-color-3);
+      font-size: var(--steps-title-font-size, @T30);
+      font-weight: var(--steps-title-font-weight, @font-weight-bold);
+      line-height: var(--steps-title-line-height, @T36);
+    }
+
+    &-subtitle {
+      flex: 1;
+      margin-left: var(--steps-subtitle-margin-left, @gap-8);
+
+      color: var(--steps-subtitle-color, @neutral-color-3);
+      font-size: var(--steps-subtitle-font-size, @T24);
+      font-weight: var(--steps-subtitle-font-weight, @font-weight-400);
+      line-height: var(--steps-subtitle-line-height, @T28);
+      text-align: var(--steps-subtitle-text-align, left);
+
+      &-right {
+        text-align: right;
+      }
+    }
+
+    &-desc {
+      color: var(--steps-desc-color, @neutral-color-3);
+      font-size: var(--steps-desc-font-size, @T26);
+      font-weight: var(--steps-desc-font-weight, @font-weight-400);
+      line-height: var(--steps-desc-line-height, @T40);
+      text-align: var(--steps-desc-text-align, justify);
+    }
+
+    &-time {
+      margin-top: var(--steps-text-vertical-gap, @gap-8);
+
+      color: var(--steps-time-color, @neutral-color-3);
+      font-size: var(--steps-time-font-size, @T24);
+      font-weight: var(--steps-time-font-weight, @font-weight-400);
+      line-height: var(--steps-time-line-height, @T28);
+      text-align: var(--steps-desc-text-align, left);
+    }
+
+    &&-active {
+      .@{steps}-item {
+        &-line {
+          background-color: var(--steps-line-active-color, var(--steps-active-color, @neutral-color-5));
+        }
+
+        &-icon-box {
+          color: var(--steps-icon-active-color, var(--steps-active-color, @brand-color));
+        }
+
+        &-dot {
+          background-color: var(--steps-dot-active-color, var(--steps-active-color, @brand-color));
+        }
+
+        &-title {
+          color: var(--steps-title-active-color, var(--steps-active-color, @brand-color));
+        }
+
+        &-subtitle {
+          color: var(--steps-subtitle-active-color, var(--steps-active-color, @brand-color));
+        }
+
+        &-desc {
+          color: var(--steps-desc-active-color, var(--steps-active-color, @neutral-color-1));
+        }
+
+        &-time {
+          color: var(--steps-time-active-color, var(--steps-active-color, @neutral-color-1));
+        }
+      }
+    }
+  }
+  // duigou，shou 这两个背景不需要镂空，使用白色底色
+  .icon-white-addressright,
+  .icon-white-addressreceiving {
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+
+      border-radius: 100%;
+
+      background-color: #fff;
+    }
+  }
+}

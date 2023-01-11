@@ -1,0 +1,40 @@
+@import '../common/static/utils';
+@import '../common/static/var';
+@import '../common/static/mixins/index.less';
+
+@cellGroup: ~'@{project}-cell-group';
+
+.@{cellGroup} {
+  &-card {
+    margin: @cell-group-margin-v @cell-group-margin-h;
+    overflow: hidden;
+
+    border-radius: @cell-group-radius;
+  }
+
+  &-title-wrap {
+    display: flex;
+    align-items: center;
+    padding: @cell-group-title-padding-v @cell-group-title-padding-h;
+  }
+
+  &-title {
+    color: @cell-group-title-color;
+    font-size: @cell-group-title-font-size;
+    font-weight: @font-weight-bold;
+    line-height: @cell-group-title-line-height;
+  }
+
+  &-sub-title {
+    margin-left: @cell-group-sub-title-margin-left;
+
+    color: @cell-group-sub-title-color;
+    font-size: @cell-group-sub-title-font-size;
+    font-weight: @cell-group-sub-title-font-weight;
+    line-height: @cell-group-sub-title-line-height;
+  }
+
+  &-body {
+    background-color: @cell-group-body-bg-color;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@swipeCell: ~'@{project}-swipe-cell';
+
+:host {
+  display: contents;
+}
+.@{swipeCell} {
+  width: 100%;
+  overflow: hidden;
+
+  &-wrap {
+    position: relative;
+
+    transition: transform 0.2s cubic-bezier(0.5, 1, 0.89, 1);
+  }
+
+  &-left,
+  &-right {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  &-left {
+    left: -1px;
+
+    transform: translateX(-100%);
+  }
+
+  &-right {
+    right: -1px;
+
+    transform: translateX(100%);
+  }
+}

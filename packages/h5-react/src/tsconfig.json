@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2017"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "jsx": "react"
+  },
+  "include": ["./"],
+  "exclude": ["node_modules"]
+}

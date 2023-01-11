@@ -1,0 +1,511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染宫格组件 使用 slot 定义内容 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <div class="titian-grid titian-grid-title">
+        使用 slot 定义内容
+      </div>
+      <div class="titian-grid titian-grid-divider">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item custom-content="" style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <slot name="content"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="content">
+      待付款
+    </div>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <slot name="icon"></slot>
+          <slot name="text"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="icon"></div>
+    <div slot="text">
+      待收货
+    </div>
+  </ti-grid-item>
+  <ti-grid-item custom-content="" style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <slot name="content"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="content">
+      待发货
+    </div>
+  </ti-grid-item>
+  <ti-grid-item custom-content="" style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <slot name="content"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="content">
+      待评价
+    </div>
+  </ti-grid-item>
+</ti-grid>
+`;
+
+exports[`渲染宫格组件 基本使用 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <slot name="title"></slot>
+      <div class="titian-grid titian-grid-divider">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="custom-item titian-grid-item" part="custom-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="mine-to-pay"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待付款
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待收货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-comment"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待评价
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+</ti-grid>
+`;
+
+exports[`渲染宫格组件 自定义图标尺寸，颜色 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <div class="titian-grid titian-grid-title">
+        自定义图标尺寸，颜色
+      </div>
+      <div class="titian-grid titian-grid-divider">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="mine-to-pay" size="60"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            图标尺寸
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon color="red" name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            定义颜色
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-comment"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待评价
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-refund"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            退货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+</ti-grid>
+`;
+
+exports[`渲染宫格组件 自定义每行个数 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <slot name="title"></slot>
+      <div class="titian-grid titian-grid-divider">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="mine-to-pay"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待付款
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待收货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-comment"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待评价
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-refund"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            退货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 33.333333333333336%;">
+        <div class="titian-grid-item-content undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="camera-point"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            拍照展示
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+</ti-grid>
+`;
+
+exports[`渲染宫格组件 自适应展示正方型 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <slot name="title"></slot>
+      <div class="titian-grid titian-grid-divider">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="mine-to-pay"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待付款
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待收货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-comment"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待评价
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-refund"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            退货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="camera-point"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            拍照展示
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待收货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item titian-grid-item-square" style="width: 25%; padding-top: 25%;">
+        <div class="titian-grid-item-content titian-grid-item-content-square undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+</ti-grid>
+`;
+
+exports[`渲染宫格组件 设置宫格间距离 1`] = `
+<ti-grid>
+  <mock:shadow-root>
+    <div>
+      <slot name="title"></slot>
+      <div class="titian-grid titian-grid-divider titian-grid-gutter" style="padding-left: 4px;">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%; margin-top: 4px; padding-right: 4px;">
+        <div class="titian-grid-item-content titian-grid-item-content-gutter undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="mine-to-pay"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待付款
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%; margin-top: 4px; padding-right: 4px;">
+        <div class="titian-grid-item-content titian-grid-item-content-gutter undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-deliver"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待收货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%; margin-top: 4px; padding-right: 4px;">
+        <div class="titian-grid-item-content titian-grid-item-content-gutter undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-receive"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待发货
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+  <ti-grid-item style="display: contents;">
+    <mock:shadow-root>
+      <div class="titian-grid-item" style="width: 25%; margin-top: 4px; padding-right: 4px;">
+        <div class="titian-grid-item-content titian-grid-item-content-gutter undefined" style="flex-direction: column;">
+          <div class="titian-grid-item-icon undefined">
+            <ti-icon name="to-comment"></ti-icon>
+          </div>
+          <div class="titian-grid-item-text undefined">
+            待评价
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-grid-item>
+</ti-grid>
+`;

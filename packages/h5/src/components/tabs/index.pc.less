@@ -1,0 +1,205 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@tabs:~ '@{project}-tabs';
+
+@tabWidth: var(--tabs-tab-width, 150px);
+@markWidth: var(--tabs-mark-width, 32px);
+
+:host {
+  flex: 1;
+  min-width: 0;
+}
+.@{tabs} {
+  ti-swiper {
+    display: block;
+    height: var(--tabs-swiper-height, 150px);
+
+    background: var(--tabs-swiper-background-color, #fff);
+  }
+
+  &-navs {
+    position: relative;
+
+    opacity: 0;
+
+    white-space: nowrap;
+
+    &-show {
+      opacity: 1;
+      background-color: var(--tabs-background-color, #fff);
+    }
+  }
+
+  &-navs-block {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: @neutral-color-6;
+  }
+
+  &-scroll-container-line {
+    position: relative;
+  }
+
+  &-scroll-container-line::before {
+    z-index: 1;
+    .hairline();
+  }
+
+  &-scroll-container-shadow {
+    position: relative;
+  }
+
+  &-scroll-container-shadow::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    height: 20px;
+
+    opacity: 0.03;
+    background: linear-gradient(180deg, #212121 0%, #21212100 100%);
+  }
+
+  &-mark-pure,
+  &-mark-multi {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: @markWidth;
+    height: var(--tabs-sub-line-height, 4px);
+    margin-left: calc(@markWidth / -2);
+
+    transition: all 0.2s;
+
+    border-radius: 3px;
+
+    background: var(--tabs-active-line-color, @brand-color-fade-100);
+  }
+
+  &-mark-block {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(@tabWidth - 8px);
+    margin-left: calc((@tabWidth) / -2);
+
+    transition: all 0.2s;
+
+    border-radius: 4px;
+
+    background: #fff;
+  }
+
+  &-mark-multi {
+    bottom: 18px;
+  }
+
+  &-nav {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: @tabWidth;
+    height: var(--tabs-tab-height, 88px);
+
+    color: var(--tabs-tab-color, @neutral-color-2);
+    font-size: var(--tabs-tab-font-size, @T28);
+    vertical-align: middle;
+  }
+
+  &-nav-active {
+    color: var(--tabs-active-text-color, @neutral-color-1);
+    font-weight: @font-weight-bold;
+  }
+
+  &-nav-block {
+    position: static;
+    height: var(--tabs-tab-height, 56px);
+
+    font-size: @T24;
+  }
+
+  &-nav-block&-nav-active {
+    color: @neutral-color-1;
+  }
+
+  &-nav-block &-text-label {
+    position: absolute;
+    z-index: 10;
+  }
+
+  &-nav-multi {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: var(--tabs-tab-padding-v, 34px) 0;
+    .@{tabs}-text-label {
+      line-height: var(--tabs-tab-line-height, @T34);
+    }
+    .@{tabs}-text-description {
+      margin-top: var(--tabs-tab-description-gap, @gap-4);
+
+      font-size: var(--tabs-tab-description-font-size, @T24);
+      line-height: var(--tabs-tab-description-line-height, @T28);
+    }
+    .@{tabs}-text-tag {
+      position: absolute;
+      bottom: var(--tabs-tab-tag-gap, 6px);
+
+      color: var(--tabs-tab-tag-color, @neutral-color-4);
+      font-size: var(--tabs-tab-tag-font-size, @T20);
+      line-height: var(--tabs-tab-tag-line-height, @T24);
+
+      &-now {
+        color: var(--tabs-tab-tag-day-color, var(--tabs-active-line-color, @brand-color-fade-100));
+      }
+    }
+  }
+
+  &-nav-calendar {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: var(--tabs-tab-padding-v, 20px) 0;
+    .@{tabs}-text-label {
+      color: var(--tabs-tab-color, @neutral-color-1);
+      font-family: var(--tabs-label-font-family, font-wemo);
+      font-size: var(--tabs-tab-font-size, @T32);
+      font-weight: var(--tabs-label-font-weight, @font-weight-bold);
+      line-height: var(--tabs-tab-line-height, @T32);
+    }
+    .@{tabs}-text-description {
+      margin-top: var(--tabs-tab-description-gap, @gap-12);
+
+      color: var(--tabs-tab-description-color, @neutral-color-2);
+      font-size: var(--tabs-tab-description-font-size, @T20);
+      font-weight: var(--tabs-label-font-weight, @font-weight-400);
+      line-height: var(--tabs-tab-description-line-height, @T24);
+    }
+
+    &.@{tabs}-nav-active {
+      .@{tabs}-text-label,
+      .@{tabs}-text-description {
+        color: var(--tabs-active-text-color, @brand-color-fade-100);
+      }
+    }
+  }
+
+  &-nav-gap {
+    width: auto;
+    padding: var(--tabs-tab-padding-v, 34px) var(--tabs-tab-gap, 20px);
+  }
+
+  &-nav.@{tabs}-nav-disabled {
+    color: @neutral-color-4;
+  }
+}

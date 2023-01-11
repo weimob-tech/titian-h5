@@ -1,0 +1,755 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 swipe-cell 基本渲染+移动: visible 控制关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200" visible="false">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: visible 控制打开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200" visible="true">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 右侧宽度变化后，右侧展开 1`] = `
+<ti-swipe-cell left-width="200" right-width="150">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 右侧宽度变化结束 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 左侧宽度变化后，左侧展开 1`] = `
+<ti-swipe-cell left-width="150" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击 document 前向左打开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击 document 后向右关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击右侧前向右滑动，右侧打开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击右侧前向右滑动，右侧打开 2`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击右侧后右侧关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击右侧后右侧关闭 2`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击左侧前向右滑动，左侧打开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 点击左侧后左侧关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 第一次向右滑开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 第一次向左关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 第二次向右关闭 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 基本渲染+移动: 第二次向左滑开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 右侧宽度变化时右侧在打开状态后，右侧先展开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-200px, 0, 0); transform: translate3d(-200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 右侧宽度变化时右侧在打开状态后，右侧变化 1`] = `
+<ti-swipe-cell left-width="200" right-width="150">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(-75px, 0, 0); transform: translate3d(-75px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 右侧宽度变化时右侧在打开状态后，右侧结束 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变为0左侧在打开状态后，左侧先展开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变化时左侧在打开状态后，左侧先展开 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变化时左侧在打开状态后，左侧变化 1`] = `
+<ti-swipe-cell left-width="150" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(75px, 0, 0); transform: translate3d(75px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变化时左侧在打开状态后，左侧结束 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变变为0左侧在打开状态后，左侧变化 1`] = `
+<ti-swipe-cell left-width="0" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;
+
+exports[`渲染 swipe-cell 左右宽度变化: 左侧宽度变变为0左侧在打开状态后，左侧结束 1`] = `
+<ti-swipe-cell left-width="200" right-width="200">
+  <mock:shadow-root>
+    <div class="titian-swipe-cell">
+      <div class="titian-swipe-cell-wrap" style="-webkit-transform: translate3d(0px, 0, 0); transform: translate3d(0px, 0, 0); -webkit-transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1);">
+        <div aria-hidden="true" class="titian-swipe-cell-left">
+          <slot name="left"></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-content">
+          <slot></slot>
+        </div>
+        <div aria-hidden="true" class="titian-swipe-cell-right">
+          <slot name="right"></slot>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div>
+    基本模式
+  </div>
+  <div class="left" slot="left" style="width: 200px;">
+    left
+  </div>
+  <div class="right" slot="right" style="width: 200px;">
+    right
+  </div>
+</ti-swipe-cell>
+`;

@@ -1,0 +1,15 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@sidebar:~ '@{project}-sidebar';
+
+:host {
+  display: contents;
+}
+.@{sidebar} {
+  width: 184px;
+  height: 100%;
+  overflow: scroll;
+
+  background: var(--sidebar-bg-color, @neutral-color-7);
+}

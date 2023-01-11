@@ -1,0 +1,33 @@
+.tabs-page {
+  width: 100vw;
+
+  background-color: #fff;
+
+  ti-tabs::part(swiper-class) {
+    height: 320px;
+
+    background: #fff;
+  }
+
+  ti-tabs::part(tab-active-class) {
+    // background: red;
+
+    // color: #eee;
+  }
+
+  ti-tabs::part(tabs-class) {
+    // border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  &-tab-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    color: #9e9e9e;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,697 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`单元格渲染测试 使用 slot 修改单元格内容 1`] = `
+<test-container>
+  <!---->
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                使用slot自定义左侧图标
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <ti-icon name="home" slot="icon"></ti-icon>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                使用slot自定义右侧图标
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <ti-icon name="home" slot="right-icon"></ti-icon>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <slot name="title"></slot>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="title">
+      使用 slot 修改 title
+    </div>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                使用slot自定义label
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="label">
+      标题下方附加信息
+    </div>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                使用slot自定义desc
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="desc">
+      居右详细内容文字
+    </div>
+  </ti-cell>
+</test-container>
+`;
+
+exports[`单元格渲染测试 单独使用单元格 1`] = `
+<test-container>
+  <!---->
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              不展示下方分割线
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居右详细内容文字
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell sub-desc="居右下方文字">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <div class="titian-cell-sub-desc" style="display: flex; justify-content: flex-end;">
+            居右下方文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell sub-desc="居右下方文字">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居右详细内容文字
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <div class="titian-cell-sub-desc" style="display: flex; justify-content: flex-end;">
+            居右下方文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell right-icon="arrow-right" sub-desc="居右下方文字">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居右详细内容文字
+            </div>
+            <ti-icon ext-class="titian-cell-right-icon" name="arrow-right" size="28"></ti-icon>
+          </div>
+          <div class="titian-cell-sub-desc" style="padding-right: 16px;">
+            居右下方文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell sub-desc="居右下方文字">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居右详细内容文字
+            </div>
+            <ti-icon ext-class="titian-cell-right-icon" name="arrow-right" size="28"></ti-icon>
+          </div>
+          <div class="titian-cell-sub-desc" style="padding-right: 16px;">
+            居右下方文字
+          </div>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              标题下方附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <slot name="desc"></slot>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <ti-icon class="titian-cell-icon" name="home" size="36"></ti-icon>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              自定义左侧图标
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <ti-icon class="titian-cell-icon" color="#ff0000" name="home" size="36"></ti-icon>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              自定义图标颜色
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell right-icon="arrow-right">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              自定义右侧图标
+            </div>
+            <ti-icon ext-class="titian-cell-right-icon" name="arrow-right" size="28"></ti-icon>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              使用默认右侧箭头
+            </div>
+            <ti-icon ext-class="titian-cell-right-icon" name="arrow-right" size="28"></ti-icon>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-disabled titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              禁用单元格
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-clickable titian-cell-divider">
+        <div aria-hidden="true" class="titian-cell-title-wrap">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <slot name="label"></slot>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              开启点击反馈
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell align-items="start">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider" style="align-items: start;">
+        <div aria-hidden="true" class="titian-cell-title-wrap" style="align-items: start;">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="align-items: start; display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap" style="align-items: start;">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居上对齐
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell align-items="center">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider" style="align-items: center;">
+        <div aria-hidden="true" class="titian-cell-title-wrap" style="align-items: center;">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="align-items: center; display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap" style="align-items: center;">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居中对齐
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell align-items="end">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider" style="align-items: end;">
+        <div aria-hidden="true" class="titian-cell-title-wrap" style="align-items: end;">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="align-items: end; display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap" style="align-items: end;">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居下对齐
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell align-items="end">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider" style="align-items: end;">
+        <div aria-hidden="true" class="titian-cell-title-wrap" style="align-items: end;">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="align-items: end; display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap" style="align-items: end;">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居下对齐
+            </div>
+            <slot name="right-icon"></slot>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+  <ti-cell align-items="end" use-sub-arrow="">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-cell titian-cell-divider" style="align-items: end;">
+        <div aria-hidden="true" class="titian-cell-title-wrap" style="align-items: end;">
+          <div class="titian-cell-icon-box">
+            <slot name="icon"></slot>
+          </div>
+          <div>
+            <div style="align-items: end; display: flex;">
+              <div class="titian-cell-title undefined">
+                标题
+              </div>
+            </div>
+            <div class="titian-cell-label undefined">
+              附加信息
+            </div>
+          </div>
+        </div>
+        <div class="titian-cell-desc-wrap" style="align-items: end;">
+          <div aria-hidden="true" class="titian-cell-desc-content">
+            <div class="titian-cell-desc undefined">
+              居下对齐
+            </div>
+          </div>
+          <slot name="sub-desc"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-cell>
+</test-container>
+`;

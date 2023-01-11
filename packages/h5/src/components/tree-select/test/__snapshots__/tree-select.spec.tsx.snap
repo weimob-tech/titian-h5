@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-steps 基本用法 1`] = `
+<ti-tree-select>
+  <mock:shadow-root>
+    <div class="titian-tree-select" part="" style="height: 100%;">
+      <div class="titian-tree-select-sidebar">
+        <ti-sidebar active-index="0">
+          <ti-sidebar-item data-index="0" label="侧边导航"></ti-sidebar-item>
+        </ti-sidebar>
+      </div>
+      <div class="titian-tree-select-container">
+        <div aria-hidden="true" class="titian-tree-select-cell" data-index="0">
+          标题文字
+        </div>
+        <div aria-hidden="true" class="titian-tree-select-cell" data-index="1">
+          标题文字
+        </div>
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-tree-select>
+`;

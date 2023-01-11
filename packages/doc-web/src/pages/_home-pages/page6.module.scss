@@ -1,0 +1,46 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 1000px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 2240px) {
+  .top,
+  .bottom {
+    zoom: 1.3;
+  }
+
+  .bottom {
+    margin-top: 104px;
+  }
+}
+@media screen and (min-width: 1560px) and (max-width: 1880px) {
+  .top,
+  .bottom {
+    zoom: 0.875;
+  }
+
+  .bottom {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .top,
+  .bottom {
+    zoom: 0.75;
+  }
+
+  .bottom {
+    margin-top: 60px;
+  }
+}

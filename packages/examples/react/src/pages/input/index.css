@@ -1,0 +1,24 @@
+.suffix-box {
+  margin-left: 26px;
+}
+
+.red {
+  color: #fa2c19;
+  font-weight: 500;
+}
+
+.prefix-box {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.input-container {
+  width: calc(100% - 56px);
+  margin: 0 28px;
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
+}

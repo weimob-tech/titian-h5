@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-button 加载状态 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-loading titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <ti-loading exportparts="" ext-class=" titian-button-icon" ext-css="" size="30"></ti-loading>
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+  </ti-button>
+  <ti-button loading-size="{{46}}">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-loading titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <ti-loading exportparts="" ext-class=" titian-button-icon" ext-css="" size="NaN"></ti-loading>
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    提交
+  </ti-button>
+  <ti-button loading-type="spinner">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-loading titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <ti-loading exportparts="" ext-class=" titian-button-icon" ext-css="" mode="spinner" size="30"></ti-loading>
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+  </ti-button>
+  <ti-button loading-text="加载中">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-loading titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <ti-loading exportparts="" ext-class=" titian-button-icon" ext-css="" size="30" text="加载中"></ti-loading>
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 动态改变color 1`] = `
+<ti-button color="red">
+  <mock:shadow-root>
+    <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,red); --active-color: var(--button-active-color,red);">
+      <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+        <slot></slot>
+      </div>
+    </button>
+  </mock:shadow-root>
+  确定
+</ti-button>
+`;
+
+exports[`渲染 ti-button 块级按钮 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-block titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    块级
+  </ti-button>
+  <ti-button ext-style="width: 200rpx">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); width:  200rpx;">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    定宽
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    自适应宽度
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 按钮圆角 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --button-radius: 999px;">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    胶囊按钮
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    默认圆角按钮
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --button-radius: 0px;">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    直角按钮
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 按钮尺寸 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-tiny titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    高度48rpx
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-small titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    高度56rpx
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-medium titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    高度64rpx
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    高度80rpx
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-large titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    高度96rpx
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 按钮类型 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    默认
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-warning" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--warning-r, 255), var(--warning-g, 163), var(--warning-b, 0), 1)); --active-color: var(--button-active-color,rgba(var(--warning-r, 255), var(--warning-g, 163), var(--warning-b, 0), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    警告
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-success" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--success-r, 7), var(--success-g, 193), var(--success-b, 96), 1)); --active-color: var(--button-active-color,rgba(var(--success-r, 7), var(--success-g, 193), var(--success-b, 96), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    成功
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-error" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--error-r, 255), var(--error-g, 46), var(--error-b, 46), 1)); --active-color: var(--button-active-color,rgba(var(--error-r, 255), var(--error-g, 46), var(--error-b, 46), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    错误
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-info" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--link-r, 42), var(--link-g, 106), var(--link-b, 233), 1)); --active-color: var(--button-active-color,rgba(var(--link-r, 42), var(--link-g, 106), var(--link-b, 233), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    信息
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-simple" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(117, 117, 117, 1)); --active-color: var(--button-active-color,rgba(117, 117, 117, 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    灰色调
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 按钮类型 2`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    面性强调
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-filled titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 0.1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 0.2));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    面性次要
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-hairline titian-button-outlined titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 0.1)); --button-border-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    线框按钮
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-hairline titian-button-outlined titian-button-size-big titian-button-type-simple" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(117, 117, 117, 1)); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: var(--button-active-color,rgba(117, 117, 117, 0.1)); --button-border-color: #c4c4c4;">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    灰色调线框按钮
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    文字按钮
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 按钮边框、禁用 1`] = `
+<ti-button>
+  <mock:shadow-root>
+    <button class="titian-button titian-button-hairline titian-button-outlined titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 0.1)); --button-border-color: var(--button-text-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+      <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+        <slot></slot>
+      </div>
+    </button>
+  </mock:shadow-root>
+  一像素边框
+</ti-button>
+`;
+
+exports[`渲染 ti-button 按钮颜色 1`] = `
+<test-container>
+  <!---->
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-filled titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#7232dd); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(114, 50, 221, 0.1)); --active-color: var(--button-active-color,rgba(114, 50, 221, 0.2));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    确定
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,blue); --active-color: var(--button-active-color,blue);">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    确定
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-hairline titian-button-outlined titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,blue); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: var(--button-active-color,); --button-border-color: var(--button-text-color,blue);">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    确定
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgb(7, 193, 96)); --active-color: var(--button-active-color,rgb(7, 193, 96));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    确定
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-filled titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,rgba(7, 193, 96, 0.5)); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(7,193,96,0.1)); --active-color: var(--button-active-color,rgba(7,193,96,0.2));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    确定
+  </ti-button>
+  <ti-button>
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,linear-gradient(to right, #4bb0ff, #6149f6)); --active-color: var(--button-active-color,linear-gradient(to right, #4bb0ff, #6149f6));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    渐变按钮
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 搭配图标 1`] = `
+<test-container>
+  <!---->
+  <ti-button prefix-icon="home">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <ti-icon ext-class="titian-button-icon titian-button-icon-prefix titian-button-icon-no-gap" name="home" part=""></ti-icon>
+          <slot></slot>
+        </div>
+      </button>
+    </mock:shadow-root>
+    左图标
+  </ti-button>
+  <ti-button suffix-icon="arrow-right">
+    <mock:shadow-root>
+      <button class="titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+        <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+          <slot></slot>
+          <ti-icon ext-class="titian-button-icon titian-button-icon-suffix titian-button-icon-no-gap" name="arrow-right" part=""></ti-icon>
+        </div>
+      </button>
+    </mock:shadow-root>
+    有图标
+  </ti-button>
+</test-container>
+`;
+
+exports[`渲染 ti-button 改变extCss 1`] = `
+<ti-button ext-class=".my-class {width: 50px}" ext-css=".my-class {width: 100px}">
+  <mock:shadow-root>
+    <button class=".my-class 50px} titian-button titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary {width:" id="titian-button" part=".my-class {width: 50px}" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+      <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+        <slot></slot>
+      </div>
+    </button>
+    <style>
+      .my-class {width: 100px}
+    </style>
+  </mock:shadow-root>
+  确定
+</ti-button>
+`;

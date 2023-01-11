@@ -1,0 +1,65 @@
+@import '../common/static/var.less';
+@import '../common/static/utils.less';
+@import '../common/static/mixins/index.less';
+@slider: ~'@{project}-slider';
+
+.@{slider} {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  height: 56px;
+
+  &-rail {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    margin: auto;
+
+    border-radius: 999px;
+
+    background-color: @slider-rail-bg-color;
+  }
+
+  &-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    height: 8px;
+    margin: auto;
+
+    border-radius: 999px;
+
+    background-color: @slider-track-bg-color;
+  }
+
+  &-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36px;
+    height: 36px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background-color: @slider-thumb-bg-color;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 10%);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+    }
+  }
+}

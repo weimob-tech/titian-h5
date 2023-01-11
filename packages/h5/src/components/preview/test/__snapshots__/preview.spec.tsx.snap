@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-preview 基本渲染 1`] = `
+<ti-preview>
+  <mock:shadow-root>
+    <ti-transition class="titian-preview titian-preview-mask" destroy-on-exit="" name="fade" style="--protected-preview-z-index: 11000;">
+      <div class="titian-preview-file-wrap">
+        <ti-swiper current="0"></ti-swiper>
+      </div>
+      <div class="titian-preview-content-box">
+        <div></div>
+        <div class="titian-preview-serial-number">
+          1/0
+        </div>
+      </div>
+    </ti-transition>
+  </mock:shadow-root>
+</ti-preview>
+`;
+
+exports[`渲染 ti-preview 隐藏标题 1`] = `
+<ti-preview>
+  <mock:shadow-root>
+    <ti-transition class="titian-preview titian-preview-mask" destroy-on-exit="" name="fade" style="--protected-preview-z-index: 11000;">
+      <div class="titian-preview-file-wrap">
+        <ti-swiper current="0"></ti-swiper>
+      </div>
+      <div class="titian-preview-content-box">
+        <div class="titian-preview-serial-number">
+          1/0
+        </div>
+      </div>
+    </ti-transition>
+  </mock:shadow-root>
+</ti-preview>
+`;
+
+exports[`渲染 ti-preview 隐藏页码 1`] = `
+<ti-preview>
+  <mock:shadow-root>
+    <ti-transition class="titian-preview titian-preview-mask" destroy-on-exit="" name="fade" style="--protected-preview-z-index: 11000;">
+      <div class="titian-preview-file-wrap">
+        <ti-swiper current="0"></ti-swiper>
+      </div>
+      <div class="titian-preview-content-box">
+        <div></div>
+      </div>
+    </ti-transition>
+  </mock:shadow-root>
+</ti-preview>
+`;

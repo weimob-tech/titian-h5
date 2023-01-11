@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染回到顶部 使用时展示回到顶部文字 1`] = `
+<test-container>
+  <!---->
+  <div style="height: 2000px;">
+    <ti-back-top>
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-back-top" style="display: none;">
+          <ti-icon name="go-to-top" size="32"></ti-icon>
+          <span class="titian-back-top-text">
+            顶部
+          </span>
+        </div>
+      </mock:shadow-root>
+    </ti-back-top>
+  </div>
+</test-container>
+`;
+
+exports[`渲染回到顶部 使用时展示回到顶部文字 2`] = `
+<test-container>
+  <!---->
+  <div style="height: 2000px;">
+    <ti-back-top extcss=".a {background: red}">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-back-top" style="display: none;">
+          <ti-icon name="go-to-top" size="48"></ti-icon>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-back-top>
+  </div>
+</test-container>
+`;
+
+exports[`渲染回到顶部 使用时展示回到顶部文字 3`] = `
+<test-container>
+  <!---->
+  <div style="height: 2000px;">
+    <ti-back-top>
+      <mock:shadow-root>
+        <div aria-hidden="true" class="enterActiveClass enterDoneClass titian-back-top titian-slide-up-enter-active titian-slide-up-enter-done">
+          <ti-icon name="go-to-top" size="32"></ti-icon>
+          <span class="titian-back-top-text">
+            顶部
+          </span>
+        </div>
+      </mock:shadow-root>
+    </ti-back-top>
+  </div>
+</test-container>
+`;
+
+exports[`渲染回到顶部 删除节点，移除点击事件 1`] = `
+<test-container>
+  <!---->
+</test-container>
+`;
+
+exports[`渲染回到顶部 简单使用 1`] = `
+<test-container>
+  <!---->
+  <div style="height: 2000px;">
+    <ti-back-top extcss=".a {background: red}">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-back-top" style="display: none;">
+          <ti-icon name="go-to-top" size="48"></ti-icon>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-back-top>
+  </div>
+</test-container>
+`;
+
+exports[`渲染回到顶部 简单使用 2`] = `
+<test-container>
+  <!---->
+  <div style="height: 2000px;">
+    <ti-back-top extcss=".a {background: red}">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="enterActiveClass enterDoneClass titian-back-top titian-slide-up-enter-active titian-slide-up-enter-done">
+          <ti-icon name="go-to-top" size="48"></ti-icon>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-back-top>
+  </div>
+</test-container>
+`;

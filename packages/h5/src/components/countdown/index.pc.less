@@ -1,0 +1,170 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@countdown:~ '@{project}-countdown';
+
+.@{countdown} {
+  color: var(--countdown-color, @neutral-color-2);
+  font-size: var(--countdown-font-size, @T28);
+  line-height: var(--countdown-line-height, 34px);
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+
+  &-box {
+    display: flex;
+    align-items: center;
+
+    line-height: normal;
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--countdown-border-radius, 8px);
+
+    background: var(--countdown-background, #fff2f2);
+
+    color: var(--countdown-color, #ff2e2e);
+    font-family: var(--countdown-font-family, font-wemo);
+    font-weight: var(--countdown-font-weight, @font-weight-bold);
+    line-height: normal;
+  }
+
+  &-mixture {
+    color: var(--countdown-day-color, @neutral-color-1);
+    font-family: var(--countdown-font-family, font-wemo);
+    font-weight: var(--countdown-font-weight, @font-weight-bold);
+  }
+
+  &-day {
+    color: var(--countdown-day-color, @neutral-color-1);
+    font-weight: var(--countdown-font-weight, @font-weight-bold);
+  }
+
+  &-dot {
+    color: var(--countdown-dot-color, @neutral-color-1);
+  }
+
+  &-box-small {
+    .@{countdown}-block {
+      width: var(--countdown-size, @T32);
+      height: var(--countdown-size, @T32);
+
+      font-size: var(--countdown-font-size, @T24);
+
+      &-millisecond {
+        width: var(--countdown-millisecond-width, 42px);
+      }
+    }
+    .@{countdown}-mixture {
+      font-size: var(--countdown-font-size, @T24);
+    }
+    .@{countdown}-day {
+      font-size: var(--countdown-day-font-size, @T24);
+
+      &-block {
+        margin: var(--countdown-day-margin, 0 @gap-8);
+      }
+
+      &-mixture {
+        margin: var(--countdown-day-margin, 0 @gap-12 0 6px);
+      }
+    }
+    .@{countdown}-dot {
+      --protected-icon-font-size: var(--countdown-dot-size, @T20);
+    }
+  }
+
+  &-box-medium {
+    .@{countdown}-block {
+      width: var(--countdown-size, @T40);
+      height: var(--countdown-size, @T40);
+
+      font-size: var(--countdown-font-size, @T26);
+
+      &-millisecond {
+        width: var(--countdown-millisecond-width, 52px);
+      }
+    }
+    .@{countdown}-mixture {
+      font-size: var(--countdown-font-size, @T26);
+    }
+    .@{countdown}-day {
+      font-size: var(--countdown-day-font-size, @T24);
+
+      &-block {
+        margin: var(--countdown-day-margin, 0 @gap-12);
+      }
+
+      &-mixture {
+        margin: var(--countdown-day-margin, 0 @gap-16 0 6px);
+      }
+    }
+    .@{countdown}-dot {
+      --protected-icon-font-size: var(--countdown-dot-size, @T24);
+    }
+  }
+
+  &-box-big {
+    .@{countdown}-block {
+      width: var(--countdown-size, @T44);
+      height: var(--countdown-size, @T44);
+
+      font-size: var(--countdown-font-size, @T28);
+
+      &-millisecond {
+        width: var(--countdown-millisecond-width, 55px);
+      }
+    }
+    .@{countdown}-mixture {
+      font-size: var(--countdown-font-size, @T28);
+    }
+    .@{countdown}-day {
+      font-size: var(--countdown-day-font-size, @T24);
+
+      &-block {
+        margin: var(--countdown-day-margin, 0 @gap-12);
+      }
+
+      &-mixture {
+        margin: var(--countdown-day-margin, 0 18px 0 6px);
+      }
+    }
+    .@{countdown}-dot {
+      --protected-icon-font-size: var(--countdown-dot-size, @T24);
+    }
+  }
+
+  &-box-large {
+    .@{countdown}-block {
+      width: var(--countdown-size, @T48);
+      height: var(--countdown-size, @T48);
+
+      font-size: var(--countdown-font-size, @T30);
+
+      &-millisecond {
+        width: var(--countdown-millisecond-width, 62px);
+      }
+    }
+    .@{countdown}-mixture {
+      font-size: var(--countdown-font-size, @T30);
+    }
+    .@{countdown}-day {
+      font-size: var(--countdown-day-font-size, @T26);
+
+      &-block {
+        margin: var(--countdown-day-margin, 0 @gap-12);
+      }
+
+      &-mixture {
+        margin: var(--countdown-day-margin, 0 @gap-20 0 6px);
+      }
+    }
+    .@{countdown}-dot {
+      --protected-icon-font-size: var(--countdown-dot-size, @T28);
+    }
+  }
+}

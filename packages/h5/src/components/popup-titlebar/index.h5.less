@@ -1,0 +1,48 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@popuptitle:~ '@{project}-popup-titlebar';
+
+:host {
+  display: contents;
+}
+.@{popuptitle} {
+  &-cancel {
+    color: @popup-title-bar-cancel-color;
+  }
+
+  &-confirm {
+    color: @popup-title-bar-confirm-color;
+  }
+
+  &-back {
+    --protected-icon-color: @popup-title-bar-back-color;
+  }
+
+  &-close,
+  &-mini-close {
+    --protected-icon-color: @popup-title-bar-cancel-color;
+  }
+
+  &-mini-close {
+    display: flex;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: left;
+    width: 72px;
+    height: 108px;
+    padding: 0;
+
+    text-align: left;
+  }
+
+  &-mini-close-icon {
+    padding: 8px;
+  }
+
+  &-space-between {
+    text-align: left;
+  }
+}

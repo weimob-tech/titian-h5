@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-steps 基本用法 1`] = `
+<ti-tabs>
+  <mock:shadow-root>
+    <div class="titian-tabs" part="">
+      <ti-sticky disabled="" offsettop="0">
+        <div>
+          <ti-scroll-view class="titian-tabs-scroll-pure" exportparts="" extclass="" extcss="" scroll-into-view="item-0" scroll-x="">
+            <div class="titian-tabs-navs-pure" style="--tabs-tab-width: 0px; --tabs-tab-gap: -0.25px;">
+              <div aria-hidden="true" class="titian-tabs-nav titian-tabs-nav-active titian-tabs-nav-pure" data-index="0" id="item-0" part="">
+                <div class="titian-tabs-text-label" part="">
+                  首页
+                </div>
+              </div>
+              <div aria-hidden="true" class="titian-tabs-nav titian-tabs-nav-pure" data-index="1" id="item-1" part="">
+                <div class="titian-tabs-text-label" part="">
+                  商品列表
+                </div>
+              </div>
+              <div aria-hidden="true" class="titian-tabs-nav titian-tabs-nav-pure" data-index="2" id="item-2" part="">
+                <div class="titian-tabs-text-label" part="">
+                  购物车
+                </div>
+              </div>
+              <div aria-hidden="true" class="titian-tabs-nav titian-tabs-nav-pure" data-index="3" id="item-3" part="">
+                <div class="titian-tabs-text-label" part="">
+                  个人中心
+                </div>
+              </div>
+              <div class="titian-tabs-mark-pure" part="" style="transform: translateX(0px);"></div>
+            </div>
+          </ti-scroll-view>
+        </div>
+      </ti-sticky>
+    </div>
+  </mock:shadow-root>
+</ti-tabs>
+`;

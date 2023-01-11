@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-notice-bar 基本用法 1`] = `
+<ti-notice-bar variant="vertical">
+  <mock:shadow-root>
+    <div class="titian-notice-bar titian-notice-bar-auto undefined" id="titian-notice-bar">
+      <slot name="before"></slot>
+      <div class="titian-notice-bar-container">
+        <div class="titian-notice-bar-translate">
+          <div class="titian-notice-bar-content titian-notice-bar-vertical">
+            内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字
+          </div>
+        </div>
+      </div>
+      <slot name="after"></slot>
+    </div>
+  </mock:shadow-root>
+</ti-notice-bar>
+`;

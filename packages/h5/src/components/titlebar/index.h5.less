@@ -1,0 +1,59 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+:host {
+  display: contents;
+}
+
+@titlebar:~ '@{project}-titlebar';
+
+.@{titlebar} {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  padding: @title-bar-padding-v @title-bar-padding-h;
+
+  &-left,
+  &-right {
+    position: relative;
+    z-index: 1;
+    width: @title-bar-left-width;
+    height: @title-bar-height;
+
+    font-size: @title-bar-font-size;
+    line-height: @title-bar-height;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-title {
+    flex: 1;
+
+    text-align: center;
+  }
+
+  &-main-title {
+    height: @title-bar-height;
+
+    color: @title-bar-title-color;
+    font-size: @title-bar-font-size;
+    font-weight: @font-weight-bold;
+    line-height: @title-bar-height;
+  }
+
+  &-sub-title {
+    height: @title-bar-sub-title-height;
+    margin-top: 8px;
+
+    color: @title-bar-sub-title-color;
+    font-size: @title-bar-sub-title-font-size;
+    font-weight: 400;
+  }
+}

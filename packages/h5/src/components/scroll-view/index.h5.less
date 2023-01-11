@@ -1,0 +1,86 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@scrollview:~ '@{project}-scroll-view';
+
+:host(.@{scrollview}) {
+  display: block;
+  position: relative;
+  width: @scroll-view-width;
+  min-width: @scroll-view-min-width;
+  max-width: @scroll-view-max-width;
+  height: @scroll-view-height;
+  min-height: @scroll-view-min-height;
+  max-height: @scroll-view-max-height;
+  padding: @scroll-view-padding-v @scroll-view-padding-h;
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
+}
+:host(.@{scrollview}.@{scrollview}-x) {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+:host(.@{scrollview}.@{scrollview}-y) {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+:host::-webkit-scrollbar {
+  display: none;
+}
+.@{scrollview} {
+  &-virtual {
+    display: @scroll-view-virtual-display;
+    position: @scroll-view-virtual-position;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-refresher {
+    position: absolute;
+  }
+
+  &-x&-virtual {
+    min-width: 100%;
+
+    white-space: nowrap;
+  }
+
+  &-y&-virtual {
+    min-width: 100%;
+  }
+
+  &-virtual-start,
+  &-virtual-end {
+    position: absolute;
+
+    opacity: 0;
+  }
+
+  &-x &-virtual-start {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+  }
+
+  &-y &-virtual-start {
+    width: 100%;
+    height: 1px;
+  }
+
+  &-x &-virtual-end {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+  }
+
+  &-y &-virtual-end {
+    width: 100%;
+    height: 1px;
+  }
+}

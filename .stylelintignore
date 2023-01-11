@@ -1,0 +1,9 @@
+node_modules
+**/dist/*
+**/loader/*
+www/*
+*.lock
+.husky/*
+.vscode/*
+packages/touch-emulator/tests/*
+packages/touch-emulator/touch-emulator.js

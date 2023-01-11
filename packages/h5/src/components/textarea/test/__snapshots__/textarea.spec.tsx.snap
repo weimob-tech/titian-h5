@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-steps 基本用法 1`] = `
+<ti-textarea>
+  <mock:shadow-root>
+    <div class="titian-textarea" part=""><textarea class="titian-textarea-box" maxlength="140" part="" placeholder="请输入评论文字，限200字以内…"></textarea>
+    </div>
+  </mock:shadow-root>
+</ti-textarea>
+`;

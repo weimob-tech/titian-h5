@@ -1,0 +1,355 @@
+$mainColor: rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25));
+$mainColor-20: rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 20%);
+
+.main {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 4px 40px rgba(0, 0, 0, 7%));
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  margin-left: 45.5px;
+  zoom: 0.78;
+
+  transform-origin: 0 center;
+}
+
+.section {
+  box-sizing: border-box;
+  width: 280px;
+  margin: 25px 12.5px;
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  color: #212121;
+}
+
+// checkbox
+.box {
+  display: grid;
+  grid-column-gap: 46px;
+  grid-row-gap: 20px;
+  grid-template-columns: 74px 74px;
+  grid-template-rows: 16px 16px;
+  padding: 32px 44px;
+}
+
+// tabbar
+.tabbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 66px;
+  padding-top: 6px;
+}
+
+.ti-tabbar {
+  display: contents;
+}
+
+// cell 示例
+.cell {
+  padding: 5px;
+
+  --cell-desc-text-color: #9e9e9e;
+}
+
+.cell-images {
+  display: grid;
+  grid-column-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cell-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding: 12px 14px;
+}
+
+.image-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+}
+
+// colors 控件
+.controller-title {
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  margin-bottom: 40px;
+}
+
+.color {
+  position: relative;
+  width: 14px;
+  height: 14px;
+
+  border: 1px solid #f2f2f2;
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.color + .color {
+  margin-top: 17px;
+}
+
+.color.checked {
+  border-color: inherit;
+}
+
+.color.checked::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+// radius 控件
+.radius-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  height: 150px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.input {
+  margin-top: 54px;
+
+  transform: rotate(-90deg);
+  transform-origin: center bottom;
+}
+
+input[type='range'] {
+  appearance: none;
+
+  width: 108px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    to right,
+    $mainColor 0%,
+    $mainColor var(--slider-percent, 0),
+    $mainColor-20 var(--slider-percent, 0),
+    $mainColor-20 100%
+  );
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #fff;
+  box-shadow: 0 1.2222px 4.8889px rgba(0, 0, 0, 12%);
+
+  cursor: ns-resize;
+  appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  border: none;
+
+  background: transparent;
+  box-shadow: none;
+  appearance: none;
+}
+
+// collapse 折叠面板
+.collapse {
+  // height: 210px;
+}
+
+::part(textarea) {
+  border-radius: 4px;
+
+  background-color: #fafafa;
+}
+
+// countdown
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+}
+
+.countdown-box {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  border-radius: 4px;
+
+  background: $mainColor-20;
+
+  color: $mainColor;
+  line-height: normal;
+}
+
+.millisecond {
+  width: 30px;
+}
+
+.day {
+  margin: 0 6px;
+
+  font-weight: 600;
+}
+
+.d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 24px;
+
+  line-height: normal;
+}
+
+// tag
+.tag {
+  display: flex;
+  box-sizing: border-box;
+  grid-row: 1/3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 82px;
+  height: 157px;
+  margin: 0;
+  padding: 18px;
+}
+
+// input-number
+.input-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 173px;
+  height: 82px;
+  margin: 0;
+
+  font-size: 0;
+}
+
+.input-number-box {
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 8px;
+  grid-template-columns: 90px 32px;
+}
+
+::part(ext-input) {
+  --input-number-background: #fff;
+}
+
+// rate
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 173px;
+  height: 50px;
+  margin: 0;
+}
+
+// dialog
+.dialog-box {
+  padding: 22px 18px;
+
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 6px;
+
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  flex: 1;
+  height: 44px;
+
+  line-height: 44px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.cancel {
+  color: #757575;
+}
+
+.submit {
+  color: $mainColor;
+}
+
+// search
+.search {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+// tag-rate-input
+.tag-rate-input {
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  grid-template-columns: 82px 173px;
+  grid-template-rows: 82px 50px;
+  margin-left: 12.5px;
+}

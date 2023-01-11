@@ -1,0 +1,16 @@
+@import '../common/static/utils';
+@import '../common/static/var';
+@import '../common/static/mixins/index.less';
+@safe: ~'@{project}-safe';
+
+.@{safe} {
+  background-color: @safe-bg-color;
+
+  &-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  &-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

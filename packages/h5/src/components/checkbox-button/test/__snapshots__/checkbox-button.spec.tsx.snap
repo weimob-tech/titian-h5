@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 checkbox button 修改按钮颜色 1`] = `
+<test-container>
+  <!---->
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button" style="--checkbox-button-disabled-border-color: rgba(255, 255, 0, 0.2); --checkbox-button-disabled-text-color: rgba(255, 255, 0, 0.4); --checkbox-button-checked-bg-color: rgba(255, 255, 0, 0.1); --checkbox-button-checked-text-color: rgba(255, 255, 0, 1); --checkbox-button-checked-border-color: rgba(255, 255, 0, 0.4);">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button" style="--checkbox-button-disabled-border-color: rgba(0,0,0,0.2); --checkbox-button-disabled-text-color: rgba(0,0,0,0.4); --checkbox-button-checked-bg-color: rgba(0,0,0,0.1); --checkbox-button-checked-text-color: rgba(0,0,0,1); --checkbox-button-checked-border-color: rgba(0,0,0,0.4);">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button" style="--checkbox-button-disabled-border-color: rgba(0,0,0,0.2); --checkbox-button-disabled-text-color: rgba(0,0,0,0.4); --checkbox-button-checked-bg-color: rgba(0,0,0,0.1); --checkbox-button-checked-text-color: rgba(0,0,0,1); --checkbox-button-checked-border-color: rgba(0,0,0,0.4);">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+</test-container>
+`;
+
+exports[`渲染 checkbox button 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          复选按钮文字
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          <slot></slot>
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    复选按钮文字
+  </ti-checkbox-button>
+</test-container>
+`;
+
+exports[`渲染 checkbox button 渲染禁用按钮 1`] = `
+<ti-checkbox-button>
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-checkbox-button titian-checkbox-button-disabled">
+      <ti-tag lefticon="" righticon="">
+        <slot name="prefix" slot="prefix"></slot>
+        禁用
+        <slot name="suffix" slot="suffix"></slot>
+      </ti-tag>
+    </div>
+  </mock:shadow-root>
+</ti-checkbox-button>
+`;
+
+exports[`渲染 checkbox button 渲染组件内容 1`] = `
+<test-container>
+  <!---->
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button">
+        <ti-tag lefticon="" righticon="sort-inactive">
+          <slot name="prefix" slot="prefix"></slot>
+          设置右侧图标
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          自定义左侧内容
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    <ti-image ext-style="margin-right: 6rpx" slot="prefix">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-image" part="" style="border-radius: 0px; width: 20px; height: 20px; margin-right:  6rpx;">
+          <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+          <div class="titian-image-notice">
+            <ti-icon name="default-pic" size="72"></ti-icon>
+          </div>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-image>
+  </ti-checkbox-button>
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          自定义右侧内容
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    <ti-image ext-style="margin-left: 6rpx" slot="suffix">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-image" part="" style="border-radius: 0px; width: 20px; height: 20px; margin-left:  6rpx;">
+          <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+          <div class="titian-image-notice">
+            <ti-icon name="default-pic" size="72"></ti-icon>
+          </div>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-image>
+  </ti-checkbox-button>
+</test-container>
+`;
+
+exports[`渲染 checkbox button 渲染默认选中状态 1`] = `
+<test-container>
+  <!---->
+  <ti-checkbox-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button titian-checkbox-button-checked">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          默认选中
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+  <ti-checkbox-button default-checked="">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-checkbox-button titian-checkbox-button-checked">
+        <ti-tag lefticon="" righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          默认选中
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-checkbox-button>
+</test-container>
+`;

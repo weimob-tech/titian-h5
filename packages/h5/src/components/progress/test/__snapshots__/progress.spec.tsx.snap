@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`进度条 修改展示进度值、颜色等 1`] = `
+<test-container>
+  <!---->
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate" style="height: 10px;">
+          <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-40%); height: 10px;"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate">
+          <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-20%); background-color: #2a6ae9;"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate" style="background-color: rgba(0, 0, 0, 0.1);">
+          <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-20%); background-color: rgba(0,0,0,1);"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate" style="background-image: linear-gradient(to right, #108ee9, #87d068); color: #87d068; background-color: rgba(135, 208, 104, 0.1);">
+          <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-20%); background-color: rgba(0,0,0,1); background-image: linear-gradient(to right, #108ee9, #87d068); color: #87d068;"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+</test-container>
+`;
+
+exports[`进度条 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate">
+          <div class="titian-progress-bar titian-progress-bar-"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+  <ti-progress>
+    <mock:shadow-root>
+      <div class="titian-progress" part="">
+        <div class="titian-progress-determinate">
+          <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-20%);"></div>
+        </div>
+        <slot name="info"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-progress>
+</test-container>
+`;
+
+exports[`进度条 展示进度值 1`] = `
+<ti-progress>
+  <mock:shadow-root>
+    <div class="titian-progress" part="">
+      <div class="titian-progress-determinate">
+        <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-20%); background-color: #2a6ae9;"></div>
+      </div>
+      <div class="titian-progress-pivot" style="color: #2a6ae9;">
+        80%
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-progress>
+`;
+
+exports[`进度条 设置缓冲值 1`] = `
+<ti-progress>
+  <mock:shadow-root>
+    <div class="titian-progress" part="">
+      <div class="titian-progress-determinate">
+        <div class="titian-progress-buffer-bar" style="transform: translateX(-20%);"></div>
+        <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-40%);"></div>
+      </div>
+      <slot name="info"></slot>
+    </div>
+  </mock:shadow-root>
+</ti-progress>
+`;
+
+exports[`进度条 设置进度条宽度 1`] = `
+<ti-progress>
+  <mock:shadow-root>
+    <div class="titian-progress" part="">
+      <div class="titian-progress-determinate" style="height: 10px;">
+        <div class="titian-progress-bar titian-progress-bar-" style="transform: translateX(-40%); height: 10px;"></div>
+      </div>
+      <slot name="info"></slot>
+    </div>
+  </mock:shadow-root>
+</ti-progress>
+`;
