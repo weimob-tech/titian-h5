@@ -1,4 +1,4 @@
-# 🎉 特性
+## 🎉 特性
 - 60+ 高质量组件
 - 适配移动端交互
 - 支持多框架，包括Web Components 、React和Vue 3.0
@@ -7,7 +7,7 @@
 - 支持 SSR
 - 国际化支持
 
-# 🔥 安装
+## 🔥 安装
 React 项目
 ```shell
 npm install @titian-design/react
@@ -18,7 +18,7 @@ Vue 3.0 项目
 npm install @titian-design/vue
 ```
 
-# 👍 使用
+## 👍 使用
 React 项目
 ```js
 import { TiButton } from '@titian-design/react';
@@ -43,7 +43,7 @@ const app = createApp(App)
 app.use(TitianUI)
 app.mount('#app')
 ```
-# 🔨 本地开发
+## 🔨 本地开发
 
 ```bash
 $ git clone git@github.com:weimob-tech/titian-h5.git
@@ -62,6 +62,6 @@ $ pnpm start
 | packages/h5-vue   | `@titian-design/vue`   | 基于 `@titian-design/h5` 搭建的 vue 3 组件库 | `@titian-design/h5`    |
 | packages/doc-web  | -                      | 基于 `docusaurus` 搭建的 API 文档            | `@titian-design/react` |
 
-# 🎈 协议
+## 🎈 协议
 
 Titian Design 使用 [MIT 协议](LICENSE)
