@@ -62,4 +62,6 @@ $ pnpm start
 | packages/h5-vue   | `@titian-design/vue`   | 基于 `@titian-design/h5` 搭建的 vue 3 组件库 | `@titian-design/h5`    |
 | packages/doc-web  | -                      | 基于 `docusaurus` 搭建的 API 文档            | `@titian-design/react` |
 
+# 🎈 协议
 
+Titian Design 使用 [MIT 协议](LICENSE)
