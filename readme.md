@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/titian-logo.png" width="200" />
+  <img src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/Logo_Titian.png" width="200" />
 </p>
 
 <div align="center">
