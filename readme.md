@@ -11,7 +11,7 @@
 [figma-badge]: https://img.shields.io/badge/Figma-UIKit-%2318a0fb
 [figma-url]: https://www.figma.com/@titian-design/h5
 [license-badge]: https://img.shields.io/npm/l/@titian-design/h5
-[license-url]: https://github.com/weimob-tech/titian-design/blob/main/LICENSE
+[license-url]: https://github.com/weimob-tech/titian-h5/blob/master/LICENSE
 [download-image]: https://img.shields.io/npm/dm/@titian-design/h5
 [download-url]: https://npmjs.org/package/@titian-design/h5
 
