@@ -9,7 +9,7 @@
 [npm-badge]: https://img.shields.io/npm/v/@titian-design/h5.svg
 [npm-url]: https://www.npmjs.com/package/@titian-design/h5
 [figma-badge]: https://img.shields.io/badge/Figma-UIKit-%2318a0fb
-[figma-url]: https://www.figma.com/@titian-design/h5
+[figma-url]: https://www.figma.com/community/file/1194917512409387064
 [license-badge]: https://img.shields.io/npm/l/@titian-design/h5
 [license-url]: https://github.com/weimob-tech/titian-h5/blob/master/LICENSE
 [download-image]: https://img.shields.io/npm/dm/@titian-design/h5
