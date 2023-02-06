@@ -17,7 +17,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiButton, TiShareSheet } from '@titian-design/vue';
+import { TiButton, TiShareSheet } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

@@ -1,5 +1,5 @@
 import { UserContext } from '@site/src/pages/index';
-import { TiCountdown, TiIcon } from '@titian-design/react';
+import { TiCountdown, TiIcon } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React, { useState, useContext } from 'react';
 import styles from './index.module.scss';

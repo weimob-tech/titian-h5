@@ -15,7 +15,7 @@ side_iframe_path: '#/divider'
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiDivider } from '@titian-design/vue'
+import { TiDivider } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -28,7 +28,7 @@ import { TiDivider } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -41,7 +41,7 @@ import { TiDivider } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -55,7 +55,7 @@ import { TiDivider } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -74,7 +74,7 @@ import { TiDivider } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -86,7 +86,7 @@ import { TiDivider } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -99,7 +99,7 @@ import { TiDivider } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/vue';
+import { TiDivider } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiDivider API

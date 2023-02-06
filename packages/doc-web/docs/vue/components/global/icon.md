@@ -17,7 +17,7 @@ import IconCollection from '@site/src/components/iconCollection';
 **基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用**
 ## 安装使用
 ```typescript showLineNumbers
-import { TiIcon } from '@titian-design/vue'
+import { TiIcon } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiIcon } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/vue';
+import { TiIcon } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -43,7 +43,7 @@ import { TiIcon } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/vue';
+import { TiIcon } from '@titian-design/mobile-vue';
 </script>
 <style>
 @font-face {
@@ -90,7 +90,7 @@ import { TiIcon } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/vue';
+import { TiIcon } from '@titian-design/mobile-vue';
 </script>
 <style>
 @font-face {

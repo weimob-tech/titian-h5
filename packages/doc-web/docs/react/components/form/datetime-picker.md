@@ -13,7 +13,7 @@ side_iframe_path: "#/datetime-picker"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiDatetimePicker } from '@titian-design/react'
+import { TiDatetimePicker } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

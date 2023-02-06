@@ -1,4 +1,4 @@
-import { TiButton, TiCell, TiSwitch, TiImage, TiIcon } from '@titian-design/react';
+import { TiButton, TiCell, TiSwitch, TiImage, TiIcon } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
 

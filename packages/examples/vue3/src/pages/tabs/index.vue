@@ -23,7 +23,7 @@
 </template>
 <script lang="ts" setup>
 import { ref, nextTick } from 'vue';
-import { TiTabs, TiTabsProps } from '@titian-design/vue';
+import { TiTabs, TiTabsProps } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

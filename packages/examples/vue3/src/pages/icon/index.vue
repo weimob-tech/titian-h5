@@ -24,7 +24,7 @@
 </template>
 <script lang="ts" setup>
 import { ref, computed, CSSProperties } from 'vue';
-import { TiIcon } from '@titian-design/vue';
+import { TiIcon } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 interface IconAttrsProps {

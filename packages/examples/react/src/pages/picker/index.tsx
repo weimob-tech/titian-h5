@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiButton, TiPopup, TiPicker } from '@titian-design/react';
+import { TiButton, TiPopup, TiPicker } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import city from './city';
 import './index.less';

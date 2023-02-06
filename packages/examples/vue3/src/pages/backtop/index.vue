@@ -7,7 +7,7 @@
   <TiBackTop :text="attrs.text" extClass="back-top" />
 </template>
 <script lang="ts" setup>
-import { TiBackTopProps, TiCellGroup, TiCell, TiBackTop } from '@titian-design/vue';
+import { TiBackTopProps, TiCellGroup, TiCell, TiBackTop } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

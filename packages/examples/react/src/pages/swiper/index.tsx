@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { TiImage, TiSwiper, TiSwiperItem, TiSwiperProps } from '@titian-design/react';
+import { TiImage, TiSwiper, TiSwiperItem, TiSwiperProps } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

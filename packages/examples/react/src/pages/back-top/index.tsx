@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TiBackTop, TiBackTopProps, TiCell, TiCellGroup } from '@titian-design/react';
+import { TiBackTop, TiBackTopProps, TiCell, TiCellGroup } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

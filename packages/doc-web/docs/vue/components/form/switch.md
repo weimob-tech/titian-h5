@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 默认值
@@ -39,7 +39,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 尺寸
@@ -49,7 +49,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 颜色
@@ -59,7 +59,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 禁用
@@ -69,7 +69,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 加载
@@ -79,7 +79,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 受控模式
@@ -89,7 +89,7 @@ import { TiSwitch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwitch } from '@titian-design/vue';
+import { TiSwitch } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiSwitch API

@@ -14,7 +14,7 @@ side_iframe_path: "#/slider"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSlider } from '@titian-design/react'
+import { TiSlider } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

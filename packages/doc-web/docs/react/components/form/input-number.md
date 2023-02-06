@@ -12,7 +12,7 @@ side_iframe_path: "#/input-number"
 **步进器由增加按钮、减少按钮和输入框组成，用于输入范围内的数值**
 ## 安装使用
 ```typescript showLineNumbers
-import { TiInputNumber } from '@titian-design/react'
+import { TiInputNumber } from '@titian-design/mobile-react'
 ```
 ## 用法示例
 

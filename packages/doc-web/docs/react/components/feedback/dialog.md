@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { $tiDialog } from '@titian-design/react';
+import { $tiDialog } from '@titian-design/mobile-react';
 ```
 
 
@@ -27,7 +27,7 @@ import { $tiDialog } from '@titian-design/react';
 #### 常规 API 式调用
 
 ```typescript tsx showLineNumbers
-import { $tiDialog } from '@titian-design/react'
+import { $tiDialog } from '@titian-design/mobile-react'
 
 const App = () => {
 

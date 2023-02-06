@@ -13,7 +13,7 @@ side_iframe_path: "#/tabs"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTabs } from '@titian-design/vue'
+import { TiTabs } from '@titian-design/mobile-vue'
 ```
 
 import TabsLink from '@site/src/components/tabsLink';
@@ -28,7 +28,7 @@ import TabsLink from '@site/src/components/tabsLink';
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </script>
 ```
@@ -39,7 +39,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = [{name: '首页'}, {name: '我的'}]
 </script>
 ```
@@ -52,7 +52,7 @@ const tabs = [{name: '首页'}, {name: '我的'}]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </script>
 ```
@@ -66,7 +66,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -81,7 +81,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -96,7 +96,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -108,7 +108,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表"]
 </script>
 ```
@@ -119,7 +119,7 @@ const tabs = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 </script>
 ```
@@ -133,7 +133,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心", "详情页"
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表"]
 const calendarTabs = [
   { label: '01', description: '周一' }, 
@@ -156,7 +156,7 @@ const multiTabs = [
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/vue';
+import { TiTabs } from '@titian-design/mobile-vue';
 const tabs = ["首页", "商品列表"]
 </script>
 ```

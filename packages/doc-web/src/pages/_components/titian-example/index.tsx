@@ -1,5 +1,5 @@
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { TiDivider, setupTitianReact } from '@titian-design/react';
+import { TiDivider, setupTitianReact } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import CellExample from './cell';

@@ -14,7 +14,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiTextarea, TiTextareaProps } from '@titian-design/vue';
+import { TiTextarea, TiTextareaProps } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

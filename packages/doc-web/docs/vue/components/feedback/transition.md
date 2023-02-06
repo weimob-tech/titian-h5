@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiTransition } from '@titian-design/vue';
+import { TiTransition } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -40,7 +40,7 @@ import { TiTransition } from '@titian-design/vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiTransition } from '@titian-design/vue';
+import { TiTransition } from '@titian-design/mobile-vue';
 
 const show = ref(false);
 const effectName = ref('fade');

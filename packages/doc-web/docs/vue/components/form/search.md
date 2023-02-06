@@ -12,7 +12,7 @@ side_iframe_path: "#/search"
 **适用于搜索场景**
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSearch } from '@titian-design/vue'
+import { TiSearch } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -23,7 +23,7 @@ import { TiSearch } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/vue';
+import { TiSearch } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -34,7 +34,7 @@ import { TiSearch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/vue';
+import { TiSearch } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -52,7 +52,7 @@ import { TiSearch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/vue';
+import { TiSearch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 使用插槽
@@ -77,7 +77,7 @@ import { TiSearch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/vue';
+import { TiSearch } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 键盘确认按钮文字
@@ -91,7 +91,7 @@ import { TiSearch } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/vue';
+import { TiSearch } from '@titian-design/mobile-vue';
 </script>
 ```
 

@@ -18,7 +18,7 @@
   </CustomPage>
 </template>
 <script lang="ts" setup>
-import { TiPreview, TiImage, TiPreviewProps } from '@titian-design/vue';
+import { TiPreview, TiImage, TiPreviewProps } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';

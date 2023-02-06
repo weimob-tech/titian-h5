@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPicker, TiPickerItem } from '@titian-design/vue';
+import { TiPicker, TiPickerItem } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -41,7 +41,7 @@ options 字段数据结构：[PickerAcronymColumn](#简易模式--列数据结�
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = ['选项一', '选项二', '选项三', '选项四', '选项五'];
 const value = ['选项二'];
@@ -60,7 +60,7 @@ const onConfirm = (event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = {
   colAlias: 'a',
@@ -85,7 +85,7 @@ const onConfirm = (event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = [
     ['选项一', '选项二', '选项三', '选项四', '选项五'],
@@ -107,7 +107,7 @@ const onConfirm = (event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = [
  {
@@ -138,7 +138,7 @@ const onConfirm = (event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = [
  { text: '选项一', disabled: true },
@@ -164,7 +164,7 @@ const onConfirm = (event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiPicker, TiPickerColumn } from '@titian-design/vue';
+import { TiPicker, TiPickerColumn } from '@titian-design/mobile-vue';
 
 const options = [
  {

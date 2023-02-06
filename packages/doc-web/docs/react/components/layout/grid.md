@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiGrid, TiGridItem } from '@titian-design/react'
+import { TiGrid, TiGridItem } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

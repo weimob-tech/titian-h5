@@ -10,7 +10,7 @@
   </CustomPage>
 </template>
 <script setup lang="ts">
-import { TiColProps, TiRowProps, TiCol, TiRow } from '@titian-design/vue';
+import { TiColProps, TiRowProps, TiCol, TiRow } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

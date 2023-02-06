@@ -13,7 +13,7 @@ side_iframe_path: "#/notice-bar"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiNoticeBar } from '@titian-design/vue'
+import { TiNoticeBar } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -25,7 +25,7 @@ import { TiNoticeBar } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/vue';
+import { TiNoticeBar } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 纵向滚动
@@ -35,7 +35,7 @@ import { TiNoticeBar } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/vue';
+import { TiNoticeBar } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 滚动速度
@@ -45,7 +45,7 @@ import { TiNoticeBar } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/vue';
+import { TiNoticeBar } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 内容超出后显示方式
@@ -65,7 +65,7 @@ import { TiNoticeBar } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/vue';
+import { TiNoticeBar } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiNoticeBar API

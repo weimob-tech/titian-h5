@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { TiSku, TiGoodsCard, TiSkuSelector, TiButton, TiPopup, TiPopupTitlebar } from '@titian-design/react';
+import { TiSku, TiGoodsCard, TiSkuSelector, TiButton, TiPopup, TiPopupTitlebar } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import { mockSkuData, mockSkuDataSingle } from './mockData.js';
 import './index.less';

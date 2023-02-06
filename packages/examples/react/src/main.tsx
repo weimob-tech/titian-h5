@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 
 import { HashRouter, useRoutes } from 'react-router-dom';
-import { setupTitianReact, TiConfigProvider } from '@titian-design/react';
+import { setupTitianReact, TiConfigProvider } from '@titian-design/mobile-react';
 
 //@ts-ignore
 import * as TouchEmulatorFn from '@titian-design/touchemulator';

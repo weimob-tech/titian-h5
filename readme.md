@@ -31,18 +31,18 @@
 ## 🔥 安装
 React 项目
 ```shell
-npm install @titian-design/react
+npm install @titian-design/mobile-react
 ```
 
 Vue 3.0 项目
 ```shell
-npm install @titian-design/vue
+npm install @titian-design/mobile-vue
 ```
 
 ## 👍 使用
 React 项目
 ```js
-import { TiButton } from '@titian-design/react';
+import { TiButton } from '@titian-design/mobile-react';
 
 const App = () => (
   <div className="App">
@@ -56,7 +56,7 @@ export default App;
 Vue 3.0 项目
 ```js
 import { createApp } from 'vue'
-import { TitianUI } from '@titian-design/vue'
+import { TitianUI } from '@titian-design/mobile-vue'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -79,9 +79,9 @@ $ pnpm start
 | 代码路径          | npm 包名               | 说明                                         | 依赖于                 |
 | ----------------- | ---------------------- | -------------------------------------------- | ---------------------- |
 | packages/h5       | `@titian-design/h5`    | `H5` 组件库源文件，是以 [`stencil`](https://stenciljs.com/docs/introduction) 为基础。            | `@stencil/core`        |
-| packages/h5-react | `@titian-design/react` | 基于 `@titian-design/h5` 搭建的 react 组件库 | `@titian-design/h5`    |
-| packages/h5-vue   | `@titian-design/vue`   | 基于 `@titian-design/h5` 搭建的 vue 3 组件库 | `@titian-design/h5`    |
-| packages/doc-web  | -                      | 基于 `docusaurus` 搭建的 API 文档            | `@titian-design/react` |
+| packages/h5-react | `@titian-design/mobile-react` | 基于 `@titian-design/h5` 搭建的 react 组件库 | `@titian-design/h5`    |
+| packages/h5-vue   | `@titian-design/mobile-vue`   | 基于 `@titian-design/h5` 搭建的 vue 3 组件库 | `@titian-design/h5`    |
+| packages/doc-web  | -                      | 基于 `docusaurus` 搭建的 API 文档            | `@titian-design/mobile-react` |
 
 ## 🎈 协议
 

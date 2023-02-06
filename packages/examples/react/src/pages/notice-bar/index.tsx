@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Page, { OptionType } from '../../components/page';
-import { TiButton, TiNoticeBarProps, TiNoticeBar } from '@titian-design/react';
+import { TiButton, TiNoticeBarProps, TiNoticeBar } from '@titian-design/mobile-react';
 
 const options: OptionType[] = [
   {

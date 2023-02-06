@@ -1,4 +1,4 @@
-import { TiInputNumber } from '@titian-design/react';
+import { TiInputNumber } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
 import styles from './index.module.scss';

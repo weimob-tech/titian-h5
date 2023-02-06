@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiDivider, EDividerPosition, EDividerOrientation } from '@titian-design/react';
+import { TiDivider, EDividerPosition, EDividerOrientation } from '@titian-design/mobile-react';
 
 import Page, { OptionType } from '../../components/page';
 import './index.less';

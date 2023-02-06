@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiEmpty, TiButton } from '@titian-design/react';
+import { TiEmpty, TiButton } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import png from './example-empty.png';
 import extCss from './index.less';

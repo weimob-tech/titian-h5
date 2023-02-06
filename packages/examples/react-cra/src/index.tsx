@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { TiCol, TiRow } from '@titian-design/react';
+import { TiCol, TiRow } from '@titian-design/mobile-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 

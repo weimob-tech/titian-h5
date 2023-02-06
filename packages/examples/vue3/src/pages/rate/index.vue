@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/vue';
+import { TiRate } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

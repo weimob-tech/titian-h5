@@ -12,7 +12,7 @@ side_iframe_path: "#/input-number"
 **步进器由增加按钮、减少按钮和输入框组成，用于输入范围内的数值**
 ## 安装使用
 ```typescript showLineNumbers
-import { TiInputNumber } from '@titian-design/vue'
+import { TiInputNumber } from '@titian-design/mobile-vue'
 ```
 ## 用法示例
 
@@ -23,7 +23,7 @@ import { TiInputNumber } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 步进器尺寸
@@ -34,7 +34,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 步进器风格
@@ -46,7 +46,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -57,7 +57,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 步进器步长
@@ -67,7 +67,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -81,7 +81,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 边框
@@ -92,7 +92,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 收起状态
@@ -102,7 +102,7 @@ import { TiInputNumber } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/vue';
+import { TiInputNumber } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiInputNumber API

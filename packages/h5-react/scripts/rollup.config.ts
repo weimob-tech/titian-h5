@@ -66,7 +66,7 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       format,
       sourcemap: true,
       ...(format === 'umd' ? { name: 'TitianH5', inlineDynamicImports: true } : {}),
-      banner: `console.log('%c @titian-design/react: ${packageJSON.version}', 'background: #222; color: #bada55');`,
+      banner: `console.log('%c @titian-design/mobile-react: ${packageJSON.version}', 'background: #222; color: #bada55');`,
     },
     external: ['react', 'react-dom'],
     plugins: [

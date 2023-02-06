@@ -1,4 +1,4 @@
-import { TiTabbar, TiTabbarItem } from '@titian-design/react';
+import { TiTabbar, TiTabbarItem } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
 

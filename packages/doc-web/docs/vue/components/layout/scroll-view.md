@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiScrollView } from '@titian-design/vue';
+import { TiScrollView } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -78,7 +78,7 @@ import { TiScrollView } from '@titian-design/vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiScrollView } from '@titian-design/vue';
+import { TiScrollView } from '@titian-design/mobile-vue';
   
 const upper = () => {
   console.log("到达头部");

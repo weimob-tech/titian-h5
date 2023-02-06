@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TiSwiper, TiSwiperItem, TiSwiperProps, TiImage } from '@titian-design/vue';
+import { TiSwiper, TiSwiperItem, TiSwiperProps, TiImage } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

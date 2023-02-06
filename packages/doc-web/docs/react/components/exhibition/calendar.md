@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCalendar } from '@titian-design/react';
+import { TiCalendar } from '@titian-design/mobile-react';
 ```
 
 ## 用法示例

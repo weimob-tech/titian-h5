@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import CustomPage from '../../components/page.vue';
-import { TiCalendar, TiButton } from '@titian-design/vue';
+import { TiCalendar, TiButton } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 

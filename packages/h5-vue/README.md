@@ -26,17 +26,17 @@ Titian Vue 是以 Web Components 为基础的 Vue 3 组件库，同时与小程�
 
 ```shell
 # 通过 npm 安装
-npm i @titian-design/vue --save
+npm i @titian-design/mobile-vue --save
 
 # 通过 yarn 安装
-yarn add @titian-design/vue
+yarn add @titian-design/mobile-vue
 ```
 
 ### 使用
 
 ```typescript
 import { createApp } from 'vue';
-import { TitianUI } from '@titian-design/vue';
+import { TitianUI } from '@titian-design/mobile-vue';
 import App from './App.vue';
 
 const app = createApp(App);
@@ -55,5 +55,5 @@ app.mount('#app');
 - [changelog 更新日志](https://github.com/weimob-tech/titian-h5/blob/master/packages/h5-vue/CHANGELOG.md)
 - [issue 提出问题](https://github.com/weimob-tech/titian-h5/issues)
 - [小程序组件库](https://www.npmjs.com/package/@titian-design/weapp)
-- [Vue 组件库](https://www.npmjs.com/package/@titian-design/vue)
-- [React 组件库](https://www.npmjs.com/package/@titian-design/react)
+- [Vue 组件库](https://www.npmjs.com/package/@titian-design/mobile-vue)
+- [React 组件库](https://www.npmjs.com/package/@titian-design/mobile-react)

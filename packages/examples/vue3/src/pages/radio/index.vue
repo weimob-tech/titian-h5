@@ -22,7 +22,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiRadioGroup, TiRadio } from '@titian-design/vue';
+import { TiRadioGroup, TiRadio } from '@titian-design/mobile-vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 import { addUnit } from '../../utils';

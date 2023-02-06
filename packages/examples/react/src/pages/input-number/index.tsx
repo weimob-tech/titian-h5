@@ -1,4 +1,4 @@
-import { TiInputNumber, TiInputNumberProps } from '@titian-design/react';
+import { TiInputNumber, TiInputNumberProps } from '@titian-design/mobile-react';
 import { useState } from 'react';
 import Page, { OptionType } from '../../components/page';
 import './index.css';

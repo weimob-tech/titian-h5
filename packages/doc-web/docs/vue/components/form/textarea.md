@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiTextarea } from '@titian-design/vue'
+import { TiTextarea } from '@titian-design/mobile-vue'
 ```
 ## 用法示例
 
@@ -29,7 +29,7 @@ import { TiTextarea } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTextarea } from '@titian-design/vue';
+import { TiTextarea } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 高度自适应
@@ -39,7 +39,7 @@ import { TiTextarea } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTextarea } from '@titian-design/vue';
+import { TiTextarea } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 字数统计
@@ -49,7 +49,7 @@ import { TiTextarea } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTextarea } from '@titian-design/vue';
+import { TiTextarea } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 键盘确认按钮文字
@@ -63,7 +63,7 @@ import { TiTextarea } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTextarea } from '@titian-design/vue';
+import { TiTextarea } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiTextarea API

@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { TiCascade, TiPopup, TiButton } from '@titian-design/react';
+import { TiCascade, TiPopup, TiButton } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import city from './city';
 

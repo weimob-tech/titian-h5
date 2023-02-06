@@ -13,7 +13,7 @@ side_iframe_path: "#/badge"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiBadge } from '@titian-design/vue'
+import { TiBadge } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiBadge } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiBadge } from '@titian-design/vue';
+import { TiBadge } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 置于元素内部
@@ -46,7 +46,7 @@ import { TiBadge } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBadge } from '@titian-design/vue';
+import { TiBadge } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 普通展示，无定位
@@ -59,7 +59,7 @@ import { TiBadge } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBadge, TiCell } from '@titian-design/vue';
+import { TiBadge, TiCell } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 使用在文字右上角
@@ -71,7 +71,7 @@ import { TiBadge, TiCell } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBadge, TiCell } from '@titian-design/vue';
+import { TiBadge, TiCell } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 自定义偏移
@@ -83,7 +83,7 @@ import { TiBadge, TiCell } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBadge, TiCell } from '@titian-design/vue';
+import { TiBadge, TiCell } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 徽标内容撑开方向
@@ -98,7 +98,7 @@ import { TiBadge, TiCell } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBadge, TiCell } from '@titian-design/vue';
+import { TiBadge, TiCell } from '@titian-design/mobile-vue';
 </script>
 ```
 ## TiBadge API

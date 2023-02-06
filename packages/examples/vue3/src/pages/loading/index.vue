@@ -4,7 +4,7 @@
   </CustomPage>
 </template>
 <script lang="ts" setup>
-import { TiLoadingProps, TiLoading } from '@titian-design/vue';
+import { TiLoadingProps, TiLoading } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';

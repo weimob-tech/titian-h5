@@ -1,6 +1,6 @@
 import React from 'react';
 import Page, { OptionType } from '../../components/page';
-import { TiBadge, TiBadgeProps } from '@titian-design/react';
+import { TiBadge, TiBadgeProps } from '@titian-design/mobile-react';
 
 import './index.less';
 

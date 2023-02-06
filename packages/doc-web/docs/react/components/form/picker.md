@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPicker, TiPickerItem } from '@titian-design/react';
+import { TiPicker, TiPickerItem } from '@titian-design/mobile-react';
 ```
 
 ## 用法示例

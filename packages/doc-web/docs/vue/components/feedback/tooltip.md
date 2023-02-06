@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiTooltip } from '@titian-design/vue';
+import { TiTooltip } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -39,7 +39,7 @@ import { TiTooltip } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTooltip, TiIcon } from '@titian-design/vue';
+import { TiTooltip, TiIcon } from '@titian-design/mobile-vue';
 </script>
 ```
 

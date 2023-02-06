@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiProgress, TiProgressProps, TiCircleProgress } from '@titian-design/react';
+import { TiProgress, TiProgressProps, TiCircleProgress } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

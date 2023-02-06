@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { $tiDialog, TiButton, TiDialog } from '@titian-design/react';
+import { $tiDialog, TiButton, TiDialog } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import { useState, useCallback } from 'react';
 import { mergeOptionIntoAttrs } from '../../util/index';

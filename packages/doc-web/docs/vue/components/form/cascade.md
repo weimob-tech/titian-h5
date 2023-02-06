@@ -23,7 +23,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCascade } from '@titian-design/vue';
+import { TiCascade } from '@titian-design/mobile-vue';
 ```
 
 
@@ -43,7 +43,7 @@ import { TiCascade } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCascade } from '@titian-design/vue';
+import { TiCascade } from '@titian-design/mobile-vue';
 import { tabs, options } from './mockData';
 </script>
 ```
@@ -114,7 +114,7 @@ export default { tabs, options };
 </template>
 
 <script lang="ts" setup>
-import { TiCascade } from '@titian-design/vue';
+import { TiCascade } from '@titian-design/mobile-vue';
   
 const asyncGetOptionAPI = async (value: any) => {
     let rawResponse;

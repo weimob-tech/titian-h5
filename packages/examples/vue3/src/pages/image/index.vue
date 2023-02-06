@@ -22,7 +22,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiImage } from '@titian-design/vue';
+import { TiImage } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 const successUrl = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png?';

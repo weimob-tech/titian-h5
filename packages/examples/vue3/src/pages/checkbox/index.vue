@@ -35,7 +35,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { TiCheckboxGroupProps, TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/vue';
+import { TiCheckboxGroupProps, TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

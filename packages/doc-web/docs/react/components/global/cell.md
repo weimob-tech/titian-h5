@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCell, TiCellGroup } from '@titian-design/react';
+import { TiCell, TiCellGroup } from '@titian-design/mobile-react';
 ```
 
 ## 基本用法

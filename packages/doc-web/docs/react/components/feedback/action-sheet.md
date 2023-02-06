@@ -13,7 +13,7 @@ side_iframe_path: "#/action-sheet"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiActionSheet } from '@titian-design/react'
+import { TiActionSheet } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

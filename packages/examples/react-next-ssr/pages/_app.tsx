@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { TiCol, TiRow } from '@titian-design/react';
+import { TiCol, TiRow } from '@titian-design/mobile-react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,4 +1,4 @@
-import { TiButton } from '@titian-design/react';
+import { TiButton } from '@titian-design/mobile-react';
 import { useCallback, useState } from 'react';
 import Page, { OptionType } from '../../components/page';
 import './index.css';

@@ -14,7 +14,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiTabbar, TiTabbarItem } from '@titian-design/vue';
+import { TiTabbar, TiTabbarItem } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 

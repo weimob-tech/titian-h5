@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiSwitch } from '@titian-design/react';
+import { TiSwitch } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 interface SwitchAttrsProps {

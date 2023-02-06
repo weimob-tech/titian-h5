@@ -13,7 +13,7 @@ side_iframe_path: "#/datetime-picker"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiDatetimePicker } from '@titian-design/vue'
+import { TiDatetimePicker } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -27,7 +27,7 @@ import { TiDatetimePicker } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -47,7 +47,7 @@ import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -60,7 +60,7 @@ import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 enum columnType { YEAR = "year", MONTH = "month", DAY = "day", HOUR = "hour", MINUTE = "minute" }
 const formatter = (type: columnType, value: number) => {
   const pipe = {
@@ -84,7 +84,7 @@ const formatter = (type: columnType, value: number) => {
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 enum columnType { YEAR = "year", MONTH = "month", DAY = "day", HOUR = "hour", MINUTE = "minute" }
 const filter = (type: columnType, options: Array<{value: number}>) => {
   if (type === "year") {
@@ -103,7 +103,7 @@ const filter = (type: columnType, options: Array<{value: number}>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 </script>
 ```
 #### 时间项排序
@@ -116,7 +116,7 @@ import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDatetimePicker, TiPopup } from '@titian-design/vue';
+import { TiDatetimePicker, TiPopup } from '@titian-design/mobile-vue';
 </script>
 ```
 

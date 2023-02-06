@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiCollapse, TiCollapseItem } from '@titian-design/react';
+import { TiCollapse, TiCollapseItem } from '@titian-design/mobile-react';
 ```
 
 ## 用法示例

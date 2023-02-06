@@ -1,4 +1,4 @@
-import { TiTextarea, TiTextareaProps } from '@titian-design/react';
+import { TiTextarea, TiTextareaProps } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import { useState } from 'react';
 import './index.css';

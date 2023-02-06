@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiButton, TiCell, TiCellGroup, TiCheckbox, TiImage, TiSwipeCell, TiTag } from '@titian-design/react';
+import { TiButton, TiCell, TiCellGroup, TiCheckbox, TiImage, TiSwipeCell, TiTag } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

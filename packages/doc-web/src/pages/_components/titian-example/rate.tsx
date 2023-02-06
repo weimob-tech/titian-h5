@@ -1,4 +1,4 @@
-import { TiRate } from '@titian-design/react';
+import { TiRate } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import styles from './index.module.scss';

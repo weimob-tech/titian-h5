@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import CustomPage from '../../components/page.vue';
-import { TiButton, TiPopup, TiPicker } from '@titian-design/vue';
+import { TiButton, TiPopup, TiPicker } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import { OptionType } from '../../components/page.interface';
 import city from './city';

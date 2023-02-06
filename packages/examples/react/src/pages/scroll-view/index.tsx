@@ -1,6 +1,6 @@
 //@ts-nocheck
 // import { useState, useRef, useEffect } from 'react';
-import { TiScrollView } from '@titian-design/react';
+import { TiScrollView } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import './index.less';
 

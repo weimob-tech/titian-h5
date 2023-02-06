@@ -13,7 +13,7 @@ side_iframe_path: "#/countdown"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiCountdown } from '@titian-design/react'
+import { TiCountdown } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

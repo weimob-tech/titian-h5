@@ -13,7 +13,7 @@ side_iframe_path: "#/notice-bar"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiNoticeBar } from '@titian-design/react'
+import { TiNoticeBar } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

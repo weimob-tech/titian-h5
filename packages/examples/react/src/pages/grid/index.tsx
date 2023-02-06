@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TiGrid, TiGridProps, TiGridItemProps, TiGridItem } from '@titian-design/react';
+import { TiGrid, TiGridProps, TiGridItemProps, TiGridItem } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 const options: OptionType[] = [

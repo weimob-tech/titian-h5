@@ -13,7 +13,7 @@ side_iframe_path: "#/sku"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSku } from '@titian-design/react'
+import { TiSku } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

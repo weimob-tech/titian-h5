@@ -1,5 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { TiCheckboxButton, TiCheckbox, TiCheckboxGroup, TiCheckboxGroupProps, TiImage } from '@titian-design/react';
+import {
+  TiCheckboxButton,
+  TiCheckbox,
+  TiCheckboxGroup,
+  TiCheckboxGroupProps,
+  TiImage,
+} from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 import './index.less';

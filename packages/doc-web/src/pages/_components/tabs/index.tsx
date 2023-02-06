@@ -1,4 +1,4 @@
-import { TiDivider } from '@titian-design/react';
+import { TiDivider } from '@titian-design/mobile-react';
 import ClipboardJS from 'clipboard';
 import clsx from 'clsx';
 import React, { useState } from 'react';
@@ -22,29 +22,29 @@ function Tabs() {
     {
       tab: 'React',
       content: `
-      npm install @titian-design/react <br />
+      npm install @titian-design/mobile-react <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-react'</span><br />
     `,
-      text: `npm i @titian-design/react`,
+      text: `npm i @titian-design/mobile-react`,
     },
     {
       tab: 'Vue',
       content: `
-      npm install @titian-design/vue <br />
+      npm install @titian-design/mobile-vue <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Vue</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/vue/es/style/index.css'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-vue'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-vue/es/style/index.css'</span><br />
       <span style="color: #fff">Vue.</span><span style="color: ${green}">use</span><span style="color: #fff">(Titian);</span>
     `,
-      text: `npm i @titian-design/vue`,
+      text: `npm i @titian-design/mobile-vue`,
     },
     // {
     //   tab: 'H5',
     //   content: `
-    //   npm install @titian-design/react <br />
+    //   npm install @titian-design/mobile-react <br />
     //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/react'</span><br />
+    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-react'</span><br />
     // `,
     //   text: `npm i @titian-design/h5`
     // }

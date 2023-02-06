@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TiDropdownItem, TiDropdownItemProps, TiDropdownMenu, TiDropdownMenuProps } from '@titian-design/react';
+import { TiDropdownItem, TiDropdownItemProps, TiDropdownMenu, TiDropdownMenuProps } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 const options: OptionType[] = [

@@ -13,7 +13,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSidebar, TiSidebarItem, TiSidebarProps } from '@titian-design/vue';
+import { TiSidebar, TiSidebarItem, TiSidebarProps } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 import { addUnit } from '../../utils';

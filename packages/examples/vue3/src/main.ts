@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { TitianUI } from '@titian-design/vue';
+import { TitianUI } from '@titian-design/mobile-vue';
 import App from './App.vue';
 import { router } from './router';
 

@@ -20,7 +20,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -45,7 +45,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -58,7 +58,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -71,7 +71,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -84,7 +84,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -97,7 +97,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 
@@ -109,7 +109,7 @@ import { TiEmpty } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { TiEmpty } from '@titian-design/vue';
+import { TiEmpty } from '@titian-design/mobile-vue';
 </script>
 ```
 

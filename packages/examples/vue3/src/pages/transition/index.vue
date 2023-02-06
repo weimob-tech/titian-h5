@@ -11,7 +11,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { TiTransitionProps, TiTransition } from '@titian-design/vue';
+import { TiTransitionProps, TiTransition } from '@titian-design/mobile-vue';
 import { ref, watch, watchEffect } from 'vue';
 import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';

@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { $tiToast } from '@titian-design/vue';
+import { $tiToast } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
 import { OptionType } from '../../components/page.interface';

@@ -20,7 +20,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript jsx showLineNumbers
-import { TiSteps } from '@titian-design/vue';
+import { TiSteps } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiSteps } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>  
-import { TiSteps } from '@titian-design/vue';
+import { TiSteps } from '@titian-design/mobile-vue';
 const options = [
   {
     title: "标题文字",
@@ -57,7 +57,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>  
-import { TiSteps } from '@titian-design/vue';
+import { TiSteps } from '@titian-design/mobile-vue';
 const options = [
   {
     title: "标题文字",
@@ -83,7 +83,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>  
-import { TiSteps } from '@titian-design/vue';
+import { TiSteps } from '@titian-design/mobile-vue';
 const options = [
   {
     title: "标题文字",
@@ -109,7 +109,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>  
-import { TiSteps } from '@titian-design/vue';
+import { TiSteps } from '@titian-design/mobile-vue';
 const options = [
   {
     title: "标题文字",

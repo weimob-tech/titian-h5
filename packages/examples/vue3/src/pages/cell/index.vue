@@ -85,8 +85,8 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { TiBadge, TiCellProps, TiCheckbox, TiDivider, TiImage, TiSwitch, TiTag } from '@titian-design/vue';
-import { TiCell } from '@titian-design/vue';
+import { TiBadge, TiCellProps, TiCheckbox, TiDivider, TiImage, TiSwitch, TiTag } from '@titian-design/mobile-vue';
+import { TiCell } from '@titian-design/mobile-vue';
 import CustomPage from '../../components/page.vue';
 import { IOptionType } from '../../components/page.interface';
 import { addUnit } from '../../utils';

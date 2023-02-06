@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiPrice } from '@titian-design/react';
+import { TiPrice } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 
 const options: OptionType[] = [

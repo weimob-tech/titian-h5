@@ -9,7 +9,7 @@ import {
   TiSwitch,
   TiImage,
   TiBadge,
-} from '@titian-design/react';
+} from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import { addUnit } from '../../util';
 

@@ -57,5 +57,5 @@ export default App;
 - [changelog 更新日志](https://github.com/weimob-tech/titian-h5/blob/master/packages/h5/CHANGELOG.md)
 - [issue 提出问题](https://github.com/weimob-tech/titian-h5/issues)
 - [小程序组件库](https://www.npmjs.com/package/@titian-design/weapp)
-- [Vue 组件库](https://www.npmjs.com/package/@titian-design/vue)
-- [React 组件库](https://www.npmjs.com/package/@titian-design/react)
+- [Vue 组件库](https://www.npmjs.com/package/@titian-design/mobile-vue)
+- [React 组件库](https://www.npmjs.com/package/@titian-design/mobile-react)

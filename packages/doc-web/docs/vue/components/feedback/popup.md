@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPopup, TiPopupTitlebar } from '@titian-design/vue';
+import { TiPopup, TiPopupTitlebar } from '@titian-design/mobile-vue';
 ```
 
 ## 用法示例
@@ -40,7 +40,7 @@ import { TiPopup, TiPopupTitlebar } from '@titian-design/vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPopup } from '@titian-design/vue';
+import { TiPopup } from '@titian-design/mobile-vue';
 
 const visible = useRef(true);
 const onClose = () => {
@@ -74,7 +74,7 @@ const onClose = () => {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPopup, TiPopupTitlebar } from '@titian-design/vue';
+import { TiPopup, TiPopupTitlebar } from '@titian-design/mobile-vue';
 
 const visible = useRef(true);
 const onClose = () => {
@@ -114,7 +114,7 @@ const onClose = () => {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPopup, TiScrollView } from '@titian-design/vue';
+import { TiPopup, TiScrollView } from '@titian-design/mobile-vue';
 
 const visible = useRef(true);
 const onClose = () => {
@@ -153,7 +153,7 @@ const onClose = () => {
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiPopup, TiScrollView } from '@titian-design/vue';
+import { TiPopup, TiScrollView } from '@titian-design/mobile-vue';
 
 const visible = useRef(true);
 const onClose = () => {

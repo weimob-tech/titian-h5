@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { TiPopupTitlebar } from '@titian-design/react';
+import { TiPopupTitlebar } from '@titian-design/mobile-react';
 import Page, { OptionType } from '../../components/page';
 import { mergeOptionIntoAttrs } from '../../util';
 import './index.less';

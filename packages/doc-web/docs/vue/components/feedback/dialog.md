@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { $tiDialog } from '@titian-design/vue';
+import { $tiDialog } from '@titian-design/mobile-vue';
 ```
 
 
@@ -31,7 +31,7 @@ import { $tiDialog } from '@titian-design/vue';
 </template>
 
 <script lang="ts" setup>
-import { $tiDialog } from '@titian-design/vue'
+import { $tiDialog } from '@titian-design/mobile-vue'
 
 $tiDialog.show({
   title: "Confirm标题",
@@ -72,7 +72,7 @@ $tiDialog.close()
 </template>
 
 <script lang="ts" setup>
-import { TiDialog, ref } from '@titian-design/vue'
+import { TiDialog, ref } from '@titian-design/mobile-vue'
   
 const visible = ref(false);
 

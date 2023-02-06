@@ -13,7 +13,7 @@ side_iframe_path: "#/badge"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiBadge } from '@titian-design/react'
+import { TiBadge } from '@titian-design/mobile-react'
 ```
 
 ## 用法示例

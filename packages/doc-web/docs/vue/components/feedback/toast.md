@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { $tiToast } from '@titian-design/vue'
+import { $tiToast } from '@titian-design/mobile-vue'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { $tiToast } from '@titian-design/vue'
 </template>
 
 <script lang="ts" setup>
-import { $tiToast } from '@titian-design/vue';
+import { $tiToast } from '@titian-design/mobile-vue';
 
 $tiToast.info("这是一条轻提示！");
 
