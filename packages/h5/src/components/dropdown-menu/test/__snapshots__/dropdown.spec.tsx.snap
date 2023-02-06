@@ -1,0 +1,1206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 dropdown Switch 选择类型 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1">
+            <ti-switch size="40" slot="right-icon" value=""></ti-switch>
+          </ti-cell>
+          <ti-cell title="选项2" value="2">
+            <ti-switch size="40" slot="right-icon"></ti-switch>
+          </ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown submit 模式 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+          <ti-button>
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-contained titian-button-gradient titian-button-hairline titian-button-size-big titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color, #fff); --loading-color: var(--button-loading-color, --text-color); --background-color: var(--button-background-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1)); --active-color: var(--button-active-color,rgba(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25), 1));">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            确定
+          </ti-button>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 不使用遮罩 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button block="" color="primary" data-index="0" variant="text">
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button block="" color="#000" data-index="1" variant="text">
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button block="" color="#000" data-index="2" variant="text">
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item titian-dropdown-item-visible" part="" style="top: 200px;">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10007; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10008; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10009; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10010; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10011; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10012; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 向上基本渲染 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button block="" color="primary" data-index="0" variant="text">
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-up"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button block="" color="#000" data-index="1" variant="text">
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-up"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button block="" color="#000" data-index="2" variant="text">
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-up"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="bottom: NaNpx;">
+        <ti-popup closeonmask="" hasmask="" position="bottom" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="bottom" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="bottom" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 向下基本渲染 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button block="" color="primary" data-index="0" variant="text">
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button block="" color="#000" data-index="1" variant="text">
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button block="" color="#000" data-index="2" variant="text">
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item titian-dropdown-item-visible" part="" style="top: 200px;">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10001; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10002; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10003; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10004; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup>
+          <mock:shadow-root>
+            <ti-transition class="titian-popup-mask titian-transition" part="titian-popup-mask" timing-function="cubic-bezier(0.5, 1, 0.89, 1)" style="z-index: 10005; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+            </ti-transition>
+            <ti-transition class="titian-popup titian-popup-top titian-transition" part="titian-popup titian-popup-top" style="z-index: 10006; --private-start-duration: 300ms; --private-end-duration: 200ms; display: none;">
+              <mock:shadow-root></mock:shadow-root>
+              <div class="titian-popup-box titian-popup-box-top undefined" part="undefined">
+                <ti-safe-area class="noscroll" position="top"></ti-safe-area>
+                <slot></slot>
+              </div>
+            </ti-transition>
+          </mock:shadow-root>
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 多选模式 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1">
+            <ti-icon name="selected" size="32" slot="right-icon"></ti-icon>
+          </ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 多选模式, value 不为数组 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1">
+            <ti-icon name="selected" size="32" slot="right-icon"></ti-icon>
+          </ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 多选模式, value 不为数组 2`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="" style="--dropdown-label-active-color: black;">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 0px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1">
+            <ti-icon name="selected" size="32" slot="right-icon"></ti-icon>
+          </ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 点击展开 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 点击展开: 第二个 title 点击 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,primary); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(360deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 被动触发展开: 展开 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 被动触发展开: 收起 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0" part="">
+          <ti-button data-index="0">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(360deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button data-index="1">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button data-index="2">
+            <mock:shadow-root>
+              <button class="titian-button titian-button-block titian-button-hairline titian-button-size-big titian-button-text titian-button-type-primary" id="titian-button" part="" type="button" style="--text-color: var(--button-text-color,#000); --loading-color: var(--button-loading-color, --text-color); --background-color: transparent; --active-color: transparent;">
+                <div class="titian-button-content titian-button-content-no-gap titian-button-content-prefix" part="">
+                  <slot></slot>
+                </div>
+              </button>
+            </mock:shadow-root>
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 设置图标 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button block="" color="primary" data-index="0" variant="text">
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button block="" color="#000" data-index="1" variant="text">
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button block="" color="#000" data-index="2" variant="text">
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;
+
+exports[`渲染 dropdown 设置选中颜色 1`] = `
+<ti-dropdown-menu>
+  <mock:shadow-root>
+    <div class="titian-dropdown-menu" part="" style="--dropdown-active-color: blue; --dropdown-label-active-color: blue;">
+      <div class="titian-dropdown-menu-title-wrap">
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-0 titian-dropdown-menu-visible" part="">
+          <ti-button block="" color="blue" data-index="0" variant="text">
+            标题1
+            <div class="titian-dropdown-menu-icon" style="transform: rotate(180deg);">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-1" part="">
+          <ti-button block="" color="#000" data-index="1" variant="text">
+            标题2
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+        <div class="titian-dropdown-menu-title titian-dropdown-menu-title-2" part="">
+          <ti-button block="" color="#000" data-index="2" variant="text">
+            自定义内容
+            <div class="titian-dropdown-menu-icon">
+              <ti-icon name="arrow-down"></ti-icon>
+            </div>
+          </ti-button>
+        </div>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="--protected-icon-color: blue; top: 200px;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)" visible="">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="--protected-icon-color: blue;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <ti-cell title="选项1" value="1"></ti-cell>
+          <ti-cell title="选项2" value="2"></ti-cell>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+  </ti-dropdown-item>
+  <ti-dropdown-item>
+    <mock:shadow-root>
+      <div class="titian-dropdown-item" part="" style="--protected-icon-color: blue;">
+        <ti-popup closeonmask="" hasmask="" position="top" safearea="" timingfunction="cubic-bezier(0.49, 0.04, 1, 1)">
+          <slot></slot>
+        </ti-popup>
+      </div>
+    </mock:shadow-root>
+    自定义内容
+  </ti-dropdown-item>
+</ti-dropdown-menu>
+`;

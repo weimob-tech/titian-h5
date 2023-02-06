@@ -1,0 +1,66 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@picker:~ '@{project}-picker';
+
+.@{picker} {
+  position: relative;
+  @protected-picker-mask-bg-image: var(--protected-picker-mask-bg-image, @picker-mask-bg-image);
+  @protected-picker-loading-bg-color: var(--protected-picker-loading-bg-color, @picker-loading-bg-color);
+
+  --protected-picker-column-row-color: var(--protected-picker-row-color, @picker-row-color);
+  --protected-picker-column-row-selected-color: var(--protected-picker-row-selected-color, @picker-row-selected-color);
+  --protected-picker-column-row-disabled-color: var(--protected-picker-row-disabled-color, @picker-row-disabled-color);
+
+  &-loading {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.89;
+    background: @protected-picker-loading-bg-color;
+  }
+
+  &-content {
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  &-mask {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(0);
+
+    background-image: @protected-picker-mask-bg-image;
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: 100% 105px;
+
+    pointer-events: none;
+  }
+
+  &-hairline {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+
+    border-top: 1px solid @neutral-color-6;
+    border-bottom: 1px solid @neutral-color-6;
+  }
+
+  &-column-box {
+    display: flex;
+    height: 100%;
+  }
+}

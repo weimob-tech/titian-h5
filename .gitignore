@@ -1,0 +1,71 @@
+# IDE
+.idea
+.history
+.husky/_
+.DS_Store
+**/.DS_Store
+website
+*.zip
+
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Production
+/build
+/dist
+**/**/build
+**/**/dist
+
+# Generated files
+.docusaurus
+.cache-loader
+**/**/.docusaurus
+**/**/.cache-loader
+packages/h5/dist
+packages/h5/loader
+packages/h5/www
+packages/h5/locale
+packages/h5-react/src/components.ts
+packages/h5-react/src/react-component-lib
+packages/h5-react/src_umd
+packages/h5-react/dist
+packages/h5-vue/dist
+packages/h5-vue/src/components.ts
+packages/h5-vue/src/vue-component-lib
+
+# Misc
+.env.local
+.env.*.local
+
+# stencil
+.stencil/
+
+# testing
+coverage
+
+# production
+build
+dist
+
+# local env files
+.env*.local
+
+# misc
+*.DS_Store
+*.pem
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# next.js
+.next/
+out/

@@ -1,0 +1,21 @@
+.popup-center {
+  width: 240px;
+  height: 240px;
+}
+
+.popup-left {
+  width: 150px;
+}
+
+.popup-right {
+  width: 150px;
+}
+
+.popup-bottom {
+  height: 648px;
+}
+
+.popup-right,
+.popup-left {
+  height: 100vh;
+}

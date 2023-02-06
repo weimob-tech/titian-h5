@@ -1,0 +1,53 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@cascade:~ '@{project}-cascade';
+
+.@{cascade} {
+  &-header {
+    display: flex;
+    box-sizing: border-box;
+    min-width: 100%;
+    height: @cascade-header-height;
+    padding: @cascade-header-padding-v @cascade-header-padding-h;
+
+    --scroll-view-virtual-display: flex;
+  }
+
+  &-tab {
+    display: inline-flex;
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+    padding: @cascade-tab-padding-v @cascade-tab-padding-h;
+
+    color: @cascade-tab-color;
+    font-size: @cascade-tab-font-size;
+    text-align: center;
+  }
+
+  &-selected {
+    color: @cascade-tab-selected-color;
+  }
+
+  &-active {
+    color: @cascade-tab-active-color;
+    font-weight: @cascade-tab-active-font-weight;
+  }
+
+  &-content {
+    height: @cascade-content-height;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: @cascade-item-height;
+    padding: @cascade-item-padding-v @cascade-item-padding-h;
+
+    color: @cascade-item-color;
+    font-size: @cascade-item-font-size;
+    font-weight: @cascade-item-font-weight;
+  }
+}

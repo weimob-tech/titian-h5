@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`进度条 修改 value 的值 1`] = `
+<ti-circle-progress buffer="80" value="60">
+  <mock:shadow-root>
+    <div class="titian-circle-progress" part="">
+      <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: undefined;"></canvas>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-circle-progress>
+`;
+
+exports[`进度条 修改展示进度值、颜色等 1`] = `
+<test-container>
+  <!---->
+  <ti-circle-progress>
+    <mock:shadow-root>
+      <div class="titian-circle-progress" part="">
+        <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: undefined;"></canvas>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-circle-progress>
+  <ti-circle-progress>
+    <mock:shadow-root>
+      <div class="titian-circle-progress" part="">
+        <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: #2a6ae9;"></canvas>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-circle-progress>
+  <ti-circle-progress>
+    <mock:shadow-root>
+      <div class="titian-circle-progress" part="">
+        <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: #000000;"></canvas>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-circle-progress>
+  <ti-circle-progress>
+    <mock:shadow-root>
+      <div class="titian-circle-progress" part="">
+        <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: #000000;"></canvas>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-circle-progress>
+</test-container>
+`;
+
+exports[`进度条 基本渲染 1`] = `
+<ti-circle-progress>
+  <mock:shadow-root>
+    <div class="titian-circle-progress" part="">
+      <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: undefined;"></canvas>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-circle-progress>
+`;
+
+exports[`进度条 展示进度值 1`] = `
+<ti-circle-progress>
+  <mock:shadow-root>
+    <div class="titian-circle-progress" part="">
+      <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: #2a6ae9;"></canvas>
+      <div class="titian-circle-progress-text" style="color: #2a6ae9;">
+        80%
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-circle-progress>
+`;
+
+exports[`进度条 设置缓冲值 1`] = `
+<ti-circle-progress>
+  <mock:shadow-root>
+    <div class="titian-circle-progress" part="">
+      <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: undefined;"></canvas>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-circle-progress>
+`;
+
+exports[`进度条 设置进度条宽度 1`] = `
+<ti-circle-progress>
+  <mock:shadow-root>
+    <div class="titian-circle-progress" part="">
+      <canvas class="titian-circle-progress-canvas" height="80" width="80" style="color: undefined;"></canvas>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-circle-progress>
+`;

@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-image touch事件 1`] = `
+<ti-image>
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-image" part="">
+      <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+      <div class="titian-image-notice">
+        <ti-icon name="default-pic" size="72"></ti-icon>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <img src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</ti-image>
+`;
+
+exports[`渲染 ti-image 加载中提示 1`] = `
+<test-container>
+  <!---->
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div slot="loading"></div>
+  </ti-image>
+</test-container>
+`;
+
+exports[`渲染 ti-image 加载失败提示 1`] = `
+<test-container>
+  <!---->
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://cdn2.weimob.com/saas/assets/images/a.jpg">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://cdn2.weimob.com/saas/assets/images/a.jpg">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div slot="error"></div>
+  </ti-image>
+</test-container>
+`;
+
+exports[`渲染 ti-image 动态改变color 1`] = `
+<ti-image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg">
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-image" part="">
+      <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg">
+      <div class="titian-image-notice">
+        <ti-icon name="default-pic" size="72"></ti-icon>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-image>
+`;
+
+exports[`渲染 ti-image 图片比例 1`] = `
+<test-container>
+  <!---->
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image titian-image-ratio" part="" style="--image-aspect-ratio: 2;">
+        <img class="titian-image-img titian-image-img-fill titian-image-img-ratio" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image titian-image-ratio" part="">
+        <img class="titian-image-img titian-image-img-fill titian-image-img-ratio" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image titian-image-ratio" part="" style="--image-aspect-ratio: 2; height: 50px;">
+        <img class="titian-image-img titian-image-img-fill titian-image-img-ratio" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+</test-container>
+`;
+
+exports[`渲染 ti-image 填充模式 1`] = `
+<test-container>
+  <!---->
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="width: 90px; height: 90px;">
+        <img class="titian-image-img titian-image-img-contain" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="width: 90px; height: 90px;">
+        <img class="titian-image-img titian-image-img-cover" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="width: 90px; height: 90px;">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="width: 90px; height: 90px;">
+        <img class="titian-image-img titian-image-img-center" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="width: 90px; height: 90px;">
+        <img class="titian-image-img titian-image-img-scaledown" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+</test-container>
+`;
+
+exports[`渲染 ti-image 懒加载 1`] = `
+<ti-image>
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-image" part="">
+      <img class="titian-image-img titian-image-img-fill" date-src="https://image-c-dev.weimobwmc.com/qa-On6X/330f19549ea34f97a0851db8ae5187a4.jpg" src="https://image-c-dev.weimobwmc.com/qa-On6X/330f19549ea34f97a0851db8ae5187a4.jpg">
+      <div class="titian-image-notice">
+        <ti-icon name="default-pic" size="72"></ti-icon>
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</ti-image>
+`;
+
+exports[`渲染 ti-image 自定义圆角 1`] = `
+<test-container>
+  <!---->
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="border-radius: 9px; width: 50px; height: 50px;">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="border-radius: 100%; width: 50px; height: 50px;">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+  <ti-image>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-image" part="" style="border-radius: calc(var(--base-radius-size, 0px) + 0px); width: 50px; height: 50px;">
+        <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+        <div class="titian-image-notice">
+          <ti-icon name="default-pic" size="72"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-image>
+</test-container>
+`;

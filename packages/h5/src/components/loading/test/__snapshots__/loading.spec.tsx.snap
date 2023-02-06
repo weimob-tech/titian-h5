@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染加载中组件 基本使用 1`] = `
+<test-container>
+  <!---->
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 3px; width: 30px; height: 30px;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 3px; width: 30px; height: 30px;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-spinner" part="" style="padding: 3px; width: 30px; height: 30px;">
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+</test-container>
+`;
+
+exports[`渲染加载中组件 添加文字 1`] = `
+<test-container>
+  <!---->
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 3px; width: 30px; height: 30px;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-row">
+          loading...
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-spinner" part="" style="padding: 3px; width: 30px; height: 30px;">
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-row">
+          loading...
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 3px; width: 30px; height: 30px; --loading-color: #ff0000;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-row" style="color: #ff0000;">
+          loading...
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-spinner" part="" style="padding: 3px; width: 30px; height: 30px; --loading-color: #ff0000;">
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-row" style="color: #ff0000;">
+          loading...
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+</test-container>
+`;
+
+exports[`渲染加载中组件 自定义加载颜色, 尺寸 1`] = `
+<test-container>
+  <!---->
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 3px; width: 30px; height: 30px; --loading-color: #ff0000;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 30px; height: 30px;">
+            <div class="titian-loading-view-item" style="width: 30px; height: 30px; border-width: 2.5px; border-top-color: #ff0000;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row" style="color: #ff0000;">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-spinner" part="" style="padding: 3px; width: 30px; height: 30px; --loading-color: #ff0000;">
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 30px; height: 30px;"></div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row" style="color: #ff0000;">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-circular" part="" style="padding: 4.5px; width: 45px; height: 45px;">
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 45px; height: 45px;">
+            <div class="titian-loading-view-item" style="width: 45px; height: 45px; border-width: 3.75px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 45px; height: 45px;">
+            <div class="titian-loading-view-item" style="width: 45px; height: 45px; border-width: 3.75px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 45px; height: 45px;">
+            <div class="titian-loading-view-item" style="width: 45px; height: 45px; border-width: 3.75px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 45px; height: 45px;">
+            <div class="titian-loading-view-item" style="width: 45px; height: 45px; border-width: 3.75px;"></div>
+          </div>
+          <div class="titian-loading-view titian-loading-view-circular" style="width: 45px; height: 45px;">
+            <div class="titian-loading-view-item" style="width: 45px; height: 45px; border-width: 3.75px;"></div>
+          </div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+  <ti-loading>
+    <mock:shadow-root>
+      <div class="titian-loading-wrap" style="flex-direction: row;">
+        <div class="titian-loading titian-loading-spinner" part="" style="padding: 4.5px; width: 45px; height: 45px;">
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+          <div class="titian-loading-view titian-loading-view-spinner" style="width: 45px; height: 45px;"></div>
+        </div>
+        <div class="titian-loading-text titian-loading-text-empty titian-loading-text-row">
+          <slot></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-loading>
+</test-container>
+`;

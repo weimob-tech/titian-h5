@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-input-number 基本用法 1`] = `
+<test-container>
+  <!---->
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number" part="" style="--input-number-size: 28px;">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="28"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 32px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="28"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number titian-input-number-pure" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number titian-input-number-block" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number titian-input-number-bright" part="">
+        <div aria-hidden="true" class="titian-input-number-minus titian-input-number-minus-disabled" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="38"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 18px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="38"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number auto-width="">
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <div class="titian-input-number-field-virtual" style="width: 100%; min-width: 30px;">
+            0
+          </div>
+          <input class="titian-input-number-field titian-input-number-field-autoWidth" inputmode="decimal" type="text" value="0" style="width: 100%; min-width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus titian-input-number-minus-disabled" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field titian-input-number-field-disabled" disabled="" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus titian-input-number-plus-disabled" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number disabled-input="">
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field titian-input-number-field-disabled" disabled="" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number read-only="">
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" readonly="" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number read-only-input="">
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" readonly="" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number titian-input-number-border titian-input-number-pure" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div class="titian-input-number titian-input-number-block titian-input-number-border" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-input-number-thumbnail">
+        ×0
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+  <ti-input-number input-width="30">
+    <mock:shadow-root>
+      <div class="titian-input-number" part="">
+        <div aria-hidden="true" class="titian-input-number-minus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+        </div>
+        <div class="titian-input-number-box" part="">
+          <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 15px;">
+        </div>
+        <div aria-hidden="true" class="titian-input-number-plus" part="">
+          <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input-number>
+</test-container>
+`;
+
+exports[`渲染 ti-input-number 展开收起 1`] = `
+<ti-input-number>
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="12" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;
+
+exports[`渲染 ti-input-number 改变value 1`] = `
+<ti-input-number value="12">
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="12" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;
+
+exports[`渲染 ti-input-number 点击加减号 1`] = `
+<ti-input-number>
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="12" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;
+
+exports[`渲染 ti-input-number 输入 1`] = `
+<ti-input-number>
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="3" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus titian-input-number-plus-disabled" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;
+
+exports[`渲染 ti-input-number 输入整数 1`] = `
+<ti-input-number>
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="12" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;
+
+exports[`渲染 ti-input-number 非受控 1`] = `
+<ti-input-number>
+  <mock:shadow-root>
+    <div class="titian-input-number" part="">
+      <div aria-hidden="true" class="titian-input-number-minus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-minus" size="24"></ti-icon>
+      </div>
+      <div class="titian-input-number-box" part="">
+        <input class="titian-input-number-field" inputmode="decimal" type="text" value="0" style="width: 30px;">
+      </div>
+      <div aria-hidden="true" class="titian-input-number-plus" part="">
+        <ti-icon ext-class="input-number-icon" name="stepper-plus" size="24"></ti-icon>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input-number>
+`;

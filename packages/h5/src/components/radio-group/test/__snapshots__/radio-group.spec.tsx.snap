@@ -1,0 +1,622 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 radio group 渲染 radio box 基本渲染 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 禁用所有多选框文字点击效果 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 禁用所有多选框点击效果 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-disabled titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-disabled titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-disabled titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          文字内容-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 设置 options 渲染 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <ti-radio>
+        <mock:shadow-root>
+          <div class="titian-radio titian-radio-horizontal">
+            <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+              <div class="titian-radio-icon-wrap">
+                <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+              </div>
+            </div>
+            <div aria-hidden="true" class="titian-radio- titian-radio-label">
+              选项 A
+            </div>
+          </div>
+        </mock:shadow-root>
+      </ti-radio>
+      <ti-radio>
+        <mock:shadow-root>
+          <div class="titian-radio titian-radio-horizontal">
+            <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+              <div class="titian-radio-icon-wrap">
+                <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+              </div>
+            </div>
+            <div aria-hidden="true" class="titian-radio- titian-radio-label">
+              选项 B
+            </div>
+          </div>
+        </mock:shadow-root>
+      </ti-radio>
+      <ti-radio>
+        <mock:shadow-root>
+          <div class="titian-radio titian-radio-horizontal">
+            <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+              <div class="titian-radio-icon-wrap">
+                <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+              </div>
+            </div>
+            <div aria-hidden="true" class="titian-radio- titian-radio-label">
+              选项 C
+            </div>
+          </div>
+        </mock:shadow-root>
+      </ti-radio>
+    </div>
+  </mock:shadow-root>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 设置选中值，受控模式 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-checked titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap titian-radio-icon-wrap-checked">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-in titian-radio-icon-checked" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 设置选中值，受控模式 2`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-checked titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap titian-radio-icon-wrap-checked">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-in titian-radio-icon-checked" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio box 设置选中值，非受控模式 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-checked titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap titian-radio-icon-wrap-checked">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-in titian-radio-icon-checked" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-1
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-2
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+  <ti-radio>
+    <mock:shadow-root>
+      <div class="titian-radio titian-radio-horizontal">
+        <div aria-hidden="true" class="titian-checkbox-icon-content" style="--base-radius-size: 499.5px;">
+          <div class="titian-radio-icon-wrap">
+            <ti-icon ext-class="titian-radio-icon titian-radio-icon-zoom-out" name="checkbox-hollow" size="32"></ti-icon>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-radio- titian-radio-label">
+          受控模式-3
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-radio>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 修改icon 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 修改颜色 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(255, 0, 0, 0.2); --radio-button-disabled-text-color: rgba(255, 0, 0, 0.4); --radio-button-checked-bg-color: rgba(255, 0, 0, 0.1); --radio-button-checked-text-color: rgba(255, 0, 0, 1); --radio-button-checked-border-color: rgba(255, 0, 0, 0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(255, 0, 0, 0.2); --radio-button-disabled-text-color: rgba(255, 0, 0, 0.4); --radio-button-checked-bg-color: rgba(255, 0, 0, 0.1); --radio-button-checked-text-color: rgba(255, 0, 0, 1); --radio-button-checked-border-color: rgba(255, 0, 0, 0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(255, 0, 0, 0.2); --radio-button-disabled-text-color: rgba(255, 0, 0, 0.4); --radio-button-checked-bg-color: rgba(255, 0, 0, 0.1); --radio-button-checked-text-color: rgba(255, 0, 0, 1); --radio-button-checked-border-color: rgba(255, 0, 0, 0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 基本渲染 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 禁用所有多选框点击效果 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-disabled" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-disabled" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-disabled" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 设置选中值，受控模式 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-checked" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;
+
+exports[`渲染 radio group 渲染 radio button 设置选中值，非受控模式 1`] = `
+<ti-radio-group>
+  <mock:shadow-root>
+    <div class="titian-radio-group titian-radio-group-horizontal undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-checked" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-1
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-2
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          受控模式-3
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</ti-radio-group>
+`;

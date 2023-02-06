@@ -1,0 +1,82 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+@sku: ~'@{project}-sku';
+
+:host {
+  --preview-z-index: 20000;
+}
+
+.@{sku} {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  min-height: calc(50vh - 108px - env(safe-area-inset-bottom) - var(--custom-nav-height, 0px));
+  max-height: calc(90vh - 108px - env(safe-area-inset-bottom) - var(--custom-nav-height, 0px));
+  overflow: scroll;
+
+  &-scroll-view {
+    position: relative;
+    height: 100%;
+
+    --scroll-view-min-height: calc(50vh - 108px - 246px - env(safe-area-inset-bottom) - var(--custom-nav-height, 0px));
+    --scroll-view-max-height: calc(90vh - 108px - 246px - env(safe-area-inset-bottom) - var(--custom-nav-height, 0px));
+  }
+  //  内置 scroll view 容器
+
+  &-container {
+    padding: 0 28px;
+    padding-top: 12px;
+  }
+
+  // 数量
+  &-quantity {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+    &-label {
+      height: 60px;
+
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 60px;
+      text-align: left;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding-right: 28px;
+    padding-left: 28px;
+
+    &::before {
+      .hairline(top);
+    }
+
+    &-custom {
+      display: inline-block;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 108px;
+    }
+
+    &-btnwrapper {
+      flex: 1;
+      margin-right: 20px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

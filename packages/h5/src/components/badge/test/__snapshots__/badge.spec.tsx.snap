@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-action-sheet 在文字右上角 1`] = `
+<ti-badge at-text="">
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-badge">
+      <div class="titian-badge-container titian-badge-container-atText titian-badge-container-circle" part="">
+        6
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <div>
+    Title Text
+  </div>
+</ti-badge>
+`;
+
+exports[`渲染 ti-action-sheet 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-badge>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-circle" part="">
+          5
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div class="box"></div>
+  </ti-badge>
+  <ti-badge>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-dot" part=""></div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div class="box"></div>
+  </ti-badge>
+  <ti-badge>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-circle" part="">
+          <ti-icon name="home" size="20"></ti-icon>
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div class="box"></div>
+  </ti-badge>
+  <div class="box" style="position: relative;">
+    <ti-badge>
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-badge">
+          <div class="titian-badge-container titian-badge-container-circle" part="">
+            6
+          </div>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-badge>
+  </div>
+</test-container>
+`;
+
+exports[`渲染 ti-action-sheet 徽标内容撑开方向 1`] = `
+<test-container>
+  <!---->
+  <ti-badge>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-circle" part="">
+          6
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div class="box"></div>
+  </ti-badge>
+  <ti-badge>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-circle titian-badge-container-left" part="">
+          6
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    <div class="box"></div>
+  </ti-badge>
+</test-container>
+`;
+
+exports[`渲染 ti-action-sheet 无定位 1`] = `
+<ti-cell>
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-cell titian-cell-divider">
+      <div aria-hidden="true" class="titian-cell-title-wrap">
+        <div class="titian-cell-icon-box">
+          <slot name="icon"></slot>
+        </div>
+        <div>
+          <div style="display: flex;">
+            <slot name="title"></slot>
+          </div>
+          <slot name="label"></slot>
+        </div>
+      </div>
+      <div class="titian-cell-desc-wrap">
+        <div aria-hidden="true" class="titian-cell-desc-content">
+          <slot name="desc"></slot>
+          <slot name="right-icon"></slot>
+        </div>
+        <slot name="sub-desc"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <ti-badge slot="desc">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-badge">
+        <div class="titian-badge-container titian-badge-container-circle titian-badge-container-static" part="">
+          6
+        </div>
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-badge>
+</ti-cell>
+`;
+
+exports[`渲染 ti-action-sheet 自定义偏移 1`] = `
+<ti-badge>
+  <mock:shadow-root>
+    <div aria-hidden="true" class="titian-badge">
+      <div class="titian-badge-container titian-badge-container-circle titian-badge-container-offset" part="" style="--badge-top: 1px; --badge-right: 3px;">
+        6
+      </div>
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <div class="box"></div>
+</ti-badge>
+`;

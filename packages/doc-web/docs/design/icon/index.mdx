@@ -1,0 +1,51 @@
+---
+title: 图标
+sidebar_custom_props:
+  suffix: Icon
+hide_title: true
+pagination_prev: null
+pagination_next: null
+---
+
+# 图标 _Icon_
+
+**对于一款产品，Icon 在其中扮演着举足轻重的作用，除了其本身的功能价值，也能够体现产品整体的风格调性。而在绘制图标的时候，需要具体考量 Icon 的形状与风格
+注：通常 Icon 形式可以有【线性】【面性】【拟物】【三维】等，此处仅讨论【线/面性图标】的绘制）。**
+
+## 形状：Keyline 线绘制
+
+**不同的形状，带给用户的视觉体量有所不同，因此在实际绘制图标的时候，如果单纯仅控制 Icon 的绝对尺寸，面对千变万化的 Icon 形状，就会出现视觉比重失衡，因此引入 Keyline 线辅助绘制图标。24a 乘 24a 的正方形（a 为系数），绘制出相应的辅助线，确定 Icon 线条走向。Keyline 线能够提供一个大体的轮廓参照，但具体图标绘制的过程中，许多形状并非规律几何形状，因此需要根据具体形状来单独处理轮廓外形，从而达到整体视觉比重平衡。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-a.png)
+
+## 风格
+
+**对于不同调性的产品，Icon 也可以呈现不同的风格样式，通过对【线条粗细】【端点截面】【倾角】【拐角】等属性的调整，能得到不同的风格结果。举例说明：**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-b.png)
+
+## 绘制基础
+
+**1）基础图标（@2x 环境下），由于 36 的约数中包含：【1】【2】【3】【4】【6】【9】【12】【18】，图标缩放后延展性较强，因此以 36px 尺寸画布绘制的线性图标。基础图标（@2x 环境下），以 36px 尺寸画布绘制的线性图标，默认线条粗细定为 2.5px ，配合 keyline 线完成 Icon 的绘制。并且在后续转曲，根据不同使用场景，等比缩放使用。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-c.png)
+
+**2）具体应用时，Icon 有多种规格尺寸：16px、20px、24px、28px、32px、36px、40px ；且 icon 可以配合文字使用，尺寸等同文字字号。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-d.png)
+
+## 衍生场景
+
+**1）在通用情况之外，也会有特殊场景，例如一些型较为简单、约定俗成的 Icon，例如【加减乘除】【正确错误】等，如果保持 2.5px 粗细，就会显得整体视觉不平衡，因此会使用 3.0px 粗细（36px 尺寸下）**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-e.png)
+
+**2）同样对于一些型比较复杂、且具体应用场景下需要大尺寸呈现的 Icon，例如【售后状态】等，因此会使用 2.0px 粗细（36px 尺寸下）**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-f.png)
+
+## 避免错误
+
+**具体 icon 绘制的过程中，有许多细节点需要注意，下方列举一些实际应用中的错误示范。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/icon-g.png)

@@ -1,0 +1,160 @@
+.flex {
+    display: flex;
+}
+
+.justify_between {
+    justify-content: space-between;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// 色相
+.hues {
+    flex: 1;
+    margin-right: 10%;
+}
+
+.hue_items {
+    height: 8px;
+    border-radius: 2px;
+    flex: 1;
+
+    &+.hue_items {
+        margin-left: 2px;
+    }
+}
+
+.hue {
+    margin-top: 12px;
+    width: 100%;
+    height: 8px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #FF0000, #FF4000, #FF8000, #FFBF00, #F8F819, #40FF00, #00FF80, #00BFFF, #0000FF, #8000FF, #FF00FF, #FF0080);
+}
+
+// 饱和度
+.saturated {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #FF0000 0%, rgba(255, 0, 0, 0) 100%);
+    border-radius: 2px;
+}
+
+// 明度
+.lightness {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #FF0000 0%, #000000 100%);
+    border-radius: 2px;
+}
+
+// 主题色
+.theme_olor {
+    padding: 16px 24px;
+    height: 66px;
+    background: #FFF;
+    border-radius: 6px;
+
+    .theme_olor_item {
+        flex: 1;
+        padding: 4px;
+        height: 32px;
+        background: #FA2C19;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+
+        &+.theme_olor_item {
+            margin-left: 8px;
+        }
+    }
+
+    &+.theme_olor {
+        background: #212121;
+        margin-top: 10px;
+    }
+}
+
+// 中性色
+.neutral_color {
+    .neutral_color_left {
+        width: 72%;
+    }
+
+    .neutral_color_right {
+        width: 22%;
+    }
+
+    .neutral_color_title {
+        height: 12px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #4D4D4D;
+        margin-bottom: 20px;
+    }
+
+    .neutral_color_item {
+        width: 30px;
+        height: 40px;
+        background: #000000;
+        border-radius: 2px;
+
+        &+.neutral_color_item {
+            margin-left: 8px;
+        }
+
+        &.border {
+            border: 1px solid #F2F2F2;
+        }
+    }
+
+    .neutral_color_desc {
+        margin-top: 16px;
+        background: linear-gradient(180deg, #F5F5F5 34.38%, rgba(245, 245, 245, 0) 100%);
+        border-radius: 2px;
+        text-align: center;
+        line-height: 32px;
+        color: #4D4D4D;
+        font-size: 12px;
+    }
+}
+
+// 功能色
+.function_color {
+    .function_color_container {
+        border-radius: 6px;
+        padding: 12px 16px;
+        flex: 1;
+
+        .function_color_blocks {
+            .function_color_items {
+                padding: 6px 0;
+                border-radius: 4px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                flex: 1;
+
+                &+.function_color_items {
+                    margin-left: 16px;
+                }
+            }
+
+            &+.function_color_blocks {
+                margin-top: 10px;
+            }
+        }
+
+        &+.function_color_container {
+            margin-left: 24px;
+        }
+    }
+}

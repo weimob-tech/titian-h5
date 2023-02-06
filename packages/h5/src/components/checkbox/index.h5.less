@@ -1,0 +1,153 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+
+@checkbox: ~'@{project}-checkbox';
+
+:host {
+  display: contents;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+}
+
+.@{checkbox} {
+  display: inline-flex;
+  position: relative;
+  z-index: 0;
+  flex-direction: @checkbox-direction;
+  align-items: center;
+  padding: @checkbox-padding-v @checkbox-padding-h;
+
+  &-icon-content {
+    padding: @checkbox-icon-wrap-padding-v @checkbox-icon-wrap-padding-h;
+  }
+
+  &-icon-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    // border-radius: @checkbox-radius;
+
+    --protected-icon-line-height: 1;
+
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    cursor: pointer;
+
+    &::after {
+      content: ' ';
+
+      position: absolute;
+      z-index: 5;
+      box-sizing: border-box;
+
+      border: 2px solid @neutral-color-5;
+      border-radius: @checkbox-radius;
+      .abs-pos();
+    }
+  }
+
+  &-checked {
+    .@{checkbox} {
+      &-icon-wrap {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    --protected-icon-display: block;
+    --protected-icon-color: @checkbox-icon-revert-color;
+    position: relative;
+    z-index: 0;
+
+    transform: scale(0.5);
+
+    border-radius: @checkbox-radius;
+
+    opacity: 0;
+    background-color: @checkbox-icon-color;
+
+    &-zoom-in {
+      animation: zoom-in 0.1s cubic-bezier(0.48, 0.33, 0.24, 1.18);
+      animation-fill-mode: forwards;
+    }
+
+    &-zoom-out {
+      animation: zoom-out 0.1s cubic-bezier(0.48, 0.33, 0.24, 1.18);
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &-label {
+    flex: 1;
+    padding: @checkbox-label-padding-v @checkbox-label-padding-h;
+
+    outline: none;
+
+    color: @checkbox-label-color;
+    font-size: @T28;
+    font-weight: @font-weight-400;
+    line-height: 1;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &-empty {
+      display: none;
+    }
+  }
+
+  &-disabled {
+    pointer-events: none;
+
+    .@{checkbox} {
+      &-icon {
+        &-wrap {
+          &::after {
+            border: 2 rpx solid @neutral-color-6;
+
+            background-color: @neutral-color-7;
+          }
+        }
+
+        &-checked {
+          transform: scale(1);
+
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}

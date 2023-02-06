@@ -1,0 +1,15 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@datetimePicker: ~'@{project}-datetime-picker';
+
+.@{datetimePicker} {
+  position: relative;
+
+  --protected-picker-mask-bg-image: @datetime-picker-mask-bg-image;
+  --protected-picker-loading-bg-color: @datetime-picker-loading-bg-color;
+  --protected-picker-row-color: @datetime-picker-row-color;
+  --protected-picker-row-selected-color: @datetime-picker-row-selected-color;
+  --protected-picker-row-disabled-color: @datetime-picker-row-disabled-color;
+}

@@ -1,0 +1,24 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@tabbaritem:~ '@{project}-tab-bar-item';
+
+:host {
+  display: contents;
+}
+.@{tabbaritem} {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &-title {
+    margin: @tabbar-item-title-margin-top @tabbar-item-title-margin-h @tabbar-item-title-margin-bottom;
+
+    font-family: PingFangSC-Regular, 'PingFang SC';
+    line-height: @line-height;
+  }
+}

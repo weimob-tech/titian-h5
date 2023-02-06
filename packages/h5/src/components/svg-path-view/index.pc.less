@@ -1,0 +1,22 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+@svg-path-view:~ '@{project}-svg-path-view';
+
+.@{svg-path-view} {
+  display: @svg-path-view-display;
+  width: @svg-path-view-size;
+  height: @svg-path-view-size;
+
+  &-spin {
+    animation: spin 1s linear infinite;
+  }
+}

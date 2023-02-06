@@ -1,0 +1,36 @@
+.page {
+  background: #f9f9f9;
+}
+
+.prefix,
+.suffix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #111;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.prefix {
+  margin-right: 28px;
+}
+
+.suffix {
+  margin-left: 28px;
+}
+
+/* ::part(search-box) {
+  border-radius: 20px;
+
+  --icon-color: #212121;
+}
+
+::part(diy) {
+  background-color: #f3f3f3;
+}
+
+::part(search-inner-class) {
+  background-color: #fff;
+} */

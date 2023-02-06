@@ -1,0 +1,775 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-input label左侧搭配图标 1`] = `
+<ti-input prefix-icon="home">
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <ti-icon color="#9e9e9e" ext-class="titian-input-left-icon" name="home" size="28"></ti-icon>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            标题
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 填充模式 1`] = `
+<test-container>
+  <!---->
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              左侧标题
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" placeholder="用户输入中文案">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input titian-input-disabled" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              禁用
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" disabled="" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input titian-input-readOnly" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              只读
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" readonly="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              最大输入长度20
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="20" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input titian-input-borderless" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              不显示底部分割线
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              必填
+            </div>
+          </div>
+          <div class="titian-input-required-icon">
+            <ti-icon ext-class="titian-input-icon" name="required" size="24"></ti-icon>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              不显示清除按钮
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+</test-container>
+`;
+
+exports[`渲染 ti-input 格式化1 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text" value="23">
+      </div>
+      <div aria-hidden="true" class="titian-input-icon-box">
+        <ti-icon color="#9e9e9e" ext-class="titian-input-icon" name="clear" size="36"></ti-icon>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 格式化2 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text" value="0123">
+      </div>
+      <div aria-hidden="true" class="titian-input-icon-box">
+        <ti-icon color="#9e9e9e" ext-class="titian-input-icon" name="clear" size="36"></ti-icon>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 点击清除按钮 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            文本
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" type="text" value="">
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 禁用 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input titian-input-disabled" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" disabled="" inputmode="numeric" maxlength="140" part="" type="text" value="23">
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 自动聚焦 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input autofocus="" class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text" value="23">
+      </div>
+      <div aria-hidden="true" class="titian-input-icon-box">
+        <ti-icon color="#9e9e9e" ext-class="titian-input-icon" name="clear" size="36"></ti-icon>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 输入 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text" value="0123">
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 输入对齐方式 1`] = `
+<test-container>
+  <!---->
+  <ti-input text-align="left">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              标题
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-left titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input text-align="right">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              标题
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-right titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+</test-container>
+`;
+
+exports[`渲染 ti-input 输入框左右使用插槽 1`] = `
+<test-container>
+  <!---->
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              手机号
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="prefix">
+      + 86
+    </div>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              验证码
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+    <div slot="suffix">
+      发验证码
+    </div>
+  </ti-input>
+</test-container>
+`;
+
+exports[`渲染 ti-input 输入类型 1`] = `
+<test-container>
+  <!---->
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              文本
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" type="text">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              数字
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              密码安全输入键盘
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" type="password">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              带小数点的数字键盘
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="decimal" maxlength="140" part="" type="text">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+</test-container>
+`;
+
+exports[`渲染 ti-input 错误提示 1`] = `
+<test-container>
+  <!---->
+  <ti-input>
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              标题
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input titian-input-input-error" inputmode="text" maxlength="140" part="" value="输错了">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input error-message="手机号格式错误">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              手机号
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" inputmode="text" maxlength="140" part="" value="123213">
+          <div class="input-text-align-undefined titian-input-error-message">
+            <ti-icon ext-class="titian-input-warning-icon" name="warning" size="24"></ti-icon>
+            <text>
+              手机号格式错误
+            </text>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+</test-container>
+`;
+
+exports[`渲染 ti-input 键盘确认 1`] = `
+<ti-input>
+  <mock:shadow-root>
+    <div class="titian-input" part="">
+      <div class="titian-input-label-container">
+        <slot name="prefix-icon"></slot>
+        <div class="titian-input-title">
+          <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+            数字
+          </div>
+        </div>
+      </div>
+      <div class="titian-input-slot">
+        <slot name="prefix"></slot>
+      </div>
+      <div class="titian-input-container">
+        <input class="input-text-align-undefined titian-input-input" inputmode="numeric" maxlength="140" part="" type="text" value="0123">
+      </div>
+      <div class="titian-input-slot">
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-input>
+`;
+
+exports[`渲染 ti-input 键盘确认按钮文字 1`] = `
+<test-container>
+  <!---->
+  <ti-input confirm-type="done">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              完成
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" enterkeyhint="done" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input confirm-type="send">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              发送
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" enterkeyhint="send" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input confirm-type="search">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              搜索
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" enterkeyhint="search" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input confirm-type="next">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              下一项
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" enterkeyhint="next" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+  <ti-input confirm-type="go">
+    <mock:shadow-root>
+      <div class="titian-input" part="">
+        <div class="titian-input-label-container">
+          <slot name="prefix-icon"></slot>
+          <div class="titian-input-title">
+            <div class="titian-input-title-text" part="" style="--input-line-clamp: 0;">
+              前往
+            </div>
+          </div>
+        </div>
+        <div class="titian-input-slot">
+          <slot name="prefix"></slot>
+        </div>
+        <div class="titian-input-container">
+          <input class="input-text-align-undefined titian-input-input" enterkeyhint="go" inputmode="text" maxlength="140" part="">
+        </div>
+        <div class="titian-input-slot">
+          <slot name="suffix"></slot>
+        </div>
+      </div>
+    </mock:shadow-root>
+  </ti-input>
+</test-container>
+`;

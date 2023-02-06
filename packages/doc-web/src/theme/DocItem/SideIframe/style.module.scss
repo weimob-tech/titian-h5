@@ -1,0 +1,34 @@
+.iframeBox {
+  display: flex;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 48px);
+  flex-direction: column;
+  flex-grow: 0;
+  height: 685px;
+
+  .iframe {
+    width: 375px;
+    height: 641px;
+
+    border: 16px solid #fafafa;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    background-color: #fff;
+
+    &.radius12 {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+
+  svg {
+    width: 375px;
+    height: 44px;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    background: #f9f9f9;
+  }
+}

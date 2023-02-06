@@ -1,0 +1,121 @@
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+@import '../common/static/var.less';
+
+@transition: ~'@{project}-transition';
+
+@enter: ~'enter';
+@enterTo: ~'enter-done';
+@exit: ~'exit';
+@exitTo: ~'exit-done';
+
+@fade: ~'fade';
+@fadeInDown: ~'fade-down';
+@fadeInUp: ~'fade-up';
+@fadeInLeft: ~'fade-left';
+@fadeInRight: ~'fade-right';
+@slideInUp: ~'slide-up';
+@slideInDown: ~'slide-down';
+@slideInRight: ~'slide-right';
+@slideInLeft: ~'slide-left';
+@zoom: ~'zoom';
+
+:host(.@{project}-@{fade}-@{enter}),
+:host(.@{project}-@{fade}-@{exitTo}),
+:host(.@{project}-@{fadeInDown}-@{enter}),
+:host(.@{project}-@{fadeInDown}-@{exitTo}),
+:host(.@{project}-@{fadeInUp}-@{enter}),
+:host(.@{project}-@{fadeInUp}-@{exitTo}),
+:host(.@{project}-@{fadeInLeft}-@{enter}),
+:host(.@{project}-@{fadeInLeft}-@{exitTo}),
+:host(.@{project}-@{fadeInRight}-@{enter}),
+:host(.@{project}-@{fadeInRight}-@{exitTo}) {
+  opacity: 0;
+}
+
+:host(.@{project}-@{fade}-@{enter}-active),
+:host(.@{project}-@{fade}-@{exit}-active) {
+  transition-property: opacity;
+}
+
+:host(.@{project}-@{fadeInDown}-@{enter}-active),
+:host(.@{project}-@{fadeInDown}-@{exit}-active),
+:host(.@{project}-@{fadeInUp}-@{enter}-active),
+:host(.@{project}-@{fadeInUp}-@{exit}-active),
+:host(.@{project}-@{fadeInLeft}-@{enter}-active),
+:host(.@{project}-@{fadeInLeft}-@{exit}-active),
+:host(.@{project}-@{fadeInRight}-@{enter}-active),
+:host(.@{project}-@{fadeInRight}-@{exit}-active),
+:host(.@{project}-@{zoom}-@{enter}-active),
+:host(.@{project}-@{zoom}-@{exit}-active) {
+  transition-property: transform, opacity;
+}
+
+:host(.@{project}-@{slideInUp}-@{enter}-active),
+:host(.@{project}-@{slideInUp}-@{exit}-active),
+:host(.@{project}-@{slideInDown}-@{enter}-active),
+:host(.@{project}-@{slideInDown}-@{exit}-active),
+:host(.@{project}-@{slideInRight}-@{enter}-active),
+:host(.@{project}-@{slideInRight}-@{exit}-active),
+:host(.@{project}-@{slideInLeft}-@{enter}-active),
+:host(.@{project}-@{slideInLeft}-@{exit}-active) {
+  transition-property: transform, visibility;
+}
+:host(.@{project}-@{slideInUp}-@{enter}),
+:host(.@{project}-@{slideInUp}-@{exitTo}) {
+  visibility: visible;
+
+  transform: translate3d(0, 100%, 0);
+}
+
+:host(.@{project}-@{slideInDown}-@{enter}),
+:host(.@{project}-@{slideInDown}-@{exitTo}) {
+  visibility: visible;
+
+  transform: translate3d(0, -100%, 0);
+}
+
+:host(.@{project}-@{slideInRight}-@{enter}),
+:host(.@{project}-@{slideInRight}-@{exitTo}) {
+  visibility: visible;
+
+  transform: translate3d(-100%, 0, 0);
+}
+
+:host(.@{project}-@{slideInLeft}-@{enter}),
+:host(.@{project}-@{slideInLeft}-@{exitTo}) {
+  visibility: visible;
+
+  transform: translate3d(100%, 0, 0);
+}
+
+:host(.@{project}-@{fadeInLeft}-@{enter}),
+:host(.@{project}-@{fadeInLeft}-@{exitTo}) {
+  transform: translate3d(100%, 0, 0);
+}
+
+:host(.@{project}-@{fadeInRight}-@{enter}),
+:host(.@{project}-@{fadeInRight}-@{exitTo}) {
+  transform: translate3d(-100%, 0, 0);
+}
+
+:host(.@{project}-@{fadeInUp}-@{enter}),
+:host(.@{project}-@{fadeInUp}-@{exitTo}) {
+  transform: translate3d(0, 100%, 0);
+}
+
+:host(.@{project}-@{fadeInDown}-@{enter}),
+:host(.@{project}-@{fadeInDown}-@{exitTo}) {
+  transform: translate3d(0, -100%, 0);
+}
+
+:host(.@{project}-@{zoom}-@{enter}),
+:host(.@{project}-@{zoom}-@{exitTo}) {
+  transform: scale3d(0.1, 0.1, 0.1);
+
+  opacity: 0;
+}
+
+:host(.@{transition}) {
+  display: block;
+}

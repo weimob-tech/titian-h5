@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-countdown 基本渲染 1`] = `
+<ti-countdown time="1118888666">
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      <div class="titian-countdown-box titian-countdown-box-big">
+        <div class="titian-countdown-mixture">
+          12
+        </div>
+        <div class="titian-countdown-day titian-countdown-day-mixture">
+          天
+        </div>
+        <div class="titian-countdown-block">
+          22
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block">
+          48
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block">
+          08
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block titian-countdown-block-millisecond">
+          666
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-countdown>
+`;
+
+exports[`渲染 ti-countdown 尺寸 1`] = `
+<ti-countdown use-slot="false">
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      <div class="titian-countdown-box titian-countdown-box-small">
+        <div class="titian-countdown-block"></div>
+        <div class="titian-countdown-day titian-countdown-day-block">
+          天
+        </div>
+        <div class="titian-countdown-block">
+          00
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block">
+          00
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block">
+          01
+        </div>
+        <div class="titian-countdown-dot">
+          <ti-icon name="colon"></ti-icon>
+        </div>
+        <div class="titian-countdown-block titian-countdown-block-millisecond"></div>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-countdown>
+`;
+
+exports[`渲染 ti-countdown 暂停 1`] = `
+<ti-countdown>
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      00天00:00:00 000
+    </div>
+  </mock:shadow-root>
+</ti-countdown>
+`;
+
+exports[`渲染 ti-countdown 格式化时间 1`] = `
+<ti-countdown format="HH:mm:ss SSS">
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      16:34:48 666
+    </div>
+  </mock:shadow-root>
+</ti-countdown>
+`;
+
+exports[`渲染 ti-countdown 自定义内容 1`] = `
+<ti-countdown use-slot="true">
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <div class="time"></div>
+  <div class="tag">
+    天
+  </div>
+  <div class="time"></div>
+  <div class="tag">
+    :
+  </div>
+  <div class="time"></div>
+  <div class="tag">
+    :
+  </div>
+  <div class="time"></div>
+  <div class="tag">
+    :
+  </div>
+  <div class="time"></div>
+</ti-countdown>
+`;
+
+exports[`渲染 ti-countdown 风格 1`] = `
+<ti-countdown>
+  <mock:shadow-root>
+    <div class="titian-countdown undefined">
+      128天16:34:48 666
+    </div>
+  </mock:shadow-root>
+</ti-countdown>
+`;

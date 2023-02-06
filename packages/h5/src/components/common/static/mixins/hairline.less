@@ -1,0 +1,49 @@
+@import '../var.less';
+
+.hairline(@direction: bottom, @color: @neutral-color-6) {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  & when (@direction = top), (@direction = bottom) {
+    right: 0;
+    height: 0;
+
+    transform: scaleY(0.5);
+    transform-origin: top left;
+
+    border-top: 1px solid @color;
+  }
+  & when (@direction = bottom) {
+    top: auto;
+    bottom: 0;
+
+    transform-origin: bottom left;
+  }
+  & when (@direction = left), (@direction = right) {
+    bottom: 0;
+    width: 0;
+
+    transform: scaleX(0.5);
+    transform-origin: top left;
+
+    border-left: 1px solid @color;
+  }
+  & when (@direction = right) {
+    right: 0;
+    left: auto;
+
+    transform-origin: top right;
+  }
+  & when (@direction = all) {
+    width: 200%;
+    height: 200%;
+
+    transform: scale(0.5);
+    transform-origin: left top;
+
+    border: 1px solid @color;
+  }
+}

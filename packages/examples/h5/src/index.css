@@ -1,0 +1,48 @@
+body {
+  overflow: hidden;
+
+  color: #212121;
+  font-family: 'PingFang SC', HarmonyOSSansSC, 'HarmonyOS Sans SC', 'Noto Sans SC', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Microsoft YaHei', '微软雅黑', MicrosoftJhengHei, '华文细黑', Helvetica, Arial, sans-serif,
+    'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+@font-face {
+  font-family: font-wemo;
+  src: url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.eot'),
+    url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.woff2'),
+    url('https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/mall/font/wemo/WEMONum-Bold-v1.2.ttf');
+}
+
+/* 新dome样式 */
+.container {
+  width: calc(100% - 56px);
+  margin: 0 28px;
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
+}
+
+.hairline-all {
+  position: relative;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.hairline-all::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+
+  transform: scale(0.5);
+  transform-origin: left top;
+
+  border: 2px solid #f2f2f2;
+  border-radius: 40px;
+}

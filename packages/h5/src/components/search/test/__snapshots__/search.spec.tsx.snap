@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-search 使用插槽 1`] = `
+<test-container>
+  <!---->
+  <ti-search>
+    <mock:shadow-root>
+      <div class="titian-search" part="">
+        <slot name="prefix"></slot>
+        <div class="titian-search-input-container" part="">
+          <div style="display: contents;">
+            <ti-icon class="search-icon titian-icon titian-icon-base titian-icon-search" ext-class="search-icon" style="font-size: 16px;"></ti-icon>
+            <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+            <div class="titian-search-suffix-icon">
+              <slot name="right-icon"></slot>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-search-button-box" part="">
+          <ti-button variant="text">
+            搜索
+          </ti-button>
+        </div>
+        <slot name="suffix"></slot>
+      </div>
+    </mock:shadow-root>
+    <div slot="prefix">
+      <span>
+        请选择
+      </span>
+      <ti-icon class="titian-icon titian-icon-arrow-down titian-icon-base" style="font-size: 16px;"></ti-icon>
+    </div>
+    <ti-icon class="titian-icon titian-icon-base titian-icon-scan" slot="right-icon" style="font-size: 16px;"></ti-icon>
+  </ti-search>
+  <ti-search>
+    <mock:shadow-root>
+      <div class="titian-search" part="">
+        <slot name="prefix"></slot>
+        <div class="titian-search-input-container" part="">
+          <div style="display: contents;">
+            <ti-icon class="search-icon titian-icon titian-icon-base titian-icon-search" ext-class="search-icon" style="font-size: 16px;"></ti-icon>
+            <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+            <div class="titian-search-suffix-icon">
+              <slot name="right-icon"></slot>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-search-button-box" part="">
+          <ti-button variant="text">
+            搜索
+          </ti-button>
+        </div>
+        <slot name="suffix"></slot>
+      </div>
+    </mock:shadow-root>
+    <div slot="prefix">
+      <ti-icon class="titian-icon titian-icon-base titian-icon-category" style="font-size: 21px;"></ti-icon>
+    </div>
+    <div slot="suffix">
+      <ti-icon class="titian-icon titian-icon-arrange titian-icon-base" style="font-size: 21px;"></ti-icon>
+    </div>
+  </ti-search>
+</test-container>
+`;
+
+exports[`渲染 ti-search 基本用法 1`] = `
+<ti-search>
+  <mock:shadow-root>
+    <div class="titian-search" part="">
+      <slot name="prefix"></slot>
+      <div class="titian-search-input-container" part="">
+        <div style="display: contents;">
+          <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+          <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+          <div class="titian-search-suffix-icon">
+            <slot name="right-icon"></slot>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-search-button-box" part="">
+        <ti-button variant="text">
+          搜索
+        </ti-button>
+      </div>
+      <slot name="suffix"></slot>
+    </div>
+  </mock:shadow-root>
+</ti-search>
+`;
+
+exports[`渲染 ti-search 居中模式 1`] = `
+<ti-search>
+  <mock:shadow-root>
+    <div class="titian-search" part="">
+      <div class="titian-search-input-container" part="">
+        <div style="display: contents;">
+          <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+          <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-search-button-box titian-search-button-box-focus" part="">
+        <ti-button variant="text">
+          搜索
+        </ti-button>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-search>
+`;
+
+exports[`渲染 ti-search 搜索按钮状态 1`] = `
+<test-container>
+  <!---->
+  <ti-search>
+    <mock:shadow-root>
+      <div class="titian-search" part="">
+        <slot name="prefix"></slot>
+        <div class="titian-search-input-container" part="">
+          <div style="display: contents;">
+            <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+            <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+            <div class="titian-search-suffix-icon">
+              <slot name="right-icon"></slot>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-search-button-box titian-search-button-box-pure" part="">
+          <ti-button variant="text">
+            搜索
+          </ti-button>
+        </div>
+        <slot name="suffix"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-search>
+  <ti-search always-show-search="">
+    <mock:shadow-root>
+      <div class="titian-search" part="">
+        <slot name="prefix"></slot>
+        <div class="titian-search-input-container" part="">
+          <div style="display: contents;">
+            <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+            <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+            <div class="titian-search-suffix-icon">
+              <slot name="right-icon"></slot>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-search-button-box titian-search-button-box-focus" part="">
+          <ti-button variant="text">
+            搜索
+          </ti-button>
+        </div>
+        <slot name="suffix"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-search>
+  <ti-search>
+    <mock:shadow-root>
+      <div class="titian-search" part="">
+        <slot name="prefix"></slot>
+        <div class="titian-search-input-container" part="">
+          <div style="display: contents;">
+            <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+            <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class=""></ti-input>
+            <div class="titian-search-suffix-icon">
+              <slot name="right-icon"></slot>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="titian-search-button-box" part="">
+          <ti-button variant="text">
+            搜索
+          </ti-button>
+        </div>
+        <slot name="suffix"></slot>
+      </div>
+    </mock:shadow-root>
+  </ti-search>
+</test-container>
+`;
+
+exports[`渲染 ti-search 输入 1`] = `
+<ti-search>
+  <mock:shadow-root>
+    <div class="titian-search" part="">
+      <slot name="prefix"></slot>
+      <div class="titian-search-input-container" part="">
+        <div style="display: contents;">
+          <ti-icon ext-class="search-icon" name="search" size="32"></ti-icon>
+          <ti-input class="titian-search-input-host" clearable="" confirm-type="search" exportparts="" ext-class="search-input" ext-css="" input-class="" placeholder="请输入"></ti-input>
+          <div class="titian-search-suffix-icon">
+            <slot name="right-icon"></slot>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-search-button-box" part="">
+        <ti-button variant="text">
+          搜索
+        </ti-button>
+      </div>
+      <slot name="suffix"></slot>
+    </div>
+  </mock:shadow-root>
+</ti-search>
+`;

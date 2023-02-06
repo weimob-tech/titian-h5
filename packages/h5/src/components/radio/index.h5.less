@@ -1,0 +1,148 @@
+@import '../common/static/var';
+@import '../common/static/utils';
+@import '../common/static/mixins/index.less';
+
+@radio: ~'@{project}-radio';
+
+:host {
+  display: contents;
+}
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+}
+
+.@{radio} {
+  display: inline-flex;
+  flex-direction: @radio-direction;
+  align-items: @radio-align-items;
+  padding: @radio-padding-v @radio-padding-h;
+
+  &-icon-content {
+    padding: @radio-icon-wrap-padding-h @radio-icon-wrap-padding-h;
+  }
+
+  &-icon-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    --protected-icon-line-height: 1;
+    outline: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &::after {
+      content: ' ';
+
+      position: absolute;
+      z-index: 5;
+      box-sizing: border-box;
+
+      border: 2px solid @neutral-color-5;
+      border-radius: @radio-radius;
+      .abs-pos();
+    }
+  }
+
+  &-checked {
+    .@{radio} {
+      &-icon-wrap {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    --protected-icon-display: block;
+    --protected-icon-color: @radio-icon-revert-color;
+    position: relative;
+    z-index: 0;
+
+    transform: scale(0.5);
+
+    border-radius: @radio-radius;
+
+    opacity: 0;
+    background-color: @radio-icon-color;
+
+    line-height: 1;
+
+    &-zoom-in {
+      animation: zoom-in 0.1s cubic-bezier(0.48, 0.33, 0.24, 1.18);
+      animation-fill-mode: forwards;
+    }
+
+    &-zoom-out {
+      animation: zoom-out 0.1s cubic-bezier(0.48, 0.33, 0.24, 1.18);
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &-label {
+    flex: 1;
+    padding: @radio-label-padding-v @radio-label-padding-h;
+
+    outline: none;
+
+    color: @radio-label-color;
+    font-size: @T28;
+    font-weight: @font-weight-400;
+    line-height: 1;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &-empty {
+    display: none;
+  }
+
+  &-disabled {
+    pointer-events: none;
+
+    .@{radio} {
+      &-icon {
+        &-wrap {
+          &::after {
+            border: 2px solid @neutral-color-6;
+
+            background-color: @neutral-color-7;
+          }
+        }
+
+        &-checked {
+          transform: scale(1);
+
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}

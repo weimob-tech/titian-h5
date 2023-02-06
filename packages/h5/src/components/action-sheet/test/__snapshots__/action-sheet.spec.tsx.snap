@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-action-sheet 基本渲染 1`] = `
+<ti-action-sheet>
+  <mock:shadow-root>
+    <ti-popup class="titian-action-sheet" position="bottom">
+      <div class="titian-action-sheet-title">
+        标题
+      </div>
+      <div aria-hidden="true" class="titian-action-sheet-button">
+        <div class="titian-action-sheet-text">
+          <ti-badge attext="" use-slot="">
+            <span>
+              选项1
+            </span>
+          </ti-badge>
+        </div>
+        <div class="titian-action-sheet-description">
+          描述1
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-action-sheet-button">
+        <div class="titian-action-sheet-text">
+          <ti-icon extclass="titian-action-sheet-icon" name="home"></ti-icon>
+          <ti-badge attext="" use-slot="">
+            <span>
+              选项1
+            </span>
+          </ti-badge>
+        </div>
+        <div class="titian-action-sheet-description">
+          描述1
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-action-sheet-button titian-action-sheet-disabled">
+        <div class="titian-action-sheet-text">
+          <ti-badge attext="" use-slot="">
+            <span>
+              选项1
+            </span>
+          </ti-badge>
+        </div>
+        <div class="titian-action-sheet-description">
+          描述1
+        </div>
+      </div>
+      <div aria-hidden="true" class="titian-action-sheet-button titian-action-sheet-loading">
+        <div class="titian-action-sheet-text">
+          <ti-loading extclass="titian-action-sheet-loading-icon" size="28"></ti-loading>
+          <ti-badge attext="" use-slot="">
+            <span>
+              选项1
+            </span>
+          </ti-badge>
+        </div>
+        <div class="titian-action-sheet-description">
+          描述1
+        </div>
+      </div>
+    </ti-popup>
+  </mock:shadow-root>
+</ti-action-sheet>
+`;
+
+exports[`渲染 ti-action-sheet 字段别名 1`] = `
+<ti-action-sheet>
+  <mock:shadow-root>
+    <ti-popup class="titian-action-sheet" position="bottom">
+      <div aria-hidden="true" class="titian-action-sheet-button">
+        <div class="titian-action-sheet-text">
+          <ti-badge attext="" use-slot="">
+            <span>
+              选项1
+            </span>
+          </ti-badge>
+        </div>
+      </div>
+    </ti-popup>
+  </mock:shadow-root>
+</ti-action-sheet>
+`;

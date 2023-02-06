@@ -1,0 +1,164 @@
+$horizontal: 240px;
+$vertical: 200px;
+$duration: 300ms;
+
+.container {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+
+  animation-timing-function: cubic-bezier(0.48, 0.33, 0.24, 0.95);
+}
+
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animate__fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animate__fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+.animate__fadeInTop {
+  animation-name: fadeInTop;
+}
+
+.animate__fadeOutTop {
+  animation-name: fadeOutTop;
+}
+
+.animate__fadeInBottom {
+  animation-name: fadeInBottom;
+}
+
+.animate__fadeOutBottom {
+  animation-name: fadeOutBottom;
+}
+
+.animate__fadeInCenter {
+  animation-name: fadeInCenter;
+}
+
+.animate__fadeOutCenter {
+  animation-name: fadeOutCenter;
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translate3d(-$horizontal, 0, 0);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-$horizontal, 0, 0);
+
+    opacity: 0;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translate3d($horizontal, 0, 0);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d($horizontal, 0, 0);
+
+    opacity: 0;
+  }
+}
+@keyframes fadeInTop {
+  from {
+    transform: translate3d(0, -$vertical, 0);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes fadeOutTop {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, -$vertical, 0);
+
+    opacity: 0;
+  }
+}
+@keyframes fadeInBottom {
+  from {
+    transform: translate3d(0, $vertical, 0);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes fadeOutBottom {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, $vertical, 0);
+
+    opacity: 0;
+  }
+}
+@keyframes fadeInCenter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutCenter {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

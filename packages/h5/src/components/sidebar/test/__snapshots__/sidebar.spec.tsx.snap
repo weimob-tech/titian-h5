@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-sidebar 基本用法 1`] = `
+<ti-sidebar active-index="2">
+  <mock:shadow-root>
+    <ti-scroll-view class="titian-sidebar" part="" scrolly="">
+      <slot></slot>
+    </ti-scroll-view>
+  </mock:shadow-root>
+  <ti-sidebar-item>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-sidebar-item titian-sidebar-item-active" part="">
+        <ti-badge attext="" content="1">
+          <div class="titian-sidebar-item-refresh titian-sidebar-item-text">
+            侧边导航
+          </div>
+        </ti-badge>
+      </div>
+    </mock:shadow-root>
+  </ti-sidebar-item>
+  <ti-sidebar-item>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-sidebar-item" part="">
+        <ti-badge attext="" content="">
+          <div class="titian-sidebar-item-refresh titian-sidebar-item-text">
+            IP联名款
+          </div>
+        </ti-badge>
+      </div>
+    </mock:shadow-root>
+  </ti-sidebar-item>
+  <ti-sidebar-item>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-sidebar-item titian-sidebar-item-disabled" part="">
+        <ti-badge attext="" content="">
+          <div class="titian-sidebar-item-refresh titian-sidebar-item-text">
+            精选系列
+          </div>
+        </ti-badge>
+      </div>
+    </mock:shadow-root>
+  </ti-sidebar-item>
+</ti-sidebar>
+`;

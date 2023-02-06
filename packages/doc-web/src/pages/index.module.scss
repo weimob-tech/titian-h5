@@ -1,0 +1,13 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0;
+  overflow: hidden;
+
+  --ifm-navbar-background-color: transparent;
+  --navbar-border-bottom: none;
+
+  nav {
+    border-bottom: none !important;
+  }
+}

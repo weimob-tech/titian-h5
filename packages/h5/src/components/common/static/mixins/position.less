@@ -1,0 +1,10 @@
+.abs-pos(@top: 0px, @right: 0px, @bottom: 0px, @left: 0px) {
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.fixed-pos(@top: 0px, @right: 0px, @bottom: 0px, @left: 0px) {
+  .abs-pos(@top: 0px, @right: 0px, @bottom: 0px, @left: 0px);
+}

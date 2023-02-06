@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染 ti-steps 基本用法 1`] = `
+<ti-steps>
+  <mock:shadow-root>
+    <div class="titian-steps undefined">
+      <div class="titian-steps-item titian-steps-item-active">
+        <div class="titian-steps-item-left">
+          <div class="titian-steps-item-icon-box">
+            <div class="titian-steps-item-dot"></div>
+          </div>
+          <div class="titian-steps-item-line"></div>
+        </div>
+        <div class="titian-steps-item-content">
+          <div class="titian-steps-item-title-box">
+            <div class="titian-steps-item-title">
+              标题文字
+            </div>
+            <div class="titian-steps-item-subtitle">
+              副标题
+            </div>
+          </div>
+          <div class="titian-steps-item-desc">
+            详细内容文字，详细内容文字，详细内容文字
+          </div>
+          <div class="titian-steps-item-time">
+            2018.07.06 09:52:42
+          </div>
+        </div>
+      </div>
+      <div class="titian-steps-item">
+        <div class="titian-steps-item-left">
+          <div class="titian-steps-item-icon-box">
+            <div class="titian-steps-item-dot"></div>
+          </div>
+        </div>
+        <div class="titian-steps-item-content">
+          <div class="titian-steps-item-title-box">
+            <div class="titian-steps-item-title">
+              标题文字
+            </div>
+            <div class="titian-steps-item-subtitle">
+              副标题
+            </div>
+          </div>
+          <div class="titian-steps-item-desc">
+            详细内容文字，详细内容文字，详细内容文字
+          </div>
+          <div class="titian-steps-item-time">
+            2018.07.06 09:52:42
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-steps>
+`;
+
+exports[`渲染 ti-steps 设置副标题右对齐 1`] = `
+<ti-steps subtitle-align="right">
+  <mock:shadow-root>
+    <div class="titian-steps undefined">
+      <div class="titian-steps-item titian-steps-item-active">
+        <div class="titian-steps-item-left">
+          <div class="titian-steps-item-icon-box">
+            <div class="titian-steps-item-dot"></div>
+          </div>
+          <div class="titian-steps-item-line"></div>
+        </div>
+        <div class="titian-steps-item-content">
+          <div class="titian-steps-item-title-box">
+            <div class="titian-steps-item-title">
+              标题文字
+            </div>
+            <div class="titian-steps-item-subtitle titian-steps-item-subtitle-right">
+              副标题
+            </div>
+          </div>
+          <div class="titian-steps-item-desc">
+            详细内容文字，详细内容文字，详细内容文字
+          </div>
+          <div class="titian-steps-item-time">
+            2018.07.06 09:52:42
+          </div>
+        </div>
+      </div>
+      <div class="titian-steps-item">
+        <div class="titian-steps-item-left">
+          <div class="titian-steps-item-icon-box">
+            <div class="titian-steps-item-dot"></div>
+          </div>
+        </div>
+        <div class="titian-steps-item-content">
+          <div class="titian-steps-item-title-box">
+            <div class="titian-steps-item-title">
+              标题文字
+            </div>
+            <div class="titian-steps-item-subtitle titian-steps-item-subtitle-right">
+              副标题
+            </div>
+          </div>
+          <div class="titian-steps-item-desc">
+            详细内容文字，详细内容文字，详细内容文字
+          </div>
+          <div class="titian-steps-item-time">
+            2018.07.06 09:52:42
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+</ti-steps>
+`;

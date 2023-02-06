@@ -1,0 +1,58 @@
+{
+  "name": "@titian-design/h5",
+  "version": "0.1.0",
+  "description": "Titian h5 basic",
+  "homepage": "https://github.com/weimob-tech/titian-h5/blob/master/packages/h5/readme.md",
+  "bugs": {
+    "url": "https://github.com/weimob-tech/titian-h5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/titian-h5.git",
+    "directory": "packages/h5"
+  },
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "unpkg": "dist/h5/h5.esm.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "loader",
+    "locale"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "build:readme": "stencil build --docs-readme",
+    "generate": "stencil generate",
+    "prepublish": "npm run build",
+    "start": "stencil build --watch",
+    "test:spec": "cross-env NODE_ENV=test stencil test --spec --coverage --no-cache",
+    "test:e2e": "stencil test --e2e",
+    "test:e2e:watch": "stencil test --e2e --watchAll",
+    "test:spec:watch": "cross-env NODE_ENV=test stencil test --spec --watchAll --coverage"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.20.0",
+    "@stencil/store": "^2.0.1"
+  },
+  "devDependencies": {
+    "@stencil/less": "^1.0.0",
+    "@stencil/postcss": "^2.1.0",
+    "@stencil/react-output-target": "^0.3.1",
+    "@stencil/vue-output-target": "^0.6.2",
+    "@types/autoprefixer": "^10.2.0",
+    "@types/jest": "^27.0.3",
+    "autoprefixer": "^10.4.7",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "postcss": "^8.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-px2units-extra": "^1.0.1",
+    "puppeteer": "^10.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "fs-extra": "^10.1.0",
+    "cross-env": "^7.0.3"
+  }
+}

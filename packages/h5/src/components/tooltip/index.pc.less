@@ -1,0 +1,79 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+@tooltip:~ '@{project}-tooltip';
+
+.@{tooltip} {
+  display: inline-flex;
+
+  &-content {
+    visibility: hidden;
+    position: fixed;
+    z-index: @tooltip-content-z-index;
+    max-width: @tooltip-content-max-width;
+
+    border-radius: @tooltip-content-radius;
+
+    opacity: 0.8;
+    background: @tooltip-content-bg-color;
+    box-shadow: @tooltip-box-shadow;
+
+    color: @tooltip-content-color;
+  }
+
+  &-content-visible {
+    visibility: visible;
+  }
+
+  &-arrow {
+    position: absolute;
+    z-index: 1;
+    height: 12px !important;
+    overflow: hidden;
+
+    background: @tooltip-arrow-content-bg-color;
+
+    pointer-events: none;
+  }
+
+  &-all {
+    width: 36px !important;
+  }
+
+  &-half {
+    width: 18px !important;
+  }
+
+  &-arrow-up {
+    top: 0;
+
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &-arrow-down {
+    bottom: 0;
+
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &-inner {
+    position: relative;
+    min-width: @tooltip-inner-min-width;
+    padding: @tooltip-inner-padding-v @tooltip-inner-padding-h;
+
+    color: @tooltip-inner-color;
+    font-size: @tooltip-inner-font-size;
+    line-height: @tooltip-inner-line-height;
+    text-align: left;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

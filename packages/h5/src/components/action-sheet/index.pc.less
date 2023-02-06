@@ -1,0 +1,108 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@action-sheet: ~'@{project}-action-sheet';
+
+.@{action-sheet} {
+  --popup-box-bg-color: @neutral-color-7;
+
+  &-title {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: @action-sheet-padding-v @action-sheet-padding-h;
+
+    background: @action-sheet-button-bg-color;
+
+    color: @action-sheet-title-color;
+    font-size: @action-sheet-title-font-size;
+    font-weight: @font-weight-bold;
+    line-height: @action-sheet-line-height;
+
+    &::before {
+      .hairline();
+    }
+  }
+
+  &-button {
+    position: relative;
+    padding: @action-sheet-padding-v @action-sheet-padding-h;
+
+    border-radius: 0;
+
+    background: @action-sheet-button-bg-color;
+
+    color: @action-sheet-button-color;
+    font-size: @action-sheet-button-font-size;
+    line-height: @action-sheet-line-height;
+
+    user-select: none;
+
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      .hairline();
+    }
+
+    &:active:not(.@{action-sheet}-loading):not(.@{action-sheet}-disabled) {
+      background: @action-sheet-button-active-color;
+    }
+  }
+
+  &-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-icon {
+    margin-right: @action-sheet-icon-margin-right;
+
+    --protected-icon-line-height: 1;
+  }
+
+  &-description {
+    margin-top: @action-sheet-description-margin-top;
+
+    color: @action-sheet-description-color;
+    font-size: @action-sheet-description-font-size;
+    line-height: @action-sheet-description-line-height;
+  }
+
+  &-disabled {
+    color: @action-sheet-button-disabled-color;
+  }
+
+  &-loading-icon {
+    margin-right: @action-sheet-icon-margin-right;
+  }
+
+  &-cancel {
+    width: 100%;
+    height: auto;
+    margin-top: @action-sheet-cancel-btn-gap;
+    padding: @action-sheet-padding-v @action-sheet-padding-h;
+
+    border: none;
+    outline: none;
+
+    background: @action-sheet-cancel-background;
+
+    color: @action-sheet-cancel-color;
+    font-size: @action-sheet-cancel-font-size;
+    line-height: @action-sheet-line-height;
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background: fade(#000, 10%);
+    }
+  }
+}

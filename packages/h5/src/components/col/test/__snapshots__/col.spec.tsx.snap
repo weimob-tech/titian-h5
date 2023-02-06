@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染布局组件 偏移量渲染 span 12, offset 12 1`] = `
+<ti-row>
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex undefined" style="margin-left: -0px; margin-right: -0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-12 undefined" style="padding-left: 0px; padding-right: 0px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-12
+  </ti-col>
+</ti-row>
+`;
+
+exports[`渲染布局组件 单独 col 1`] = `
+<ti-col>
+  <mock:shadow-root>
+    <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-0 undefined" style="padding-left: 0px; padding-right: 0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  span-12
+</ti-col>
+`;
+
+exports[`渲染布局组件 基本渲染 span 12 1`] = `
+<ti-row>
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex undefined" style="margin-left: -0px; margin-right: -0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-0 undefined" style="padding-left: 0px; padding-right: 0px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-12
+  </ti-col>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-0 undefined" style="padding-left: 0px; padding-right: 0px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-12
+  </ti-col>
+</ti-row>
+`;
+
+exports[`渲染布局组件 基本渲染 span 24 1`] = `
+<ti-row>
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex undefined" style="margin-left: -0px; margin-right: -0px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-24 titian-col-flex-24 titian-col-offset-0 undefined" style="padding-left: 0px; padding-right: 0px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-24
+  </ti-col>
+</ti-row>
+`;
+
+exports[`渲染布局组件 间距渲染 span 12, gutter 16 1`] = `
+<ti-row>
+  <mock:shadow-root>
+    <div class="titian-row titian-row-flex undefined" style="margin-left: -8px; margin-right: -8px;">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-0 undefined" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-12
+  </ti-col>
+  <ti-col>
+    <mock:shadow-root>
+      <div class="titian-col titian-col-12 titian-col-flex-12 titian-col-offset-0 undefined" style="padding-left: 8px; padding-right: 8px;">
+        <slot></slot>
+      </div>
+    </mock:shadow-root>
+    span-12
+  </ti-col>
+</ti-row>
+`;

@@ -1,0 +1,127 @@
+.swipe-content {
+  --button-icon-size: 28px;
+
+  & ti-swipe-cell {
+    &::part(page-swipe-cell) {
+      --icon-line-height: 1;
+
+      width: calc(100% - 56px);
+      margin: 0 28px;
+    }
+  }
+
+  & ti-button {
+    &::part(swipe-cell-btn) {
+      height: calc(100% - 24px) !important;
+      padding: 28px 20px;
+
+      font-size: 24px;
+    }
+
+    &::part(swipe-cell-column) {
+      padding: 28px 36px;
+    }
+
+    &::part(prefix-icon-class) {
+      margin-right: 4px;
+    }
+
+    &::part(btn-column) {
+      flex-direction: column;
+
+      --button-icon-size: 36px;
+
+      ::part(prefix-icon-class) {
+        margin-right: 0;
+        margin-bottom: 4px;
+      }
+    }
+
+    &::part(prefix-btn-column) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.swipe-action {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.swipe-action.left {
+  padding-left: 0;
+}
+
+.swipe-action.right {
+  padding-right: 0;
+}
+
+.btn-column {
+  flex-direction: column;
+}
+
+.prefix-icon {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.prefix-icon-h {
+  margin-right: 8px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.left .btn {
+  margin-right: 12px;
+}
+
+.right .btn {
+  margin-left: 12px;
+}
+
+.good-card {
+  display: flex;
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: #fff;
+}
+
+.good-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 0 24px;
+}
+
+.good-title {
+  color: #212121;
+  font-family: PingFangSC-Regular, 'PingFang SC';
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.good-img {
+  width: 180px;
+  height: 180px;
+}
+
+.good-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.good-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

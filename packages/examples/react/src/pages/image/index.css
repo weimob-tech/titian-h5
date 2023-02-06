@@ -1,0 +1,16 @@
+.img-container {
+  display: flex;
+  width: auto;
+
+  border-radius: 0;
+
+  background: #f2f2f2;
+}
+
+.bg-pic {
+  position: absolute;
+  width: 270px;
+  height: 180px;
+
+  opacity: 0.2;
+}

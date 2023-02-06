@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`渲染单选按钮 基本渲染 1`] = `
+<test-container>
+  <!---->
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          <slot></slot>
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          文字内容
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          <slot></slot>
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    文字内容
+  </ti-radio-button>
+</test-container>
+`;
+
+exports[`渲染单选按钮 改变单选按钮颜色 1`] = `
+<test-container>
+  <!---->
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(42, 106, 233, 0.2); --radio-button-disabled-text-color: rgba(42, 106, 233, 0.4); --radio-button-checked-bg-color: rgba(42, 106, 233, 0.1); --radio-button-checked-text-color: rgba(42, 106, 233, 1); --radio-button-checked-border-color: rgba(42, 106, 233, 0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          通过属性更改颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(0,0,0,0.2); --radio-button-disabled-text-color: rgba(0,0,0,0.4); --radio-button-checked-bg-color: rgba(0,0,0,0.1); --radio-button-checked-text-color: rgba(0,0,0,1); --radio-button-checked-border-color: rgba(0,0,0,0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          通过属性更改颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="" style="--radio-button-disabled-border-color: rgba(0,0,0,0.2); --radio-button-disabled-text-color: rgba(0,0,0,0.4); --radio-button-checked-bg-color: rgba(0,0,0,0.1); --radio-button-checked-text-color: rgba(0,0,0,1); --radio-button-checked-border-color: rgba(0,0,0,0.4);">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          通过属性更改颜色
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</test-container>
+`;
+
+exports[`渲染单选按钮 组件内容设置 1`] = `
+<test-container>
+  <!---->
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="sort-inactive">
+          <slot name="prefix" slot="prefix"></slot>
+          设置右侧图标
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          自定义左侧内容
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    <ti-image ext-style="margin-right: 6px" slot="prefix">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-image" part="" style="border-radius: 0px; width: 20px; height: 20px; margin-right:  6px;">
+          <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+          <div class="titian-image-notice">
+            <ti-icon name="default-pic" size="72"></ti-icon>
+          </div>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-image>
+  </ti-radio-button>
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          自定义右侧内容
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+    <ti-image ext-style="margin-left: 6px" slot="suffix">
+      <mock:shadow-root>
+        <div aria-hidden="true" class="titian-image" part="" style="border-radius: 0px; width: 20px; height: 20px; margin-left:  6px;">
+          <img class="titian-image-img titian-image-img-fill" loading="eager" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+          <div class="titian-image-notice">
+            <ti-icon name="default-pic" size="72"></ti-icon>
+          </div>
+          <slot></slot>
+        </div>
+      </mock:shadow-root>
+    </ti-image>
+  </ti-radio-button>
+</test-container>
+`;
+
+exports[`渲染单选按钮 默认选中状态 1`] = `
+<test-container>
+  <!---->
+  <ti-radio-button>
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-checked" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          默认选中
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+  <ti-radio-button default-checked="">
+    <mock:shadow-root>
+      <div aria-hidden="true" class="titian-radio-button titian-radio-button-checked" part="">
+        <ti-tag righticon="">
+          <slot name="prefix" slot="prefix"></slot>
+          默认选中
+          <slot name="suffix" slot="suffix"></slot>
+        </ti-tag>
+      </div>
+    </mock:shadow-root>
+  </ti-radio-button>
+</test-container>
+`;
