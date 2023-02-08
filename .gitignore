@@ -72,3 +72,6 @@ out/
 
 # eslint
 .eslintcache
+
+# stylelint
+.stylelintcache
