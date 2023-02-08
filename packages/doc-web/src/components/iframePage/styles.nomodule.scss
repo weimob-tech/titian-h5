@@ -4,7 +4,6 @@
 
   background-color: #f9f9f9;
 
-
   .page-container {
     position: relative;
     height: 20vh;
@@ -72,11 +71,11 @@
   //   padding-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
   // }
 
-  .page-container:empty+.menu::before {
+  .page-container:empty + .menu::before {
     content: none;
   }
 
-  .page-container:empty+.menu::after {
+  .page-container:empty + .menu::after {
     content: none;
   }
 
@@ -100,7 +99,7 @@
     background: #f9f9f9;
   }
 
-  .page-container:empty+.menu {
+  .page-container:empty + .menu {
     height: auto;
     padding-top: 0;
 
@@ -220,7 +219,7 @@
     line-height: normal;
   }
 
-  .radio+.radio {
+  .radio + .radio {
     margin-left: 6px;
   }
 
@@ -244,7 +243,7 @@
     border-radius: 100%;
   }
 
-  .color+.color {
+  .color + .color {
     margin-left: 20px;
   }
 
