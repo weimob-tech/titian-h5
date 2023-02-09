@@ -5,9 +5,8 @@ import Notice from '../_components/notice';
 import styles from './page5.module.scss';
 
 function Page({ display, leaving }: { display: string; leaving: boolean }) {
-  const figmaUrl =
-    'https://www.figma.com/file/w2RUoYgz82b4CarMNqAgrO/Titian%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%B5%84%E6%BA%90?node-id=2701%3A8313&t=5L4ymiX2g2SmKsQx-1';
-  const githubUrl = '';
+  const figmaUrl = 'https://www.figma.com/community/file/1194917512409387064';
+  const githubUrl = 'https://github.com/weimob-tech/titian-design';
   const link = url => {
     if (!url) return;
     window.open(url);

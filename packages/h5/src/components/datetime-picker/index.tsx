@@ -7,6 +7,7 @@ import getCurYear, {
   DateTimePickerHelper,
   getOrderPickerValue,
   getOrderValue,
+  DateTimeTypeMapping,
 } from './utils';
 
 const currentYear = getCurYear();
@@ -270,26 +271,20 @@ export class TiDatetimePicker {
       this.helper.setPickValue();
       this.helper.setScope();
       this.helper.setPickColumns();
-      const update = {
-        ...(colAlias === DateTimePickerColumnEnum.YEAR
-          ? {
-              monthOption: this.helper.monthOption,
-              monthValue: this.helper.monthValue,
-            }
-          : {}),
-        dayOption: this.helper.dayOption,
-        dayValue: this.helper.dayValue,
-        ...(type === DateTimePickerEnum.DATETIME
-          ? {
-              hourOption: this.helper.hourOption,
-              hourValue: this.helper.hourValue,
-              minuteOption: this.helper.minuteOption,
-              minuteValue: this.helper.minuteValue,
-            }
-          : {}),
-      };
+      let list = DateTimeTypeMapping[type];
+      const start = list.findIndex(item => item === colAlias);
+      if (start === list.length - 1) {
+        return;
+      }
+      list = list.slice(start + 1, list.length);
+      const update = list.reduce((target, item) => {
+        const optionKey = `${item}Option`;
+        const valueKey = `${item}Value`;
+        target[optionKey] = this.helper[optionKey];
+        target[valueKey] = this.helper[valueKey];
+        return target;
+      }, {});
       this.max = Object.keys(update).length / 2;
-      this.dayOption = [];
       Object.assign(this, update);
       return;
     }

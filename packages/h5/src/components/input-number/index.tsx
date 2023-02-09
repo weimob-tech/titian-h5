@@ -193,6 +193,7 @@ export class TiInputNumber implements BasicComponentAbstract {
   private count = type => {
     let newValue = +this.value;
     newValue = type === 'plus' ? +this.value + this.step : +this.value - this.step;
+    newValue = parseFloat(newValue.toFixed(10));
     this.onChange(newValue, type);
   };
 

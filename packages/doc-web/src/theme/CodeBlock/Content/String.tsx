@@ -62,7 +62,7 @@ export default function CodeBlockString({
               <code className={clsx(styles.codeBlockLines, showLineNumbers && styles.codeBlockLinesWithNumbering)}>
                 {tokens.map((line, i) => (
                   <Line
-                    key={JSON.stringify(line)}
+                    key={Math.random()}
                     line={line}
                     getLineProps={getLineProps}
                     getTokenProps={getTokenProps}

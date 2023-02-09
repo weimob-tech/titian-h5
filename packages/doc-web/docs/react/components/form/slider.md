@@ -12,6 +12,10 @@ side_iframe_path: "#/slider"
 
 **滑块输入，提供默认值、可选范围等能力。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tislider-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiSlider } from '@titian-design/mobile-react'

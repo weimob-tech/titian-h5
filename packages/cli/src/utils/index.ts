@@ -1,6 +1,6 @@
-import { promises } from 'fs';
+import { existsSync, promises, readFileSync, statSync } from 'fs';
 import { platform } from 'os';
-import { posix } from 'path';
+import * as path from 'path';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -20,7 +20,7 @@ export function slash(p: string): string {
 export const isWindows = platform() === 'win32';
 
 export function normalizePath(id: string): string {
-  return posix.normalize(isWindows ? slash(id) : id);
+  return path.posix.normalize(isWindows ? slash(id) : id);
 }
 
 export async function isDir(dirname: string) {
@@ -30,4 +30,22 @@ export async function isDir(dirname: string) {
   } catch (error) {
     return false;
   }
+}
+
+export function lookupFile(dir: string, formats: string[], pathOnly = false): string | undefined {
+  let ret = '';
+  formats.forEach(format => {
+    const fullPath = path.join(dir, format);
+    if (ret === '' && existsSync(fullPath) && statSync(fullPath).isFile()) {
+      ret = pathOnly ? fullPath : readFileSync(fullPath, 'utf-8');
+    }
+  });
+  if (ret !== '') {
+    return ret;
+  }
+  const parentDir = path.dirname(dir);
+  if (parentDir !== dir) {
+    return lookupFile(parentDir, formats, pathOnly);
+  }
+  return '';
 }

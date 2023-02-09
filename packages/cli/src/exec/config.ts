@@ -1,12 +1,14 @@
-import { existsSync, unlinkSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
 import { join, resolve, dirname, isAbsolute, extname } from 'path';
 import { performance } from 'perf_hooks';
 import { pathToFileURL } from 'url';
+import * as dotenv from 'dotenv';
+import * as dotenvExpand from 'dotenv-expand';
 import { build, OnResolveArgs, OnResolveResult, PluginBuild } from 'esbuild';
 import * as readPkgUp from 'read-pkg-up';
 import type { HookFun } from '../models/Command';
 import Package from '../models/package';
-import { dynamicImport, isDir, isObject, normalizePath } from '../utils';
+import { dynamicImport, isDir, isObject, lookupFile, normalizePath } from '../utils';
 import logger from '../utils/logger';
 
 export interface UserConfig<T = HookFun> {
@@ -18,6 +20,7 @@ export interface UserConfig<T = HookFun> {
   hooks?: T[];
   projectId?: string | number;
   mainPackage?: string;
+  envDir?: string;
 }
 
 export type ResolvedConfig = Readonly<
@@ -26,6 +29,7 @@ export type ResolvedConfig = Readonly<
     configFileDependencies?: string[];
     inlineConfig?: InlineConfig;
     compilerPath?: string | undefined;
+    env: Record<string, any>;
   }
 >;
 
@@ -34,6 +38,7 @@ export interface InlineConfig extends UserConfig {
   compiler?: string;
   mode?: string;
   args?: string[];
+  envFile?: false;
 }
 
 export type UserConfigFn = (env: ConfigEnv) => UserConfig | Promise<UserConfig>;
@@ -82,6 +87,42 @@ async function bundleConfigFile(fileName: string, isESM = false) {
 
 interface NodeModuleWithCompile extends NodeModule {
   _compile(code: string, filename: string): any;
+}
+
+function loadEnv(mode: string, envDir: string, prefixes: string | string[] = 'TITIAN_'): Record<string, string> {
+  prefixes = Array.isArray(prefixes) ? prefixes : [prefixes];
+  const env: Record<string, string> = {};
+  const envFiles = [`.env.${mode}.local`, `.env.${mode}`, `.env.local`, `.env`];
+  Object.keys(process.env).forEach(key => {
+    if (
+      typeof prefixes !== 'string' &&
+      prefixes?.some((prefix: string) => key.startsWith(prefix)) &&
+      env[key] === undefined
+    ) {
+      env[key] = process.env[key] as string;
+    }
+  });
+  envFiles.forEach(file => {
+    const path = lookupFile(envDir, [file], true);
+    if (path) {
+      const parsed = dotenv.parse(readFileSync(path));
+
+      // let environment variables use each other
+      dotenvExpand.expand({
+        parsed,
+
+        // prevent process.env mutation
+        ignoreProcessEnv: true,
+      });
+
+      Object.entries(parsed).forEach(([key, value]) => {
+        if ((prefixes as string[]).some(prefix => key.startsWith(prefix)) && env[key] === undefined) {
+          env[key] = value;
+        }
+      });
+    }
+  });
+  return env;
 }
 
 async function loadConfigFromBundledFile(fileName: string, bundledCode: string): Promise<UserConfig> {
@@ -252,6 +293,8 @@ export async function resolveConfig(inlineConfig: InlineConfig, command: string,
     cacheDir = join(resolvedRoot, '.titian-cache');
   }
 
+  const envDir = config.envDir ? normalizePath(resolve(resolvedRoot, config.envDir)) : resolvedRoot;
+  const userEnv = inlineConfig.envFile !== false && loadEnv(mode, envDir);
   // compiler path
   const { compiler } = config;
 
@@ -317,6 +360,9 @@ export async function resolveConfig(inlineConfig: InlineConfig, command: string,
     mode,
     compiler,
     compilerPath,
+    env: {
+      ...userEnv,
+    },
   };
 
   return resolved;

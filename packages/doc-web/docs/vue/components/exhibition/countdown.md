@@ -11,6 +11,10 @@ side_iframe_path: "#/countdown"
 # 倒计时 _Countdown_
 **倒计时组件用于实时展示倒计时数值，精度支持毫秒**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ticountdown-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiCountdown } from '@titian-design/mobile-vue'

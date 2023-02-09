@@ -20,7 +20,7 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-switch": "titan-ui/switch/index"
+    "ti-switch": "@titian-design/weapp/switch/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

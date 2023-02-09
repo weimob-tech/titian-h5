@@ -23,7 +23,7 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-share-sheet": "titan-ui/share-sheet/index"
+    "ti-share-sheet": "@titian-design/weapp/share-sheet/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

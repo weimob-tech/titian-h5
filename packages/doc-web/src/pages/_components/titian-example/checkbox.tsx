@@ -1,6 +1,6 @@
-import { TiCheckbox } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
+import { TiCheckbox } from '@titian-design/mobile-react';
 import styles from './index.module.scss';
 
 export default function CheckboxExample(): JSX.Element {

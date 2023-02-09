@@ -15,6 +15,10 @@ import TabItem from '@theme/TabItem';
 
 **滑动容器，提供类似于小程序 ScrollView 的能力。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiscrollview-api" />
+
 ## 安装使用
 
 ```typescript showLineNumbers
@@ -190,7 +194,7 @@ const App: React.FC = () => {
  </TabItem>
 </Tabs>
 
-
+## TiScrollView API
 ### 属性 **Properties**
 
 | 属性           | 类型                 | 默认值  | 必填 | 说明                                                                               | 备注 |

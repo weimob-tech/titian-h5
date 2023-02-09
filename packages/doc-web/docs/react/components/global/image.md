@@ -11,6 +11,10 @@ side_iframe_path: '#/image'
 # 图片 _Image_
 **图片容器，在保留原生 img 的特性下，支持懒加载，自定义占位、加载失败等。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiimage-api" />
+
 ## 安装使用
 
 ```typescript showLineNumbers

@@ -11,14 +11,14 @@ side_iframe_path: "#/tabs"
 # 标签页 _Tabs_
 **选项卡切换组件，用于在不同的内容区域之间进行切换**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="titabs-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiTabs } from '@titian-design/mobile-vue'
 ```
-
-import TabsLink from '@site/src/components/tabsLink';
-
-<TabsLink id="titabs-api" />
 
 ## 用法示例
 #### 基础用法
@@ -163,25 +163,27 @@ const tabs = ["首页", "商品列表"]
 ## TiTabs API
 ### 属性 **Properties**
 
-| 名称          | 类型                                 | 必填 | 默认值  | 说明                                                                                         | 备注 |
-| ------------- | ------------------------------------ | ---- | ------- | -------------------------------------------------------------------------------------------- | ---- |
-| variant       | `string`                             | 否   | `pure`  | 标签页的风格，可选值：`block` `pure` `calendar` `multi`                                      | -    |
-| tabs          | `array` \| `Array<Option>`           | 是   | -       | 数据项, ['首页', '我的'] 或者 [{label: '首页'}，{label: '我的'}]                             | -    |
-| active-tab    | `number` \| `string`                 | 否   | `0`     | 选中项索引，或者 tab-key 对应的值                                                            | -    |
-| disabled-tabs | `array`                              | 否   | -       | 禁用的数据项                                                                                 | -    |
-| duration      | `number`                             | 否   | `500`   | 滑动动画时长                                                                                 | -    |
-| divider       | `string`                             | 否   | -       | 分割线类型，可选值：`line` `shadow` `default`                                                | -    |
-| sticky        | `boolean`                            | 否   | `false` | 是否有吸顶效果                                                                               | -    |
-| offset-top    | `number`                             | 否   | 0       | 吸顶距离                                                                                     | -    |
-| use-pure-css  | `boolean`                            | 否   | `false` | 使用css的position: sticky实现                                                                | -    |
-| count         | `number`                             | 否   | `5`     | 单屏展示的菜单数量                                                                           | -    |
-| tab-width     | `number`                             | 否   | -       | 每个菜单的宽度，单位 px，设置此项后 count 则无效                                             | -    |
-| gap           | `number`                             | 否   | `-1`    | tab(文字)间距，单位 px，设置此项后 tab-width 和 count 无效                                   | -    |
-| auto-gap      | `boolean`                            | 否   | `true`  | 当 tab 总宽度不够一屏，采用平铺模式                                                          | -    |
-| use-slot      | `boolean`                            | 否   | `false` | 是否启用插槽，即内置 swiper 组件                                                             | -    |
-| ext-style     | `string` \| `Record<string, string>` | 否   | -       | 根节点样式                                                                                   | -    |
-| tabKey        | `string`                             | 否   | `label` | tabs 如果是对象数组，对应每项的关键词 key                                                    | -    |
-| alias         | `Record<string, string>`             | 否   | -       | 数据项默认字段名`label` `description` `tag` `date`的别名，用于自定义数据，可替代`tabKey`属性 | -    |
+| 名称                  | 类型                                 | 必填 | 默认值  | 说明                                                                                         | 备注 |
+| --------------------- | ------------------------------------ | ---- | ------- | -------------------------------------------------------------------------------------------- | ---- |
+| variant               | `string`                             | 否   | `pure`  | 标签页的风格，可选值：`block` `pure` `calendar` `multi`                                      | -    |
+| tabs                  | `array` \| `Array<Option>`           | 是   | -       | 数据项, ['首页', '我的'] 或者 [{label: '首页'}，{label: '我的'}]                             | -    |
+| active-tab            | `number` \| `string`                 | 否   | `0`     | 选中项索引，或者 tab-key 对应的值                                                            | -    |
+| disabled-tabs         | `array`                              | 否   | -       | 禁用的数据项                                                                                 | -    |
+| duration              | `number`                             | 否   | `500`   | 滑动动画时长                                                                                 | -    |
+| divider               | `string`                             | 否   | -       | 分割线类型，可选值：`line` `shadow` `default`                                                | -    |
+| sticky                | `boolean`                            | 否   | `false` | 是否有吸顶效果                                                                               | -    |
+| offset-top            | `number`                             | 否   | 0       | 吸顶距离                                                                                     | -    |
+| use-pure-css          | `boolean`                            | 否   | `false` | 使用css的position: sticky实现                                                                | -    |
+| count                 | `number`                             | 否   | `5`     | 单屏展示的菜单数量                                                                           | -    |
+| tab-width             | `number`                             | 否   | -       | 每个菜单的宽度，单位 px，设置此项后 count 则无效                                             | -    |
+| gap                   | `number`                             | 否   | `-1`    | tab(文字)间距，单位 px，设置此项后 tab-width 和 count 无效                                   | -    |
+| auto-gap              | `boolean`                            | 否   | `true`  | 当 tab 总宽度不够一屏，采用平铺模式                                                          | -    |
+| use-slot              | `boolean`                            | 否   | `false` | 是否启用插槽，即内置 swiper 组件                                                             | -    |
+| ext-style             | `string` \| `Record<string, string>` | 否   | -       | 根节点样式                                                                                   | -    |
+| tabKey                | `string`                             | 否   | `label` | tabs 如果是对象数组，对应每项的关键词 key                                                    | -    |
+| alias                 | `Record<string, string>`             | 否   | -       | 数据项默认字段名`label` `description` `tag` `date`的别名，用于自定义数据，可替代`tabKey`属性 | -    |
+| scroll-with-animation | `boolean`                            | 否   | `true`  | tab切换，是否使用过度动画                                                                    | -    |
+| async-change          | `boolean`                            | 否   | `false` | 是否采用受控模式，异步设置active-tab                                                         | -    |
 
 ### Option
 
@@ -196,12 +198,12 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 
 ### 事件 **Events**
 
-| 名称   | 参数列表                                                                  | 描述                               | 备注 |
-| ------ | ------------------------------------------------------------------------- | ---------------------------------- | ---- |
-| change | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 当前激活的标签                     | -    |
-| fixed  | `(e: CustomEvent<{isFixed: boolean}>) => void`                            | 使用吸顶功能是，吸顶状态改变是触发 | -    |
-| ti-click  | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击tab项时触发 | -    |
-| disabled  | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击禁用的tab项时触发 | -    |
+| 名称     | 参数列表                                                                  | 描述                               | 备注 |
+| -------- | ------------------------------------------------------------------------- | ---------------------------------- | ---- |
+| change   | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 当前激活的标签                     | -    |
+| fixed    | `(e: CustomEvent<{isFixed: boolean}>) => void`                            | 使用吸顶功能是，吸顶状态改变是触发 | -    |
+| ti-click | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击tab项时触发                    | -    |
+| disabled | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击禁用的tab项时触发              | -    |
 
 ### 插槽 **Slots**
 

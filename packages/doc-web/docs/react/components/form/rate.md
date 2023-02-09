@@ -12,6 +12,11 @@ side_iframe_path: "#/rate"
 
 **提供评分能力。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tirate-api" />
+
+
 ## 安装使用
 
 ```typescript showLineNumbers

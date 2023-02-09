@@ -18,7 +18,7 @@ function NavbarItems({ items }: { items: any }) {
   return (
     <>
       {items.map(item => (
-        <NavbarItem {...item} key={item?.label} />
+        <NavbarItem {...item} key={item?.label || item?.href} />
       ))}
     </>
   );

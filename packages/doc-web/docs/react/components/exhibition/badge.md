@@ -11,6 +11,10 @@ side_iframe_path: "#/badge"
 # 徽标 _Badge_
 **图标或者文字右上角的圆形徽标数字**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tibadge-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiBadge } from '@titian-design/mobile-react'

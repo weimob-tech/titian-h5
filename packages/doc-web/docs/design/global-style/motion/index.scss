@@ -1,0 +1,28 @@
+.red {
+    color: #FA2C19;
+}
+
+.flex {
+    display: flex;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-top: 77px;
+
+    border: 1px solid #F5F5F5;
+    border-radius: 12px;
+
+    background: #FAFAFA;
+    box-shadow: 0 1px 1px #FFF, inset 0 4px 20px rgba(0, 0, 0, 2%);
+
+    &+.bg {
+        margin-left: 40px;
+    }
+
+    img {
+        width: 50%;
+    }
+}

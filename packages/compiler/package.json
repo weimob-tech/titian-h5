@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin typescript",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "start": "rollup -c rollup.config.ts --configPlugin typescript -w"
   },
   "dependencies": {
     "@pnpm/find-workspace-packages": "^4.0.5",
@@ -25,6 +26,7 @@
     "execa": "5.1.1",
     "find-workspace-root": "^1.0.1",
     "find-yarn-workspace-root": "^2.0.0",
+    "isomorphic-git": "^1.21.0",
     "open": "^8.4.0",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",

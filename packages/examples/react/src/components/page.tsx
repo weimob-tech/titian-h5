@@ -202,9 +202,24 @@ const Radio = ({
   value: unknown;
   onClick: React.MouseEventHandler<HTMLElement>;
 }) => {
+  let myScrollView: HTMLDivElement | null;
+  const handler = (e: React.MouseEvent<HTMLElement, MouseEvent>, idx: number) => {
+    if (myScrollView) {
+      myScrollView.scrollTo({
+        left: 76 * (idx - 1),
+        behavior: 'smooth',
+      });
+    }
+    onClick(e);
+  };
   return (
     <div className="radio-box">
-      <div className="inner-radio-box">
+      <div
+        className="inner-radio-box"
+        ref={ref => {
+          myScrollView = ref;
+        }}
+      >
         {list.map((radio, idx) => {
           return (
             <div
@@ -213,7 +228,7 @@ const Radio = ({
               data-key={id}
               data-value={radio.value}
               className={`radio ${value === radio.value ? 'checked' : ''}`}
-              onClick={onClick}
+              onClick={e => handler(e, idx)}
             >
               {radio.label}
             </div>

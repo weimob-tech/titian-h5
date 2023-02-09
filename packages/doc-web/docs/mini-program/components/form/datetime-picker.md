@@ -14,12 +14,16 @@ import TabItem from '@theme/TabItem';
 # 时间选择器 _DateTimePicker_
 **用于选择时间，支持日期、时分等时间维度，通常与弹出层组件配合使用**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ti-datetime-picker-api" />
+
 ## 安装使用
 ```json showLineNumbers
 {
   // 原生小程序
   "usingComponents": {
-    "ti-datetime-picker": "titan-ui/datetime-picker/index"
+    "ti-datetime-picker": "@titian-design/weapp/datetime-picker/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

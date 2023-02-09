@@ -6,6 +6,7 @@ const sharedConfig = {
   external: [
     // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
     ...Object.keys(require('./package.json').dependencies),
+    'isomorphic-git/http/node',
   ],
   plugins: [nodeResolve(), typescript()],
 };

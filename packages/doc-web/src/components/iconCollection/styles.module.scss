@@ -1,35 +1,35 @@
 .titian-icon {
-  display: flex;
-  flex-wrap: wrap;
-
-  &-wrapper {
-    width: 120px;
-    height: 120px;
-    font-size: 14px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    border-radius: 6px;
-    position: relative;
-  }
+    flex-wrap: wrap;
 
-  &-name {
-    margin-top: 12px;
-    text-align: center;
-  }
+    &-wrapper {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        border-radius: 6px;
+        position: relative;
+    }
 
-  // &-actions {
-  //     position: absolute;
-  //     bottom: 20px;
-  //     width: 100%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     font-size: 16px;
-  //     opacity: 0;
-  //     visibility: hidden;
-  //     transition: all 0.1s linear 0s;
-  // }
+    &-name {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    // &-actions {
+    //     position: absolute;
+    //     bottom: 20px;
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     font-size: 16px;
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transition: all 0.1s linear 0s;
+    // }
 }

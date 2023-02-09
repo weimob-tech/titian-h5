@@ -53,11 +53,16 @@ export class TiTextarea implements BasicComponentAbstract {
 
   @Watch('value')
   updateCount(value) {
-    this.count = value ? value.length : 0;
+    let count = 0;
+    if (value) {
+      count = this.maxlength > 0 ? Math.min(value.length, this.maxlength) : value.length;
+    }
+    this.count = count;
   }
 
   private onInput(event) {
-    this.count = event.target.value.length;
+    const len = event.target.value.length;
+    this.count = this.maxlength > 0 ? Math.min(len, this.maxlength) : len;
     this.input.emit({ value: event.target.value });
   }
 
