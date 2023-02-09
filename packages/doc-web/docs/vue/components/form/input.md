@@ -10,6 +10,11 @@ side_iframe_path: "#/input"
 
 # 输入框 _Input_
 **输入框用于通过键盘输入内容，适用于单行文本**
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiinput-api" />
+
 ## 安装使用
 
 ```typescript showLineNumbers

@@ -10,6 +10,11 @@ side_iframe_path: "#/input-number"
 
 # 步进器 _InputNumber_
 **步进器由增加按钮、减少按钮和输入框组成，用于输入范围内的数值**
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ti-input-number-api" />
+
 ## 安装使用
 ```json showLineNumbers
 {
@@ -92,7 +97,7 @@ side_iframe_path: "#/input-number"
 ### 事件 **Events**
 | 名称        | 参数列表                                                      | 描述                     | 备注 |
 | ----------- | ------------------------------------------------------------- | ------------------------ | ---- |
-| bind:hange    | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 当绑定值变化时触发的事件 | -    |
+| bind:change    | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 当绑定值变化时触发的事件 | -    |
 | bind:plus      | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 点击增加按钮时触发时触发 | -    |
 | bind:minus     | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 点击减少按钮时触发时触发 | -    |
 | bind:focus     | `(e: WechatMiniprogram.CustomEvent<{value: number}>) => void`                               | 输入框聚焦时触发         | -    |

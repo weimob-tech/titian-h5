@@ -10,6 +10,18 @@ export enum DateTimePickerColumnEnum {
   HOUR = 'hour',
   MINUTE = 'minute',
 }
+export const DateTimeTypeMapping = Object.freeze({
+  'date': Object.freeze([DateTimePickerColumnEnum.YEAR, DateTimePickerColumnEnum.MONTH, DateTimePickerColumnEnum.DAY]),
+  'time': Object.freeze([DateTimePickerColumnEnum.HOUR, DateTimePickerColumnEnum.MINUTE]),
+  'datetime': Object.freeze([
+    DateTimePickerColumnEnum.YEAR,
+    DateTimePickerColumnEnum.MONTH,
+    DateTimePickerColumnEnum.DAY,
+    DateTimePickerColumnEnum.HOUR,
+    DateTimePickerColumnEnum.MINUTE,
+  ]),
+  'year-month': Object.freeze([DateTimePickerColumnEnum.YEAR, DateTimePickerColumnEnum.MONTH]),
+});
 export enum DateTimePickerEnum {
   /** 年月日 */
   'DATE' = 'date',

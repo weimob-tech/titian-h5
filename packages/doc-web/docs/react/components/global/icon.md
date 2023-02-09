@@ -18,6 +18,11 @@ import IconCollection from '@site/src/components/iconCollection';
 # 图标 _Icon_
 
 ** 基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用 **
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiicon-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiIcon } from '@titian-design/mobile-react'

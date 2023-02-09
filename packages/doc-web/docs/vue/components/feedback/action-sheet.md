@@ -11,6 +11,10 @@ side_iframe_path: "#/action-sheet"
 # 动作面板 _ActionSheet_
 **从底部弹出的动作菜单面板**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiactionsheet-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiActionSheet } from '@titian-design/mobile-vue'

@@ -1,3 +1,4 @@
+import { normalizePath } from '@titian-design/cli';
 import readPkgUp from 'read-pkg-up';
 import type Release from './release';
 import type { PackagesInfo, PackageInfo } from './release';
@@ -68,7 +69,7 @@ class Warehouse {
     const { packageJson } = readPkgUp.sync({ cwd: this.release.config.root || process.cwd() }) as readPkgUp.ReadResult;
 
     if (packageJson?.devDependencies?.jest) {
-      await this.release.exec('jest', [...this.packagesList.map(item => item.location)]);
+      await this.release.exec('jest', [...this.packagesList.map(item => normalizePath(item.location))]);
     }
   }
 

@@ -15,6 +15,11 @@ import IconCollection from '@site/src/components/iconCollection';
 # 图标 _Icon_
 
 **基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用**
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ti-icon-api" />
+
 ## 安装使用
 ```json showLineNumbers
 {
@@ -33,7 +38,7 @@ import IconCollection from '@site/src/components/iconCollection';
 
 #### 基础用法
 ```html showLineNumbers
-<TiIcon name="plus" size="{{30}}" color="#f60" />
+<ti-icon name="plus" size="{{30}}" color="#f60" />
 ```
 ## ti-icon API
 ### 属性 **Properties**

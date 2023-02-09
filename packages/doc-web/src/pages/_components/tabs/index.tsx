@@ -1,7 +1,7 @@
-import { TiDivider } from '@titian-design/mobile-react';
 import ClipboardJS from 'clipboard';
 import clsx from 'clsx';
 import React, { useState } from 'react';
+import { TiDivider } from '@titian-design/mobile-react';
 import styles from './index.module.scss';
 
 function Tabs() {
@@ -17,37 +17,39 @@ function Tabs() {
         <span style="color: #fff">&nbsp;&nbsp;"ti-button": </span><span style="color: ${red}">"@titian-design/weapp/button/index"</span><br />
       <span style="color: #fff">}</span><br />
     `,
-      text: `npm i @titian-design/weapp \nimport Vue from 'vue'`,
+      text: `npm i @titian-design/weapp
+"usingComponents": {
+  "ti-button": "@titian-design/weapp/button/index"
+}`,
     },
     {
       tab: 'React',
       content: `
       npm install @titian-design/mobile-react <br />
       <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-react'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">{ TiButton }</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-react'</span><br />
     `,
-      text: `npm i @titian-design/mobile-react`,
+      text: `npm install @titian-design/mobile-react
+import React from 'react'
+import { TiButton } from '@titian-design/mobile-react'`,
     },
     {
       tab: 'Vue',
       content: `
       npm install @titian-design/mobile-vue <br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Vue</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-vue'</span><br />
-      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-vue/es/style/index.css'</span><br />
-      <span style="color: #fff">Vue.</span><span style="color: ${green}">use</span><span style="color: #fff">(Titian);</span>
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">{ createApp }</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'vue'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">{ TitianUI }</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-vue'</span><br />
+      <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">App</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'./App.vue'</span><br />
+      <span style="color: ${green}">const</span>&nbsp;&nbsp;<span style="color: #fff">app&nbsp;&nbsp;=</span>&nbsp;&nbsp;<span style="color: ${green}">createApp</span><span style="color: #fff">(App)</span><br />
+      <span style="color: #fff">app.</span><span style="color: ${green}">use</span><span style="color: #fff">(TitianUI).</span><span style="color: ${green}">mount</span><span style="color: #fff">('#app')</span>
     `,
-      text: `npm i @titian-design/mobile-vue`,
+      text: `npm install @titian-design/mobile-vue
+import { createApp } from  'vue'
+import { TitianUI } from '@titian-design/mobile-vue'
+import  App  from  './App.vue'
+const  app  =  createApp(App)
+app.use(TitianUI).mount('#app')`,
     },
-    // {
-    //   tab: 'H5',
-    //   content: `
-    //   npm install @titian-design/mobile-react <br />
-    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">React</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp<span style="color: ${red}">'react'</span><br />
-    //   <span style="color: ${green}">import</span>&nbsp;&nbsp;<span style="color: #fff">Titian</span>&nbsp;&nbsp;<span style="color: ${green}">from</span>&nbsp;&nbsp;<span style="color: ${red}">'@titian-design/mobile-react'</span><br />
-    // `,
-    //   text: `npm i @titian-design/h5`
-    // }
   ];
   const copy = () => {
     const clipboard = new ClipboardJS('.copy-btn', {
@@ -80,8 +82,9 @@ function Tabs() {
       </div>
       <div className={clsx(styles.content)}>
         <div className={clsx(styles.line)}>
-          {[...Array(5)].map((el, idx) => (
-            <span key={el}>{idx + 1}</span>
+          {[...Array(6)].map((el, idx) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <span key={idx}>{idx + 1}</span>
           ))}
         </div>
         <TiDivider color="#4D4D4D" orientation="vertical" />

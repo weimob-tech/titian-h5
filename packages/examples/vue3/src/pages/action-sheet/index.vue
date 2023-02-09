@@ -25,20 +25,6 @@ import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 const options: IOptionType[] = [
   {
-    type: 'color',
-    name: 'Color',
-    key: 'color',
-    desc: '颜色',
-    value: '#212121',
-    list: [
-      { label: 'red', value: '#fa2c19' },
-      { label: 'orange', value: '#ffa300' },
-      { label: 'green', value: '#07c160' },
-      { label: 'blue', value: '#2a6ae9' },
-      { label: 'black', value: '#212121' },
-    ],
-  },
-  {
     key: 'title',
     type: 'radio',
     name: 'Title',

@@ -143,7 +143,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 ```html showLineNumbers
 <template>
   <TiButton prefix-icon="home">左图标</TiButton>
-  <TiButton suffix-icon="arrow-right">有图标</TiButton>
+  <TiButton suffix-icon="arrow-right">右图标</TiButton>
 </template>
 
 <script lang="ts" setup>

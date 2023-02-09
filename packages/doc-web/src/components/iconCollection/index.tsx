@@ -1,6 +1,6 @@
-import { TiIcon } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
+import { TiIcon } from '@titian-design/mobile-react';
 import styles from './styles.module.scss';
 
 function requireSvgs() {

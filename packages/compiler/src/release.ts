@@ -1,4 +1,4 @@
-import { existsSync, writeFileSync } from 'fs';
+import * as fs from 'fs';
 import { dirname, join, relative } from 'path';
 import findPnpmWorkspacePkg from '@pnpm/find-workspace-packages';
 import { Command, spawn } from '@titian-design/cli';
@@ -7,6 +7,7 @@ import chalk from 'chalk';
 import execa, { CommonOptions, ExecaReturnValue } from 'execa';
 import findWorkspaceRoot from 'find-workspace-root';
 import findYarnWorkspaceRoot from 'find-yarn-workspace-root';
+import * as git from 'isomorphic-git';
 import open from 'open';
 import prompts, { Choice } from 'prompts';
 import readPkgUp from 'read-pkg-up';
@@ -78,7 +79,6 @@ export default class Release extends Command {
 
   override async run() {
     const newBranch = await this.createNewBranch();
-    this.newBranch = newBranch;
     const packagesInfo = await this.checkPackages();
     this.packagesInfo = packagesInfo;
     await this.getPackagesInfo(packagesInfo);
@@ -125,10 +125,9 @@ export default class Release extends Command {
   }
 
   async getLatestTag(pkgName: string) {
-    this.allTags = (await this.exec('git', ['tag'], { stdio: 'pipe' })).stdout.split(/\n/).filter(Boolean);
+    this.allTags = await git.listTags({ fs, dir: this.root });
     const prefix = pkgName === this.config.mainPackage ? 'v' : `${pkgName}@`;
     let customTag = this.currentBranch === 'master' ? '' : this.currentBranch.replace(/^master-/, '');
-
     if (!this.currentBranch.startsWith('master-')) {
       customTag = '';
     }
@@ -136,14 +135,16 @@ export default class Release extends Command {
       const versionInfo = this.processSemverVersion(this.packagesInfo?.[pkgName]?.currentVersion);
       customTag = versionInfo.prereleaseType || versionInfo.main;
     }
-
     const latestTag = semver.rsort(
       this.allTags
-        .filter(
-          tag =>
-            tag.startsWith(prefix) &&
-            (customTag === '' ? tag.indexOf(customTag) > -1 || tag.indexOf('beta') > -1 : tag.indexOf(customTag) > -1),
-        )
+        .filter(tag => {
+          if (tag.startsWith(prefix)) {
+            return customTag === ''
+              ? tag.indexOf(customTag) > -1 || tag.indexOf('beta') > -1
+              : tag.indexOf(customTag) > -1;
+          }
+          return false;
+        })
         .map(v => v.slice(prefix.length)),
     )?.[0];
     return latestTag ? `${prefix}${latestTag}` : undefined;
@@ -164,29 +165,15 @@ export default class Release extends Command {
   }
 
   async getAllBranches() {
-    const allBranchString = await this.exec('git', ['branch', '-a', '-l'], { stdio: 'pipe' });
-    const allBranch = allBranchString.stdout
-      .split('\n')
-      .map(i => {
-        let ret = i;
-        if (i.includes('*')) {
-          [, ret] = i.split(' ');
-          this.currentBranch = ret;
-        } else if (i.includes('->')) {
-          ret = '';
-        } else if (i.includes('remotes/origin/')) {
-          ret = i.slice(i.indexOf('remotes/origin/') + 'remotes/origin/'.length);
-          this.allRemoteBranch.push(ret);
-        }
-        return ret.trim();
-      })
-      .filter(Boolean);
-    this.allBranch = new Set(allBranch);
+    this.currentBranch = (await git.currentBranch({ fs, dir: this.root })) || 'master';
+    this.allRemoteBranch = await git.listBranches({ fs, dir: this.root, remote: 'origin' });
+    const allLocalBranch = await git.listBranches({ fs, dir: this.root });
+    this.allBranch = new Set([...this.allRemoteBranch, ...allLocalBranch]);
     return this.allBranch;
   }
 
   /**
-   * 1. 检查当前分支是否有文件未提交，如果有，则
+   * 1. 检查当前分支是否有文件未提交，如果有，则不允许 release
    * 2. 检查当前分支是否需要更新，如果需要更新，则更新分支
    */
   async updateBranch() {
@@ -199,6 +186,10 @@ export default class Release extends Command {
     } else {
       throw new Error('当前分支不是远程分支，请先拉取或提交到远程分支');
     }
+  }
+
+  private onCancel() {
+    process.exit(0);
   }
 
   /**
@@ -218,21 +209,16 @@ export default class Release extends Command {
       newBranch = `${newBranch}-${Math.max(...hasRelease) + 1}`;
     }
 
-    const res = await prompts([
-      {
-        type: 'text',
-        name: 'name',
-        message: '请输入 feature 发布分支的名字',
-        initial: newBranch,
-      },
-    ]);
-
+    const res = await prompts(
+      [{ type: 'text', name: 'name', message: '请输入 feature 发布分支的名字', initial: newBranch }],
+      { onCancel: this.onCancel },
+    );
     if (res.name) {
       newBranch = res.name;
     }
 
-    await this.exec('git', ['checkout', '-b', newBranch]);
-
+    await git.branch({ fs, dir: this.root, ref: newBranch, checkout: true });
+    this.newBranch = newBranch;
     return newBranch;
   }
 
@@ -254,7 +240,8 @@ export default class Release extends Command {
    */
   async checkPackages(): Promise<PackagesInfo> {
     let packagesInfo: PackagesInfo = {};
-    if (existsSync('yarn.lock')) {
+    if (fs.existsSync('yarn.lock')) {
+      this.logger.info('Manage packages with yarn');
       this.packageManager = 'yarn';
       // yarn workspace
       const workspaceRoot = findYarnWorkspaceRoot(process.cwd());
@@ -279,8 +266,9 @@ export default class Release extends Command {
       return packagesInfo;
     }
 
-    if (existsSync('package-lock.json')) {
+    if (fs.existsSync('package-lock.json')) {
       this.packageManager = 'npm';
+      this.logger.info('Manage packages with npm');
       // npm workspace
       const workspaceRoot = await findWorkspaceRoot(process.cwd());
       if (!workspaceRoot) return packagesInfo;
@@ -320,9 +308,10 @@ export default class Release extends Command {
       throw new Error('workspaces 不符合 npm workspace 的格式');
     }
 
-    if (existsSync('pnpm-workspace.yaml')) {
+    if (fs.existsSync('pnpm-workspace.yaml')) {
       this.packageManager = 'pnpm';
-      const pkgs = await findPnpmWorkspacePkg(process.cwd());
+      this.logger.info('Manage packages with pnpm');
+      const pkgs = await findPnpmWorkspacePkg(this.root);
       pkgs.forEach(({ dir, manifest }) => {
         if (manifest.name) {
           packagesInfo[manifest.name] = {
@@ -436,22 +425,28 @@ export default class Release extends Command {
         }
         return i;
       });
-    const res = await prompts([
-      {
-        type: 'select',
-        name: 'version',
-        message: `请选择 ${chalk.blue(moduleName)} 升级的版本`,
-        choices: versionChoices as [],
-      },
-    ]);
+    const res = await prompts(
+      [
+        {
+          type: 'select',
+          name: 'version',
+          message: `请选择 ${chalk.blue(moduleName)} 升级的版本`,
+          choices: versionChoices as [],
+        },
+      ],
+      { onCancel: this.onCancel },
+    );
     if (res.version === 'custom') {
-      const customRes = await prompts({
-        type: 'text',
-        name: 'version',
-        message: '请输入自定义的版本号',
-        initial: currentVersion,
-        format: val => semver.valid(val),
-      });
+      const customRes = await prompts(
+        {
+          type: 'text',
+          name: 'version',
+          message: '请输入自定义的版本号',
+          initial: currentVersion,
+          format: val => semver.valid(val),
+        },
+        { onCancel: this.onCancel },
+      );
       res.version = customRes.version;
     }
     if (!semver.valid(res.version)) {
@@ -469,21 +464,13 @@ export default class Release extends Command {
     const choices: Choice[] = [];
     Object.keys(packages).forEach(p => {
       const pkg = packages[p];
-      choices.push({
-        title: p,
-        value: p,
-        disabled: pkg.private,
-        selected: !pkg.private,
-      });
+      if (!pkg.private) {
+        choices.push({ title: p, value: p, disabled: pkg.private, selected: !pkg.private });
+      }
     });
-    const choice = await prompts([
-      {
-        type: 'multiselect',
-        name: 'modules',
-        message: '请选择需要发布的包',
-        choices,
-      },
-    ]);
+    const choice = await prompts([{ type: 'multiselect', name: 'modules', message: '请选择需要发布的包', choices }], {
+      onCancel: this.onCancel,
+    });
     const { modules } = choice;
     if (modules.length === 0) {
       this.logger.warn('请选择需要发布的包');
@@ -513,14 +500,17 @@ export default class Release extends Command {
             packages[oldModule].changelog = stdout;
             firstTag = true;
           } else if (commits.length === 0) {
-            const confirm = await prompts([
-              {
-                type: 'confirm',
-                name: 'confirm',
-                message: `${oldModule} 没有任何提交内容，是否继续发布？`,
-                initial: true,
-              },
-            ]);
+            const confirm = await prompts(
+              [
+                {
+                  type: 'confirm',
+                  name: 'confirm',
+                  message: `${oldModule} 没有任何提交内容，是否继续发布？`,
+                  initial: true,
+                },
+              ],
+              { onCancel: this.onCancel },
+            );
             if (!confirm.confirm) {
               packages[oldModule].publish = false;
               return;
@@ -570,21 +560,24 @@ export default class Release extends Command {
 
             pkgJson.version = pkg.nextVersion || pkg.currentVersion;
             if (hasdepPublish && !pkg.publish) {
-              const confirm = await prompts([
-                {
-                  type: 'confirm',
-                  name: 'confirm',
-                  message: `${pkgJson.name} 依赖的包有发布，请再次确实是否需要发布本模块？`,
-                  initial: false,
-                },
-              ]);
+              const confirm = await prompts(
+                [
+                  {
+                    type: 'confirm',
+                    name: 'confirm',
+                    message: `${pkgJson.name} 依赖的包有发布，请再次确实是否需要发布本模块？`,
+                    initial: false,
+                  },
+                ],
+                { onCancel: this.onCancel },
+              );
               if (confirm.confirm) {
                 const newVersion = await this.selectVersions(pkg.currentVersion, moduleName);
                 pkgJson.nextVersion = newVersion;
                 pkgJson.version = newVersion || pkgJson.version;
               }
             }
-            writeFileSync(pkg.pkgPath, `${sortPackageJson(JSON.stringify(pkgJson, null, 2))}\n`);
+            fs.writeFileSync(pkg.pkgPath, `${sortPackageJson(JSON.stringify(pkgJson, null, 2))}\n`);
           }
         }),
       Promise.resolve(),

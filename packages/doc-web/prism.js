@@ -57,7 +57,7 @@ const prism = {
         },
       },
       {
-        types: ['function', 'deleted', 'tag'],
+        types: ['function', 'deleted'],
         style: {
           color: '#d73a49',
         },

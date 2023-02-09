@@ -38,10 +38,11 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      // copy: [{ src: 'global/locale', dest: '../../locale' }],
     },
     {
       type: 'dist-custom-elements',
+      autoDefineCustomElements: true,
+      dir: 'dist-custom-elements',
     },
   ],
   plugins: [

@@ -16,6 +16,10 @@ import TabItem from '@theme/TabItem';
 
 **用于联动选择。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ticascade-api" />
+
 ## 安装使用
 
 ```typescript showLineNumbers

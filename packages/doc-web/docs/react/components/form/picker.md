@@ -15,6 +15,10 @@ import TabItem from '@theme/TabItem';
 
 **选择器，提供单列、双列、级联能力。**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tipicker-api" />
+
 ## 安装使用
 
 ```ts showLineNumbers
@@ -192,8 +196,8 @@ const App: React.FC = () => {
 | 名称             | 类型                                                                                            | 必填 | 默认值  | 说明                                                                                | 备注 |
 | ---------------- | ----------------------------------------------------------------------------------------------- | ---- | ------- | ----------------------------------------------------------------------------------- | ---- |
 | options          | `PickerColumn[]` \| `PickerColumn[][]` \| `PickerAcronymColumn[]`  \| `PickerAcronymColumn[][]` | 否   | []      | 列数据；可以使用该字段实现 PickerColumn 列表， 替换使用 `<TiPickerColumn />` 元素。 | -    |
-| value            |                                                                                                 | 否   | -       |                                                                                     | -    |
-| rowAlias         | null \| `number` \| `string`                                                                    | 否   | null    | 当 option 为对象类型时，指定其中某个字段，作为返回值字段；不填则从`0`自增           |      |
+| value            | 值                                                                                              | 否   | -       |                                                                                     | -    |
+| rowAlias         | null \| `number` \| `string`                                                                    | 否   | null    | 当 option 为对象类型时，指定其中某个字段，作为 value 字段；不填则从`0`自增；        |      |
 | useRowIndex      | `boolean`                                                                                       | 否   | false   | 是否使用下标                                                                        |      |
 | sports           | `boolean`                                                                                       | 否   | false   | 跳转指定位置是否带有动画                                                            | -    |
 | cascade          | `boolean`                                                                                       | 否   | false   | 级联                                                                                | -    |
@@ -221,8 +225,8 @@ const App: React.FC = () => {
 
 ### 事件 **Events**
 
-| 名称        | 参数                                                                       | 说明                | 备注            |
-| ----------- | -------------------------------------------------------------------------- | ------------------- | --------------- |
+| 名称          | 参数                                                                       | 说明                | 备注            |
+| ------------- | -------------------------------------------------------------------------- | ------------------- | --------------- |
 | onChange      | 见 [change \| select 事件返回值](#change--select--事件返回值)              | 当前选中项          | -               |
 | onReachTop    | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到顶            | -               |
 | onReachBottom | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到底            | -               |
@@ -250,10 +254,10 @@ const App: React.FC = () => {
 | 变量                        | 默认值                                                                      | 说明                                                         | 备注 |
 | --------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | --picker-mask-bg-image      | linear-gradient(180deg, rgba(255, 255, 255, 90%), rgba(255, 255, 255, 40%)) | 蒙层区背景色                                                 | -    |
-| --picker-loading-bg-color   | var(--neutral-color-9, #ffffff)                                                            | loading 区背景色                                             | -    |
-| --picker-row-color          | var(--neutral-color-1, #212121)                                                            | 同 `picker-column` 组件 `--picker-column-row-color`          | -    |
-| --picker-row-selected-color | var(--neutral-color-1, #212121)                                                            | 同 `picker-column` 组件 `--picker-column-row-selected-color` | -    |
-| --picker-row-disabled-color | var(--neutral-color-1, #212121)                                                            | 同 `picker-column` 组件 `--picker-column-row-disabled-color` | -    |
+| --picker-loading-bg-color   | var(--neutral-color-9, #ffffff)                                             | loading 区背景色                                             | -    |
+| --picker-row-color          | var(--neutral-color-1, #212121)                                             | 同 `picker-column` 组件 `--picker-column-row-color`          | -    |
+| --picker-row-selected-color | var(--neutral-color-1, #212121)                                             | 同 `picker-column` 组件 `--picker-column-row-selected-color` | -    |
+| --picker-row-disabled-color | var(--neutral-color-1, #212121)                                             | 同 `picker-column` 组件 `--picker-column-row-disabled-color` | -    |
 
 ## TiPickerColumn API
 
@@ -289,7 +293,7 @@ const App: React.FC = () => {
 
 | 变量                                | 默认值                                                              | 说明         | 备注 |
 | ----------------------------------- | ------------------------------------------------------------------- | ------------ |
-| --picker-column-row-color           | var(--picker-row-color, var(--neutral-color-1, #212121))                           | 文字颜色     | -    |
+| --picker-column-row-color           | var(--picker-row-color, var(--neutral-color-1, #212121))            | 文字颜色     | -    |
 | --picker-column--row-selected-color | var(--picker-column-row-selected-color, @picker-row-selected-color) | 选中文字颜色 | -    |
 | --picker-column--row-disabled-color | var(--picker-column-row-disabled-color, @picker-row-disabled-color) | 禁用文字颜色 | -    |
 

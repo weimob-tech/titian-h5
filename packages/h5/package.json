@@ -13,23 +13,23 @@
   },
   "license": "MIT",
   "main": "dist/index.cjs.js",
-  "unpkg": "dist/h5/h5.esm.js",
+  "unpkg": "dist/index.umd.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist",
     "loader",
-    "locale"
+    "locale",
+    "README.md"
   ],
   "scripts": {
-    "build": "stencil build",
-    "build:readme": "stencil build --docs-readme",
+    "build": "stencil build && rollup -c scripts/rollup.config.ts --configPlugin typescript",
     "generate": "stencil generate",
     "prepublish": "npm run build",
-    "start": "stencil build --watch",
-    "test:spec": "cross-env NODE_ENV=test stencil test --spec --coverage --no-cache",
+    "start": "stencil build --watch --debug",
     "test:e2e": "stencil test --e2e",
     "test:e2e:watch": "stencil test --e2e --watchAll",
+    "test:spec": "cross-env NODE_ENV=test stencil test --spec --coverage --no-cache",
     "test:spec:watch": "cross-env NODE_ENV=test stencil test --spec --watchAll --coverage"
   },
   "dependencies": {
@@ -37,13 +37,20 @@
     "@stencil/store": "^2.0.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@stencil/less": "^1.0.0",
     "@stencil/postcss": "^2.1.0",
     "@stencil/react-output-target": "^0.3.1",
     "@stencil/vue-output-target": "^0.6.2",
     "@types/autoprefixer": "^10.2.0",
+    "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.0.3",
     "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^10.1.0",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "postcss": "^8.1.0",
@@ -52,7 +59,6 @@
     "puppeteer": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "fs-extra": "^10.1.0",
-    "cross-env": "^7.0.3"
+    "rollup": "^2.72.0"
   }
 }

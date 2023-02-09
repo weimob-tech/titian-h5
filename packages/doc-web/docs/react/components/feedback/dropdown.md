@@ -302,6 +302,7 @@ const App: React.FC = () => {
 | activeColor | `string`  | 否   | -   | 选中状态的颜色                               | -    |
 | disabled    | `boolean` | 否   | false    | 是否禁用                                     | -    |
 | direction   | `up` \| `down`  | 否   | `down`     | 展示方向                  | -    |
+| getPosition   | <code>(rect: { rect: DOMRect; direction: 'up' \| 'down'; position: IPosition }) => IPosition</code>  | 否   | `down`     | 展示方向， 可选值为：down、up            |  自定义展示位置   |
 
 ### 可扩展样式名 **External Class**
 

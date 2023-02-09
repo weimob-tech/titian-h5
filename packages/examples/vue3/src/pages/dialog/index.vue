@@ -14,7 +14,9 @@
       @cancel="onCancel1"
       @confirm="onConfirm1"
       @close="onClose1"
-    ></TiDialog>
+    >
+      <div v:if="useContentSlot" class="dialog-slot-content">插槽</div>
+    </TiDialog>
   </CustomPage>
 </template>
 <script setup lang="ts">
@@ -38,7 +40,7 @@ const options: OptionType[] = [
         property: {
           title: '弹框标题弹框标题弹框标题弹框标题弹框标题弹框标题',
           content:
-            '弹窗正文单行\n限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折',
+            '使用\\n手动换行，限制宽度超出后自动折行。\n文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容',
         },
       },
       { label: '自定义插槽', value: 3, attr: { useContentSlot: true } },
@@ -119,7 +121,7 @@ const onClickForAPI = () => {
 };
 
 const onClickForDom = () => {
-  console.log('声明式调用 - dialog visible true!');
+  console.log('声明式调用 - dialog visible = true!');
   visible.value = true;
 };
 
@@ -145,5 +147,14 @@ const onClose1 = () => {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+}
+
+.dialog-slot-content {
+  background-color: #cecece;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 </style>

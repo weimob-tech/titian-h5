@@ -178,7 +178,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 | right-icon-size | `string`  | 否       | -          | 自定义右侧图标尺寸                                           | -                                                                 |
 | color         | `string`  | 否       | -          | 所有图标颜色，如果需要修改某个单一图标颜色，可使用自定义类名 | -                                                                 |
 | clickable     | `boolean` | 否       | `false`       | 开启点击反馈                                                   | -                                                                 |
-| align-items    | `string`  | 否       | -          | 单元格的横向对其方式, 具体值可见 [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)                                         | -                                                                 |
+| align-items    | `string`  | 否       | -          | 单元格的横向对齐方式, 具体值可见 [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)                                         | -                                                                 |
 | ext-style      | `string` \| `Record<string, string>`  | 否       | -          | 根节点额外扩展样式                                           | 属性值如果是带单位的话，要带上单位，如：`{margin: '10px'}`       |
 | divider       | `boolean` | 否       | -          | 是否展示分割线                                               | -                                                                 |
 | title-width    | `string`  | 否       | -          | 标题宽度，须包含单位，例如：`100px`                                         | -                                                                 |
@@ -207,6 +207,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 
 | 变量                          |  默认值 | 说明 | 备注 |
 | --------------------------    |  ------ | ----- | ---- |
+| `--cell-word-break`           | `break-all` | -    |
 | `--cell-padding-v`            | `@gap-32` | - | - |
 | `--cell-padding-h`            | `@gap-28` | - | - |
 | `--cell-text-color`           | `var(--neutral-color-1, #212121)` | - | - |
@@ -233,6 +234,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 | `--cell-label-line-height`    | `36px` | - | - |
 | `--cell-title-wrap-width`    | `auto` | - | - |
 | `--cell-title-wrap-min-width`    | `100px` | - | - |
+| `--cell-title-wrap-padding`    | `0` | - | - |
 
 ## TiCellGroup API
 

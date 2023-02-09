@@ -25,9 +25,9 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-radio": "weimob-weapp/radio/index",
-    "ti-radio-button": "weimob-weapp/radio-button/index",
-    "ti-radio-group": "weimob-weapp/radio-group/index"
+    "ti-radio": "@titian-design/weapp/radio/index",
+    "ti-radio-button": "@titian-design/weapp/radio-button/index",
+    "ti-radio-group": "@titian-design/weapp/radio-group/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

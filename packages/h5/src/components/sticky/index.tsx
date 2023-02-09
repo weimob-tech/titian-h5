@@ -167,10 +167,11 @@ export class TiSticky implements BasicComponentAbstract {
   }
 
   private outStyle(): Record<string, any> {
+    const style = { '--sticky-z-index': this.zIndex };
     if (!this.fixed) {
-      return {};
+      return style;
     }
-    return { height: `${this.height}px`, width: `${this.width}px` };
+    return { height: `${this.height}px`, width: `${this.width}px`, ...style };
   }
 
   private innerStyle(): Record<string, any> {
@@ -182,7 +183,7 @@ export class TiSticky implements BasicComponentAbstract {
 
   private setPureCss(): Record<string, any> {
     if (this.disabled) return {};
-    return { position: 'sticky', top: `${this.offsetTop || 0}px` };
+    return { 'position': 'sticky', 'top': `${this.offsetTop || 0}px`, '--sticky-z-index': this.zIndex };
   }
 
   render() {

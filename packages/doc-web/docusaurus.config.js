@@ -14,7 +14,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -62,6 +62,11 @@ const config = {
           name: 'keywords',
           content:
             'Titian, Titian Design, Titian UI, 移动端组件库, 小程序组件库, React组件库, Vue组件库, Web Components组件库',
+        },
+        {
+          name: 'description',
+          content:
+            'Titian Mobile 源自微盟移动端核心业务，支持业界主流的 MiniProgram、React、Vue 3开发技术栈；我们的目标是通过 Titian 组件库，帮助广大开发者，并不断的完善与努力打造良好的移动端产品体验。',
         },
       ],
       navbar,

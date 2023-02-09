@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-calendar": "titian/calendar/index"
+    "ti-calendar": "@titian-design/weapp/calendar/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {

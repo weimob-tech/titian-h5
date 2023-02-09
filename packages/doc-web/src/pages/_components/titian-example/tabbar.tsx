@@ -1,6 +1,6 @@
-import { TiTabbar, TiTabbarItem } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
+import { TiTabbar, TiTabbarItem, TiIcon } from '@titian-design/mobile-react';
 
 import styles from './index.module.scss';
 
@@ -13,10 +13,42 @@ export default function TabbarExample(): JSX.Element {
         className={clsx(styles['ti-tabbar'])}
         activeColor="rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))"
       >
-        <TiTabbarItem icon="home" title="首页" />
-        <TiTabbarItem icon="arrange" title="分类" />
-        <TiTabbarItem icon="cart" title="购物车" />
-        <TiTabbarItem icon="user-account-setting" title="我的" />
+        <TiTabbarItem title="首页">
+          <TiIcon
+            size="48"
+            slot="active-icon"
+            color="rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))"
+            name="tabbar-home-highlight"
+          />
+          <TiIcon size="48" slot="icon" color="#757575" name="tabbar-home" />
+        </TiTabbarItem>
+        <TiTabbarItem title="分类">
+          <TiIcon
+            size="48"
+            slot="active-icon"
+            color="rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))"
+            name="tabbar-category-highlight"
+          />
+          <TiIcon size="48" slot="icon" color="#757575" name="tabbar-category" />
+        </TiTabbarItem>
+        <TiTabbarItem title="购物车">
+          <TiIcon
+            size="48"
+            slot="active-icon"
+            color="rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))"
+            name="tabbar-cart-highlight"
+          />
+          <TiIcon size="48" slot="icon" color="#757575" name="tabbar-cart" />
+        </TiTabbarItem>
+        <TiTabbarItem title="我的">
+          <TiIcon
+            size="48"
+            slot="active-icon"
+            color="rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))"
+            name="tabbar-mine-highlight"
+          />
+          <TiIcon size="48" slot="icon" color="#757575" name="tabbar-mine" />
+        </TiTabbarItem>
       </TiTabbar>
     </div>
   );

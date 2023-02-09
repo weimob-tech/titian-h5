@@ -1,0 +1,56 @@
+---
+title: 字体
+sidebar_custom_props:
+  suffix: Font
+hide_title: true
+pagination_prev: null
+pagination_next: null
+---
+
+import "./index.scss";
+
+# 字体 _Font_
+
+**现代设计中，文字不仅作为信息传递的载体，其本身也在视觉中起到承上启下、平衡页面层级的作用。在设计中，字体的合理穿插运用，能够使整个页面更富节奏与韵律。**
+
+## 基本字体
+
+<div className="basic_font font1">PingFang SC / DroidSansFallback</div>
+
+**Font-family ：PingFang SC，DroidSansFallback，Lantinghei SC, Helvetica, Arial,'Hiragino Sans GB'**
+
+<div className="basic_font font2">0123456789,.</div>
+
+**Font：WEMO Num**
+
+## 行高
+
+### 1）基本结构
+
+**行高可以理解为一个包裹在字体外面的无形的容器。约定文字行高标准，统一设计到开发的布局，减少还原损耗。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/font-a.png)
+
+### 2）单行行高
+
+**研发过程中，行高即是定义一个文字尺寸的衡量参数，我们需要精准定义它的数值。Titian 组件库建议，单行文字 <b className="red">行高 = 1.2 倍</b> 字号 上下取整。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/font-b.png)
+
+### 3）段落行高
+
+**考虑到段落的易读性，需要增加段落文字的行高，从而增加文字与文字间的呼吸感，通常建议段落里的文字行高至少是 <b className="red">1.5</b> 倍字号大小。因此我们定义： <b className="red">段落行高 = 单行行高 + 4N</b> （N为大于1的整数），这样取值也能够满足上述1.5倍原则。**
+
+### 4）区分单行/段落的优势
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/font-e.png)
+
+## 规格
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/font-c.png)
+
+## 字重
+
+**从整体统一性出发，段落文字的行高依然保持规范，只是将多行文字，拆分成多个单行文字，且相邻两行文字间添加固定数值的间距。**
+
+![](https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/font-d.png)

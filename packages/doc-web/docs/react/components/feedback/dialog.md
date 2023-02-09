@@ -97,7 +97,7 @@ const App: React.FC = () => {
 | 名称                 | 类型      | 必填 | 默认值 | 说明                                   | 备注 |
 | -------------------- | --------- | ---- | ------ | -------------------------------------- | ---- |
 | title                | `string`  | 否   | -      | 标题                                   | -    |
-| content              | `string`  | 否   | -      | 内容                                   | -    |
+| content                 | `string`  | 否   | -      | 内容，支持使用 `\n` 换行                                   | -    |
 | zIndex               | `number`  | 否   | 12000  | zIndex                                 | -    |
 | hasCancelButton      | `boolean` | 否   | false  | 是否展示确认按钮                       | -    |
 | closeOnMask          | `boolean` | 否   | true   | 点击遮罩是否关闭对话框                 | -    |
@@ -128,6 +128,8 @@ const App: React.FC = () => {
 | ------- | -------------- | -------------------------------------- |
 | default | 内容           | -                                      |
 | actions | 自定义按钮插槽 | 当 `use-actions-slot` 为 `true` 时可用 |
+| before-title | 标题前插槽 | 当 `title` 为 `true` 时可用 |
+
 
 ### 外部样式类 **External Classes**
 
@@ -153,12 +155,14 @@ const App: React.FC = () => {
 | `--dialog-popup-box-bg-color`       | @popup-box-bg-color                                              | 弹窗背景色           | -    |
 | `--dialog-width`                    | 560px                                                            | 组件宽度             | -    |
 | `--dialog-min-height`               | 300px                                                            | 组件最小高度         | -    |
-| `--dialog-inner-padding-v`          | 64px                                                             | 内容区垂直方向内边距 | -    |
+| `--dialog-inner-padding-v`          | 58px 0 44px 0                                                            | 内容区垂直方向内边距 | -    |
 | `--dialog-inner-padding-h`          | 48px                                                             | 内容区水平方向内边距 | -    |
 | `--dialog-inner-title-color`        | var(--neutral-color-1, #212121)                                  | 内容区标题颜色       | -    |
 | `--dialog-inner-content-color`      | var(--neutral-color-1, #212121)                                  | 内容区颜色           | -    |
 | `--dialog-actions-height`           | 88px                                                             | 按钮区高度           | -    |
 | `--dialog-actions-gap`              | 32px                                                             | 按钮区按钮间距       | -    |
 | `--dialog-actions-border-top-color` | var(--neutral-color-6, #f2f2f2)                                  | 按钮区上边线颜色     | -    |
-| `--dialog-actions-spac`             | 56px                                                             | 按钮区按钮内边距     | -    |
-| `--dialog-actions-cancel-color`     | rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25)) | 按钮区取消按钮颜色   | -    |
+| `--dialog-actions-space`             | 56px                                                             | 按钮区按钮内边距     | -    |
+| `--dialog-actions-cancel-color`     | #757575 | 按钮区取消按钮颜色   | -    |
+| `--dialog-actions-cancel-border-color`     | #212121 | 按钮区取消按钮边线颜色   | -    |
+| `--dialog-actions-cancel-active-color`     | rgba(33, 33, 33, 0.1) | 按钮区取消按钮按压颜色   | -    |

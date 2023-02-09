@@ -10,6 +10,11 @@ side_iframe_path: "#/search"
 
 # 搜索 _Search_
 **适用于搜索场景**
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tisearch-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiSearch } from '@titian-design/mobile-vue'
