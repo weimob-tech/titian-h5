@@ -1,5 +1,7 @@
 node_modules
 **/dist/*
+**/dist-custom-elements/*
+**/build/*
 **/loader/*
 www/*
 *.lock
@@ -7,3 +9,6 @@ www/*
 .vscode/*
 packages/touch-emulator/tests/*
 packages/touch-emulator/touch-emulator.js
+coverage
+packages/h5/dist-custom-elements
+
