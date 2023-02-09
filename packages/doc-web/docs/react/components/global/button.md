@@ -144,7 +144,7 @@ const App: React.FC = () => {
   return (
     <>
       <TiButton prefixIcon="home">左图标</TiButton>
-      <TiButton suffixIcon="arrow-right">有图标</TiButton>
+      <TiButton suffixIcon="arrow-right">右图标</TiButton>
     </>
   )
 }

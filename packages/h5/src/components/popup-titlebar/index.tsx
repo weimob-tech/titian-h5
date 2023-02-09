@@ -113,7 +113,11 @@ export class TiPopupTitlebar implements BasicComponentAbstract {
     } else if (position === 'right') {
       if (variant === EPopupTitleBarVariantType.WithConfirm) {
         this.confirm.emit();
-      } else if (variant === EPopupTitleBarVariantType.MiniClose || variant === EPopupTitleBarVariantType.CancelOnly) {
+      } else if (
+        variant === EPopupTitleBarVariantType.MiniClose ||
+        variant === EPopupTitleBarVariantType.CancelOnly ||
+        variant === EPopupTitleBarVariantType.BackTitleClose
+      ) {
         this.close.emit();
       }
     }

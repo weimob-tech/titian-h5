@@ -11,6 +11,10 @@ side_iframe_path: "#/notice-bar"
 # 通告栏 _NoticeBar_
 **用于循环播放展示一组消息通知，可设置横向滚动和纵向滚动**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tinoticebar-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiNoticeBar } from '@titian-design/mobile-vue'

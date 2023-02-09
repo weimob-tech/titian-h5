@@ -137,11 +137,13 @@ export class TiDialog {
   };
 
   onClose = () => {
-    if (isFunction(this.onCloseCallback)) {
-      this.onCloseCallback();
-      this.onCloseCallback = () => {};
+    if (this.closeOnMask) {
+      if (isFunction(this.onCloseCallback)) {
+        this.onCloseCallback();
+        this.onCloseCallback = () => {};
+      }
+      this.close();
     }
-    // this.close();
   };
 
   @Watch('visible')
@@ -165,7 +167,9 @@ export class TiDialog {
 
   @Method()
   close() {
+    console.log('method - close - before');
     if (this.innerVisible) {
+      console.log('method - close - closeEvent.emit');
       this.closeEvent.emit();
       this.innerVisible = false;
     }
@@ -269,17 +273,22 @@ export class TiDialog {
           <div class={`${join('dialog-inner')} ${extInnerClass}`} part={extInnerClass}>
             {title ? (
               <div class={`${join('dialog-title')} ${extTitleClass}`}>
+                <slot name="before-title" />
                 <span>{title}</span>
               </div>
             ) : null}
             {useContentSlot ? (
               <slot />
             ) : (
-              <div class={`${join('dialog-content')} ${extContentClass}`} part={extContentClass}>
+              <div
+                class={`${join('dialog-content', [title ? 'with-title' : 'no-title'])} ${extContentClass}`}
+                part={extContentClass}
+              >
                 <span>{content}</span>
               </div>
             )}
           </div>
+          {useContentSlot ? <slot /> : null}
           {useActionsSlot ? (
             <slot name="actions" />
           ) : (
@@ -290,8 +299,8 @@ export class TiDialog {
               {hasCancelButton ? (
                 <div class={`${join('dialog-actions-cancel')}`}>
                   <ti-button
-                    size="medium"
-                    variant={isTextButton ? 'text' : 'filled'}
+                    size="large"
+                    variant={isTextButton ? 'text' : 'outlined'}
                     extClass={`${extActionCancelClass}`}
                     extStyle={{
                       color: cancelButtonColor || undefined,
@@ -308,7 +317,7 @@ export class TiDialog {
               ) : null}
               <div class={`${join('dialog-actions-confirm')}`}>
                 <ti-button
-                  size="medium"
+                  size="large"
                   block
                   variant={isTextButton ? 'text' : 'contained'}
                   extClass={`${extActionConfirmClass}`}

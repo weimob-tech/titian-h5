@@ -59,6 +59,12 @@ import TabsLink from '@site/src/components/tabsLink';
 | close-on-click | `boolean`         | 否       | false  | 点击关闭                    | -    |
 | ext-style     | `string`          | 否       | -      | 容器样式                    | -    |
 
+### 事件 **Events**
+
+| 名称      | 参数列表 | 描述                               | 备注 |
+| --------- | -------- | ---------------------------------- | ---- |
+| bind:close   | -        | 当提示关闭时触发 | -    |
+
 ### 插槽 **Slots**
 
 | 名称    | 说明     | 备注   |

@@ -11,6 +11,10 @@ side_iframe_path: "#/datetime-picker"
 # 时间选择器 _DateTimePicker_
 **用于选择时间，支持日期、时分等时间维度，通常与弹出层组件配合使用**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tidatetimepicker-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiDatetimePicker } from '@titian-design/mobile-vue'

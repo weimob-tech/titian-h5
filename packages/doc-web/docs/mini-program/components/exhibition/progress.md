@@ -26,7 +26,7 @@ import TabsLink from '@site/src/components/tabsLink';
   // 原生小程序
   "usingComponents": {
     "ti-progress": "@titian-design/weapp/progress/index",
-    "ti-circle-progress": "titan-weapp/circle-progress/index"
+    "ti-circle-progress": "@titian-design/weapp/circle-progress/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

@@ -303,6 +303,7 @@
 @cell-word-break: var(--cell-word-break, break-all);
 @cell-title-wrap-width: var(--cell-title-wrap-width, auto);
 @cell-title-wrap-min-width: var(--cell-title-wrap-min-width, 100px);
+@cell-title-wrap-padding: var(--cell-title-wrap-padding, 0);
 
 // cell-group
 @cell-group-margin-v: var(--cell-group-margin-v, 0);
@@ -585,7 +586,7 @@
 @dialog-popup-box-bg-color: var(--dialog-popup-box-bg-color, @popup-box-bg-color);
 @dialog-width: var(--dialog-width, 560px);
 @dialog-min-height: var(--dialog-min-height, 300px);
-@dialog-inner-padding-v: var(--dialog-inner-padding-v, 64px);
+@dialog-inner-padding-v: var(--dialog-inner-padding-v, 58px 0 44px 0);
 @dialog-inner-padding-h: var(--dialog-inner-padding-h, 48px);
 @dialog-inner-title-color: var(--dialog-inner-title-color, @neutral-color-1);
 @dialog-inner-content-color: var(--dialog-inner-content-color, @neutral-color-1);
@@ -593,7 +594,10 @@
 @dialog-actions-gap: var(--dialog-actions-gap, 32px);
 @dialog-actions-border-top-color: var(--dialog-actions-border-top-color, @neutral-color-6);
 @dialog-actions-spac: var(--dialog-actions-spac, 56px);
-@dialog-actions-cancel-color: var(--dialog-actions-cancel-color, @brand-color);
+@dialog-actions-space: var(--dialog-actions-space, 56px);
+@dialog-actions-cancel-color: var(--dialog-actions-cancel-color, #757575);
+@dialog-actions-cancel-border-color: var(--dialog-actions-cancel-border-color, #212121);
+@dialog-actions-cancel-active-color: var(--dialog-actions-cancel-border-color, rgba(33, 33, 33, 0.1));
 
 // toast
 @toast-popup-mask-bg-color: var(--toast-popup-mask-bg-color, @popup-mask-bg-color);

@@ -52,7 +52,6 @@ export default class Movement {
     options?: boolean | AddEventListenerOptions;
   }) {
     this.box = box;
-    global.box = box;
     this.#startEvent = this.#touchstart.bind(this, touchstart);
     this.#moveEvent = this.#touchmove.bind(this, touchmove);
     this.#endEvent = this.#touchend.bind(this, touchend);

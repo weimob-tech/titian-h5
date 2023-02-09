@@ -50,6 +50,12 @@ import { TiTooltip } from '@titian-design/mobile-react';
 | closeOnClick | `boolean`         | 否       | false  | 点击关闭                    | -    |
 | extStyle     | `string`          | 否       | -      | 容器样式                    | -    |
 
+### 事件 **Events**
+
+| 名称      | 参数列表 | 描述                               | 备注 |
+| --------- | -------- | ---------------------------------- | ---- |
+| onClose   | -        | 当提示关闭时触发 | -    |
+
 ### 插槽 **Slots**
 
 | 名称    | 说明     | 备注   |

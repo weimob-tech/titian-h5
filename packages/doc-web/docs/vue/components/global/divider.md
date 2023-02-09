@@ -12,6 +12,10 @@ side_iframe_path: '#/divider'
 
 **用于将内容分隔为多个区域**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tidivider-api" />
+
 ## 安装使用
 
 ```typescript showLineNumbers

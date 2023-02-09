@@ -34,8 +34,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 96px;
-    padding: @dialog-inner-padding-v @dialog-inner-padding-h;
+    min-height: 110px;
+    padding: @dialog-inner-padding-v;
   }
 
   &-title {
@@ -50,11 +50,22 @@
   }
 
   &-content {
+    padding: 0 @dialog-inner-padding-h;
+    overflow-y: auto;
+
     color: @dialog-inner-content-color;
     font-size: 30px;
     line-height: 48px;
     text-align: center;
     white-space: pre-line;
+
+    &-with-title {
+      max-height: 484px;
+    }
+
+    &-no-title {
+      max-height: 564px;
+    }
   }
 
   &-actions {
@@ -81,6 +92,7 @@
 
   &-actions-contained {
     padding: 0 @dialog-actions-spac @dialog-actions-spac;
+    padding: 0 @dialog-actions-space @dialog-actions-space;
   }
 
   &-actions-cancel {
@@ -90,6 +102,8 @@
     margin-right: @dialog-actions-gap;
 
     --button-text-color: @dialog-actions-cancel-color;
+    --button-border-color: @dialog-actions-cancel-border-color;
+    --button-active-color: @dialog-actions-cancel-active-color;
   }
 
   &-actions-confirm {

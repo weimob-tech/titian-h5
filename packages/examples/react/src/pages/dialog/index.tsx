@@ -19,7 +19,7 @@ const options: OptionType[] = [
         property: {
           title: '弹框标题弹框标题弹框标题弹框标题弹框标题弹框标题',
           content:
-            '弹窗正文单行\n限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折弹窗正文单行限制宽度超出后折',
+            '使用\\n手动换行，限制宽度超出后自动折行。\n文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容',
         },
       },
       { label: '自定义插槽', value: 3, attr: { useContentSlot: true } },
@@ -128,7 +128,9 @@ const Dialog = () => {
           <TiButton onClick={onClickForDom}>点击演示 - 声明式</TiButton>
         </div>
 
-        <TiDialog {...attr} visible={visible} onCancel={onCancel1} onConfirm={onConfirm1} onClose={onClose1}></TiDialog>
+        <TiDialog {...attr} visible={visible} onCancel={onCancel1} onConfirm={onConfirm1} onClose={onClose1}>
+          {attr.useContentSlot && <div className="dialog-slot-content">插槽</div>}
+        </TiDialog>
       </Page>
     </>
   );

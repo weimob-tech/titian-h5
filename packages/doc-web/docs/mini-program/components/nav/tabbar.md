@@ -20,8 +20,8 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-tabbar": "titan-ui/tabbar/index",
-    "ti-tabbar-item": "titan-ui/tabbar-item/index"
+    "ti-tabbar": "@titian-design/weapp/tabbar/index",
+    "ti-tabbar-item": "@titian-design/weapp/tabbar-item/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {

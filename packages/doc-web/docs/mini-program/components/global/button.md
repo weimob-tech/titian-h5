@@ -12,6 +12,10 @@ side_iframe_path: '/#/button'
 
 **按钮用于触发一个操作，如路由跳转、打开弹框、提交表单等**
 
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="ti-button-api" />
+
 ## 安装使用
 
 ```json showLineNumbers
@@ -99,7 +103,7 @@ side_iframe_path: '/#/button'
 
 ```html showLineNumbers
 <ti-button prefix-icon="home">左图标</ti-button>
-<ti-button suffix-icon="arrow-right">有图标</ti-button>
+<ti-button suffix-icon="arrow-right">右图标</ti-button>
 ```
 
 #### 加载状态

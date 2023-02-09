@@ -10,6 +10,11 @@ side_iframe_path: "#/input-number"
 
 # 步进器 _InputNumber_
 **步进器由增加按钮、减少按钮和输入框组成，用于输入范围内的数值**
+
+import TabsLink from '@site/src/components/tabsLink';
+
+<TabsLink id="tiinputnumber-api" />
+
 ## 安装使用
 ```typescript showLineNumbers
 import { TiInputNumber } from '@titian-design/mobile-vue'

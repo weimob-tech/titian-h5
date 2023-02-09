@@ -1,3 +1,4 @@
+/* eslint-disable @titian/no-more-args */
 import clsx from 'clsx';
 import React from 'react';
 import styles from './index.module.scss';
