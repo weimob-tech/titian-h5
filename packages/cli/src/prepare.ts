@@ -1,6 +1,6 @@
 import { existsSync } from 'fs';
-import chalk from 'chalk';
 import type { ParsedArgs } from 'minimist';
+import pc from 'picocolors';
 import * as readPkgUp from 'read-pkg-up';
 import userHome from 'user-home';
 import logger from './utils/logger';
@@ -16,7 +16,7 @@ const checkRoot = () => {
     const isRoot = process.getuid() === 0;
 
     if (!isRoot) {
-      logger.warn(chalk.gray('You are running as root. This is not recommended.'));
+      logger.warn(pc.gray('You are running as root. This is not recommended.'));
     }
   }
 };
@@ -25,7 +25,7 @@ const checkUserHome = () => {
   logger.debug(`user home: ${userHome}`);
 
   if (!userHome || !existsSync(userHome)) {
-    logger.warn(chalk.red(`user home not found: ${userHome}`));
+    logger.warn(pc.red(`user home not found: ${userHome}`));
     process.exit(1);
   }
 };

@@ -3,11 +3,11 @@ import { dirname, join, relative } from 'path';
 import findPnpmWorkspacePkg from '@pnpm/find-workspace-packages';
 import { Command, spawn } from '@titian-design/cli';
 import axios from 'axios';
-import chalk from 'chalk';
 import execa, { CommonOptions, ExecaReturnValue } from 'execa';
 import findWorkspaceRoot from 'find-workspace-root';
 import findYarnWorkspaceRoot from 'find-yarn-workspace-root';
 import open from 'open';
+import pc from 'picocolors';
 import prompts, { Choice } from 'prompts';
 import readPkgUp from 'read-pkg-up';
 import semver, { ReleaseType } from 'semver';
@@ -440,7 +440,7 @@ export default class Release extends Command {
       {
         type: 'select',
         name: 'version',
-        message: `请选择 ${chalk.blue(moduleName)} 升级的版本`,
+        message: `请选择 ${pc.blue(moduleName)} 升级的版本`,
         choices: versionChoices as [],
       },
     ]);
@@ -602,7 +602,7 @@ export default class Release extends Command {
       '--commit-path',
       '.',
     ];
-    this.logger.info(`正在生成 ${chalk.green(pkg.name)} 相关的 changelog`);
+    this.logger.info(`正在生成 ${pc.green(pkg.name)} 相关的 changelog`);
     await this.exec('npx', changelogArgs, { cwd: pkg.pkgDir });
   }
 
@@ -636,7 +636,7 @@ export default class Release extends Command {
             }
             pkg.tag = tag;
             if (stdout) {
-              this.logger.info('', `正在创建 ${chalk.green(pkg.name)} 的 v${pkg.nextVersion} tag`);
+              this.logger.info('', `正在创建 ${pc.green(pkg.name)} 的 v${pkg.nextVersion} tag`);
               await this.exec('git', ['add', '.']);
               await this.exec('git', ['commit', '-m', `release: ${tag}`]);
               await this.exec('git', ['tag', tag]);

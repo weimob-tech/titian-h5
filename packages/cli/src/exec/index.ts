@@ -1,6 +1,6 @@
 import { performance } from 'perf_hooks';
-import chalk from 'chalk';
 import { Command } from 'commander';
+import pc from 'picocolors';
 import logger from '../utils/logger';
 import { spawn } from '../utils/spawn';
 import { resolveConfig, InlineConfig } from './config';
@@ -41,7 +41,7 @@ export async function exec(args$0: InlineConfig, options$0: InlineConfig | Comma
     if (global.__start_time as string) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      logger.info(`run time is ${chalk.yellowBright(`${(performance.now() - global.__start_time).toFixed(2)}ms`)}`);
+      logger.info(`run time is ${pc.yellow(`${(performance.now() - global.__start_time).toFixed(2)}ms`)}`);
     }
     process.exit(e ?? 1);
   });
@@ -53,7 +53,7 @@ export async function exec(args$0: InlineConfig, options$0: InlineConfig | Comma
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     // eslint-disable-next-line no-underscore-dangle
-    logger.info(`ready in ${chalk.yellowBright(`${(performance.now() - global.__start_time).toFixed(2)}ms`)}`);
+    logger.info(`ready in ${pc.yellow(`${(performance.now() - global.__start_time).toFixed(2)}ms`)}`);
   }
 }
 

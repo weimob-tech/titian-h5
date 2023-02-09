@@ -30,7 +30,6 @@
     "build-types": "tsc -p src --emitDeclarationOnly"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
     "cli-spinner": "^0.2.10",
     "commander": "^9.2.0",
     "esbuild": "^0.14.39",
@@ -40,6 +39,7 @@
     "log4js": "^6.4.6",
     "minimist": "^1.2.6",
     "npminstall": "^6.1.0",
+    "picocolors": "^1.0.0",
     "read-pkg-up": "^7.0.1",
     "registry-url": "5.1.0",
     "semver": "^7.3.7",

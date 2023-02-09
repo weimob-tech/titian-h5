@@ -1,9 +1,9 @@
-import chalk from 'chalk';
 import * as log4js from 'log4js';
 import type { Logger } from 'log4js';
+import pc from 'picocolors';
 import { v4 } from 'uuid';
 
-const key = `${chalk.magentaBright('titian')}`;
+const key = `${pc.magenta('titian')}`;
 
 log4js.configure({
   appenders: {
