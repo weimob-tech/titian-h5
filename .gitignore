@@ -49,6 +49,7 @@ packages/h5-vue/src/vue-component-lib
 
 # testing
 coverage
+*.spec.ts.snap
 
 # production
 build
