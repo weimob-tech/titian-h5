@@ -28,6 +28,7 @@ yarn-error.log*
 **/**/.docusaurus
 **/**/.cache-loader
 packages/h5/dist
+packages/h5/dist-custom-elements
 packages/h5/loader
 packages/h5/www
 packages/h5/locale
@@ -48,6 +49,7 @@ packages/h5-vue/src/vue-component-lib
 
 # testing
 coverage
+*.spec.ts.snap
 
 # production
 build

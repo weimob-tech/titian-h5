@@ -1,4 +1,5 @@
 dist
+build
 test
 tests
 www
@@ -7,6 +8,8 @@ packages/examples/*
 packages/h5-vue/src/components.ts
 packages/h5-vue/src/vue-component-lib/*
 packages/h5/loader/*
+packages/h5/coverage/*
+packages/h5/dist-custom-elements
 packages/h5-react/src/components.ts
 packages/h5-react/src/react-component-lib/*
 packages/doc-web/build
