@@ -233,7 +233,6 @@ export class TiDialog {
       transition,
       timeout,
       cancelButtonColor,
-      confirmButtonColor,
       extClass = '',
       extPopupClass = '',
       extPopupContentClass = '',
@@ -273,12 +272,16 @@ export class TiDialog {
           <div class={`${join('dialog-inner')} ${extInnerClass}`} part={extInnerClass}>
             {title ? (
               <div class={`${join('dialog-title')} ${extTitleClass}`}>
-                <slot name="before-title" />
+                <div style={{ display: 'inline-block' }}>
+                  <slot name="before-title" />
+                </div>
                 <span>{title}</span>
               </div>
             ) : null}
             {useContentSlot ? (
-              <slot />
+              <div class={`${join('dialog-content')}`}>
+                <slot />
+              </div>
             ) : (
               <div
                 class={`${join('dialog-content', [title ? 'with-title' : 'no-title'])} ${extContentClass}`}
@@ -288,7 +291,6 @@ export class TiDialog {
               </div>
             )}
           </div>
-          {useContentSlot ? <slot /> : null}
           {useActionsSlot ? (
             <slot name="actions" />
           ) : (
@@ -299,7 +301,8 @@ export class TiDialog {
               {hasCancelButton ? (
                 <div class={`${join('dialog-actions-cancel')}`}>
                   <ti-button
-                    size="large"
+                    size="big"
+                    type="simple"
                     variant={isTextButton ? 'text' : 'outlined'}
                     extClass={`${extActionCancelClass}`}
                     extStyle={{
@@ -316,21 +319,23 @@ export class TiDialog {
                 </div>
               ) : null}
               <div class={`${join('dialog-actions-confirm')}`}>
-                <ti-button
-                  size="large"
-                  block
-                  variant={isTextButton ? 'text' : 'contained'}
-                  extClass={`${extActionConfirmClass}`}
-                  onClick={this.onConfirm}
-                  extStyle={{
-                    color: confirmButtonColor || undefined,
-                    backgroundColor: this.confirmButtonBgColor || undefined,
-                  }}
-                  exportparts={extActionConfirmClass}
-                  extCss={this.extCss}
-                >
-                  {confirmBtnText}
-                </ti-button>
+                <div>
+                  <ti-button
+                    size="big"
+                    block
+                    variant={isTextButton ? 'text' : 'contained'}
+                    extClass={`${extActionConfirmClass}`}
+                    onClick={this.onConfirm}
+                    extStyle={{
+                      color: this.confirmButtonColor || undefined,
+                      backgroundColor: this.confirmButtonBgColor || undefined,
+                    }}
+                    exportparts={extActionConfirmClass}
+                    extCss={this.extCss}
+                  >
+                    {confirmBtnText}
+                  </ti-button>
+                </div>
               </div>
             </div>
           )}

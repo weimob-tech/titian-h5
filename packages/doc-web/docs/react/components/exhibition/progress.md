@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript jsx showLineNumbers
-import { TiProgress, TiCircleProgress } from '@titian-design/mobile-react';
+import { TiProgress, TiCircleProgress } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例
@@ -100,7 +100,7 @@ const App: React.FC = () => {
 | strokeWidth   | `number`  | 否       | 8      | 进度条宽度，默认为 8px                  | -    |
 | strokeColor   | `string`  | 否       | -      | 进度条轨道颜色，默认为进度条值的 10%    | -    |
 | bufferBgColor   | `string`  | 否       | -      | 进度条缓冲轨道颜色，默认为进度条值的 30%    | -    |
-| gradientColor | `GradientColor`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to` | -    |
+| gradient-color | `GradientColor` | `string`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to`, 为字符串时，直接添加到 background-image 上 | -    |
 
 #### GradientColor
 

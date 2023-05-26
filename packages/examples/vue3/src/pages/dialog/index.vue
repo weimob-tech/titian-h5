@@ -22,11 +22,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { TiDialog, $tiDialog, TiButton } from '@titian-design/mobile-vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 import { mergeOptionIntoAttrs } from '../../utils/index';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     desc: '内容',
     key: 'content',

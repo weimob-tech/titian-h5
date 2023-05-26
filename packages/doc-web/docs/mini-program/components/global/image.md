@@ -21,11 +21,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-image": "@titian-design/weapp/image/index"
+    "ti-image": "{{packageWeappName}}/image/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-image": "platform://titian-weapp/ti-image"
+    "ti-image": "platform://titian-mp/ti-image"
   }
 }
 ```
@@ -66,7 +66,7 @@ import TabsLink from '@site/src/components/tabsLink';
 <ti-image aspect-ratio="inherit" src="{{src}}" />
 ```
 #### 加载中提示
-**更多可用iconName详见[ti-icon组件](./icon#图标展示)**
+**更多可用iconName详见[ti-icon组件](../icon#图标展示)**
 ```html showLineNumbers
 <ti-image loading-icon="default-pic" src="{{src}}" />
 <ti-image src="{{src}}">
@@ -74,7 +74,7 @@ import TabsLink from '@site/src/components/tabsLink';
 </ti-image>
 ```
 #### 加载失败提示
-**更多可用iconName详见[ti-icon组件](./icon#图标展示)**
+**更多可用iconName详见[ti-icon组件](../icon#图标展示)**
 ```html showLineNumbers
 <ti-image error-icon="default-pic" src="{{src}}" />
 <ti-image src="{{src}}">

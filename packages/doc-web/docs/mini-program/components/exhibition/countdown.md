@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-countdown": "@titian-design/weapp/countdown/index"
+    "ti-countdown": "{{packageWeappName}}/countdown/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-countdown": "platform://titian-weapp/ti-countdown"
+    "ti-countdown": "platform://titian-mp/ti-countdown"
   }
 }
 ```
@@ -163,12 +163,11 @@ Page({
 ### CSS 变量 **CSS Variable**
 | 变量                          | 默认值    | 说明                       | 备注 |
 | ----------------------------- | --------- | -------------------------- | ---- |
-| --countdown-color             | `#757575` | 倒计时文字颜色             | -    |
+| --countdown-color             | `#757575` | 倒计时文字颜色，块状风格下默认值为`#ff2e2e` | -    |
 | --countdown-font-size         | `28px`    | 倒计时文字字号             | -    |
 | --countdown-line-height       | `34px`    | 倒计时文字行高             | -    |
 | --countdown-border-radius     | `8px`     | 块状风格下，圆角           | -    |
 | --countdown-background        | `#fff2f2` | 块状风格下，背景色         | -    |
-| --countdown-color             | `#ff2e2e` | 块状风格下，文字颜色       | -    |
 | --countdown-font-family       | `wemo`    | 块状风格下，文字字体       | -    |
 | --countdown-font-weight       | `600`     | 块状风格下，文字字重       | -    |
 | --countdown-day-color         | `600`     | 块状风格下，天数文字颜色   | -    |

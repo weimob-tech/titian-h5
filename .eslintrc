@@ -34,6 +34,7 @@
       }
     ],
     "jsx-a11y/no-autofocus": "off",
-    "rules/require-default-props":"off"
+    "rules/require-default-props":"off",
+    "@typescript-eslint/no-var-requires":"off"
   }
 }

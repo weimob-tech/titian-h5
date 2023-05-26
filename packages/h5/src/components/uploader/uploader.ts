@@ -37,7 +37,7 @@ export enum UploadStatus {
   FAIL = 'fail',
 
   /** 取消上传 */
-  CACAL = 'cacal',
+  CANCEL = 'cancel',
 }
 
 export enum UploadLoadComponentType {

@@ -28,7 +28,7 @@ export class TiProgress implements BasicComponentAbstract {
 
   @Prop() color?: string = '';
 
-  @Prop() gradientColor?: TiProgressGradientColor;
+  @Prop() gradientColor?: TiProgressGradientColor | string;
 
   @Prop() strokeColor?: string = '';
 
@@ -68,8 +68,14 @@ export class TiProgress implements BasicComponentAbstract {
     this.watchColor(this.color);
   }
 
-  private completedStyles(value?: number, bgColor?: string, color?: string) {
-    const { gradientColor, strokeWidth } = this;
+  private completedStyles(options: {
+    value?: number;
+    bgColor?: string;
+    color?: string;
+    gradientColor?: string | TiProgressGradientColor;
+  }) {
+    const { value, bgColor, color, gradientColor } = options;
+    const { strokeWidth } = this;
     const styles: JSXBase.HTMLAttributes<HTMLDivElement>['style'] = {};
 
     if (value) {
@@ -86,8 +92,12 @@ export class TiProgress implements BasicComponentAbstract {
     }
 
     if (gradientColor) {
-      styles.backgroundImage = `linear-gradient(to right, ${gradientColor.from}, ${gradientColor.to})`;
-      styles.color = gradientColor.to;
+      if (typeof gradientColor === 'string') {
+        styles.backgroundImage = gradientColor;
+      } else {
+        styles.backgroundImage = `linear-gradient(to right, ${gradientColor.from}, ${gradientColor.to})`;
+        styles.color = gradientColor.to;
+      }
     }
 
     if (color) {
@@ -98,27 +108,30 @@ export class TiProgress implements BasicComponentAbstract {
   }
 
   render() {
-    const { strokeColor, buffer, bufferBgColor, value, color } = this;
+    const { strokeColor, buffer, bufferBgColor, value, color, gradientColor } = this;
 
     return (
       <div part={this.extClass} class={`${namespace.join('progress')} ${this.extClass}`}>
-        <div class={namespace.handle('progress', 'determinate')} style={this.completedStyles(undefined, strokeColor)}>
+        <div class={namespace.handle('progress', 'determinate')} style={this.completedStyles({ bgColor: strokeColor })}>
           {buffer ? (
             <div
               class={namespace.handle('progress', 'buffer-bar')}
-              style={this.completedStyles(buffer, bufferBgColor)}
+              style={this.completedStyles({ value: buffer, bgColor: bufferBgColor })}
             />
           ) : null}
           <div
-            class={namespace.join('progress-bar', [value === null ? 'linear' : ''])}
-            style={this.completedStyles(value, color)}
+            class={namespace.join('progress-bar', [value === null || value === undefined ? 'linear' : ''])}
+            style={this.completedStyles({ value, bgColor: color, gradientColor })}
           />
-          {value === null ? (
-            <div class={namespace.handle('progress', 'assist-bar')} style={this.completedStyles(value, color)} />
+          {value === null || value === undefined ? (
+            <div
+              class={namespace.handle('progress', 'assist-bar')}
+              style={this.completedStyles({ value, bgColor: color })}
+            />
           ) : null}
         </div>
         {this.showProgress ? (
-          <div class={namespace.handle('progress', 'pivot')} style={this.completedStyles(undefined, undefined, color)}>
+          <div class={namespace.handle('progress', 'pivot')} style={this.completedStyles({ color })}>
             {value}%
           </div>
         ) : (

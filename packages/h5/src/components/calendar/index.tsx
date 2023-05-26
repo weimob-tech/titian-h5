@@ -165,6 +165,10 @@ export class TiCalendar {
 
   @Prop() usePopup?: boolean = true;
 
+  @Prop() maskZIndex?: number;
+
+  @Prop() contentZIndex?: number;
+
   @State() week?: CalWeekProps[] = [];
 
   @State() monthList: CalMonthRenderProps[] = [];
@@ -209,8 +213,9 @@ export class TiCalendar {
     this.updateDataByProps();
     if (this.visible) {
       this.intersectionObserver();
-      this.addEventListener();
+      // this.addListener();
     }
+    this.observerVisible(this.visible);
     const {
       minDate = defaultProps.minDate,
       maxDate = defaultProps.maxDate,
@@ -276,7 +281,7 @@ export class TiCalendar {
 
   @Watch('visible')
   observerVisible(val: boolean) {
-    if (val && this.calendar.init) {
+    if (this.calendar.init) {
       requestAnimationFrame(() => {
         this.calendar.id = this.calendar.findMonthLocation();
         const position = this.calendar.monthList.find((_month, index) => `month${index}` === this.calendar.id);
@@ -287,9 +292,9 @@ export class TiCalendar {
       });
     }
     if (val) {
-      this.addEventListener();
+      this.addListener();
     } else {
-      this.removeEventListener();
+      this.removeListener();
     }
   }
 
@@ -301,12 +306,12 @@ export class TiCalendar {
     }, 200);
   }
 
-  addEventListener() {
+  addListener() {
     this.host?.addEventListener('touchmove', this.touchmoveByHost, { passive: false });
     this.scroll?.addEventListener('touchmove', this.touchmoveByScroll);
   }
 
-  removeEventListener() {
+  removeListener() {
     this.host?.removeEventListener('touchmove', this.touchmoveByHost);
     this.scroll?.removeEventListener('touchmove', this.touchmoveByScroll);
   }
@@ -352,7 +357,7 @@ export class TiCalendar {
 
   disconnectedCallback() {
     this.intersectionScroll?.disconnect();
-    this.removeEventListener();
+    this.removeListener();
   }
 
   updateDataByProps() {
@@ -542,12 +547,7 @@ export class TiCalendar {
             ))}
           </div>
           {confirmText && (
-            <ti-button
-              size="large"
-              color={color}
-              extClass={`${handle('calendar', ['submit'])}`}
-              onClick={this.onConfirm}
-            >
+            <ti-button size="big" color={color} class={`${handle('calendar', ['submit'])}`} onClick={this.onConfirm}>
               {confirmText}
             </ti-button>
           )}
@@ -577,6 +577,8 @@ export class TiCalendar {
           closeOnMask={closeOnMask}
           destroyOnClose={destroyOnClose}
           onClose={this.onClose}
+          maskZIndex={this.maskZIndex}
+          contentZIndex={this.contentZIndex}
           ext-class={`${extPopupClass}`}
           ext-content-class={`${handle('calendar', ['popup-content'])} ${extPopupContentClass}`}
           ext-mask-class={extPopupMaskClass}

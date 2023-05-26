@@ -19,23 +19,6 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-collapse-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-collapse": "@titian-design/weapp/collapse/index",
-    "ti-collapse-item": "@titian-design/weapp/collapse-item/index",
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-collapse": "platform://titian-weapp/ti-collapse",
-    "ti-collapse-item": "platform://titian-weapp/ti-collapse-item"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基本使用
@@ -53,12 +36,25 @@ import TabsLink from '@site/src/components/tabsLink';
 ```
 
 #### 设置默认展开
+<Tabs>
+<TabItem value="index.html" label="index.html">
+
 ```html showLineNumbers
-<ti-collapse value="{{[0]}}">
+<ti-collapse id="collapse">
   <ti-collapse-item title="默认展开">- 标题A下的内容 -</ti-collapse-item>
   <ti-collapse-item title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
 </ti-collapse>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```javascript showLineNumbers
+const collapse = document.querySelector('#collapse');
+collapse.value = 0
+```
+
+</TabItem>
+</Tabs>
 
 #### 设置图标
 ** 支持左右两侧分别设置图标 **
@@ -105,24 +101,21 @@ import TabsLink from '@site/src/components/tabsLink';
 #### 使用 `options` 属性创建面板
 
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-  <ti-collapse options="{{options}}" />
+<ti-collapse id="collapse" />
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```javascript showLineNumbers
-Page({
-  data: {
-    options: [
-      { title: '标题文字A', content: '- 标题A下的内容 -' },
-      { title: '标题文字B', content: '- 标题B下的内容 -' },
-    ],
-  },
-});
+const collapse = document.querySelector('#collapse')
+collapse.options = [
+  { title: '标题文字A', content: '- 标题A下的内容 -' },
+  { title: '标题文字B', content: '- 标题B下的内容 -' },
+]
 ```
 
 </TabItem>
@@ -130,37 +123,45 @@ Page({
 
 #### 监听展开、关闭、切换事件
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-collapse bindlose="{{handleClose}}" bind:open="{{handleOpen}}" bind:change="{{handleChange}}">
+<ti-collapse id="collapse">
   <ti-collapse-item value="a" title="标题文字A">- 标题A下的内容 -</ti-collapse-item>
   <ti-collapse-item value="b" title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
 </ti-collapse>
 
-<ti-collapse repel bind:close="{{handleClose}}" bind:open="{{handleOpen}}" bind:change="{{handleChange}}">
+<ti-collapse repel id="collapse-repel">
   <ti-collapse-item value="a" title="标题文字A">- 标题A下的内容 -</ti-collapse-item>
   <ti-collapse-item value="b" title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
 </ti-collapse>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```javascript showLineNumbers
-Page({
-  handleChange(e) {
-    console.log('切换', e.detail);
-  },
+const collapse = document.querySelector('#collapse')
+const collapseRepel = document.querySelector('#collapse-repel')
+collapse.addEventListener('close', function(e) {
+  console.log('关闭', e.detail);
+})
+collapse.addEventListener('change', function(e) {
+  console.log('切换', e.detail);
+})
+collapse.addEventListener('open', function(e) {
+  console.log('打开', e.detail);
+})
 
-  handleOpen(e) {
-    console.log('打开', e.detail);
-  },
-
-  handleClose(e) {
-    console.log('关闭', e.detail);
-  },
-});
+collapseRepel.addEventListener('close', function(e) {
+  console.log('关闭', e.detail);
+})
+collapseRepel.addEventListener('change', function(e) {
+  console.log('切换', e.detail);
+})
+collapseRepel.addEventListener('open', function(e) {
+  console.log('打开', e.detail);
+})
 ```
 
 </TabItem>
@@ -205,9 +206,9 @@ interface Options {
 
 | 名称     | 参数 | 描述             | 备注 |
 | -------- | -------- | ---------------- | ---- |
-| `bind:change` | <code>(e: WechatMiniprogram.CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code>      | 折叠面板选中值   | 当为手风琴模式时返回值为 <code>string &vert; number</code>，否则为 <code>Array<string &vert; number\></code>   |
-| `bind:open`   | <code>(e: WechatMiniprogram.CustomEvent<string &vert; number\>) => void</code>        | 折叠面板展开事件 | -    |
-| `bind:close` | <code>(e: WechatMiniprogram.CustomEvent<string &vert; number\>) => void</code>         | 折叠面板关闭事件 | -    |
+| change | <code>(e: CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code>      | 折叠面板选中值   | 当为手风琴模式时返回值为 <code>string &vert; number</code>，否则为 <code>Array<string &vert; number\></code>   |
+| open   | <code>(e: CustomEvent<string &vert; number\>) => void</code>        | 折叠面板展开事件 | -    |
+| close | <code>(e: CustomEvent<string &vert; number\>) => void</code>         | 折叠面板关闭事件 | -    |
 
 ### 可扩展样式名 **External Class**
 

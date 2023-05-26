@@ -33,7 +33,13 @@ export const PreviewPage: FC = () => {
             await previewPreview.current?.show([
               {
                 fileType: 'image',
+                title: '图片标题',
                 path: 'https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png',
+              },
+              {
+                fileType: 'image',
+                title: '图片标题 2',
+                path: 'https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png',
               },
             ]);
           }}
@@ -43,7 +49,11 @@ export const PreviewPage: FC = () => {
         <div className="preview-text">点击图片预览</div>
       </div>
       <div style={{ position: 'relative', zIndex: 10 }}>
-        <TiPreview displayNumber={attrs.displayNumber} ref={previewPreview} />
+        <TiPreview
+          displayNumber={attrs.displayNumber}
+          ref={previewPreview}
+          onLongpress={e => console.log('onLongpress', e)}
+        />
       </div>
     </Page>
   );

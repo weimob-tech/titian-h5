@@ -19,64 +19,37 @@ import TabItem from '@theme/TabItem';
 
 <TabsLink id="ti-sku-selector-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-sku-selector": "titian-mp/sku-selector/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-sku-selector": "platform://titian-mp/ti-sku-selector"
-  }
-}
-```
-
 ## 用法示例
 #### 基本用法
-
-
-
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-sku-selector
-  bind:ti-change="onTiChange"
-  bind:ti-option-change="onTiOptionChange"
-  skus="{{mockSkuData.skus}}"
-  specs="{{mockSkuData.specs}}"
-  value="{{value}}"
-  optionIds="{{optionIds}}"
-/>
+<ti-sku-selector id="ti-sku-selector"></ti-sku-selector>
 ```
-
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 import mockData from './mockData.js'
-Page({
-  data: {
-    value: '1',
-    optionIds: ['1', '2', '3']
-  },
-  methods: {
-    onTiChange(){},
-    onTiOptionChange(){}
-  }
-})
+window.onload = function(){
+  var tiSkuSelector = document.getElementById("ti-sku-selector");
+  tiSkuSelector.value = '1';
+  tiSkuSelector.optionIds = ['1', '2', '3'];
+  tiSkuSelector.skus = mockSkuData.skus;
+  tiSkuSelector.specs = mockSkuData.specs;
+  tiSkuSelector.addEventListener('change', function (e) {
+    console.log(e);
+  }, false);
+  tiSkuSelector.addEventListener('option-change', function (e) {
+    console.log(e);
+  }, false);
+};
 ```
-
-
 </TabItem>
 <TabItem value="mock" label="mockData.js">
 
-
 ```js
-
 const mockSkuData = {
   specs: [
     {
@@ -179,9 +152,7 @@ const mockSkuData = {
     },
   ],
 } 
-
 ```
-
 </TabItem>
 </Tabs>
 
@@ -202,8 +173,8 @@ const mockSkuData = {
 
 | 名称             | 参数列表                                                 | 描述                    | 备注 |
 | ---------------- | -------------------------------------------------------- | ----------------------- | ---- |
-| ti-change        | `(e: CustomEvent<{value: Sku}>) => void`                 | 选中的 SKU 值变化时出发 | -    |
-| ti-option-change | `(e: CustomEvent<{options: [], optionIds: []}>) => void` | 选中的规则变化时触发    | -    |
+| change        | `(e: CustomEvent<{value: Sku}>) => void`                 | 选中的 SKU 值变化时出发 | -    |
+| option-change | `(e: CustomEvent<{options: [], optionIds: []}>) => void` | 选中的规则变化时触发    | -    |
 
 ### 外部样式类 **External Classes**
 

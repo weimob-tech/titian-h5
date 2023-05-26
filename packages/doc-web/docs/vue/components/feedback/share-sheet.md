@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiShareSheet } from '@titian-design/mobile-vue'
+import { TiShareSheet } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -30,7 +30,7 @@ import { TiShareSheet } from '@titian-design/mobile-vue'
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiShareSheet } from '@titian-design/mobile-vue';
+import { TiShareSheet } from '{{packageWeappVue}}';
 const options = [
   { name: "微信", icon: "share-wechat", color: "#f5f5f5", bgc: "#26c85a" },
   { name: "朋友圈", icon: "link" },
@@ -49,7 +49,7 @@ const visible = ref<boolean>(false);
 
 <script lang="ts" setup>  
 import { ref } from 'vue';
-import { TiShareSheet } from '@titian-design/mobile-vue';
+import { TiShareSheet } from '{{packageWeappVue}}';
 const options = [
   [
     { name: "微信", icon: "share-wechat", color: "#f5f5f5", bgc: "#26c85a" },

@@ -8,6 +8,9 @@ pagination_next: null
 side_iframe_path: "#/popup"
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 弹出层 _Popup_
 
 **弹出层容器，用于展示弹窗等信息。提供 popup 与 popoup-titlebar 2个组件，可以单独配置。**
@@ -16,76 +19,103 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-popup-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-popup": "@titian-design/weapp/popup/index",
-    "ti-popup-titlebar": "@titian-design/weapp/popup-titlebar/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-popup": "platform://titian-weapp/ti-popup",
-    "ti-popup-titlebar": "platform://titian-weapp/ti-popup-titlebar"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基本用法
+<Tabs>
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
-<ti-popup
-  visible="{{ true }}"
-  close-on-mask="{{ true }}"
-  bind:close="onClose"
-  position="bottom"
->
-  <view>内容演示</view>
+<ti-popup id="popup" position="bottom">
+  <div>内容演示</div>
 </ti-popup>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
 
+```js showLineNumbers
+const popup = document.querySelector('#popup')
+popup.visible = true
+popup['close-on-mask'] = true
+popup.addEventListener('close', function (e) {
+  console.log(e.detail);
+})
+```
+</TabItem>
+</Tabs>
 
 #### 使用 `TiPopupTitlebar`
 
+<Tabs>
+<TabItem value="wxml" label="index.html">
+
 ```html showLineNumbers
-<ti-popup visible="{{true}}" close-on-mask="{{true}}" bind:close="onClose" position="bottom">
+<ti-popup id="popup" position="bottom">
   <ti-popup-titlebar
+    id="title-bar"
     title="标题"
     sub-title=副标题
     confirm-text="确认"
     cancel-text="取消"
     variant="with-confirm"
-    bind:cancel={onClose}
-    bind:confirm={onClose}
   />
-    <view>内容演示</view>
+    <div>内容演示</div>
   </ti-popup-titlebar>
 </ti-popup>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
 
+```js showLineNumbers
+const popup = document.querySelector('#popup')
+const popupTitle = document.querySelector('#title-bar')
+popup.visible = true
+popup['close-on-mask'] = true
+popup.addEventListener('close', function (e) {
+  console.log(e.detail);
+})
+popupTitle.addEventListener('cancel', function (e) {
+  console.log(e.detail);
+})
+popupTitle.addEventListener('confirm', function (e) {
+  console.log(e.detail);
+})
+```
+</TabItem>
+</Tabs>
 
 #### 滚动穿透
+<Tabs>
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-popup 
-  visible="{{true}}" 
-  close-on-mask="{{true}}"
-  bind:close="onClose"
+  id="popup"
   position="bottom"
 >
-  <view>阻止滚动区域</view>
-  <scroll-view scroll-y style="height: 100rpx;">
-    <view id="demo1" style="height: 200rpx;">
+  <div>阻止滚动区域</div>
+  <div style="height: 100px;overflow-y: auto">
+    <div id="demo1" style="height: 200px;">
       可滚动区域，不会穿透
-    </view>
-  </scroll-view>
+    </div>
+  </div>
 </ti-popup>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
 
+```js showLineNumbers
+const popup = document.querySelector('#popup')
+popup.visible = true
+popup.preventScroll = true
+popup['close-on-mask'] = true
+popup.addEventListener('close', function (e) {
+  console.log(e.detail);
+})
+
+```
+</TabItem>
+</Tabs>
 
 ## ti-popup API
 
@@ -112,12 +142,12 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 事件名       | 返回值 | 描述               | 备注 |
 | ------------ | ------ | ------------------ |
-| bind:show    | -      | 弹窗展示时触发     | -    |
-| bind:close   | -      | 点击遮罩关闭时触发 | -    |
-| bind:enter   | -      | 入场动画开始时触发 | -    |
-| bind:entered | -      | 入场动画结束时触发 | -    |
-| bind:exit    | -      | 出场动画开始时触发 | -    |
-| bind:exited  | -      | 出场动画结束时触发 | -    |
+| show    | -      | 弹窗展示时触发     | -    |
+| close   | -      | 点击遮罩关闭时触发 | -    |
+| enter   | -      | 入场动画开始时触发 | -    |
+| entered | -      | 入场动画结束时触发 | -    |
+| exit    | -      | 出场动画开始时触发 | -    |
+| exited  | -      | 出场动画结束时触发 | -    |
 
 ### 插槽 **Slots**
 
@@ -175,9 +205,9 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 事件名       | 返回值 | 描述               | 备注 |
 | ------------ | ------ | ------------------ |
-| bind:cancel  | -      | 点击关闭按钮时触发 | -    |
-| bind:confirm | -      | 点击确认按钮时触发 | -    |
-| bind:close   | -      | 点击关闭按钮时触发 | -    |
+| cancel  | -      | 点击关闭按钮时触发 | -    |
+| confirm | -      | 点击确认按钮时触发 | -    |
+| close   | -      | 点击关闭按钮时触发 | -    |
 
 
 ### CSS 变量 **CSS Variables**

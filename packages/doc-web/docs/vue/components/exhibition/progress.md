@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript jsx showLineNumbers
-import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
+import { TiProgress, TiCircleProgress } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -34,7 +34,7 @@ import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>  
-  import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
+  import { TiProgress, TiCircleProgress } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -47,7 +47,7 @@ import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
+import { TiProgress, TiCircleProgress } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -60,7 +60,7 @@ import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
+import { TiProgress, TiCircleProgress } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -78,7 +78,7 @@ import { TiProgress, TiCircleProgress } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiProgress } from '@titian-design/mobile-vue';
+import { TiProgress } from '{{packageWeappVue}}';
 const gradientColor = {
   from: "#108ee9",
   to: "#87d068"
@@ -100,7 +100,7 @@ const gradientColor = {
 | stroke-width   | `number`  | 否       | 8      | 进度条宽度，默认为 8px                  | -    |
 | stroke-color   | `string`  | 否       | -      | 进度条轨道颜色，默认为进度条值的 10%    | -    |
 | buffer-bg-color   | `string`  | 否       | -      | 进度条缓冲轨道颜色，默认为进度条值的 30%    | -    |
-| gradient-color | `GradientColor`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to` | -    |
+| gradient-color | `GradientColor` | `string`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to`, 为字符串时，直接添加到 background-image 上 | -    |
 
 #### GradientColor
 

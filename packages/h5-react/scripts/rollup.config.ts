@@ -68,6 +68,10 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       ...(format === 'umd' ? { name: 'TitianH5', inlineDynamicImports: true } : {}),
       banner: `console.log('%c @titian-design/mobile-react: ${packageJSON.version}', 'background: #222; color: #bada55');`,
     },
+    onwarn(warning, warn) {
+      if (warning.code === 'THIS_IS_UNDEFINED') return;
+      warn(warning);
+    },
     external: ['react', 'react-dom'],
     plugins: [
       typescript({
@@ -80,7 +84,7 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       ...(format === 'umd'
         ? [
             commonjs({
-              include: ['titian-h5/dist/components/*.js'],
+              include: ['@titian-design/h5/dist/components/*.js'],
             }),
             nodeResolve(),
           ]

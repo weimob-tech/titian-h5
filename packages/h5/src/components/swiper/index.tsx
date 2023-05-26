@@ -48,6 +48,8 @@ export class TiSwiper {
 
   @Prop() vertical?: boolean = false;
 
+  @Prop() centeredSlides?: boolean = false;
+
   @Prop() displayMultipleItems = DISPLAY_MULTIPLE_ITEMS;
 
   @Prop() spaceBetween = SPACE_BETWEEN;
@@ -87,8 +89,6 @@ export class TiSwiper {
       clearTimeout(this.timerId);
       if (value) {
         this.timerId = setTimeout(() => {
-          console.log(1231231);
-
           const childrenLength = this.children?.length || 0;
           if (this.loop) {
             if (this.index === childrenLength - 1) {
@@ -146,6 +146,11 @@ export class TiSwiper {
     });
   }
 
+  @Watch('index')
+  observerIndex() {
+    this.children.forEach((child, index) => child.updateDataFromParent(this, index));
+  }
+
   @Watch('vertical')
   observerVertical() {
     this.movement?.destroy();
@@ -193,6 +198,7 @@ export class TiSwiper {
     } else {
       this.index = this.current;
     }
+    this.children.forEach((child, index) => child.updateDataFromParent(this, index));
   }
 
   componentWillLoad() {
@@ -227,21 +233,6 @@ export class TiSwiper {
   }
 
   onTransitionEnd = () => {
-    this.animationFinishEvent.emit(this.getCurIndex(this.index));
-  };
-
-  touchstart = () => {
-    const { width, height, left: lastLeft, top: lastTop } = this.rect;
-
-    clearTimeout(this.timerId);
-    this.temp = {
-      width,
-      height,
-      lastLeft,
-      lastTop,
-    };
-    this.descendant = this.children;
-
     if (this.loop) {
       if (this.index === 0) {
         const curIndex = this.children.length - 2;
@@ -267,6 +258,20 @@ export class TiSwiper {
         lastTop: newLastTop,
       };
     }
+    this.animationFinishEvent.emit(this.getCurIndex(this.index));
+  };
+
+  touchstart = () => {
+    const { width, height, left: lastLeft, top: lastTop } = this.rect;
+
+    clearTimeout(this.timerId);
+    this.temp = {
+      width,
+      height,
+      lastLeft,
+      lastTop,
+    };
+    this.descendant = this.children;
   };
 
   touchmove = (event: TouchEvent) => {
@@ -381,19 +386,19 @@ export class TiSwiper {
   @Watch('vertical')
   verticalChange() {
     this.index = this.reallyZero;
-    this.children.forEach(child => child.updateDataFromParent(this));
+    this.children.forEach((child, index) => child.updateDataFromParent(this, index));
   }
 
   @Watch('displayMultipleItems')
   itemsChange() {
     this.index = this.reallyZero;
-    this.children.forEach(child => child.updateDataFromParent(this));
+    this.children.forEach((child, index) => child.updateDataFromParent(this, index));
   }
 
   @Watch('spaceBetween')
   spaceBetweenChange() {
     this.index = this.reallyZero;
-    this.children.forEach(child => child.updateDataFromParent(this));
+    this.children.forEach((child, index) => child.updateDataFromParent(this, index));
   }
 
   get reallyZero() {
@@ -417,21 +422,38 @@ export class TiSwiper {
 
   getTransform(index: number) {
     let translate = '0px';
-    const { spaceBetween = 0 } = this;
+    const { spaceBetween = 0, centeredSlides } = this;
+    const { width, height } = this.rect;
     const { height: swiperItemHeight, width: swiperItemWidth } = this.getSwiperItemRect();
 
     if (this.vertical) {
+      const topPosition = centeredSlides ? (height - swiperItemHeight) / 2 : 0;
       const maxHeightPosition =
-        (swiperItemHeight + spaceBetween) * this.children.length - spaceBetween - this.rect.height;
-      const position = Math.min(maxHeightPosition, (swiperItemHeight + spaceBetween) * index);
+        (swiperItemHeight + spaceBetween) * this.children.length - spaceBetween - height + topPosition;
 
-      translate = `translateY(-${position}px)`;
+      let position = (swiperItemHeight + spaceBetween) * index;
+      if (position === 0) {
+        position = topPosition;
+      } else {
+        position = -Math.min(maxHeightPosition, position - topPosition);
+      }
+
+      translate = `translateY(${position}px)`;
     } else {
-      const maxPosition = (swiperItemWidth + spaceBetween) * this.children.length - spaceBetween - this.rect.width;
-      const position = Math.min(maxPosition, (swiperItemWidth + spaceBetween) * index);
+      const leftPosition = centeredSlides ? (width - swiperItemWidth) / 2 : 0;
 
-      translate = `translateX(-${position}px)`;
+      const maxPosition = (swiperItemWidth + spaceBetween) * this.children.length - spaceBetween - width + leftPosition;
+
+      let position = (swiperItemWidth + spaceBetween) * index;
+      if (position === 0) {
+        position = leftPosition;
+      } else {
+        position = -Math.min(maxPosition, position - leftPosition);
+      }
+
+      translate = `translateX(${position}px)`;
     }
+
     return translate;
   }
 

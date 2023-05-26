@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSidebar, TiSidebarItem } from '@titian-design/mobile-vue'
+import { TiSidebar, TiSidebarItem } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiSidebar, TiSidebarItem } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSidebar , TiSidebarItem } from '@titian-design/mobile-vue';
+import { TiSidebar , TiSidebarItem } from '{{packageWeappVue}}';
 </script>
 ```
 ## TiSidebar API
@@ -49,9 +49,9 @@ import { TiSidebar , TiSidebarItem } from '@titian-design/mobile-vue';
 | 名称     | 参数列表 | 描述           | 备注 |
 | -------- | -------- | -------------- | ---- |
 | change | `(e: CustomEvent<number>) => void`    | 切换菜单时触发, 返回激活项索引| -    |
-| scrolltoupper | `(e: WechatMiniprogram.CustomEvent<{ direction: 'top' }>) => void`    | 滚动到顶部时触发| -    |
-| scrolltolower | `(e: WechatMiniprogram.CustomEvent<{ direction: 'bottom' }>) => void`    | 滚动到底部时触发| -    |
-| ti-scroll | `(e: WechatMiniprogram.CustomEvent) => void`    | 滚动时触发| -    |
+| scrolltoupper | `(e: CustomEvent<{ direction: 'top' }>) => void`    | 滚动到顶部时触发| -    |
+| scrolltolower | `(e: CustomEvent<{ direction: 'bottom' }>) => void`    | 滚动到底部时触发| -    |
+| ti-scroll | `(e: CustomEvent) => void`    | 滚动时触发| -    |
 
 ### 插槽 **Slots**
 

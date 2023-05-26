@@ -123,6 +123,7 @@ const Search: React.FC<Record<string, never>> = () => {
             search-inner-class={attrs.dashed === 1 ? 'search-inner-class' : ''}
             placeholder="请输入代填项引导文案"
             center={attrs.align}
+            alwaysShowPrefix
             onSearch={e => {
               console.log('onSearch', e);
             }}
@@ -131,7 +132,13 @@ const Search: React.FC<Record<string, never>> = () => {
             }}
           ></TiSearch>
         ) : attrs.style === 1 ? (
-          <TiSearch ext-class="search-box" extCss={extCss} placeholder="请输入代填项引导文案" center={attrs.align}>
+          <TiSearch
+            ext-class="search-box"
+            extCss={extCss}
+            placeholder="请输入代填项引导文案"
+            center={attrs.align}
+            alwaysShowPrefix
+          >
             <div slot="prefix" className="prefix">
               <span>请选择</span>
               <ti-icon name="arrow-down" size="32" />
@@ -148,7 +155,7 @@ const Search: React.FC<Record<string, never>> = () => {
             search-button-class="test"
             placeholder="请输入代填项引导文案"
             center={attrs.align}
-            animation={false}
+            alwaysShowPrefix
           >
             <div slot="prefix" className="prefix">
               <TiIcon name="category" size="42" />

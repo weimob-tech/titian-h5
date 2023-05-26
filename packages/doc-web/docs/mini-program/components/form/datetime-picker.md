@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-datetime-picker": "@titian-design/weapp/datetime-picker/index"
+    "ti-datetime-picker": "{{packageWeappName}}/datetime-picker/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-datetime-picker": "platform://titian-weapp/ti-datetime-picker"
+    "ti-datetime-picker": "platform://titian-mp/ti-datetime-picker"
   }
 }
 ```
@@ -69,15 +69,17 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```js showLineNumbers
 Page({
-  formatter (type: columnType, value: number) {
-    const pipe = {
-      year: `${value}年`,
-      month: `${value}月`,
-      day: `${value}天`,
-      hour: `${value}时`,
-      minute: `${value}分`,
+  data: {
+    formatter (type, value) {
+      const pipe = {
+        year: `${value}年`,
+        month: `${value}月`,
+        day: `${value}天`,
+        hour: `${value}时`,
+        minute: `${value}分`,
+      }
+      return pipe[type]
     }
-    return pipe[type]
   }
 });
 ```
@@ -98,11 +100,13 @@ Page({
 
 ```js showLineNumbers
 Page({
-  filter (type: columnType, value: number) {
-    if (type === "year") {
-      return options.filter((options) => options.value % 2 === 0);
+  data: {
+    filter (type, value) {
+      if (type === "year") {
+        return options.filter((options) => options.value % 2 === 0);
+      }
+      return options;
     }
-    return options;
   }
 });
 ```

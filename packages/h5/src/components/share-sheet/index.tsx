@@ -97,6 +97,8 @@ export class TiShareSheet {
 
   @Event({ eventName: 'confirm', composed: false }) confirmEvent!: EventEmitter<boolean>;
 
+  @Event({ eventName: 'select', composed: false }) selectEvent!: EventEmitter<ShareSheetProps>;
+
   @Element() host!: HTMLTiShareSheetElement;
 
   onClose = () => {
@@ -112,6 +114,10 @@ export class TiShareSheet {
   onConfirm = () => {
     this.visible = false;
     this.confirmEvent.emit();
+  };
+
+  onSelect = item => {
+    this.selectEvent.emit(item);
   };
 
   // eslint-disable-next-line class-methods-use-this
@@ -192,6 +198,7 @@ export class TiShareSheet {
                   data-col={col}
                   key={item.name}
                   type="button"
+                  onClick={() => this.onSelect(item)}
                 >
                   <div class={handle('share-sheet', ['icon'])} style={completedBgColor(item.bgc)}>
                     {this.renderItem(item)}

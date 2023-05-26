@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSlider } from '@titian-design/mobile-react'
+import { TiSlider } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例

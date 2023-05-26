@@ -19,73 +19,51 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-progress-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-progress": "@titian-design/weapp/progress/index",
-    "ti-circle-progress": "titan-weapp/circle-progress/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-progress": "platform://titian-weapp/ti-progress",
-    "ti-circle-progress": "platform://titian-weapp/ti-circle-progress",
-  }
-}
-```
 ## 用法示例
 
 #### 基本使用
 
 ```html showLineNumbers
-<ti-progress />
-<ti-progress value="{{80}}" />
-<ti-circle-progress value="{{80}}" />
+<ti-progress></ti-progress>
+<ti-progress value="80"></ti-progress>
+<ti-circle-progress value="80"></ti-circle-progress>
 ```
 
 #### 设置缓冲进度
 ```html showLineNumbers
-<ti-progress value="{{60}}" buffer="{{80}}" />
-<ti-circle-progress value="{{60}}" buffer="{{80}}" />
+<ti-progress value="60" buffer="80"></ti-progress>
+<ti-circle-progress value="60" buffer="80"></ti-circle-progress>
 ```
 
 #### 设置进度条宽度
 ```html showLineNumbers
-<ti-progress value="{{50}}" stroke-width="{{20}}" />
-<ti-circle-progress value="{{80}}" stroke-width="{{20}}" />
+<ti-progress value="50" stroke-width="20"></ti-progress>
+<ti-circle-progress value="80" stroke-width="20"></ti-circle-progress>
 ```
 
 #### 修改展示进度值、颜色等
-
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-progress value="{{80}}" show-progress />
-<ti-circle-progress value="{{80}}" show-progress />
+<ti-progress value="80" show-progress></ti-progress>
+<ti-circle-progress value="80" show-progress></ti-circle-progress>
 
-<ti-progress value="{{80}}" color="#2a6ae9" />
-<ti-circle-progress value="{{80}}" color="#2a6ae9" />
+<ti-progress value="80" color="#2a6ae9"></ti-progress>
+<ti-circle-progress value="80" color="#2a6ae9"></ti-circle-progress>
 
-<ti-progress value="{{80}}" gradient-color="{{gradientColor}}" />
+<ti-progress value="80" id="gradient-progress" />
 ```
-
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
-```javascript showLineNumbers
-Page({
-  data: {
-    gradientColor: {
-      from: '#108ee9',
-      to: '#87d068',
-    },
-  },
-});
+```js showLineNumbers
+var progress = document.querySelector("#gradient-progress");
+progress["gradientColor"] = {
+  from: "#108ee9",
+  to: "#87d068"
+};
 ```
-
 </TabItem>
 </Tabs>
 
@@ -103,7 +81,7 @@ Page({
 | stroke-width   | `number`  | 否       | 8      | 进度条宽度，默认为 8px                  | 此时单位为 `rpx`   |
 | stroke-color   | `string`  | 否       | -      | 进度条轨道颜色，默认为进度条值的 10%    | -    |
 | buffer-bg-color   | `string`  | 否       | -      | 进度条缓冲轨道颜色，默认为进度条值的 30%    | -    |
-| gradient-color | `GradientColor`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to` | -    |
+| gradient-color | `GradientColor` | `string`  | 否       | -      | 进度条颜色为渐变色，需要设置 `from` 和 `to`, 为字符串时，直接添加到 background-image 上 | -    |
 
 #### GradientColor
 
@@ -125,14 +103,14 @@ interface GradientColor {
 
 | 变量                         | 默认值 | 说明           | 备注 |
 | ---------------------------- | ------ | -------- | ---- |
-| `--progress-margin-v`          | `8rpx` | 垂直方向外间距 | -    |
-| `--progress-margin-h`          | `0` | 水平方向外间距 | -    |
-| `--progress-height`            | `8rpx` | 进度条高度     | -    |
-| `--progress-radius`            | `calc(var(--base-radius-size, 0px) + 12px)` | 圆角大小       | -    |
-| `--progress-bar-color`         | `rgb(@theme-r, @theme-g, @theme-b)` | 轨道颜色       | -    |
-| `--progress-bar-radius`        | `calc(var(--base-radius-size, 0px) + 12px)` | 轨道圆角大小   | -    |
-| `--progress-pivot-margin-left` | `8rpx` | 左侧外间距     | -    |
-| `--progress-pivot-color`       | `rgb(@theme-r, @theme-g, @theme-b)` | 进度条内容颜色 | -    |
+| `--progress-margin-v`          | 8rpx | 垂直方向外间距 | -    |
+| `--progress-margin-h`          | 0 | 水平方向外间距 | -    |
+| `--progress-height`            | 8rpx | 进度条高度     | -    |
+| `--progress-radius`            | calc(var(--base-radius-size, 0px) + 12px) | 圆角大小       | -    |
+| `--progress-bar-color`         | rgb(@theme-r, @theme-g, @theme-b) | 轨道颜色       | -    |
+| `--progress-bar-radius`        | calc(var(--base-radius-size, 0px) + 12px) | 轨道圆角大小   | -    |
+| `--progress-pivot-margin-left` | 8rpx | 左侧外间距     | -    |
+| `--progress-pivot-color`       | rgb(@theme-r, @theme-g, @theme-b) | 进度条内容颜色 | -    |
 
 ## ti-circle-progress API
 
@@ -140,7 +118,7 @@ interface GradientColor {
 
 | 名称          | 类型      | 是否必填 | 默认值 | 说明                                    | 备注 |
 | ------------- | --------- | -------- | ------ | --------------------------------------- | ---- |
-| size         | `number`  | 否       | `72`      | 进度值大小                  | -    |
+| size         | `number`  | 否       | 72      | 进度值大小                  | -    |
 | value         | `number`  | 否       | 0      | 进度值，取值范围 0-100                  | -    |
 | buffer        | `number`  | 否       | 0      | 缓冲值，取值范围 0-100                  | -    |
 | show-progress  | `boolean` | 否       | false  | 是否展示进度值，默认不展示              | -    |

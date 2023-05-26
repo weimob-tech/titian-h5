@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-sticky": "@titian-design/weapp/sticky/index"
+    "ti-sticky": "{{packageWeappName}}/sticky/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-sticky": "platform://titian-weapp/ti-sticky"
+    "ti-sticky": "platform://titian-mp/ti-sticky"
   }
 }
 ```

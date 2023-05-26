@@ -190,6 +190,8 @@ export class TiCell implements BasicComponentAbstract {
 
   @Prop() titleClass?: string;
 
+  @Prop() titleWrapClass?: string;
+
   @Prop() labelClass?: string;
 
   @Prop() descClass?: string;
@@ -280,7 +282,12 @@ export class TiCell implements BasicComponentAbstract {
         class={this.getClassName()}
         style={this.completedStyles(this.extStyle)}
       >
-        <div class={handle('cell', 'title-wrap')} aria-hidden="true" style={this.completedStyles()}>
+        <div
+          part={this.titleWrapClass}
+          class={`${handle('cell', 'title-wrap')} ${this.titleWrapClass || ''}`}
+          aria-hidden="true"
+          style={this.completedStyles()}
+        >
           {this.renderLeftIcon()}
           <div>
             <div style={{ ...this.completedStyles(), display: 'flex' }}>

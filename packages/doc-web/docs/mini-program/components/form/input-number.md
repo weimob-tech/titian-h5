@@ -20,11 +20,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-input-number": "@titian-design/weapp/input-number/index"
+    "ti-input-number": "{{packageWeappName}}/input-number/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-input-number": "platform://titian-weapp/ti-input-number"
+    "ti-input-number": "platform://titian-mp/ti-input-number"
   }
 }
 ```
@@ -97,7 +97,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ### 事件 **Events**
 | 名称        | 参数列表                                                      | 描述                     | 备注 |
 | ----------- | ------------------------------------------------------------- | ------------------------ | ---- |
-| bind:change    | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 当绑定值变化时触发的事件 | -    |
+| bind:hange    | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 当绑定值变化时触发的事件 | -    |
 | bind:plus      | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 点击增加按钮时触发时触发 | -    |
 | bind:minus     | `(e: WechatMiniprogram.CustomEvent<number>) => void`                               | 点击减少按钮时触发时触发 | -    |
 | bind:focus     | `(e: WechatMiniprogram.CustomEvent<{value: number}>) => void`                               | 输入框聚焦时触发         | -    |

@@ -17,61 +17,14 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-dialog-api" />
 
-## 安装使用
-
-:::note
-小程序在机制上不允许动态插入 DOM。
-
-当 API 调用时，需要在外层先引入 `<ti-dialog id="titian-dialog" />` 组件，再使用 js 获取该组件实例、并设置该组件。
-
-当使用声明式 DOM 调用时，跟常规组件一样，在 `json` 和 `wxml` 中引入即可。
-:::
-
-<Tabs>
-  <TabItem value="json" label="index.json" >
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-dialog": "@titian-design/weapp/dialog/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-dialog": "platform://titian-weapp/ti-dialog"
-  }
-}
-```
-
-  </TabItem>
-  <TabItem value="js" label="index.js">
-
-```typescript tsx showLineNumbers
-// 原生小程序
-import { $tiDialog } from "@titian-design/weapp/index";
-
-// titan-cli 搭建的项目
-const { $tiDialog } = requirePlatform("@titian-design/weapp").main;
-```
-
- </TabItem>
- <TabItem value="wxml" label="index.wxml">
-
-```html showLineNumbers
-<ti-dialog id="titian-dialog" />
-```
-
- </TabItem>
-</Tabs>
-
-
 ## 用法示例
 
 #### 常规 API 式调用
 
 
 ```typescript tsx showLineNumbers
-$tiDialog.show({
+const dialog = window.TitianH5Basic.$tiDialog;
+dialog.show({
   title: "Confirm标题",
   content: "内容",
   cancelBtnText: "取消",
@@ -83,7 +36,7 @@ $tiDialog.show({
   onClose() {}
 });
 
-$tiDialog.close();
+dialog.close();
 ```
 
 
@@ -95,7 +48,8 @@ $tiDialog.close();
 :::
 
 ```typescript tsx showLineNumbers
-$tiDialog.show({
+const dialog = window.TitianH5Basic.$tiDialog;
+dialog.show({
   selector: "#titian-dialog",
   title: "",
   content: "",
@@ -108,7 +62,7 @@ $tiDialog.show({
   onClose() {}
 });
 
-$tiDialog.show({
+dialog.show({
   ctx: this
   selector: "#titian-dialog",
   title: "",
@@ -128,18 +82,29 @@ $tiDialog.show({
 
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml" >
+<TabItem value="html" label="index.html" >
 
 ```html showLineNumbers
-<ti-dialog title="标题" visible="{{visible}}" bind:cancel="onCancel" bind:confirm="onConfirm" bind:close="onClose">
-  <view>默认插槽</view>
+<ti-dialog title="标题" id="dialog">
+  <div>默认插槽</div>
 </ti-dialog>
 ```
 
   </TabItem>
-  <TabItem value="js" label="index.js">
+  <TabItem value="index.js" label="index.js">
 
 ```typescript tsx showLineNumbers
+const dialog = document.querySelector('#dialog')
+dialog.visible = true
+dialog.addEventListener('cancel', function (e) {
+  console.log(e.detail)
+})
+dialog.addEventListener('confirm', function (e) {
+  console.log(e.detail)
+})
+dialog.addEventListener('close', function (e) {
+  console.log(e.detail)
+})
 Page({
   data: {
     visible: false,
@@ -174,7 +139,7 @@ Page({
 | title                | `string`  | 否   | -      | 标题                     | -    |
 | content              | `string`  | 否   | -      | 内容                     | -    |
 | z-index               | `number`  | 否   | 12000  | z-index                   | -    |
-| has-cancel-button      | `boolean` | 否   | false  | 是否展示确认按钮         | -    |
+| has-cancel-button      | `boolean` | 否   | false  | 是否展示取消按钮         | -    |
 | close-on-mask           | `boolean` | 否   | true   | 点击遮罩是否关闭对话框                 | -    |
 | close-on-actions        | `boolean` | 否   | true   | 点击`确认`和`取消`按钮，是否关闭对话框 | -    |
 | is-text-button         | `boolean` | 否   | false  | 是否为文字按钮           | -    |
@@ -191,9 +156,9 @@ Page({
 
 | 名称      | 参数列表 | 描述                               | 备注 |
 | --------- | -------- | ---------------------------------- | ---- |
-| bind:cancel  | -        | 点击取消按钮时触发                 | -    |
-| bind:confirm | -        | 点击确认按钮时触发                 | -    |
-| bind:close   | -        | 当关闭时触发 | -    |
+| cancel  | -        | 点击取消按钮时触发                 | -    |
+| confirm | -        | 点击确认按钮时触发                 | -    |
+| close   | -        | 当关闭时触发 | -    |
 
 ### 插槽 **Slots**
 
@@ -221,17 +186,17 @@ Page({
 
 | 变量                                | 默认值               | 说明                 | 备注 |
 | ----------------------------------- | -------------------- | -------------------- | ---- |
-| `--dialog-popup-mask-bg-color`      | @popup-mask-bg-color | 遮罩背景色           | -    |
-| `--dialog-popup-radius`             | @popup-radius        | 弹窗圆角             | -    |
-| `--dialog-popup-box-bg-color`       | @popup-box-bg-color  | 弹窗背景色           | -    |
-| `--dialog-width`                    | 560rpx               | 组件宽度             | -    |
-| `--dialog-min-height`               | 300rpx               | 组件最小高度         | -    |
-| `--dialog-inner-padding-v`          | 64rpx                | 内容区垂直方向内边距 | -    |
-| `--dialog-inner-padding-h`          | 48rpx                | 内容区水平方向内边距 | -    |
-| `--dialog-inner-title-color`        | var(--neutral-color-1, #212121)     | 内容区标题颜色       | -    |
-| `--dialog-inner-content-color`      | var(--neutral-color-1, #212121)     | 内容区颜色           | -    |
-| `--dialog-actions-height`           | 88rpx                | 按钮区高度           | -    |
-| `--dialog-actions-gap`              | 32rpx                | 按钮区按钮间距       | -    |
-| `--dialog-actions-border-top-color` | var(--neutral-color-6, #f2f2f2)     | 按钮区上边线颜色     | -    |
-| `--dialog-actions-spac`             | 56rpx                | 按钮区按钮内边距     | -    |
-| `--dialog-actions-cancel-color`     | rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))         | 按钮区取消按钮颜色   | -    |
+| --dialog-popup-mask-bg-color      | @popup-mask-bg-color | 遮罩背景色           | -    |
+| --dialog-popup-radius             | @popup-radius        | 弹窗圆角             | -    |
+| --dialog-popup-box-bg-color       | @popup-box-bg-color  | 弹窗背景色           | -    |
+| --dialog-width                    | 560rpx               | 组件宽度             | -    |
+| --dialog-min-height               | 300rpx               | 组件最小高度         | -    |
+| --dialog-inner-padding-v          | 64rpx                | 内容区垂直方向内边距 | -    |
+| --dialog-inner-padding-h          | 48rpx                | 内容区水平方向内边距 | -    |
+| --dialog-inner-title-color        | var(--neutral-color-1, #212121)     | 内容区标题颜色       | -    |
+| --dialog-inner-content-color      | var(--neutral-color-1, #212121)     | 内容区颜色           | -    |
+| --dialog-actions-height           | 88rpx                | 按钮区高度           | -    |
+| --dialog-actions-gap              | 32rpx                | 按钮区按钮间距       | -    |
+| --dialog-actions-border-top-color | var(--neutral-color-6, #f2f2f2)     | 按钮区上边线颜色     | -    |
+| --dialog-actions-spac             | 56rpx                | 按钮区按钮内边距     | -    |
+| --dialog-actions-cancel-color     | rgb(var(--theme-r, 250), var(--theme-g, 44), var(--theme-b, 25))         | 按钮区取消按钮颜色   | -    |

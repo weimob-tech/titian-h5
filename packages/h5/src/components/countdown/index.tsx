@@ -69,12 +69,7 @@ export class TiCountdown implements BasicComponentAbstract {
   lock!: boolean;
 
   @Watch('useSlot')
-  watchUseSlot(newValue: boolean) {
-    if (newValue) {
-      this.formatStr = 'sss';
-    } else {
-      this.formatStr = 'HH:mm:ss';
-    }
+  watchUseSlot() {
     this.watchTime(this.time);
   }
 
@@ -100,7 +95,6 @@ export class TiCountdown implements BasicComponentAbstract {
   componentDidLoad(): void {
     this.formatStr = 'HH:mm:ss';
     if (this.format) this.formatStr = this.format;
-    if (this.useSlot) this.formatStr = 'SSS';
     if (this.time !== undefined) {
       this.reset();
     }
@@ -221,7 +215,11 @@ export class TiCountdown implements BasicComponentAbstract {
               <ti-icon name="colon" />
             </div>
           )}
-          {show(format, 'S') && <div class={`${join('countdown-block', ['millisecond'])}`}>{timeData.millisecond}</div>}
+          {show(format, 'S') && (
+            <div class={`${join('countdown-block', [format.indexOf('SSS') > -1 ? 'millisecond' : ''])}`}>
+              {timeData.millisecond}
+            </div>
+          )}
         </div>
       );
     }

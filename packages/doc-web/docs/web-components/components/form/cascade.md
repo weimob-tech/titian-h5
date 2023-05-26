@@ -20,21 +20,6 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-cascade-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-cascade": "@titian-design/weapp/cascade/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-cascade": "platform://titian-weapp/ti-cascade"
-  }
-}
-```
-
 ## 基本使用方式
 
 #### 静态数据
@@ -44,61 +29,62 @@ import TabsLink from '@site/src/components/tabsLink';
 :::
 
 <Tabs>
- <TabItem value="index.wxml" label="index.wxml" >
+ <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-cascade tabs="{{ tab }}" options="{{ options }}" />
+<ti-cascade id="ti-cascade"></ti-cascade>
 ```
 
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript js showLineNumbers
-Page({
-  data: {
-    tabs: ['省', '市', '区/县'],
-    options: [
-      {
-        code: '310000',
-        name: '上海市',
-        children: [
-          {
-            code: '310100',
-            name: '直辖市',
-            children: [
-              {
-                code: '310101',
-                name: '黄浦区'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        code: '330000',
-        name: '浙江省',
-        children: [
-          {
-            code: '330100',
-            name: '杭州市',
-            children: [
-              {
-                code: '330102',
-                name: '上城区'
-              },
-              {
-                code: '330105',
-                name: '拱墅区'
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-});
-```
+```javascript showLineNumbers
+window.onload=function(){
+  var tabs = ['省', '市', '区/县'];
+  var options = [
+    {
+      code: '310000',
+      name: '上海市',
+      children: [
+        {
+          code: '310100',
+          name: '直辖市',
+          children: [
+            {
+              code: '310101',
+              name: '黄浦区'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      code: '330000',
+      name: '浙江省',
+      children: [
+        {
+          code: '330100',
+          name: '杭州市',
+          children: [
+            {
+              code: '330102',
+              name: '上城区'
+            },
+            {
+              code: '330105',
+              name: '拱墅区'
+            }
+          ]
+        }
+      ]
+    }
+  ];
 
+  var tiCascade = document.getElementById("ti-cascade");
+  tiCascade.tabs = tabs;
+  tiCascade.options = options;
+}
+```
   </TabItem>
 </Tabs>
 
@@ -112,21 +98,61 @@ Page({
 3. 该接口可以搭配静态 `options` 数据；当在 `options` 内找不到下一层数据时，会尝试调用 `getOptions` 接口，拿到下一层级数据。
 :::note
 <Tabs>
- <TabItem value="index.wxml" label="index.wxml" >
+ <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-cascade tabs="{{ tab }}"  options="{{options}}" get-options="asyncGetOptionAPI" />
+<ti-cascade id="ti-cascade"></ti-cascade>
 ```
 
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript js showLineNumbers
-Page({
-  data: {
-    tabs: ['省', '市', '区/县'],
-  },
-  async asyncGetOptionAPI(value: any){
+```javascript showLineNumbers
+window.onload=function(){
+  var tabs = ['省', '市', '区/县'];
+  var options = [
+    {
+      code: '310000',
+      name: '上海市',
+      children: [
+        {
+          code: '310100',
+          name: '直辖市',
+          children: [
+            {
+              code: '310101',
+              name: '黄浦区'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      code: '330000',
+      name: '浙江省',
+      children: [
+        {
+          code: '330100',
+          name: '杭州市',
+          children: [
+            {
+              code: '330102',
+              name: '上城区'
+            },
+            {
+              code: '330105',
+              name: '拱墅区'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  var tiCascade = document.getElementById("ti-cascade");
+  tiCascade.tabs = tabs;
+  tiCascade.options = options;
+  tiCascade.addEventListener('getOptions', async function (value: any){
     let rawResponse;
     if (value) {
       rawResponse = await fetch('api3/address/tmp/getAreasByCityId', {
@@ -147,8 +173,8 @@ Page({
     }
     const { data } = await rawResponse.json();
     return data;
-  }
-});
+  }, false);
+};
 ```
 
   </TabItem>
@@ -161,15 +187,15 @@ Page({
 | 名称               | 类型                                 | 必填 | 默认值     | 说明        | 备注 |
 | ------------------ | ------------------------------------ | ---- | ---------- | ----------- | ---- |
 | titlebar           | `boolean`                            | 否   | true       |             | -    |
-| title              | `string`                             | 否   | '选择地址' | 标题        | -    |
+| title              | `string`                             | 否   | 选择地址 | 标题        | -    |
 | sub-title           | `string`                             | 否   | -          | 副标题      | -    |
-| code               | `string`                             | 否   | 'code'     | 指定列标识      | -    |
-| label              | `string`                             | 否   | 'label'    | 指定文案字段    | -    |
+| code               | `string`                             | 否   | code     | 指定列标识      | -    |
+| label              | `string`                             | 否   | label    | 指定文案字段    | -    |
 | value              | `array`                              | 否   | []         | 值        | -    |
-| options            | <code> { [key: string \| number]: unknown }[]  </code>                            | 否   | []       | 数据源      | -    |
+| options            | <code>{ [key: string \| number]: unknown }[]</code>                            | 否   | []       | 数据源      | -    |
 | active             | `number`                             | 否   | 0          | 当前展示项  | -    |
 | get-options         | `function`                           | 否   | -          | 获取列数据  | -    |
-| cascade            | `string`                             | 否   | `children` | 级联字段    | -    |
+| cascade            | `string`                             | 否   | children | 级联字段    | -    |
 | ext-header-style     | `string` \| `Record<string, string>` | 否   |            | header 样式 | -    |
 | ext-tab-style        | `string` \| `Record<string, string>` | 否   |            | tab 样式    | -    |
 | ext-option-item-style | `string` \| `Record<string, string>` | 否   |            | 当前项样式  | -    |
@@ -179,8 +205,8 @@ Page({
 
 | 名称         | 参数列表             | 描述             | 备注 |
 | ------------ | -------------------- | ---------------- | ---- |
-| bind:change       | `e: WechatMiniprogram.CustomEvent<{ value: unknown[]; options: CascadeOption[];active: number;}> => void` | 当前选中项，见 [级联项 `CascadeOption`](#级联项-cascadeoption)      | -    |
-| bind:changeSwiper | `e: WechatMiniprogram.CustomEvent<{  current: number; source: 'touch' | '';}> => void`       | 切换当前活动项目 | -    |
+| onchange       | `(e: CustomEvent) => void` | 当前选中项，见 [级联项 `CascadeOption`](#级联项-cascadeoption)      | -    |
+| onchangeSwiper | `(e: CustomEvent) => void`       | 切换当前活动项目 | -    |
 | close        |                      | 关闭             | -    |
 
 ### CSS 变量 **CSS Variable**

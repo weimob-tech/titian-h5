@@ -52,6 +52,8 @@ import Input from '../pages/input/index.vue';
 import InputNumber from '../pages/input-number/index.vue';
 import Search from '../pages/search/index.vue';
 import NoticeBar from '../pages/notice-bar/index.vue';
+import VirtualListPage from '../pages/virtual-list/index.vue';
+import Navbar from '../pages/navbar/index.vue';
 
 type page = RouteRecordRaw & {
   path: string;
@@ -144,6 +146,7 @@ export const config: Pages[] = [
       { path: '/tree-select', title: '分类导航', subTitle: 'TreeSelect', component: TreeSelectPage },
       { path: '/tabs', title: '标签页', subTitle: 'Tabs', component: TabsPage },
       { path: '/tabbar', title: '标签栏', subTitle: 'Tabbar', component: TabbarPage },
+      { path: '/navar', title: '导航栏', subTitle: 'Navbar', component: Navbar },
     ],
   },
   {
@@ -151,6 +154,7 @@ export const config: Pages[] = [
     children: [
       { path: '/sku', title: '商品规格选择 SKU', subTitle: 'Sku', component: Root },
       { path: '/price', title: '价格 ', subTitle: 'Price', component: PricePage },
+      { path: '/virtual-list', title: '虚拟列表 ', subTitle: 'Virtual List', component: VirtualListPage },
     ],
   },
 ];

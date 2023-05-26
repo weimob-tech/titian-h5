@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiImage } from '@titian-design/mobile-vue'
+import { TiImage } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -31,7 +31,7 @@ import { TiImage } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -47,7 +47,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -62,7 +62,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -74,7 +74,7 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
@@ -87,12 +87,12 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 </script>
 ```
 #### 加载中提示
-**更多可用iconName详见[TiIcon组件](./icon#图标展示)**
+**更多可用iconName详见[TiIcon组件](../icon#图标展示)**
 ```html showLineNumbers
 <template>
   <TiImage :loading-icon="iconName" :src="src" />
@@ -102,13 +102,13 @@ const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 const iconName = 'default-pic'
 </script>
 ```
 #### 加载失败提示
-**更多可用iconName详见[TiIcon组件](./icon#图标展示)**
+**更多可用iconName详见[TiIcon组件](../icon#图标展示)**
 ```html showLineNumbers
 <template>
   <TiImage :error-icon="iconName" :src="src" />
@@ -118,7 +118,7 @@ const iconName = 'default-pic'
 </template>
 
 <script lang="ts" setup>
-import { TiImage } from '@titian-design/mobile-vue';
+import { TiImage } from '{{packageWeappVue}}';
 const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
 const iconName = 'default-pic'
 </script>

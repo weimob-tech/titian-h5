@@ -1,7 +1,38 @@
+.layout-container {
+  box-sizing: border-box;
+  width: calc(100% - 56px);
+  margin: 0 28px;
+  overflow: hidden;
+
+  border-radius: 12px !important;
+}
+
 .item {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 72px;
 
-  background-color: #eee;
+  background: #fa2c19;
+
+  color: #fff;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.item-3 {
+  opacity: 0.7;
+}
+
+.item-12 {
+  opacity: 0.49;
+}
+
+.item12.index-1 {
+  opacity: 0.7;
+}
+
+.item-8.index-1 {
+  opacity: 0.49;
 }

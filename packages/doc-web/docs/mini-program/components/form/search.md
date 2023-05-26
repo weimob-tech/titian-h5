@@ -20,11 +20,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-search": "@titian-design/weapp/search/index"
+    "ti-search": "{{packageWeappName}}/search/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-search": "platform://titian-weapp/ti-search"
+    "ti-search": "platform://titian-mp/ti-search"
   }
 }
 ```
@@ -129,7 +129,7 @@ import TabsLink from '@site/src/components/tabsLink';
 | ---- | ------ | ---- | ---- |
 | --search-font-size | `28rpx` | 搜索文字字号 | - |
 | --search-out-height | `108rpx` | 搜索框整体高度 | - |
-| --search-out-background | `108rpx` | 搜索框整体背景色 | - |
+| --search-out-background | `#fff` | 搜索框整体背景色 | - |
 | --search-out-padding-v | `0rpx` | 搜索框整体垂直方向内边距 | - |
 | --search-out-padding-h | `28rpx` | 搜索框整体水平方向内边距 | - |
 | --search-inner-height | `72rpx` | 搜索框内部输入区域高度 | - |

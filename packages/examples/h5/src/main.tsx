@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { applyPolyfills, defineCustomElements } from '@titian-design/h5/loader';
 import { routes } from './router';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
@@ -19,7 +18,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-
-applyPolyfills().then(() => {
-  defineCustomElements();
-});

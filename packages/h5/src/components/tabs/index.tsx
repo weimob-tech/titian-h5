@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
-import { Component, h, Prop, Element, Event, EventEmitter, Watch, Fragment } from '@stencil/core';
-import { JSXBase, State } from '@stencil/core/internal';
-import { stringToAttrStyle, isPlainObject, addShadowRootStyle, isString } from '../common/utils';
+import { Component, h, Prop, Element, Event, EventEmitter, Watch, Fragment, State } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
+import { stringToAttrStyle, isPlainObject, addShadowRootStyle, isString, getClientWidth } from '../common/utils';
 import { join, handle } from '../common/utils/namespace';
 import { raf } from '../common/utils/raf';
 import { getChildrenSelectorName } from '../common/utils/relation';
@@ -67,7 +67,7 @@ function computedMarkLeft(...param: [number, number, string, unknown[]]) {
 
 function computedIntoView(activeIndex: number, count: number) {
   let id = activeIndex - Number.parseInt(`${count / 2}`, 10);
-  if (id < 0) {
+  if (id < 0 || !count) {
     id = 0;
   }
   if (count === 2) {
@@ -106,6 +106,10 @@ export class TiTabs {
   @Element() host: HTMLElement;
 
   @Prop() extCss = '';
+
+  @Prop() tabClass = '';
+
+  @Prop() tabTextActiveClass = '';
 
   @Prop() tabs: (string | TiTabsOption)[] = [];
 
@@ -211,6 +215,7 @@ export class TiTabs {
   }
 
   @Watch('tabWidth')
+  @Watch('gap')
   updateTabWidth() {
     let { count } = this;
     if (this.tabs.length <= count && this.autoGap) {
@@ -275,7 +280,7 @@ export class TiTabs {
 
   setTabWidth(count: number) {
     let currentCount = count;
-    const windowWidth = document.documentElement.clientWidth;
+    const windowWidth = getClientWidth();
     const dom = this.scrollBox.getBoundingClientRect();
     const scrollViewWidth = Math.min(dom.width, windowWidth) || windowWidth;
     let currentTabWidth = count > 0 ? scrollViewWidth / count : 0;
@@ -422,6 +427,8 @@ export class TiTabs {
       offsetTop,
       tabKey,
       alias,
+      tabClass,
+      tabTextActiveClass,
     } = this;
     return (
       <div class={`${join('tabs')} ${extClass}`} style={stringToAttrStyle(extStyle)} part={extClass}>
@@ -461,10 +468,15 @@ export class TiTabs {
                       { active: index === activeIndex },
                       { disabled: disabledTabs.includes(index) },
                       { gap: gap >= 0 },
-                    ])}  ${index === activeIndex ? tabActiveClass : ''}`}
-                    part={`${index === activeIndex ? tabActiveClass : ''}`}
+                    ])}  ${index === activeIndex ? tabActiveClass : ''} ${tabClass}`}
+                    part={`${index === activeIndex ? tabActiveClass : ''} ${tabClass}`}
                   >
-                    <div class={`${join('tabs-text-label')} ${tabTextClass}`} part={tabTextClass}>
+                    <div
+                      class={`${join('tabs-text-label')} ${tabTextClass} ${
+                        index === activeIndex ? tabTextActiveClass : ''
+                      }`}
+                      part={`${tabTextClass} ${index === activeIndex ? tabTextActiveClass : ''}`}
+                    >
                       {tab[alias.label || tabKey] || tab}
                     </div>
                     {typeof tab !== 'string' && (

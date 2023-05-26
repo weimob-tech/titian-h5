@@ -33,11 +33,11 @@ export class TiSkuSelector {
 
   @State() allOptions = [];
 
-  @State() disabledOptions = new Set<string>([]);
+  @State() disabledOptions = [] as string[];
 
-  @State() selectedOptions = new Set<string>([]);
+  @State() selectedOptions = [] as string[];
 
-  @State() soldoutOptions = new Set<string>([]);
+  @State() soldoutOptions = [] as string[];
 
   @State() specsViewModel = [] as any[];
 
@@ -95,7 +95,7 @@ export class TiSkuSelector {
     const { skus, value } = this;
     const defaultSku = skus.find(i => i.skuId === value);
     const selectedOptions = defaultSku?.specOptionIds || [];
-    this.selectedOptions = new Set(selectedOptions);
+    this.selectedOptions = selectedOptions;
   }
 
   @Watch('optionIds')
@@ -103,7 +103,7 @@ export class TiSkuSelector {
     const { optionIds, value } = this;
     if (!value) {
       if (Object.prototype.toString.call(optionIds) === '[object Array]' && optionIds.length > 0) {
-        this.selectedOptions = new Set(optionIds);
+        this.selectedOptions = optionIds as string[];
       }
     }
   }
@@ -111,20 +111,16 @@ export class TiSkuSelector {
   @Watch('selectedOptions')
   makeOthersOptions() {
     const { selectedOptions } = this;
-    let disabledOptions = new Set<string>();
-    if (selectedOptions.size !== 0) {
-      disabledOptions = new Set(
-        [...selectedOptions]
-          .map(i => [...(this.graph.nonConnectableEdges.get(i) || [])])
-          .reduce((a, b) => [...a, ...b], []),
-      );
+    let disabledOptions = [];
+    if (selectedOptions.length !== 0) {
+      disabledOptions = [...selectedOptions]
+        .map(i => [...(this.graph.nonConnectableEdges.get(i) || [])])
+        .reduce((a, b) => [...a, ...b], []);
     }
 
-    const soldoutOptions = new Set(
-      [...selectedOptions]
-        .map((i: any) => [...(this.graph.soldoutEdges.get(i) || [])])
-        .reduce((a, b) => [...a, ...b], []),
-    );
+    const soldoutOptions = [...selectedOptions]
+      .map((i: any) => [...(this.graph.soldoutEdges.get(i) || [])])
+      .reduce((a, b) => [...a, ...b], []);
 
     this.disabledOptions = disabledOptions;
     this.soldoutOptions = soldoutOptions;
@@ -144,9 +140,9 @@ export class TiSkuSelector {
       ...s,
       options: s.options.map((o: any) => ({
         ...o,
-        isSelected: selectedOptions.has(o.optionId),
-        isDisabled: disabledOptions.has(o.optionId),
-        isSoldout: soldoutOptions.has(o.optionId),
+        isSelected: selectedOptions.includes(o.optionId),
+        isDisabled: disabledOptions.includes(o.optionId),
+        isSoldout: soldoutOptions.includes(o.optionId),
       })),
     }));
 
@@ -157,7 +153,7 @@ export class TiSkuSelector {
     const { selectedOptions, specs } = this;
     let selectedSku = null;
 
-    if (selectedOptions.size === specs.length) {
+    if (selectedOptions.length === specs.length) {
       const key = [...selectedOptions].sort().join(',');
       const selectedSkuId = this.optionIdsToSpecIdMap.get(key) || this.value;
 
@@ -170,7 +166,7 @@ export class TiSkuSelector {
       });
     }
 
-    const options = this.allOptions.filter(x => selectedOptions.has(x.optionId));
+    const options = this.allOptions.filter(x => selectedOptions.includes(x.optionId));
 
     this.tiOptionChange.emit({
       optionIds: [...selectedOptions],
@@ -179,12 +175,12 @@ export class TiSkuSelector {
   }
 
   getSelectedSiblingOptionId(optionId: string) {
-    return [...this.graph.siblingsEdges.get(optionId)].find(x => this.selectedOptions.has(x) && x !== optionId);
+    return [...this.graph.siblingsEdges.get(optionId)].find(x => this.selectedOptions.includes(x) && x !== optionId);
   }
 
   onTapOptionHandler = event => {
     const { optionId } = event.target.dataset;
-    if (this.disabledOptions.has(optionId)) return;
+    if (this.disabledOptions.includes(optionId)) return;
     // 仅多规格会触发该事件
 
     const toBeReplacedOptionId = this.getSelectedSiblingOptionId(optionId);
@@ -193,7 +189,7 @@ export class TiSkuSelector {
     if (toBeReplacedOptionId) {
       // replace 替换
       selectedOptions = [...[...this.selectedOptions].filter(x => x !== toBeReplacedOptionId), optionId];
-    } else if (this.selectedOptions.has(optionId)) {
+    } else if (this.selectedOptions.includes(optionId)) {
       // deselect 反选
       selectedOptions = [...this.selectedOptions].filter(x => x !== optionId);
     } else {
@@ -201,7 +197,7 @@ export class TiSkuSelector {
       selectedOptions = [...this.selectedOptions, optionId];
     }
 
-    this.selectedOptions = new Set(selectedOptions);
+    this.selectedOptions = selectedOptions;
   };
 
   render() {

@@ -1,37 +1,48 @@
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 
 export default function TabsLink({ id }: { id: string }) {
-  const [activeKey, setActiveKey] = useState(0);
+  const isBrowser = useIsBrowser();
+  const [isActive, setIsActive] = useState(false);
 
   const scroll = () => {
-    const offsetTop = document.getElementById(id)?.offsetTop;
-    window.scrollTo({
-      top: activeKey ? offsetTop - 170 : 0,
-      behavior: 'smooth',
-    });
+    const offsetTop = window.pageYOffset;
+    setIsActive(offsetTop > document.getElementById(id).offsetTop - 200);
   };
 
-  useEffect(scroll, [activeKey]);
+  useEffect(() => {
+    function throttle(func, delay) {
+      let timerId;
+      return function (...args) {
+        if (!timerId) {
+          timerId = setTimeout(() => {
+            func.apply(this, args);
+            timerId = null;
+          }, delay);
+        }
+      };
+    }
+
+    window.addEventListener('scroll', throttle(scroll, 100));
+    return () => window.removeEventListener('scroll', scroll);
+  }, []);
 
   return (
     <div className={styles.tabsLink}>
       <div
-        className={!activeKey ? styles.active : ''}
-        onClick={() => setActiveKey(0)}
+        className={!isActive ? styles.active : ''}
+        onClick={() => {
+          if (isBrowser) window.location.hash = '';
+        }}
         onKeyDown={() => {}}
         role="presentation"
       >
         使用
       </div>
-      <div
-        className={activeKey ? styles.active : ''}
-        onClick={() => setActiveKey(1)}
-        onKeyDown={() => {}}
-        role="presentation"
-      >
+      <a className={isActive ? styles.active : ''} href={`#${id}`}>
         API
-      </div>
+      </a>
     </div>
   );
 }

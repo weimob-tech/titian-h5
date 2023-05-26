@@ -6,7 +6,7 @@ import { spawn } from '../utils/spawn';
 import { resolveConfig, InlineConfig } from './config';
 
 export async function exec(args$0: InlineConfig, options$0: InlineConfig | Command, command$0: Command): Promise<void> {
-  const command: Command = command$0 || options$0;
+  const command: any = command$0 || options$0;
   const options: InlineConfig = (command$0 ? options$0 : args$0) as InlineConfig;
   const commandName = command.name();
   const config = await resolveConfig(
@@ -42,6 +42,9 @@ export async function exec(args$0: InlineConfig, options$0: InlineConfig | Comma
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       logger.info(`run time is ${chalk.yellowBright(`${(performance.now() - global.__start_time).toFixed(2)}ms`)}`);
+    }
+    if (e !== 0) {
+      child.kill('SIGINT');
     }
     process.exit(e ?? 1);
   });

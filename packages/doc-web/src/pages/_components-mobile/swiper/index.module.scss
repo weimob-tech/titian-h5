@@ -1,0 +1,125 @@
+$x: 13.33vw;
+$duration: 300ms;
+
+.swiper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 84vw;
+  height: 78.6vw;
+  margin: 0 auto;
+}
+
+.swiper-item {
+  box-sizing: border-box;
+  width: 38vw;
+  height: 30.4vw;
+  padding: 1.87vw 0 0 2.13vw;
+}
+
+.img {
+  position: absolute;
+  z-index: -1;
+  width: 38vw;
+  height: 30.4vw;
+}
+
+.container {
+  &:first-child {
+    margin-left: 7.73vw;
+  }
+
+  &:nth-child(2n) {
+    margin-top: 8.8vw;
+  }
+}
+
+.name {
+  color: #212121;
+  font-size: 2.93vw;
+  font-weight: 500;
+  line-height: 4vw;
+}
+
+.line {
+  width: 5.07vw;
+  height: 0.27vw;
+  margin: 1.33vw 0;
+
+  background: #4d4d4d;
+}
+
+.job {
+  color: #9e9e9e;
+  font-size: 1.6vw;
+  line-height: 2.4vw;
+}
+
+.animation {
+  // animation-iteration-count: infinite;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+
+  animation-timing-function: cubic-bezier(0.48, 0.33, 0.24, 0.95);
+}
+
+.animation-1-fadeIn {
+  animation-name: fadeIn;
+}
+
+.animation-2-fadeIn {
+  animation-name: fadeIn;
+  animation-delay: 75ms;
+}
+
+.animation-3-fadeIn {
+  animation-name: fadeIn;
+  animation-delay: 150ms;
+}
+
+.animation-4-fadeIn {
+  animation-name: fadeIn;
+  animation-delay: 225ms;
+}
+
+.animation-1-fadeOut {
+  animation-name: fadeOut;
+}
+
+.animation-2-fadeOut {
+  animation-name: fadeOut;
+  animation-delay: 75ms;
+}
+
+.animation-3-fadeOut {
+  animation-name: fadeOut;
+  animation-delay: 150ms;
+}
+
+.animation-4-fadeOut {
+  animation-name: fadeOut;
+  animation-delay: 225ms;
+}
+@keyframes fadeIn {
+  from {
+    transform: translate3d($x, 0, 0);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-$x, 0, 0);
+
+    opacity: 0;
+  }
+}

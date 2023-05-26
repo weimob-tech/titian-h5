@@ -24,7 +24,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 #### 基础用法
 ```html showLineNumbers
-<ti-icon name="plus" size="30" color="#f60" />
+<ti-icon name="plus" size="30" color="#f60"></ti-icon>
 ```
 
 ## ti-icon API

@@ -34,6 +34,7 @@ import TabsLink from '@site/src/components/tabsLink';
 | prefix   | `string` | 否   | -      | 前缀       | -    |
 | value    | `number` | 否   | 0      | 价格       | -    |
 | suffix   | `string` | 否   | -      | 后缀       | -    |
+| radix   | `number` | 否   | 2      | 小数点精度       | -    |
 | ext-style | `string` | 否   | -      | 根节点样式 | -    |
 
 ### CSS 变量 **CSS Variables**

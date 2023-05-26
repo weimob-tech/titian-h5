@@ -2,11 +2,6 @@
   "name": "@titian-design/mobile-vue",
   "version": "0.1.1",
   "description": "titian vue h5 component with webcomponent",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/weimob-tech/titian-h5.git",
-    "directory": "packages/h5-vue"
-  },
   "license": "MIT",
   "author": "",
   "main": "./dist/index.cjs.js",
@@ -17,9 +12,9 @@
     "typings"
   ],
   "scripts": {
-    "build": "rollup -c scripts/rollup.config.ts --configPlugin typescript",
+    "build": "rollup -c scripts/rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "clean": "rimraf dist types typings",
-    "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w"
+    "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w --bundleConfigAsCjs"
   },
   "dependencies": {
     "@titian-design/h5": "workspace:0.1.1"
@@ -30,7 +25,7 @@
     "@rollup/plugin-typescript": "^8.3.2",
     "@vue/tsconfig": "^0.1.3",
     "rimraf": "^3.0.2",
-    "rollup": "^2.79.0",
+    "rollup": "^3.21.0",
     "rollup-plugin-dts": "^4.2.1",
     "tslib": "^2.4.0",
     "typescript": "^4.8.3",

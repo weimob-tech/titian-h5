@@ -8,7 +8,7 @@ import AnimationBox from '../_components/animation-box';
 import Notice from '../_components/notice';
 import styles from './page1.module.scss';
 
-function Page({ display, leaving }: { display: string; leaving: string }) {
+function Page({ display, leaving }: { display: string; leaving: boolean }) {
   const history = useHistory();
   const [showBgImg, setShowBgImg] = useState(true);
   const [qrcodeTab, setQrcodeTab] = useState('miniprogram');
@@ -41,14 +41,14 @@ function Page({ display, leaving }: { display: string; leaving: string }) {
               {qrcodeTab === 'miniprogram' && (
                 <img
                   className={clsx(styles.qrcode)}
-                  src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/titian-mp-qrcode.png"
+                  src="https://image-c.weimobwmc.com/sass-admin/59a223c13d3b49628a0130448f0e983a.jpg"
                   alt=""
                 />
               )}
               {qrcodeTab === 'h5' && (
                 <img
                   className={clsx(styles.qrcode)}
-                  src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/titian-h5-qrcode.png"
+                  src="https://image-c.weimobwmc.com/sass-admin/0b48ccec5a514ac58355a66b98ee1ebe.png"
                   alt=""
                 />
               )}
@@ -81,7 +81,7 @@ function Page({ display, leaving }: { display: string; leaving: string }) {
             <img
               width={1920}
               height={1440}
-              src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/titian-home-pg.png"
+              src="https://image-c.weimobwmc.com/sass-admin/e9dd11a5e90b4d76a244d21f5f258231.png"
               alt=""
             />
           </div>

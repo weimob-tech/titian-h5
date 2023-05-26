@@ -34,25 +34,20 @@
 
     background: transparent;
 
-    color: @neutral-color-1;
-    font-size: @T28;
-    line-height: 42px;
+    color: var(--textarea-color, @neutral-color-1);
+    font-size: var(--textarea-font-size, @T28);
+    line-height: var(--textarea-line-height, 42px);
 
     resize: none;
     -webkit-tap-highlight-color: transparent;
   }
 
-  .placeholder-class {
-    color: @neutral-color-3;
-    line-height: 42px;
-  }
-
   &-count {
-    margin-top: 12px;
+    margin-top: var(--textarea-count-gap, 12px);
 
-    color: @neutral-color-3;
-    font-size: @T24;
-    line-height: 28px;
+    color: var(--textarea-count-color, @neutral-color-3);
+    font-size: var(--textarea-count-font-size, @T24);
+    line-height: var(--textarea-count-line-height, 28px);
     text-align: right;
   }
 }

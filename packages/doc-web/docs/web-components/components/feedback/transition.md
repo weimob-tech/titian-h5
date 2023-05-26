@@ -19,43 +19,29 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-transition-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-   // 原生小程序
-  "usingComponents": {
-    "ti-transition": "@titian-design/weapp/transition/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-transition": "platform://titian-weapp/ti-transition"
-  }
-}
-```
-
-
 ## 用法示例
 
 
 <Tabs>
-  <TabItem value="wxml" label="index.wxml" >
+  <TabItem value="wxml" label="index.html" >
 
 ```html showLineNumbers
-<ti-transition
-    show="{{show}}"
-    name="fade"
-    extClass="demo-block"
->
-     <view >内容</view>
+<ti-transition id="transition" name="fade" ext-class="demo-block">
+  <div >内容</div>
 </ti-transition>
 ```
+</TabItem>
+<TabItem value="js" label="index.js">
 
+```js showLineNumbers
+const transition = document.querySelector('#transition')
+transition.show = true
+```
   </TabItem>
-  <TabItem value="wxss" label="index.wxss">
+  <TabItem value="css" label="index.css">
 
 ```css showLineNumbers
-.demo-block {
+::part(demo-block) {
   position: fixed;
   top: 100rpx;
   left: 0rpx;
@@ -105,12 +91,12 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 名称       | 参数列表 | 描述                 | 备注 |
 | ---------- | -------- | -------------------- | ---- |
-| bind:enter    | -        | 入场动画开始时触发   | -    |
-| bind:entering | -        | 入场动画进行中时触发 | -    |
-| bind:entered  | -        | 入场动画结束时触发   | -    |
-| bind:exit     | -        | 出场动画开始时触发   | -    |
-| bind:exiting  | -        | 出场动画进行中时触发 | -    |
-| bind:exited   | -        | 出场动画结束时触发   | -    |
+| enter    | -        | 入场动画开始时触发   | -    |
+| entering | -        | 入场动画进行中时触发 | -    |
+| entered  | -        | 入场动画结束时触发   | -    |
+| exit     | -        | 出场动画开始时触发   | -    |
+| exiting  | -        | 出场动画进行中时触发 | -    |
+| exited   | -        | 出场动画结束时触发   | -    |
 
 ### 插槽 **Slots**
 

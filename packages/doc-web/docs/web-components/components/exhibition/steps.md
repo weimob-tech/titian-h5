@@ -18,51 +18,37 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-steps-api" />
 
-## 安装使用
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-steps": "@titian-design/weapp/steps/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-steps": "platform://titian-weapp/ti-steps"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基础用法
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-steps options="{{ options }}" current="{{ 0 }}" />
+<ti-steps id="ti-steps"></ti-steps>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    options: [
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      },
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      }
-    ]
-  }
-})
+window.onload = function(){
+  var tiSteps = document.getElementById("ti-steps");
+  tiSteps.current = 0;
+  tiSteps.options = [
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    },
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    }
+  ];
+};
 ```
 </TabItem>
 </Tabs>
@@ -70,66 +56,66 @@ Page({
 #### 设置高亮项
 **可以设置 current 属性，也可设置每项 option 里面的 checked 字段**
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-steps options="{{ options }}" current="{{ 1 }}" />
+<ti-steps id="ti-steps"></ti-steps>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    options: [
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      },
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      }
-    ]
-  }
-})
+window.onload = function(){
+  var tiSteps = document.getElementById("ti-steps");
+  tiSteps.current = 1;
+  tiSteps.options = [
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    },
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    }
+  ];
+};
 ```
 </TabItem>
 </Tabs>
 
 #### 设置副标题右对齐
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-steps options="{{ options }}" subtitle-align="right" />
+<ti-steps id="ti-steps" subtitle-align="right"></ti-steps>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    options: [
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      },
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-      }
-    ]
-  }
-})
+window.onload = function(){
+  var tiSteps = document.getElementById("ti-steps");
+  tiSteps.current = 1;
+  tiSteps.options = [
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    },
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+    }
+  ];
+};
 ```
 </TabItem>
 </Tabs>
@@ -137,31 +123,30 @@ Page({
 #### 自定义样式
 **自定义每一项的样式，可以设置每项option里面的style字段，[查看可用css变量](#css-变量-css-variable)**
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-steps options="{{ options }}" />
+<ti-steps id="ti-steps"></ti-steps>
 ```
 </TabItem>
-<TabItem value="js" label="index.js" default>
+<TabItem value="index.js" label="index.js" default>
 
 ```js showLineNumbers
-Page({
-  data: {
-    options: [
-      {
-        title: "标题文字",
-        subtitle: "副标题",
-        description: "详细内容文字，详细内容文字，详细内容文字",
-        time: "2018.07.06 09:52:42",
-        style: {
-          '--steps-title-font-size': '12px',
-          '--steps-desc-color': 'red',
-        }
+window.onload = function(){
+  var tiSteps = document.getElementById("ti-steps");
+  tiSteps.options = [
+    {
+      title: "标题文字",
+      subtitle: "副标题",
+      description: "详细内容文字，详细内容文字，详细内容文字",
+      time: "2018.07.06 09:52:42",
+      style: {
+        '--steps-title-font-size': '12px',
+        '--steps-desc-color': 'red',
       }
-    ]
-  }
-})
+    }
+  ]
+};
 ```
 </TabItem>
 </Tabs>

@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiImage } from '@titian-design/mobile-react'
+import { TiImage } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -92,7 +92,7 @@ const App: React.FC = () => {
 }
 ```
 #### 加载中提示
-**更多可用iconName详见[TiIcon组件](./icon#图标展示)**
+**更多可用iconName详见[TiIcon组件](../icon#图标展示)**
 ```typescript tsx showLineNumbers
 const App: React.FC = () => {
   const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'
@@ -108,7 +108,7 @@ const App: React.FC = () => {
 }
 ```
 #### 加载失败提示
-**更多可用iconName详见[TiIcon组件](./icon#图标展示)**
+**更多可用iconName详见[TiIcon组件](../icon#图标展示)**
 ```typescript tsx showLineNumbers
 const App: React.FC = () => {
   const src = 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png'

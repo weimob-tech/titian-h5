@@ -174,6 +174,7 @@ export class TiButton implements BasicComponentAbstract {
   }
 
   onClick = e => {
+    if (window.Titian?.bubbles === true) return;
     if (this.disabled || this.loading) {
       e.stopPropagation();
     }

@@ -16,26 +16,11 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-loading-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-loading": "@titian-design/weapp/loading/index"
-  },
-
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-loading": "platform://titian-weapp/ti-loading"
-  }
-}
-```
 ## 用法示例
 #### 基本使用
 
 ```html showLineNumbers
-<ti-loading />
+<ti-loading></ti-loading>
 ```
 
 #### 自定义展示模式
@@ -43,25 +28,25 @@ import TabsLink from '@site/src/components/tabsLink';
 ** `loading` 支持 `circular` 和 `spinner` 两种模式 **
 
 ```html showLineNumbers
-<ti-loading mode="circular" />
-<ti-loading mode="spinner" />
+<ti-loading mode="circular"></ti-loading>
+<ti-loading mode="spinner"></ti-loading>
 ```
 
 #### 自定义加载颜色, 尺寸
 ```html showLineNumbers
-<ti-loading color="#ff0000" mode="circular" />
-<ti-loading color="#ff0000" mode="spinner" />
-<ti-loading mode="circular" size="{{108}}" />
-<ti-loading mode="spinner" size="{{108}}" />
+<ti-loading color="#ff0000" mode="circular" ></ti-loading>
+<ti-loading color="#ff0000" mode="spinner" ></ti-loading>
+<ti-loading mode="circular" size="108" ></ti-loading>
+<ti-loading mode="spinner" size="108" ></ti-loading>
 ```
 
 #### 添加文字
 
 ```html showLineNumbers
-<ti-loading mode="circular" text="loading..." />
-<ti-loading mode="spinner" text="loading..." />
-<ti-loading color="#ff0000" mode="circular" text="loading..." />
-<ti-loading color="#ff0000" mode="spinner" text="loading..." />
+<ti-loading mode="circular" text="loading..."></ti-loading>
+<ti-loading mode="spinner" text="loading..."></ti-loading>
+<ti-loading color="#ff0000" mode="circular" text="loading..."></ti-loading>
+<ti-loading color="#ff0000" mode="spinner" text="loading..."></ti-loading>
 ```
 
 ## ti-loading API

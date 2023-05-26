@@ -19,109 +19,49 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-back-top-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-back-top": "@titian-design/weapp/back-top/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-back-top": "platform://titian-weapp/ti-back-top"
-  }
-}
-```
-
 ## 基本用法
 
 #### 简单使用
 
-<Tabs>
-<TabItem value="html" label="index.wxml">
-
 ```html showLineNumbers
-<view style="height: 200vh" />
-<ti-back-top />
+<div style="height: 200vh" ></div>
+<ti-back-top></ti-back-top>
 ```
-
-</TabItem>
-<TabItem value="js" label="index.js">
-
-```javascript showLineNumbers
-Page({
-  onPageScroll() {},
-});
-```
-
-</TabItem>
-</Tabs>
 
 #### 使用时展示回到顶部文字
 
-<Tabs>
-<TabItem value="html" label="index.wxml">
-
 ```html showLineNumbers
-<view style="height: 200vh" />
-<ti-back-top text="顶部" />
+<div style="height: 200vh"></div>
+<ti-back-top text="顶部"></ti-back-top>
 ```
-
-</TabItem>
-<TabItem value="js" label="index.js">
-
-```javascript showLineNumbers
-Page({
-  onPageScroll() {},
-});
-```
-
-</TabItem>
-</Tabs>
 
 #### 设置滚动时长
 
-<Tabs>
-<TabItem value="html" label="index.wxml">
-
 ```html showLineNumbers
-<view style="height: 200vh" />
-<ti-back-top duration="{{500}}" />
+<div style="height: 200vh"></div>
+<ti-back-top duration="500"></div>
 ```
-
-</TabItem>
-<TabItem value="js" label="index.js">
-
-```javascript showLineNumbers
-Page({
-  onPageScroll() {},
-});
-```
-
-</TabItem>
-</Tabs>
 
 #### 绑定点击事件
 
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<view style="height: 200vh" />
-<ti-back-top bind:tap="handleClick" />
+<div style="height: 200vh"></div>
+<ti-back-top id="ti-back-top"></ti-back-top>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```javascript showLineNumbers
-Page({
-  onPageScroll() {},
-  handleClick() {
-    console.log('点击效果')
-  },
-});
+window.onload = function(){
+  var tiActionSheet = document.querySelector("#ti-back-top");
+  tiBackTop.addEventListener('click', function (e) {
+    console.log(e.detail);
+  });
+} 
 ```
 
 </TabItem>
@@ -143,7 +83,7 @@ Page({
 
 | 名称  | 参数 | 说明               | 备注 |
 | ----- | ---- | ------------------ | ---- |
-| `bind:tap` | -    | 点击后的回调函数 | -    |
+| click | -    | 点击后的回调函数 | -    |
 
 ### 可扩展样式名 **External Class**
 

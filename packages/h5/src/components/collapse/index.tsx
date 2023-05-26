@@ -21,7 +21,7 @@ export class TiCollapse {
 
   @Prop() extOptionStyle?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
 
-  @Prop() value?: unknown;
+  @Prop() value?: string | number | Array<string | number>;
 
   @Prop() options: (OmitType<Components.TiCollapseItem, (...args: any) => any> & { content: string })[] | string = [];
 
@@ -137,6 +137,7 @@ export class TiCollapse {
       value = ((this.selectValue || []) as []).filter((activeName: string | number) => activeName !== name);
     }
 
+    value = Array.isArray(value) ? value.filter(i => i !== undefined && i !== null) : value;
     this.selectValue = value;
     this.updateChildren();
     if (status) {

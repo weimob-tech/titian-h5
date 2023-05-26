@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCalendar } from '@titian-design/mobile-react';
+import { TiCalendar } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例
@@ -169,6 +169,8 @@ const App: React.FC = () => {
 | round          | `boolean`                                          | 否   | false           | 圆角模式                                                                            | -                                             |
 | title          | `string`                                           | 否   | '选择日期'      | 标题                                                                                | -                                             |
 | formatter      | `(date: CalRenderDateProps) => CalRenderDateProps` | 否   | null            | 格式化日历函数，参数类型 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) | -                                             |
+| maskZIndex           | `number`  | 否   | 10000    | 遮罩 z-index 层级                                                                                    | -    |
+| contentZIndex        | `number`  | 否   | 10001    | 内容 z-index 层级                                                                                    | -    |
 | extStyle       | `string`                                           | 否   | ''              | 容器样式                                                                            | -                                             |
 | teleport       | `Element`                                          | 否   | document.body   | DOM 挂载节点                                                                        | -                                             |
 

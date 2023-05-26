@@ -26,6 +26,8 @@ export class TiToast {
 
   @Prop() extCss = '';
 
+  @Prop() extTextClass = '';
+
   @Prop() zIndex = 30000;
 
   @Prop() extStyle?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
@@ -163,11 +165,13 @@ export class TiToast {
   };
 
   renderChild() {
-    const { type, extStyle, color, iconName, text } = this;
+    const { type, extStyle, color, iconName, text, extTextClass } = this;
     if (type === EToastType.Text) {
       return (
         <div class={join('toast-content', ['with-text'])} style={stringToAttrStyle(extStyle)}>
-          <div class={join('toast-text')}>{text}</div>
+          <div class={`${join('toast-text')} ${extTextClass}`} part={extTextClass}>
+            {text}
+          </div>
         </div>
       );
     }
@@ -176,14 +180,18 @@ export class TiToast {
         <div class={join('toast-content', ['with-icon'])} style={stringToAttrStyle(extStyle)}>
           <ti-loading size={48} />
           <ti-icon size={48} name={iconName} color={color} ext-class={join('toast-icon')} />
-          <div class={join('toast-text')}>{text}</div>
+          <div class={`${join('toast-text')} ${extTextClass}`} part={extTextClass}>
+            {text}
+          </div>
         </div>
       );
     }
     return (
       <div class={join('toast-content', ['with-icon'])} style={stringToAttrStyle(extStyle)}>
         <ti-icon size={48} name={iconName} color={color} ext-class={join('toast-icon')} />
-        <div class={join('toast-text')}>{text}</div>
+        <div class={`${join('toast-text')} ${extTextClass}`} part={extTextClass}>
+          {text}
+        </div>
       </div>
     );
   }

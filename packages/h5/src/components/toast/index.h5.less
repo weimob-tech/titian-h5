@@ -63,16 +63,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: @toast-status-width;
-    height: @toast-status-height;
+    padding: var(--toast-content-padding, 16px 36px);
 
     .@{toast}-text {
-      max-width: 100%;
+      max-width: var(--toast-text-max-width, 160px);
       margin-top: @toast-status-gap;
 
-      font-size: @T24;
-      line-height: @line-height;
-      .ellipsis();
+      font-size: var(--toast-text-font-size, @T24);
+      line-height: var(--toast-text-line-height, 36px);
     }
   }
 }

@@ -25,15 +25,15 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-radio": "@titian-design/weapp/radio/index",
-    "ti-radio-button": "@titian-design/weapp/radio-button/index",
-    "ti-radio-group": "@titian-design/weapp/radio-group/index"
+    "ti-radio": "{{packageWeappName}}/radio/index",
+    "ti-radio-button": "{{packageWeappName}}/radio-button/index",
+    "ti-radio-group": "{{packageWeappName}}/radio-group/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-radio": "platform://titian-weapp/ti-radio",
-    "ti-radio-button": "platform://titian-weapp/ti-radio-button",
-    "ti-radio-group": "platform://titian-weapp/ti-radio-group"
+    "ti-radio": "platform://titian-mp/ti-radio",
+    "ti-radio-button": "platform://titian-mp/ti-radio-button",
+    "ti-radio-group": "platform://titian-mp/ti-radio-group"
   }
 }
 ```

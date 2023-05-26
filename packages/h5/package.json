@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "main": "dist/index.cjs.js",
-  "unpkg": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.min.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
@@ -23,7 +23,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "stencil build && rollup -c scripts/rollup.config.ts --configPlugin typescript",
+    "build": "stencil build && rollup -c scripts/rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "generate": "stencil generate",
     "prepublish": "npm run build",
     "start": "stencil build --watch --debug",
@@ -33,7 +33,7 @@
     "test:spec:watch": "cross-env NODE_ENV=test stencil test --spec --watchAll --coverage"
   },
   "dependencies": {
-    "@stencil/core": "^2.20.0",
+    "@stencil/core": "3.1.0",
     "@stencil/store": "^2.0.1"
   },
   "devDependencies": {
@@ -59,6 +59,6 @@
     "puppeteer": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "rollup": "^2.72.0"
+    "rollup": "^3.21.0"
   }
 }

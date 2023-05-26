@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiUploader } from '@titian-design/mobile-vue'
+import { TiUploader } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -38,9 +38,10 @@ import { TiUploader } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiUploader } from '@titian-design/mobile-vue';
+import { TiUploader } from '{{packageWeappVue}}';
 </script>
 ```
+
 #### 自定义参数
 
 自定义header
@@ -102,7 +103,7 @@ const change = (file, fileList) => {
 </template>
 
 <script lang="ts" setup>
-import { TiUploader } from '@titian-design/mobile-vue';
+import { TiUploader } from '{{packageWeappVue}}';
 
 const beforeUpload = (event: any) => {
   console.log("beforeUpload", event);
@@ -115,42 +116,86 @@ const doSubmit = (event: any) => {
 </script>
 ```
 
+#### 自定义上传, 仅使用组件样式
+
+```html showLineNumbers
+<template>
+  <TiUploader
+    :value="fileList"
+    :after-choose="afterChoose"
+    :immediately="false"
+    @change="onChange"
+     />
+</template>
+
+<script lang="ts" setup>
+import { TiUploader } from '{{packageWeappVue}}';
+import { ref } from 'vue';
+
+const fileList = ref([
+  {
+    path: 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png',
+    fileType: 'image',
+    status: 'done',
+  },
+])
+const afterChoose = (selectedList, existsList) => {
+  // 上传之前你可以根据需求，比如size，来过滤selectedList
+  YOUR_UPLOAD().then(() => {
+    // 在你的上传回调里设置fileList，主要设置路径path，和状态status => 成功: done，失败：fail，上传中：'upload'
+    fileList.value = [
+      ...existsList,
+      ...selectedList.map(el => ({
+        ...el,
+        path: 'https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png',
+        status: 'done', // 上传失败的话 这里设置  fail
+      })),
+    ]
+  });
+  // 这里return出去的是走后续上传的文件
+  return selectedList.map(el => ({ ...el, status: 'upload' }));
+};
+const onChange = e => {
+  fileList.value = e.detail.fileList
+};
+</script>
+```
 
 ## TiUploader API
 
 ### 属性 **Properties**
 
-| 名称                | 类型                                         | 是否必填 | 默认值              | 说明                                                                                       | 备注 |
-| ------------------- | -------------------------------------------- | -------- | ------------------- | ------------------------------------------------------------------------------------------ | ---- |
-| value               | `unknown`                                    | 否       | -                   | 使用 value，组件为受控模式                                                                 | -    |
-| default-value       | `UploadFileParams[]`                         | 否       | []                  | 使用 defaultValue ，组件为非受控模式                                                       |      |
-| disabled            | `boolean`                                    | 否       | false               | 禁用交互能力                                                                               |      |
-| immediately         | `boolean`                                    | 否       | true                | 是否立刻上传                                                                               | -    |
-| immediately-choose  | `boolean`                                    | 否       | true                | 点击后立即选择                                                                             | -    |
-| size                | `small`                           \| `large` | 否       | small               | 组件尺寸                                                                                   | -    |
-| choose-text         | `string`                                     | 否       |                     | 选择器文案                                                                                 | -    |
-| choose-icon         | `string`                                     | 否       | plus                | 选择器 icon                                                                                | -    |
-| source-type         | `array`                                      | 否       | ['album', 'camera'] | 选择图片的来源                                                                             | -    |
-| camera              | `back` \| `front`                            | 否       | back                | 仅在 sourceType 为 camera 时生效，使用前置或后置摄像头                                     | -    |
-| count               | `number`                                     | 否       | 9                   | 选择文件/图片/视频的数量                                                                   | -    |
-| url                 | `string`                                     | 否       | -                   | 上传地址                                                                                   | -    |
-| preview             | `Function`                                   | 否       |                     | 自定义预览组件。默认使用内置的预览工具                                                     | -    |
-| choose              | `Function`                                   | 否       |                     | 选择函数                                                                                   | -    |
-| before-choose       | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
-| after-choose        | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           | -    |
-| before-upload       | `Function`                                   | 否       |                     | - 上传前置方法 可用用于处理上传参数                                                        | -    |
-| upload              | `Function`                                   | 否       |                     | 自定义上传方法，不传则使用内置的上传方法                                                   | -    |
-| complete            | `Function`                                   | 否       |                     | 上传完成/删除完成后调用                                                                    | -    |
-| after-upload        | `Function`                                   | 否       |                     | 上传后置方法，后置处理返回结果                                                             | -    |
-| upload-exercise     | '' \| `loading` \| `progress`                | 否       | loading             | 上传中展示风格                                                                             | -    |
+| 名称               | 类型                                         | 是否必填 | 默认值              | 说明                                                                                       | 备注 |
+| ------------------ | -------------------------------------------- | -------- | ------------------- | ------------------------------------------------------------------------------------------ | ---- |
+| value              | `unknown`                                    | 否       | -                   | 使用 value，组件为受控模式                                                                 | -    |
+| default-value      | `UploadFileParams[]`                         | 否       | []                  | 使用 defaultValue ，组件为非受控模式                                                       |      |
+| disabled           | `boolean`                                    | 否       | false               | 禁用交互能力                                                                               |      |
+| immediately        | `boolean`                                    | 否       | true                | 是否立刻上传                                                                               | -    |
+| immediately-choose | `boolean`                                    | 否       | true                | 点击后立即选择                                                                             | -    |
+| size               | `small`                           \| `large` | 否       | small               | 组件尺寸                                                                                   | -    |
+| choose-text        | `string`                                     | 否       |                     | 选择器文案                                                                                 | -    |
+| choose-icon        | `string`                                     | 否       | plus                | 选择器 icon                                                                                | -    |
+| source-type        | `array`                                      | 否       | ['album', 'camera'] | 选择图片的来源                                                                             | -    |
+| camera             | `back` \| `front`                            | 否       | back                | 仅在 sourceType 为 camera 时生效，使用前置或后置摄像头                                     | -    |
+| count              | `number`                                     | 否       | 9                   | 选择文件/图片/视频的数量                                                                   | -    |
+| url                | `string`                                     | 否       | -                   | 上传地址                                                                                   | -    |
+| preview            | `Function`                                   | 否       |                     | 自定义预览组件。默认使用内置的预览工具                                                     | -    |
+| choose             | `Function`                                   | 否       |                     | 选择函数                                                                                   | -    |
+| before-choose      | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
+| after-choose       | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           |
+| before-upload      | `Function`                                   | 否       |                     | - 上传前置方法 可用用于处理上传参数                                                        | -    |
+| upload             | `Function`                                   | 否       |                     | 自定义上传方法，不传则使用内置的上传方法                                                   | -    |
+| complete           | `Function`                                   | 否       |                     | 上传完成/删除完成后调用                                                                    | -    |
+| after-upload       | `Function`                                   | 否       |                     | 上传后置方法，后置处理返回结果                                                             | -    |
+| upload-exercise    | '' \| `loading` \| `progress`                | 否       | loading             | 上传中展示风格                                                                             | -    |
 | image-params        | `Record<string, any>`                        | 否       | {}                  | 上传图片参数；当不传自定义 `beforeUpload` 方法时，可以传该参数作为内部 beforeUpload 的参数 | -    |
 | video-params        | `Record<string, any>`                        | 否       | {}                  | 上传视频参数；当不传自定义 `beforeUpload` 方法时，可以传该参数作为内部 beforeUpload 的参数 | -    |
 | file-params         | `Record<string, any>`                        | 否       | {}                  | 上传文件参数；当不传自定义 `beforeUpload` 方法时，可以传该参数作为内部 beforeUpload 的参数 | -    |
-| image-result-format | <code>(string \| number)[]</code>            | 否       | []                  | 图片参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
-| video-result-format | <code>(string \| number)[]</code>            | 否       | []                  | 视频参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
-| file-result-format  | <code>(string \| number)[]</code>            | 否       | []                  | 文件参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
-| accept              | `string`                                     | 否       | */*                 | http 的 accept 参数，指定文件类型                                                          | -    |
-| ext-style           | `string`                                     | 否       | ''                  | 容器样式                                                                                   | -    |
+| image-result-format  | <code>(string \| number)[]</code>            | 否       | []                  | 图片参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
+| video-result-format  | <code>(string \| number)[]</code>            | 否       | []                  | 视频参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
+| file-result-format   | <code>(string \| number)[]</code>            | 否       | []                  | 文件参数；当不传自定义 `afterUpload` 方法时，可以传该参数作为内部 afterUpload 的参数       | -    |
+| accept             | `string`                                     | 否       | */*                 | http 的 accept 参数，指定文件类型                                                          | -    |
+| ext-style          | `string`                                     | 否       | ''                  | 容器样式                                                                                   | -    |
 
 
 

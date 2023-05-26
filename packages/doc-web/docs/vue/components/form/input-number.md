@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiInputNumber } from '@titian-design/mobile-vue'
+import { TiInputNumber } from '{{packageWeappVue}}'
 ```
 ## 用法示例
 
@@ -28,7 +28,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 #### 步进器尺寸
@@ -39,7 +39,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 #### 步进器风格
@@ -51,7 +51,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -62,7 +62,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 #### 步进器步长
@@ -72,7 +72,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -86,7 +86,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 #### 边框
@@ -97,7 +97,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 #### 收起状态
@@ -107,7 +107,7 @@ import { TiInputNumber } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInputNumber } from '@titian-design/mobile-vue';
+import { TiInputNumber } from '{{packageWeappVue}}';
 </script>
 ```
 ## TiInputNumber API

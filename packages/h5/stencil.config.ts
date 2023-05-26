@@ -6,6 +6,7 @@ import { reactOutputTarget as react } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 import autoprefixer from 'autoprefixer';
 import fs from 'fs-extra';
+
 // @ts-ignore
 import pxToViewport from 'postcss-px-to-viewport';
 // @ts-ignore
@@ -23,7 +24,7 @@ function copyFiles(from: string, to: string) {
 }
 
 export const config: Config = {
-  namespace: 'titian-design',
+  namespace: 'titian-h5',
   outputTargets: [
     react({
       componentCorePackage: '@titian-design/h5',
@@ -41,7 +42,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      autoDefineCustomElements: true,
+      customElementsExportBehavior: 'bundle',
       dir: 'dist-custom-elements',
     },
   ],
@@ -71,6 +72,12 @@ export const config: Config = {
     }),
     copyFiles('src/global/locale', 'locale'),
   ],
+  // buildEs5: 'prod',
+  // rollupConfig: {
+  //   inputOptions: {
+  //     treeshake: true,
+  //   },
+  // },
   extras: {
     experimentalImportInjection: true,
   },

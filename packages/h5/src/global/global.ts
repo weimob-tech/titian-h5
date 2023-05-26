@@ -4,7 +4,9 @@ import { Mode } from '../interface';
 // packages/h5/src/components/common/utils/platform.ts
 
 let defaultMode: Mode = 'h5';
-
+if (typeof window !== 'undefined') {
+  defaultMode = window.Titian?.mode || 'h5';
+}
 export const getTitianMode = (ref?: any): Mode => (ref && getMode(ref)) || defaultMode;
 
 // declare const Context: any;
