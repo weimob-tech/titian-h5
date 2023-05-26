@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiDivider } from '@titian-design/mobile-vue'
+import { TiDivider } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiDivider } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -45,7 +45,7 @@ import { TiDivider } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -59,7 +59,7 @@ import { TiDivider } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -78,7 +78,7 @@ import { TiDivider } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -90,7 +90,7 @@ import { TiDivider } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -103,7 +103,7 @@ import { TiDivider } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiDivider } from '@titian-design/mobile-vue';
+import { TiDivider } from '{{packageWeappVue}}';
 </script>
 ```
 ## TiDivider API

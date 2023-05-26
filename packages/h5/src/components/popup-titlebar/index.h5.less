@@ -7,42 +7,31 @@
 :host {
   display: contents;
 }
+
 .@{popuptitle} {
-  &-cancel {
-    color: @popup-title-bar-cancel-color;
+  &-cancel-only {
+    --title-bar-left-btn-color: @popup-title-bar-cancel-color;
   }
 
-  &-confirm {
-    color: @popup-title-bar-confirm-color;
+  &-with-confirm {
+    --title-bar-right-btn-color: @popup-title-bar-confirm-color;
   }
 
-  &-back {
+  &-back-title-cancel {
     --protected-icon-color: @popup-title-bar-back-color;
   }
 
-  &-close,
   &-mini-close {
     --protected-icon-color: @popup-title-bar-cancel-color;
+    --title-bar-right-btn-align: left;
+    --title-bar-width: 64px;
+    --title-bar-height: 108px;
+    --title-bar-right-btn-margin: 0 0 0 auto;
+    --title-bar-right-btn-padding: 0 0 0 8px;
+    --title-bar-float: right;
   }
 
-  &-mini-close {
-    display: flex;
-    position: absolute;
-    right: 0;
-    align-items: center;
-    justify-content: left;
-    width: 72px;
-    height: 108px;
-    padding: 0;
-
-    text-align: left;
-  }
-
-  &-mini-close-icon {
-    padding: 8px;
-  }
-
-  &-space-between {
-    text-align: left;
+  &-left-title-close {
+    --title-bar-title-align: left;
   }
 }

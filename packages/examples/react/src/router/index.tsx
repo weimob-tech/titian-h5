@@ -62,6 +62,8 @@ import Price from '../pages/price';
 import Cascade from '../pages/cascade';
 import { SwiperPage } from '../pages/swiper';
 import { PreviewPage } from '../pages/preview';
+import { VirtualListPage } from '../pages/virtual-list';
+import Navbar from '../pages/navbar';
 
 interface page {
   path: string;
@@ -113,7 +115,7 @@ export const config: Pages[] = [
       { path: '/picker', title: '选择器', subTitle: 'Picker', element: <Picker /> },
       { path: '/datetime-picker', title: '时间选择', subTitle: 'Datetime-picker', element: <DatetimePicker /> },
       { path: '/calendar', title: '日历', subTitle: 'Calendar', element: <Calendar /> },
-      { path: '/cascade', title: '选择器', subTitle: 'cascade', element: <Cascade /> },
+      { path: '/cascade', title: '级联组件', subTitle: 'cascade', element: <Cascade /> },
     ],
   },
   {
@@ -155,6 +157,7 @@ export const config: Pages[] = [
       { path: '/tree-select', title: '分类导航', subTitle: 'TreeSelect', element: <TreeSelect /> },
       { path: '/tabs', title: '标签页', subTitle: 'Tabs', element: <Tabs /> },
       { path: '/tabbar', title: '标签栏', subTitle: 'Tabbar', element: <Tabbar /> },
+      { path: '/navbar', title: '导航栏', subTitle: 'Navbar', element: <Navbar /> },
     ],
   },
   {
@@ -162,6 +165,7 @@ export const config: Pages[] = [
     children: [
       { path: '/sku', title: '商品规格选择 SKU', subTitle: 'Sku', element: <Sku /> },
       { path: '/price', title: '价格 ', subTitle: 'Price', element: <Price /> },
+      { path: '/virtual-list', title: '虚拟列表 ', subTitle: 'Virtual List', element: <VirtualListPage /> },
       { path: '/icon-list', title: '图标列表 ', subTitle: 'IconList', element: <IconListPage />, skipDisplay: true },
     ],
   },

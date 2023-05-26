@@ -23,7 +23,7 @@ export default function DocItemSideIframe() {
 
   return (
     <div className={clsx(styles.iframeBox)}>
-      {isMiniApp && <Bar />}
+      {isMiniApp && !iframeUrl.includes('navbar') && <Bar />}
       <iframe
         title="navigation"
         className={`${clsx(styles.iframe)} ${isMiniApp ? '' : clsx(styles.radius12)}`}

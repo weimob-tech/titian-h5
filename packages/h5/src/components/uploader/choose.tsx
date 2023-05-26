@@ -60,6 +60,8 @@ export class TiUploader {
 
   @Prop() extClass?: string = '';
 
+  @Prop() cols?: number;
+
   @Event({ eventName: 'change', bubbles: false, composed: false }) changeEvent!: EventEmitter<UploadFileExternal[]>;
 
   @Event({ eventName: 'choose', bubbles: false, composed: false }) chooseEvent!: EventEmitter;
@@ -68,6 +70,8 @@ export class TiUploader {
     status: string;
     message: string;
   }>;
+
+  @Event({ bubbles: false, composed: false }) clickPlus!: EventEmitter;
 
   inputRef!: HTMLInputElement;
 
@@ -116,6 +120,7 @@ export class TiUploader {
 
   @Method()
   async onSelect(event?: MouseEvent) {
+    this.clickInput();
     const { immediatelyChoose = defaultProps.immediatelyChoose, choose, fileKeyList, fileMap } = this;
     if (!immediatelyChoose && event && event.type === 'click') {
       this.chooseEvent.emit();
@@ -131,6 +136,10 @@ export class TiUploader {
     this.inputRef?.click();
   }
 
+  private clickInput = () => {
+    this.clickPlus.emit();
+  };
+
   renderFile() {
     const {
       accept = defaultProps.accept,
@@ -140,6 +149,7 @@ export class TiUploader {
       fileKeyList,
       fileMap,
       disabled,
+      clickInput,
     } = this;
     // eslint-disable-next-line no-nested-ternary
     const capture = sourceType.every(item => item === 'camera')
@@ -175,6 +185,7 @@ export class TiUploader {
           multiple
           accept={params.accept || accept}
           capture={params.capture || capture}
+          onClick={clickInput}
         />
       </form>
     );
@@ -188,14 +199,25 @@ export class TiUploader {
       pure,
       choose,
       extClass = '',
+      cols,
     } = this;
+    let iconSize = size === 'large' ? 40 : 30;
+    let textSizeName = null;
+    if (cols > 4) {
+      iconSize = 40;
+      textSizeName = 'small';
+    } else if (cols === 4) {
+      iconSize = 44;
+      textSizeName = 'middle';
+    } else if (cols > 0) {
+      iconSize = 48;
+      textSizeName = 'big';
+    }
     if (typeof choose === 'function') {
       return (
         <div class={join('choose', [size])} onClick={this.onSelect.bind(this)} aria-hidden="true" part={extClass}>
-          {chooseIcon && (
-            <ti-icon name={chooseIcon} size={size === 'large' ? 40 : 30} ext-class={handle('choose', ['icon'])} />
-          )}
-          {chooseText && <text class={handle('choose', ['text'])}>{chooseText}</text>}
+          {chooseIcon && <ti-icon name={chooseIcon} size={iconSize} ext-class={handle('choose', ['icon'])} />}
+          {chooseText && <text class={join('choose-text', [textSizeName])}>{chooseText}</text>}
         </div>
       );
     }
@@ -203,12 +225,12 @@ export class TiUploader {
       return this.renderFile();
     }
     return (
-      <div class={join('choose', [size])}>
-        {chooseIcon && (
-          <ti-icon name={chooseIcon} size={size === 'large' ? 40 : 30} ext-class={handle('choose', ['icon'])} />
-        )}
-        {chooseText && <text class={handle('choose', ['text'])}>{chooseText}</text>}
-        {this.renderFile()}
+      <div class={join('choose', [size, cols ? 'cols' : ''])}>
+        <div class={join('choose', ['box'])}>
+          {chooseIcon && <ti-icon name={chooseIcon} size={iconSize} ext-class={handle('choose', ['icon'])} />}
+          {chooseText && <text class={join('choose-text', [textSizeName])}>{chooseText}</text>}
+          {this.renderFile()}
+        </div>
       </div>
     );
   }

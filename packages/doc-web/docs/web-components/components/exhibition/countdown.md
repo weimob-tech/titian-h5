@@ -18,110 +18,91 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-countdown-api" />
 
-## 安装使用
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-countdown": "@titian-design/weapp/countdown/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-countdown": "platform://titian-weapp/ti-countdown"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基础用法
 ```html showLineNumbers
-<ti-countdown autoplay time="{{time}}" />
+<ti-countdown autoplay></ti-countdown>
 ```
 #### 格式化时间
 ```html showLineNumbers
-<ti-countdown format="HH:mm:ss SSS" />
-<ti-countdown format="DD天HH时mm分ss SSS" />
-<ti-countdown format="D天H时m分s SSS" />
+<ti-countdown format="HH:mm:ss SSS"></ti-countdown>
+<ti-countdown format="DD天HH时mm分ss SSS"></ti-countdown>
+<ti-countdown format="D天H时m分s SSS"></ti-countdown>
 ```
 
 #### 风格
 ```html showLineNumbers
-<ti-countdown variant="pure" format="DD天HH:mm:ss SSS" />
-<ti-countdown variant="block" format="DD天HH时mm分ss SSS" />
-<ti-countdown variant="mixture" format="D天H时m分s SSS" />
+<ti-countdown variant="pure" format="DD天HH:mm:ss SSS"></ti-countdown>
+<ti-countdown variant="block" format="DD天HH时mm分ss SSS"></ti-countdown>
+<ti-countdown variant="mixture" format="D天H时m分s SSS"></ti-countdown>
 ```
 
 #### 尺寸
 **在variant设为`block`或者`mixture`下生效，对应块状尺寸分别为`32px` `40px` `44px` `48px`**
 ```html showLineNumbers
-<ti-countdown variant="block" size="small" />
-<ti-countdown variant="block" size="medium" />
-<ti-countdown variant="block" size="big" />
-<ti-countdown variant="block" size="large" />
-
+<ti-countdown variant="block" size="small"></ti-countdown>
+<ti-countdown variant="block" size="medium"></ti-countdown>
+<ti-countdown variant="block" size="big"></ti-countdown>
+<ti-countdown variant="block" size="large"></ti-countdown>
 ```
 
 #### 启动、暂停、重置
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-countdown class="countdown" />
+<ti-countdown id="ti-countdown"></ti-countdown>
 ```
 </TabItem>
-<TabItem value="js" label="index.js" default>
+<TabItem value="index.js" label="index.js" default>
 
 ```js showLineNumbers
-Page({
-  onStart() {
-    const countDown = this.selectComponent('.control-count-down');
-    countDown.start();
-  },
-  onPause() {
-    const countDown = this.selectComponent('.control-count-down');
-    countDown.pause();
-  },
-  onReset() {
-    const countDown = this.selectComponent('.control-count-down');
-    countDown.reset();
-  }
-})
+function onStart() {
+  const countDown = document.getElementById('ti-countdown');
+  countDown.start();
+};
+function onPause() {
+  const countDown = document.getElementById('ti-countdown');
+  countDown.pause();
+};
+function onReset() {
+  const countDown = document.getElementById('ti-countdown');
+  countDown.reset();
+};
 ```
 </TabItem>
 </Tabs>
 
 #### 自定义内容
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-countdown time="118888666" use-slot bind:change="onChange">
-  <div class="time">{{time.day}}</div>
+<ti-countdown time="118888666" use-slot onchange="onChange(event)">
+  <div id="day">0</div>
   <div class="tag">天</div>
-  <div class="time">{{time.hour}}</div>
-  <div class="tag"><ti-icon size="{{24}}" name="colon" /></div>
-  <div class="time">{{time.minute}}</div>
-  <div class="tag"><ti-icon size="{{24}}" name="colon" /></div>
-  <div class="time">{{time.second}}</div>
-  <div class="tag"><ti-icon size="{{24}}" name="colon" /></div>
-  <div class="time">{{time.millisecond}}</div>
+  <div id="hour">0</div>
+  <div class="tag"><ti-icon size="24" name="colon"></ti-icon></div>
+  <div id="minute">0</div>
+  <div class="tag"><ti-icon size="24" name="colon"></ti-icon></div>
+  <div id="second">0</div>
 </ti-countdown>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    time: {},
-  },
-  onChange(event) {
-    this.setData({
-      time: event.detail
-    });
-  },
-});
+function onChange(event) {
+  var day = document.getElementById("day");
+  day.innerhtml = time.day;
+  var hour = document.getElementById("hour");
+  hour.innerhtml = time.hour;
+  var minute = document.getElementById("minute");
+  minute.innerhtml = time.minute;
+  var second = document.getElementById("second");
+  second.innerhtml = time.second;
+};
 ```
 </TabItem>
 </Tabs>
@@ -131,7 +112,7 @@ Page({
 
 | 名称     | 类型      | 必填 | 默认值     | 说明                                           | 备注 |
 | -------- | --------- | ---- | ---------- | ---------------------------------------------- | ---- |
-| variant  | `string`  | 否   | `pure`     | 倒计时的风格，可选值：`pure` `block` `mixture`                                                                                               | -    |
+| variant  | `string`  | 否   | `pure`     | 倒计时的风格，可选值：`pure` `block` `mixture`          | -    |
 | size     | `string`  | 否   | `medium`   | 倒计时的尺寸，在variant设为`block`或者`mixture`下生效，可选值：`small` `medium` `big` `large`，对应块状尺寸分别为`32px` `40px` `44px` `48px` | -    |
 | time     | `number`  | 否   | `1200`     | 倒计时时长，单位毫秒                           | -    |
 | format   | `string`  | 否   | `HH:mm:ss` | 时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒 | -    |
@@ -144,8 +125,8 @@ Page({
 
 | 名称     | 参数列表                                                                                               | 描述             | 备注 |
 | -------- | ------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
-| bind:finish | `(e: WechatMiniprogram.CustomEvent) => void`                                                                                   | 倒计时结束时触发 | -    |
-| bind:change | `(e: WechatMiniprogram.CustomEvent<{day: number, hour: number, minute: number, second: number, millisecond: number}>) => void` | 时间变化时触发   | -    |
+| finish | `(e: CustomEvent) => void`                                                                                   | 倒计时结束时触发 | -    |
+| change | `(e: CustomEvent<{day: number, hour: number, minute: number, second: number, millisecond: number}>) => void` | 时间变化时触发   | -    |
 
 ### 插槽 **Slots**
 
@@ -163,12 +144,11 @@ Page({
 ### CSS 变量 **CSS Variable**
 | 变量                          | 默认值    | 说明                       | 备注 |
 | ----------------------------- | --------- | -------------------------- | ---- |
-| --countdown-color             | `#757575` | 倒计时文字颜色             | -    |
+| --countdown-color             | `#757575` | 倒计时文字颜色，块状风格下默认值为`#ff2e2e` | -    |
 | --countdown-font-size         | `28px`    | 倒计时文字字号             | -    |
 | --countdown-line-height       | `34px`    | 倒计时文字行高             | -    |
 | --countdown-border-radius     | `8px`     | 块状风格下，圆角           | -    |
 | --countdown-background        | `#fff2f2` | 块状风格下，背景色         | -    |
-| --countdown-color             | `#ff2e2e` | 块状风格下，文字颜色       | -    |
 | --countdown-font-family       | `wemo`    | 块状风格下，文字字体       | -    |
 | --countdown-font-weight       | `600`     | 块状风格下，文字字重       | -    |
 | --countdown-day-color         | `600`     | 块状风格下，天数文字颜色   | -    |

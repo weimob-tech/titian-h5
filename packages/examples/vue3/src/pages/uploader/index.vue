@@ -16,8 +16,8 @@
 import { TiUploader } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
-import { OptionType } from '../../components/page.interface';
-const options: OptionType[] = [
+import { IOptionType } from '../../components/page.interface';
+const options: IOptionType[] = [
   {
     type: 'radio',
     name: 'Word',

@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSidebar, TiSidebarItem } from '@titian-design/mobile-react'
+import { TiSidebar, TiSidebarItem } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -49,9 +49,9 @@ const App: React.FC = () => {
 | 名称     | 参数列表 | 描述           | 备注 |
 | -------- | -------- | -------------- | ---- |
 | onChange | `(e: CustomEvent<number>) => void`    | 切换菜单时触发, 返回激活项索引| -    |
-| onScrolltoupper | `(e: WechatMiniprogram.CustomEvent<{ direction: 'top' }>) => void`    | 滚动到顶部时触发| -    |
-| onScrolltolower | `(e: WechatMiniprogram.CustomEvent<{ direction: 'bottom' }>) => void`    | 滚动到底部时触发| -    |
-| onTiScroll | `(e: WechatMiniprogram.CustomEvent) => void`    | 滚动时触发| -    |
+| onScrolltoupper | `(e: CustomEvent<{ direction: 'top' }>) => void`    | 滚动到顶部时触发| -    |
+| onScrolltolower | `(e: CustomEvent<{ direction: 'bottom' }>) => void`    | 滚动到底部时触发| -    |
+| onTiScroll | `(e: CustomEvent) => void`    | 滚动时触发| -    |
 
 ### 插槽 **Slots**
 

@@ -1,19 +1,27 @@
 import type { Logger } from 'log4js';
 import * as readPkgUp from 'read-pkg-up';
 import { satisfies } from 'semver';
-import { SyncHook } from 'tapable';
+import { SyncHook, AsyncSeriesHook } from 'tapable';
 import { loadConfigFromFile, ResolvedConfig } from '../exec/config';
 import logger from '../utils/logger';
 
 export interface CommandHooks {
   beforeInit: SyncHook<never>;
+  beforeInitAsync: AsyncSeriesHook<never>;
   init: SyncHook<never>;
+  initAsync: AsyncSeriesHook<never>;
   afterInit: SyncHook<never>;
+  afterInitAsync: AsyncSeriesHook<never>;
   beforeRun: SyncHook<never>;
+  beforeRunAsync: AsyncSeriesHook<never>;
   run: SyncHook<never>;
+  runAsync: AsyncSeriesHook<never>;
   afterRun: SyncHook<never>;
+  afterRunAsync: AsyncSeriesHook<never>;
   watch: SyncHook<never>;
+  watchAsync: AsyncSeriesHook<never>;
   release: SyncHook<string | any>;
+  releaseAsync: AsyncSeriesHook<string | any>;
 }
 
 export type HookFun = (hook: CommandHooks) => void;
@@ -69,6 +77,15 @@ export default class Command {
       afterRun: new SyncHook(),
       watch: new SyncHook(),
       release: new SyncHook(['params']),
+
+      beforeInitAsync: new AsyncSeriesHook(),
+      initAsync: new AsyncSeriesHook(),
+      afterInitAsync: new AsyncSeriesHook(),
+      beforeRunAsync: new AsyncSeriesHook(),
+      runAsync: new AsyncSeriesHook(),
+      afterRunAsync: new AsyncSeriesHook(),
+      watchAsync: new AsyncSeriesHook(),
+      releaseAsync: new AsyncSeriesHook(['releaseInfo']),
     };
 
     this.logger = logger;
@@ -76,30 +93,36 @@ export default class Command {
 
   protected async beforeInit() {
     this.hooks.beforeInit.call();
+    await this.toPromise(this.hooks.beforeInitAsync);
   }
 
   protected async init() {
     this.hooks.init.call();
+    await this.toPromise(this.hooks.initAsync);
     this.logger.error(`init methods must be implement`);
     process.exit(1);
   }
 
   protected async afterInit() {
     this.hooks.afterInit.call();
+    await this.toPromise(this.hooks.afterInitAsync);
   }
 
   protected async beforeRun() {
     this.hooks.beforeRun.call();
+    await this.toPromise(this.hooks.beforeRunAsync);
   }
 
   protected async run() {
     this.hooks.run.call();
+    await this.toPromise(this.hooks.runAsync);
     this.logger.error(`run methods must be implement`);
     process.exit(1);
   }
 
   protected async afterRun() {
     this.hooks.afterRun.call();
+    await this.toPromise(this.hooks.afterRunAsync);
   }
 
   private async getConfig() {
@@ -136,5 +159,15 @@ export default class Command {
         this.logger.error(`node version must be ${packageJson.version}`);
       }
     }
+  }
+
+  toPromise(hook: AsyncSeriesHook<any>, arg?: any) {
+    return new Promise<void>(resolve => {
+      if (arg) {
+        hook.callAsync(arg, resolve);
+      } else {
+        hook.callAsync(resolve);
+      }
+    });
   }
 }

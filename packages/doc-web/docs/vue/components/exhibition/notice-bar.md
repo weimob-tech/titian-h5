@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiNoticeBar } from '@titian-design/mobile-vue'
+import { TiNoticeBar } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiNoticeBar } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/mobile-vue';
+import { TiNoticeBar } from '{{packageWeappVue}}';
 </script>
 ```
 #### 纵向滚动
@@ -39,7 +39,7 @@ import { TiNoticeBar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/mobile-vue';
+import { TiNoticeBar } from '{{packageWeappVue}}';
 </script>
 ```
 #### 滚动速度
@@ -49,7 +49,7 @@ import { TiNoticeBar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/mobile-vue';
+import { TiNoticeBar } from '{{packageWeappVue}}';
 </script>
 ```
 #### 内容超出后显示方式
@@ -69,7 +69,7 @@ import { TiNoticeBar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiNoticeBar } from '@titian-design/mobile-vue';
+import { TiNoticeBar } from '{{packageWeappVue}}';
 </script>
 ```
 ## TiNoticeBar API

@@ -6,8 +6,19 @@
 
   --ifm-navbar-background-color: transparent;
   --navbar-border-bottom: none;
+  --mobile-page-height: auto;
+
+  // --docsearch-button-bkg: red;
+  @media screen and (max-width: 996px) {
+    height: auto;
+    scroll-behavior: smooth;
+  }
 
   nav {
     border-bottom: none !important;
+  }
+
+  .DocSearch-Button {
+    background-color: red;
   }
 }

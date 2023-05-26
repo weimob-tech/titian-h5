@@ -1,47 +1,114 @@
+import { useCallback, useState } from 'react';
+import Page, { OptionType } from '../../components/page';
+
 import './index.css';
 
+const options: OptionType[] = [
+  {
+    key: 'mode',
+    type: 'radio',
+    name: 'Mode',
+    desc: '模式 ',
+    list: [
+      { label: '等分', value: 'equate', hiddenItems: ['custom'] },
+      { label: '自定义', value: 'custom', hiddenItems: ['divide'] },
+    ],
+    value: 'equate',
+  },
+  {
+    key: 'divide',
+    type: 'radio',
+    name: 'Divide',
+    desc: '等分',
+    list: [
+      { label: '一等分', value: 1, attr: { group: [{ label: 'Span:24  100%', span: 24 }] } },
+      {
+        label: '二等分',
+        value: 2,
+        attr: {
+          group: [
+            { label: 'Span:12  50%', span: 12 },
+            { label: 'Span:12  50%', span: 12 },
+          ],
+        },
+      },
+      {
+        label: '三等分',
+        value: 3,
+        attr: {
+          group: [
+            { label: 'Span:8  33%', span: 8 },
+            { label: 'Span:8  33%', span: 8 },
+            { label: 'Span:8  33%', span: 8 },
+          ],
+        },
+      },
+    ],
+    value: 1,
+  },
+  {
+    key: 'custom',
+    type: 'radio',
+    name: 'Custom',
+    desc: '自定义',
+    list: [
+      {
+        label: '定义长度',
+        value: 'width',
+        attr: {
+          group: [
+            { label: 'span: 6', span: 6 },
+            { label: 'span: 12', span: 12 },
+            { label: 'span: 6', span: 6 },
+          ],
+        },
+      },
+      {
+        label: '定义偏移',
+        value: 'offset',
+        hiddenItems: ['gutter'],
+        attr: {
+          group: [{ label: 'offset: 12，span: 12', span: 12, offset: 12 }],
+        },
+      },
+    ],
+    value: 'width',
+  },
+  {
+    key: 'gutter',
+    type: 'radio',
+    name: 'Gutter',
+    desc: '间距',
+    list: [
+      { label: '无', value: 0 },
+      { label: '有', value: 10 },
+    ],
+    value: 0,
+  },
+];
+
+interface LayoutAttrs {
+  gutter?: number;
+  group?: Array<any & { label: string }>;
+}
+
 const Layout: React.FC<Record<string, never>> = () => {
+  const [attrs, setAttrs] = useState<LayoutAttrs>({});
+  const change = useCallback((e: LayoutAttrs) => {
+    setAttrs(e);
+  }, []);
   return (
-    <div>
-      <ti-row gutter={16}>
-        <ti-col span={24}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={12}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={12}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={3}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={3}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={3} offset={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={6}>
-          <div className="item">1</div>
-        </ti-col>
-        <ti-col span={3}>
-          <div className="item">1</div>
-        </ti-col>
-      </ti-row>
-    </div>
+    <Page options={options} change={change}>
+      <div className="layout-container">
+        <ti-row gutter={attrs.gutter}>
+          {attrs.group?.map((item, index) => (
+            <ti-col key={index} span={item.span} offset={item.offset}>
+              <div className={`item item-${item.span} index-${index}`}>{item.label}</div>
+            </ti-col>
+          ))}
+        </ti-row>
+      </div>
+    </Page>
   );
 };
 

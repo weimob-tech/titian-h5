@@ -1,6 +1,6 @@
 import { Component, EventEmitter, h, Prop, Event, State, Element, Listen, Watch } from '@stencil/core';
 import { JSXBase } from '@stencil/core/internal';
-import { stringToAttrStyle, addShadowRootStyle } from '../common/utils';
+import { stringToAttrStyle, addShadowRootStyle, getClientWidth } from '../common/utils';
 import { join, handle } from '../common/utils/namespace';
 import addUnit from '../common/utils/suffix';
 
@@ -204,24 +204,23 @@ export class TiTooltip {
     }
   }
 
-  addEventListener() {
+  addListener() {
     window.addEventListener('scroll', this.close, { passive: false });
   }
 
-  removeEventListener() {
+  removeListener() {
     window.removeEventListener('scroll', this.close);
   }
 
   componentDidLoad() {
-    const { clientWidth } = document.documentElement;
-    this.sysWidth = clientWidth;
+    this.sysWidth = getClientWidth();
     this.calculate();
-    this.addEventListener();
+    this.addListener();
   }
 
   componentWillLoad() {
     addShadowRootStyle.call(this);
-    this.removeEventListener();
+    this.removeListener();
   }
 
   render() {

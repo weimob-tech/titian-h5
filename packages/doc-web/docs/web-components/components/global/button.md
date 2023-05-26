@@ -94,10 +94,10 @@ import TabsLink from '@site/src/components/tabsLink';
 #### 加载状态
 
 ```html showLineNumbers
-<ti-button loading />
+<ti-button loading></ti-button>
 <ti-button loading loading-size="46">提交</ti-button>
-<ti-button loading-type="spinner" loading />
-<ti-button loading-text="加载中" loading />
+<ti-button loading-type="spinner" loading></ti-button>
+<ti-button loading-text="加载中" loading></ti-button>
 ```
 
 ## ti-button API

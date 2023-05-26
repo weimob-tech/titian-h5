@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiInput } from '@titian-design/mobile-vue'
+import { TiInput } from '{{packageWeappVue}}'
 ```
 ## 用法示例
 
@@ -35,7 +35,7 @@ import { TiInput } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -49,7 +49,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 #### 键盘类型
@@ -60,7 +60,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 #### 输入对齐方式
@@ -71,7 +71,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -84,7 +84,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 #### label左侧搭配图标
@@ -94,7 +94,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -110,7 +110,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 #### 错误提示
@@ -121,7 +121,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 #### 键盘确认按钮文字
@@ -135,7 +135,7 @@ import { TiInput } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiInput } from '@titian-design/mobile-vue';
+import { TiInput } from '{{packageWeappVue}}';
 </script>
 ```
 ## TiInput API

@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript tsx showLineNumbers
-import { BackTop } from '@titian-design/mobile-vue';
+import { BackTop } from '{{packageWeappVue}}';
 ```
 
 ## 基本用法
@@ -32,7 +32,7 @@ import { BackTop } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from '@titian-design/mobile-vue';
+import { TiBackTop } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -44,7 +44,7 @@ import { TiBackTop } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from '@titian-design/mobile-vue';
+import { TiBackTop } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -56,7 +56,7 @@ import { TiBackTop } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from '@titian-design/mobile-vue';
+import { TiBackTop } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -68,7 +68,7 @@ import { TiBackTop } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiBackTop } from '@titian-design/mobile-vue';
+import { TiBackTop } from '{{packageWeappVue}}';
 
 const handleClick = () => {
   console.log('回到顶部')

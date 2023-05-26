@@ -22,11 +22,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-price": "@titian-design/weapp/price/index"
+    "ti-price": "{{packageWeappName}}/price/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-price": "platform://titian-weapp/ti-price"
+    "ti-price": "platform://titian-mp/ti-price"
   }
 }
 ```
@@ -55,6 +55,7 @@ import TabsLink from '@site/src/components/tabsLink';
 | prefix   | `string` | 否   | -      | 前缀       | -    |
 | value    | `number` | 否   | 0      | 价格       | -    |
 | suffix   | `string` | 否   | -      | 后缀       | -    |
+| radix   | `number` | 否   | 2      | 小数点精度       | -    |
 | ext-style | `string` | 否   | -      | 根节点样式 | -    |
 
 ### CSS 变量 **CSS Variables**

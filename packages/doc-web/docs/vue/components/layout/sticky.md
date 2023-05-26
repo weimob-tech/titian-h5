@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiSticky } from '@titian-design/mobile-vue'
+import { TiSticky } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiSticky } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSticky } from '@titian-design/mobile-vue';
+import { TiSticky } from '{{packageWeappVue}}';
 </script>
 ```
 #### 使用css模式
@@ -49,7 +49,7 @@ import { TiSticky } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSticky } from '@titian-design/mobile-vue';
+import { TiSticky } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -62,7 +62,7 @@ import { TiSticky } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSticky } from '@titian-design/mobile-vue';
+import { TiSticky } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -81,7 +81,7 @@ use-pure-css模式下无需指定container，默认在父元素内生效
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSticky } from '@titian-design/mobile-vue';
+import { TiSticky } from '{{packageWeappVue}}';
 const box = ref(null);
 const container = () => box.value;
 </script>

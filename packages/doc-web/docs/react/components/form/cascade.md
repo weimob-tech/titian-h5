@@ -23,7 +23,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCascade } from '@titian-design/mobile-react';
+import { TiCascade } from '{{packageWeappReact}}';
 ```
 
 

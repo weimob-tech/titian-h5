@@ -88,7 +88,7 @@ export class TiPopup implements BasicComponentAbstract {
         document.body.style.overflow = 'hidden';
       }
       if (this.disableGlobalTouchMove) {
-        this.addEventListener();
+        this.addListener();
       }
     } else {
       this.onClose();
@@ -96,7 +96,7 @@ export class TiPopup implements BasicComponentAbstract {
         document.body.style.overflow = 'auto';
       }
       if (this.disableGlobalTouchMove) {
-        this.removeEventListener();
+        this.removeListener();
       }
     }
   }
@@ -106,12 +106,12 @@ export class TiPopup implements BasicComponentAbstract {
     if (oldVal === newVal) return;
     if (this.visible) {
       if (newVal) {
-        this.addEventListener();
+        this.addListener();
       } else {
-        this.removeEventListener();
+        this.removeListener();
       }
     } else {
-      this.removeEventListener();
+      this.removeListener();
     }
   }
 
@@ -125,7 +125,7 @@ export class TiPopup implements BasicComponentAbstract {
         document.body.style.overflow = 'hidden';
       }
       if (this.disableGlobalTouchMove) {
-        this.addEventListener();
+        this.addListener();
       }
     }
   }
@@ -136,7 +136,7 @@ export class TiPopup implements BasicComponentAbstract {
       document.body.style.overflow = 'auto';
     }
     if (this.disableGlobalTouchMove) {
-      this.removeEventListener();
+      this.removeListener();
     }
   }
 
@@ -199,11 +199,11 @@ export class TiPopup implements BasicComponentAbstract {
     }
   }
 
-  addEventListener() {
+  addListener() {
     window.addEventListener('touchmove', this.onTouchMoveByWindow, { passive: false });
   }
 
-  removeEventListener() {
+  removeListener() {
     window.removeEventListener('touchmove', this.onTouchMoveByWindow);
   }
 

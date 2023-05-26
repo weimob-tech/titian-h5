@@ -143,7 +143,7 @@ const Rate: React.FC<Record<string, never>> = () => {
             ></TiPopupTitlebar>
           )}
           <div className={`popup-${attrs.position}`} style={{ overflowY: 'auto' }}>
-            <div style={{ height: '500px' }}>可滚动区域演示</div>
+            <div style={{ height: '500px' }}></div>
           </div>
         </TiPopup>
       </Page>

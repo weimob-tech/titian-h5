@@ -5,6 +5,22 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import { RollupOptions, OutputOptions } from 'rollup';
 
+function autoDefineCustomElements() {
+  return {
+    name: 'auto-define-custom-elements',
+    transform(code, id) {
+      const inputPath = path.join('dist-custom-elements', 'index.js');
+      if (id.endsWith(inputPath)) {
+        const lines = code.split('\n');
+        const index = lines.findIndex(line => /^export.*defineCustomElements.*/.test(line));
+        lines.splice(index, 0, 'defineCustomElements();');
+        return lines.join('\n');
+      }
+      return code;
+    },
+  };
+}
+
 function basicConfig(format: OutputOptions['format'] = 'esm', externalConfig: RollupOptions = {}) {
   const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8'));
 
@@ -19,7 +35,7 @@ function basicConfig(format: OutputOptions['format'] = 'esm', externalConfig: Ro
       banner: `console.log('%c titian-h5: ${packageJSON.version}', 'background: #222; color: #bada55');`,
       ...(externalConfig.output ? externalConfig.output : {}),
     },
-    plugins: [commonjs(), nodeResolve(), ...(externalConfig.plugins ? externalConfig.plugins : [])],
+    plugins: [autoDefineCustomElements(), commonjs(), nodeResolve()],
   };
 
   return { ...esmConfig };

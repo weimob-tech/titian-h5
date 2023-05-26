@@ -25,13 +25,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-dropdown-item": "@titian-design/weapp/dropdown-item/index",
-    "ti-dropdown-menu": "@titian-design/weapp/dropdown-menu/index"
+    "ti-dropdown-item": "{{packageWeappName}}/dropdown-item/index",
+    "ti-dropdown-menu": "{{packageWeappName}}/dropdown-menu/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-dropdown-item": "platform://titian-weapp/ti-dropdown-item",
-    "ti-dropdown-menu": "platform://titian-weapp/ti-dropdown-menu"
+    "ti-dropdown-item": "platform://titian-mp/ti-dropdown-item",
+    "ti-dropdown-menu": "platform://titian-mp/ti-dropdown-menu"
   }
 }
 ```

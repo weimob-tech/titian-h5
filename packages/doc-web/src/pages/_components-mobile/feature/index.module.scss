@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  padding: 10.67vw 5.33vw;
+}
+
+.img {
+  width: 10.67vw;
+  height: auto;
+}
+
+.title {
+  margin-top: 3.2vw;
+
+  color: #212121;
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 5.33vw;
+}
+
+.desc {
+  margin-top: 1.6vw;
+
+  color: #757575;
+  font-size: 2.67vw;
+  font-weight: 400;
+  line-height: 4.53vw;
+  text-align: center;
+}

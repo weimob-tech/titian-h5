@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Component, h, Prop, State, Fragment, Event, EventEmitter, Method, Element } from '@stencil/core';
+import { Component, h, Prop, State, Fragment, Event, EventEmitter, Method, Element, Watch } from '@stencil/core';
 import { JSXBase } from '@stencil/core/internal';
 import { isCustomEvent, stringToAttrStyle, randomString, addShadowRootStyle } from '../common/utils';
 
@@ -10,6 +10,7 @@ import { UploadFileExternal, UploadStatus, UploadCamera, UploadFile, UploadLoadC
 
 type Params = RequestInit & { url?: string; name: string; header: RequestInit['headers'] };
 type UploadFileParams = UploadFileExternal & { key?: UploadFile['key'] };
+type BeforeChooseType = (fileList: UploadFileExternal[]) => { accept?: string; capture?: string };
 
 const defaultProps = {
   size: 'small',
@@ -17,11 +18,12 @@ const defaultProps = {
   chooseText: '上传图片',
   count: 9,
   immediatelyChoose: true,
-  uploadExercise: UploadLoadComponentType.PROGRESS,
+  uploadExercise: UploadLoadComponentType.LOADING,
   immediately: true,
   accept: '*/*',
   camera: UploadCamera.BACK,
   sourceType: ['album', 'camera'] as ('album' | 'camera')[],
+  maxSize: 10 * 1024 * 1024,
 } as const;
 
 // TODO: 集成SDK上传
@@ -63,6 +65,12 @@ export class TiUploader {
   @Prop() preview?: (file: UploadFileExternal, list: UploadFile[]) => void;
 
   @Prop() choose?: (list: UploadFile[]) => Promise<UploadFileExternal[]>;
+
+  @Prop() beforeChoose?: BeforeChooseType;
+
+  @Prop() afterChoose?: (chooseFileList: UploadFileExternal[], fileList: UploadFileExternal[]) => UploadFileExternal[];
+
+  @Prop() maxSize?: number = defaultProps.maxSize;
 
   @Prop() upload?: (uploader: TiUploader, key: string) => void;
 
@@ -114,6 +122,8 @@ export class TiUploader {
 
   @Prop() extActionClass?: string = '';
 
+  @Prop() cols?: number;
+
   @State() fileKeyList: string[] = [];
 
   @State() fileMap: Map<string, UploadFile> = new Map();
@@ -136,12 +146,22 @@ export class TiUploader {
     uploading: boolean;
   }>;
 
-  @Event({ eventName: 'error', bubbles: false, composed: false }) errorEvent!: EventEmitter<{
+  @Event({ eventName: 'overlimit', bubbles: false, composed: false }) errorEvent!: EventEmitter<{
     status: string;
     message: string;
   }>;
 
   @Event({ eventName: 'choose', bubbles: false, composed: false }) chooseEvent!: EventEmitter;
+
+  @Event({ bubbles: false, composed: false }) clickPlus!: EventEmitter;
+
+  @Watch('value')
+  updateValue() {
+    if (Array.isArray(this.value)) {
+      this.controlled = true;
+      this.updateData(this.value);
+    }
+  }
 
   componentWillLoad() {
     addShadowRootStyle.call(this);
@@ -494,7 +514,7 @@ export class TiUploader {
     this.fileMap.delete(fileKey);
     this.schedule.delete(fileKey);
     this.progress.delete(fileKey);
-    file.status = UploadStatus.CACAL;
+    file.status = UploadStatus.CANCEL;
 
     if (typeof complete === 'function') {
       const custom = complete(
@@ -531,15 +551,27 @@ export class TiUploader {
     this.chooseRef.onSelect();
   }
 
-  onChoose() {
+  onChoose = () => {
     this.chooseEvent.emit();
-  }
+  };
 
-  onError(event: CustomEvent<{ status: string; message: string }>) {
+  onClickPlus = () => {
+    this.clickPlus.emit();
+  };
+
+  onError = (event: CustomEvent<{ status: string; message: string }>) => {
     this.errorEvent.emit(event.detail);
-  }
+  };
 
   extThumbnailCss = ``;
+
+  private computedStyle(cols, extStyle) {
+    const style = {};
+    if (cols) {
+      style['--uploader-columns-count'] = cols < 6 ? cols : 6;
+    }
+    return { ...style, ...stringToAttrStyle(extStyle) };
+  }
 
   render() {
     const {
@@ -553,6 +585,9 @@ export class TiUploader {
       uploadExercise = defaultProps.uploadExercise,
       disabled,
       choose,
+      afterChoose,
+      beforeChoose,
+      maxSize,
       fileKeyList,
       fileMap,
       extClass = '',
@@ -564,6 +599,8 @@ export class TiUploader {
       extThumVideoClass = '',
       extThumOtherClass = '',
       extActionClass = '',
+      cols,
+      computedStyle,
     } = this;
     const total = fileKeyList.length;
     return (
@@ -572,8 +609,9 @@ export class TiUploader {
           class={`${join('uploader')} ${handle('uploader', [
             disabled ? 'disabled' : '',
             size === 'large' ? 'large' : 'small',
+            cols ? 'cols' : '',
           ])} ${extClass}`}
-          style={stringToAttrStyle(extStyle)}
+          style={computedStyle(cols, extStyle)}
           part={extClass}
         >
           {fileKeyList.map(fileKey => {
@@ -581,6 +619,7 @@ export class TiUploader {
             const { size: _, ...obj } = fileMap.get(fileKey) as UploadFile;
             return (
               <ti-thumbnail
+                cols={cols}
                 uploadExercise={uploadExercise}
                 {...obj}
                 size={size}
@@ -601,16 +640,21 @@ export class TiUploader {
           })}
           {total < count ? (
             <ti-choose
+              cols={cols}
               size={size}
               count={count}
               chooseIcon={chooseIcon}
               chooseText={chooseText}
               onChange={this.onChange}
               onChoose={this.onChoose}
+              onClickPlus={this.onClickPlus}
               onError={this.onError}
               fileKeyList={fileKeyList}
               fileMap={fileMap}
               choose={choose}
+              afterChoose={afterChoose}
+              beforeChoose={beforeChoose}
+              maxSize={maxSize}
               accept={accept}
               camera={camera}
               sourceType={sourceType}

@@ -1,9 +1,9 @@
 import { Component, EventEmitter, h, Prop, Event, Element } from '@stencil/core';
 import { JSXBase, State } from '@stencil/core/internal';
 import { BasicComponentAbstract } from '../common/basic/BasicComponent';
-import { pxToVW } from '../common/utils';
+import { handle } from '../common/utils/namespace';
 
-import EPopupTitleBarVariantType, { getLeftClass, getRightClass, getRightClassIcon, getTitleClass } from './const';
+import EPopupTitleBarVariantType from './const';
 
 @Component({
   tag: 'ti-popup-titlebar',
@@ -65,41 +65,6 @@ export class TiPopupTitlebar implements BasicComponentAbstract {
   @Element() host: HTMLElement;
 
   temp: { [key: string]: unknown } = {};
-
-  private exTransCss = `
-  .titian-popup-titlebar-cancel{
-    color:var(--popup-title-bar-cancel-color, var(--neutral-color-2, #757575))
-  }
-  .titian-popup-titlebar-confirm{
-    color:var(--popup-title-bar-confirm-color, rgb(var(--theme-r, 250), var(--theme-g,44), var(--theme-b, 25)));
-  }
-  .titian-popup-titlebar-back{
-    --protected-icon-color: var(--popup-title-bar-back-color, var(--neutral-color-2, #757575)) 
-  }
-  .titian-popup-titlebar-close,.titian-popup-titlebar-mini-close{
-    --protected-icon-color: var(--popup-title-cancel-back-color, var(--neutral-color-2, #757575)) 
-  }
-  .titian-popup-titlebar-mini-close{
-    display: flex;
-    position: absolute !important;
-    right: 0;
-    align-items: center;
-    justify-content: left;
-    width: ${pxToVW('72px')} !important;
-    height: ${pxToVW('108px')} !important;
-    padding: 0;
-
-    text-align: left;
-  }
-  .titian-popup-titlebar-mini-close-icon {
-    padding: ${pxToVW('8px')};
-  }
-
-  .titian-popup-titlebar-space-between {
-    text-align: left !important;
-  }
-    ${this.extCss}
-  `;
 
   onClick = (event: CustomEvent<{ position: 'left' | 'right' | 'title' | 'sub-title' }>) => {
     const { variant } = this;
@@ -201,10 +166,12 @@ export class TiPopupTitlebar implements BasicComponentAbstract {
       extLeftClass,
       extRightClass,
       extRightIconClass,
+      extCss,
     } = this;
     return (
       <ti-titlebar
-        extCss={this.exTransCss}
+        class={`${handle('popup-titlebar', variant)}`}
+        extCss={extCss}
         left-text={leftText}
         left-icon={leftIcon}
         right-text={rightText}
@@ -215,12 +182,14 @@ export class TiPopupTitlebar implements BasicComponentAbstract {
         use-title={useTitle}
         title={title}
         sub-title={subTitle}
-        ext-class={extClass}
-        ext-title-class={`${getTitleClass(variant)} ${extTitleClass}`}
-        ext-left-class={`${getLeftClass(variant)} ${extLeftClass}`}
-        ext-right-class={`${getRightClass(variant)} ${extRightClass}`}
-        ext-right-icon-class={`${getRightClassIcon(variant)} ${extRightIconClass}`}
-        exportparts={`${extClass}, ${extTitleClass}, ${extLeftClass}, ${extRightClass}, ${extRightIconClass}`}
+        ext-class={extClass || ''}
+        ext-title-class={`${extTitleClass}`}
+        ext-left-class={`${extLeftClass}`}
+        ext-right-class={`${variant === EPopupTitleBarVariantType.MiniClose && (extClass || '')} ${
+          extRightClass || ''
+        }`}
+        ext-right-icon-class={`${extRightIconClass}`}
+        exportparts={`${extClass || ''}, ${extTitleClass}, ${extLeftClass}, ${extRightClass}, ${extRightIconClass}`}
         onTiClick={this.onClick}
       />
     );

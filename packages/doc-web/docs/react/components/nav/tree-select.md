@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTreeSelect } from '@titian-design/mobile-react'
+import { TiTreeSelect } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -140,5 +140,5 @@ const App: React.FC = () => {
 | 变量                         | 默认值  | 说明                       | 备注 |
 | ---------------------------- | ------- | -------------------------- | ---- |
 | --tree-select-cell-h         | `108px` | 右侧默认选项内容的每项高度 | - |
-| --tree-select-active-color   | `108px` | 右侧默认选项内容选中颜色   | - |
-| --tree-select-disabled-color | `108px` | 右侧默认选项内容禁用颜色   | - |
+| --tree-select-active-color   | `#fa2c19` | 右侧默认选项内容选中颜色   | - |
+| --tree-select-disabled-color | `#c4c4c4` | 右侧默认选项内容禁用颜色   | - |

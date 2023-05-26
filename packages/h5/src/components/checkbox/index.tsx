@@ -163,6 +163,8 @@ export class TiCheckbox implements BasicComponentAbstract {
 
   @Event({ bubbles: true, composed: false }) change: EventEmitter<boolean>;
 
+  firstRender = false;
+
   @Method()
   async updateDataFromParent(parent: ParentAttrs) {
     if (parent) {
@@ -193,7 +195,7 @@ export class TiCheckbox implements BasicComponentAbstract {
       if (checked !== null) {
         privateChecked = checked;
       }
-      this.handleToggleClass(privateChecked);
+      this.handleToggleClass(privateChecked, this.firstRender);
 
       this.labelDisabled = labelDisabled ?? this.labelDisabled;
       this.disabled = disabled ?? this.disabled;
@@ -233,15 +235,18 @@ export class TiCheckbox implements BasicComponentAbstract {
     if (this.checked !== null) {
       checked = this.checked;
     }
-    this.handleToggleClass(checked);
+    this.handleToggleClass(checked, false);
     this.privateChecked = checked;
 
     addShadowRootStyle.call(this);
     this.updateDataFromParent(this.parent);
   }
 
-  private handleToggleClass(checked: boolean) {
-    this.toggleClass = checked ? 'zoom-in' : 'zoom-out';
+  private handleToggleClass(checked: boolean, hasZoomOut = true) {
+    const nextClass = checked ? 'zoom-in' : hasZoomOut ? 'zoom-out' : '';
+    if (this.toggleClass !== nextClass) {
+      this.toggleClass = nextClass;
+    }
   }
 
   private getClassName() {
@@ -252,6 +257,7 @@ export class TiCheckbox implements BasicComponentAbstract {
 
   private handleChange() {
     const { privateChecked, checked, value, parent: parentEl } = this;
+    this.firstRender = true;
     if (parentEl) {
       parentEl.getInstance().then((parent: ParentAttrs) => {
         const { max } = parent;

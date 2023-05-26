@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRow, TiCol } from '@titian-design/mobile-vue';
+import { TiRow, TiCol } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -54,7 +54,7 @@ import { TiRow, TiCol } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRow, TiCol } from '@titian-design/mobile-vue';
+import { TiRow, TiCol } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -79,7 +79,7 @@ import { TiRow, TiCol } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRow, TiCol } from '@titian-design/mobile-vue';
+import { TiRow, TiCol } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -99,7 +99,7 @@ import { TiRow, TiCol } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRow, TiCol } from '@titian-design/mobile-vue';
+import { TiRow, TiCol } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -114,7 +114,7 @@ import { TiRow, TiCol } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRow, TiCol } from '@titian-design/mobile-vue';
+import { TiRow, TiCol } from '{{packageWeappVue}}';
 </script>
 ```
 

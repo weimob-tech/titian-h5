@@ -11,8 +11,9 @@ import { CalDateProps, CalDateTimeType, CalErrorProps, CalRenderDateProps, CalTy
 import { CascadeFn, CascadeOption } from "./components/cascade/cascade";
 import { CheckboxItem } from "./components/checkbox-group/index";
 import { UploadCamera, UploadFile, UploadFileExternal, UploadLoadComponentType, UploadStatus } from "./components/uploader/uploader";
-import { Components } from "./components";
+import { TiRow } from "./components/row";
 import { IPosition, OmitType } from "./components/common/interface";
+import { Components } from "./components";
 import { IStore } from "./components/common/basic/store";
 import { TimeGroup } from "./components/countdown/index";
 import { DateTimePickerColumnEnum, DateTimePickerEnum } from "./components/datetime-picker/utils";
@@ -21,6 +22,7 @@ import { IDialogStaticOptions } from "./components/dialog/types";
 import { EDividerOrientation, EDividerPosition } from "./components/divider/const";
 import { TiDropdownItemOption } from "./components/dropdown-item/index";
 import { IGoodsCart } from "./components/goods-card/index";
+import { TiGrid } from "./components/grid";
 import { EventDetails } from "./components/input/index";
 import { EPosition } from "./components/popup/const";
 import { TiProgressGradientColor } from "./components/progress/index";
@@ -31,6 +33,34 @@ import { TiTabsOption } from "./components/tabs/index";
 import { ETagShape, ETagSize, ETagVariant } from "./components/tag/const";
 import { IToastStaticOptions, IToastText } from "./components/toast/const";
 import { Timeout as Timeout1 } from "./components/transition/index";
+export { ActionItem } from "./components/action-sheet/index";
+export { JSXBase } from "@stencil/core/internal";
+export { CalDateProps, CalDateTimeType, CalErrorProps, CalRenderDateProps, CalTypeEnum } from "./components/calendar/const";
+export { CascadeFn, CascadeOption } from "./components/cascade/cascade";
+export { CheckboxItem } from "./components/checkbox-group/index";
+export { UploadCamera, UploadFile, UploadFileExternal, UploadLoadComponentType, UploadStatus } from "./components/uploader/uploader";
+export { TiRow } from "./components/row";
+export { IPosition, OmitType } from "./components/common/interface";
+export { Components } from "./components";
+export { IStore } from "./components/common/basic/store";
+export { TimeGroup } from "./components/countdown/index";
+export { DateTimePickerColumnEnum, DateTimePickerEnum } from "./components/datetime-picker/utils";
+export { Timeout, TransitionName } from "./components/common/basic/transition";
+export { IDialogStaticOptions } from "./components/dialog/types";
+export { EDividerOrientation, EDividerPosition } from "./components/divider/const";
+export { TiDropdownItemOption } from "./components/dropdown-item/index";
+export { IGoodsCart } from "./components/goods-card/index";
+export { TiGrid } from "./components/grid";
+export { EventDetails } from "./components/input/index";
+export { EPosition } from "./components/popup/const";
+export { TiProgressGradientColor } from "./components/progress/index";
+export { RadioItem } from "./components/radio-group/index";
+export { TiStepOption } from "./components/steps/index";
+export { CloseParams, OpenParams } from "./components/swipe-cell/index";
+export { TiTabsOption } from "./components/tabs/index";
+export { ETagShape, ETagSize, ETagVariant } from "./components/tag/const";
+export { IToastStaticOptions, IToastText } from "./components/toast/const";
+export { Timeout as Timeout1 } from "./components/transition/index";
 export namespace Components {
     interface TestContainer {
     }
@@ -142,6 +172,7 @@ export namespace Components {
         "closeOnMask": boolean;
         "color"?: string;
         "confirmText": string;
+        "contentZIndex"?: number;
         "defaultValue"?: CalDateTimeType[] | CalDateTimeType | null;
         "destroyOnClose": boolean;
         "disableGlobalTouchMove"?: boolean;
@@ -152,6 +183,7 @@ export namespace Components {
         "extPopupMaskClass"?: string;
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "formatter"?: (date: CalRenderDateProps) => CalRenderDateProps;
+        "maskZIndex"?: number;
         "maxDate"?: number;
         "maxRange": number;
         "maxSize": number;
@@ -314,6 +346,7 @@ export namespace Components {
         "title": string | any;
         "titleClass"?: string;
         "titleWidth"?: string;
+        "titleWrapClass"?: string;
         "useSubArrow"?: boolean;
     }
     interface TiCellGroup {
@@ -634,6 +667,7 @@ export namespace Components {
         "choose"?: (list: UploadFile[]) => Promise<UploadFileExternal[]>;
         "chooseIcon"?: string;
         "chooseText"?: string;
+        "cols"?: number;
         "count"?: number;
         "disabled"?: boolean;
         "extClass"?: string;
@@ -686,7 +720,7 @@ export namespace Components {
           * @memberOf ColProps
          */
         "span": number;
-        "updateDataFromParent": (parent$0?: HTMLTiRowElement | Components.TiRow) => Promise<void>;
+        "updateDataFromParent": (parent$0?: HTMLTiRowElement | TiRow) => Promise<void>;
     }
     interface TiCollapse {
         "clickable"?: boolean;
@@ -702,7 +736,7 @@ export namespace Components {
         "repel"?: boolean;
         "rightIcon"?: string;
         "switch": (name: string | number, status: boolean) => Promise<void>;
-        "value"?: unknown;
+        "value"?: string | number | Array<string | number>;
     }
     interface TiCollapseItem {
         "clickable"?: boolean;
@@ -723,6 +757,7 @@ export namespace Components {
     }
     interface TiConfigProvider {
         "enableTitianIcon": IStore['enableTitianIcon'];
+        "iconClassPrefix": IStore['iconClassPrefix'];
         "locale": IStore['locale'];
     }
     interface TiCountdown {
@@ -1003,7 +1038,7 @@ export namespace Components {
          */
         "text"?: string;
         "textClass"?: string;
-        "updateDataFromParent": (parent?: HTMLTiGridElement | Components.TiGrid) => Promise<void>;
+        "updateDataFromParent": (parent?: HTMLTiGridElement | TiGrid) => Promise<void>;
     }
     interface TiIcon {
         "color"?: string;
@@ -1155,6 +1190,27 @@ export namespace Components {
          */
         "text": string;
     }
+    interface TiNavbar {
+        "background": string;
+        "extClass": string;
+        "extCss": string;
+        "extStyle": string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "extSubtitleClass": string;
+        "extTitleClass": string;
+        "fontColor": string;
+        "frostedGlass": boolean;
+        "leftIcons": string[];
+        "loading": boolean;
+        "rightIcons": string[];
+        "subtitle": string;
+        "subtitleHeight": number;
+        "title": string;
+        "type": 'normal' | 'immersion';
+        "updateOpacity": (e: { scrollTop: number; }) => Promise<void>;
+        "useBackButton": boolean;
+        "useHomeButton": boolean;
+        "usePlaceholder": boolean;
+    }
     interface TiNoticeBar {
         "close": () => Promise<void>;
         "color": string;
@@ -1287,6 +1343,7 @@ export namespace Components {
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "label": string;
         "prefix": string;
+        "radix": number;
         "suffix": string;
         "unit": string;
         "value": number;
@@ -1300,7 +1357,7 @@ export namespace Components {
          */
         "extClass"?: string;
         "extCss": string;
-        "gradientColor"?: TiProgressGradientColor;
+        "gradientColor"?: TiProgressGradientColor | string;
         "showProgress"?: boolean;
         "strokeColor"?: string;
         "strokeWidth"?: number;
@@ -1578,6 +1635,7 @@ export namespace Components {
     }
     interface TiSwiper {
         "autoplay": boolean;
+        "centeredSlides"?: boolean;
         "current": number;
         "displayMultipleItems": number;
         "duration": number;
@@ -1596,7 +1654,7 @@ export namespace Components {
     interface TiSwiperItem {
         "itemId"?: string;
         "skipHiddenItemLayout": boolean;
-        "updateDataFromParent": (parent: any) => Promise<void>;
+        "updateDataFromParent": (parent: any, curIndex?: any) => Promise<void>;
     }
     interface TiSwitch {
         "activeColor"?: string;
@@ -1658,7 +1716,9 @@ export namespace Components {
         "sticky"?: boolean;
         "swiperClass"?: string;
         "tabActiveClass"?: string;
+        "tabClass": string;
         "tabKey"?: string;
+        "tabTextActiveClass": string;
         "tabTextClass"?: string;
         "tabWidth"?: number;
         "tabs": (string | TiTabsOption)[];
@@ -1699,6 +1759,7 @@ export namespace Components {
         "value"?: string;
     }
     interface TiThumbnail {
+        "cols"?: number;
         "disabled"?: boolean;
         "extClass"?: string;
         "extCss": string;
@@ -1751,6 +1812,7 @@ export namespace Components {
         "extContentStyle": string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "extCss": string;
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "extTextClass": string;
         "fail": (opts: IToastStaticOptions | IToastText) => Promise<void>;
         "info": (opts: IToastStaticOptions | IToastText) => Promise<void>;
         "loading": (opts: IToastStaticOptions | IToastText) => Promise<void>;
@@ -1793,7 +1855,7 @@ export namespace Components {
         "extStyle": {};
         "name": TransitionName;
         "show": boolean;
-        "timeout": Timeout | number;
+        "timeout": Timeout1 | number;
         "timingFunction": string;
     }
     interface TiTreeSelect {
@@ -1811,16 +1873,19 @@ export namespace Components {
     }
     interface TiUploader {
         "accept"?: string;
+        "afterChoose"?: (chooseFileList: UploadFileExternal[], fileList: UploadFileExternal[]) => UploadFileExternal[];
         "afterUpload"?: (
     uploader: TiUploader,
     file: UploadFileExternal,
     fileMap: { [key: string]: UploadFileExternal },
   ) => Partial<UploadFileExternal>;
+        "beforeChoose"?: BeforeChooseType;
         "beforeUpload"?: (params: Params, file: UploadFileExternal, list: UploadFileExternal[]) => Params;
         "camera"?: `${UploadCamera}`;
         "choose"?: (list: UploadFile[]) => Promise<UploadFileExternal[]>;
         "chooseIcon"?: string;
         "chooseText"?: string;
+        "cols"?: number;
         "complete"?: (file: UploadFileExternal, list: UploadFileExternal[], action: string) => void;
         "count"?: number;
         "defaultValue"?: UploadFileParams[];
@@ -1841,6 +1906,7 @@ export namespace Components {
         "imageResultFormat"?: (string | number)[];
         "immediately"?: boolean;
         "immediatelyChoose"?: boolean;
+        "maxSize"?: number;
         "onSelect": () => Promise<void>;
         "preview"?: (file: UploadFileExternal, list: UploadFile[]) => void;
         "size"?: 'small' | 'large';
@@ -1852,6 +1918,20 @@ export namespace Components {
         "value": unknown;
         "videoParams"?: { [key: string]: unknown };
         "videoResultFormat"?: (string | number)[];
+    }
+    interface TiVirtualList {
+        "containerHeight": number;
+        /**
+          * 额外的类名，添加到根节点的元素上
+         */
+        "extClass": string;
+        /**
+          * 额外的样式
+         */
+        "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "itemHeight": number;
+        "setListData": (listData: any[]) => Promise<void>;
+        "setRenderItem": (renderItem: (item: any) => Element | string) => Promise<void>;
     }
 }
 export interface TiActionSheetCustomEvent<T> extends CustomEvent<T> {
@@ -1917,6 +1997,10 @@ export interface TiInputCustomEvent<T> extends CustomEvent<T> {
 export interface TiInputNumberCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLTiInputNumberElement;
+}
+export interface TiNavbarCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTiNavbarElement;
 }
 export interface TiPickerCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -2041,6 +2125,10 @@ export interface TiTreeSelectCustomEvent<T> extends CustomEvent<T> {
 export interface TiUploaderCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLTiUploaderElement;
+}
+export interface TiVirtualListCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTiVirtualListElement;
 }
 declare global {
     interface HTMLTestContainerElement extends Components.TestContainer, HTMLStencilElement {
@@ -2240,6 +2328,12 @@ declare global {
     var HTMLTiLoadingElement: {
         prototype: HTMLTiLoadingElement;
         new (): HTMLTiLoadingElement;
+    };
+    interface HTMLTiNavbarElement extends Components.TiNavbar, HTMLStencilElement {
+    }
+    var HTMLTiNavbarElement: {
+        prototype: HTMLTiNavbarElement;
+        new (): HTMLTiNavbarElement;
     };
     interface HTMLTiNoticeBarElement extends Components.TiNoticeBar, HTMLStencilElement {
     }
@@ -2493,6 +2587,12 @@ declare global {
         prototype: HTMLTiUploaderElement;
         new (): HTMLTiUploaderElement;
     };
+    interface HTMLTiVirtualListElement extends Components.TiVirtualList, HTMLStencilElement {
+    }
+    var HTMLTiVirtualListElement: {
+        prototype: HTMLTiVirtualListElement;
+        new (): HTMLTiVirtualListElement;
+    };
     interface HTMLElementTagNameMap {
         "test-container": HTMLTestContainerElement;
         "ti-action-sheet": HTMLTiActionSheetElement;
@@ -2527,6 +2627,7 @@ declare global {
         "ti-input": HTMLTiInputElement;
         "ti-input-number": HTMLTiInputNumberElement;
         "ti-loading": HTMLTiLoadingElement;
+        "ti-navbar": HTMLTiNavbarElement;
         "ti-notice-bar": HTMLTiNoticeBarElement;
         "ti-picker": HTMLTiPickerElement;
         "ti-picker-column": HTMLTiPickerColumnElement;
@@ -2569,6 +2670,7 @@ declare global {
         "ti-transition": HTMLTiTransitionElement;
         "ti-tree-select": HTMLTiTreeSelectElement;
         "ti-uploader": HTMLTiUploaderElement;
+        "ti-virtual-list": HTMLTiVirtualListElement;
     }
 }
 declare namespace LocalJSX {
@@ -2685,6 +2787,7 @@ declare namespace LocalJSX {
         "closeOnMask"?: boolean;
         "color"?: string;
         "confirmText"?: string;
+        "contentZIndex"?: number;
         "defaultValue"?: CalDateTimeType[] | CalDateTimeType | null;
         "destroyOnClose"?: boolean;
         "disableGlobalTouchMove"?: boolean;
@@ -2695,6 +2798,7 @@ declare namespace LocalJSX {
         "extPopupMaskClass"?: string;
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "formatter"?: (date: CalRenderDateProps) => CalRenderDateProps;
+        "maskZIndex"?: number;
         "maxDate"?: number;
         "maxRange"?: number;
         "maxSize"?: number;
@@ -2878,6 +2982,7 @@ declare namespace LocalJSX {
         "title"?: string | any;
         "titleClass"?: string;
         "titleWidth"?: string;
+        "titleWrapClass"?: string;
         "useSubArrow"?: boolean;
     }
     interface TiCellGroup {
@@ -3199,6 +3304,7 @@ declare namespace LocalJSX {
         "choose"?: (list: UploadFile[]) => Promise<UploadFileExternal[]>;
         "chooseIcon"?: string;
         "chooseText"?: string;
+        "cols"?: number;
         "count"?: number;
         "disabled"?: boolean;
         "extClass"?: string;
@@ -3208,6 +3314,7 @@ declare namespace LocalJSX {
         "maxSize"?: number;
         "onChange"?: (event: TiChooseCustomEvent<UploadFileExternal[]>) => void;
         "onChoose"?: (event: TiChooseCustomEvent<any>) => void;
+        "onClickPlus"?: (event: TiChooseCustomEvent<any>) => void;
         "onError"?: (event: TiChooseCustomEvent<{
     status: string;
     message: string;
@@ -3272,7 +3379,7 @@ declare namespace LocalJSX {
         "options"?: (OmitType<Components.TiCollapseItem, (...args: any) => any> & { content: string })[] | string;
         "repel"?: boolean;
         "rightIcon"?: string;
-        "value"?: unknown;
+        "value"?: string | number | Array<string | number>;
     }
     interface TiCollapseItem {
         "clickable"?: boolean;
@@ -3292,6 +3399,7 @@ declare namespace LocalJSX {
     }
     interface TiConfigProvider {
         "enableTitianIcon"?: IStore['enableTitianIcon'];
+        "iconClassPrefix"?: IStore['iconClassPrefix'];
         "locale"?: IStore['locale'];
     }
     interface TiCountdown {
@@ -3747,6 +3855,29 @@ declare namespace LocalJSX {
          */
         "text"?: string;
     }
+    interface TiNavbar {
+        "background"?: string;
+        "extClass"?: string;
+        "extCss"?: string;
+        "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "extSubtitleClass"?: string;
+        "extTitleClass"?: string;
+        "fontColor"?: string;
+        "frostedGlass"?: boolean;
+        "leftIcons"?: string[];
+        "loading"?: boolean;
+        "onBack"?: (event: TiNavbarCustomEvent<{ index: number; name: string }>) => void;
+        "onClickIcon"?: (event: TiNavbarCustomEvent<{ index: number; name: string }>) => void;
+        "onHome"?: (event: TiNavbarCustomEvent<{ index: number; name: string }>) => void;
+        "rightIcons"?: string[];
+        "subtitle"?: string;
+        "subtitleHeight"?: number;
+        "title"?: string;
+        "type"?: 'normal' | 'immersion';
+        "useBackButton"?: boolean;
+        "useHomeButton"?: boolean;
+        "usePlaceholder"?: boolean;
+    }
     interface TiNoticeBar {
         "color"?: string;
         "content"?: string | string[];
@@ -3892,6 +4023,7 @@ declare namespace LocalJSX {
         "displayNumber"?: boolean;
         "displayTitle"?: boolean;
         "onChange"?: (event: TiPreviewCustomEvent<{ current: number; item: any }>) => void;
+        "onLongpress"?: (event: TiPreviewCustomEvent<{ file: IPreviewItem }>) => void;
     }
     interface TiPrice {
         "extClass"?: string;
@@ -3899,6 +4031,7 @@ declare namespace LocalJSX {
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "label"?: string;
         "prefix"?: string;
+        "radix"?: number;
         "suffix"?: string;
         "unit"?: string;
         "value"?: number;
@@ -3912,7 +4045,7 @@ declare namespace LocalJSX {
          */
         "extClass"?: string;
         "extCss"?: string;
-        "gradientColor"?: TiProgressGradientColor;
+        "gradientColor"?: TiProgressGradientColor | string;
         "showProgress"?: boolean;
         "strokeColor"?: string;
         "strokeWidth"?: number;
@@ -4095,6 +4228,7 @@ declare namespace LocalJSX {
         "onCancel"?: (event: TiShareSheetCustomEvent<boolean>) => void;
         "onClose"?: (event: TiShareSheetCustomEvent<boolean>) => void;
         "onConfirm"?: (event: TiShareSheetCustomEvent<boolean>) => void;
+        "onSelect"?: (event: TiShareSheetCustomEvent<ShareSheetProps>) => void;
         "options"?: ShareSheetProps[] | ShareSheetProps[][];
         "subTitle"?: string;
         "title"?: string;
@@ -4222,6 +4356,7 @@ declare namespace LocalJSX {
     }
     interface TiSwiper {
         "autoplay"?: boolean;
+        "centeredSlides"?: boolean;
         "current"?: number;
         "displayMultipleItems"?: number;
         "duration"?: number;
@@ -4321,7 +4456,9 @@ declare namespace LocalJSX {
         "sticky"?: boolean;
         "swiperClass"?: string;
         "tabActiveClass"?: string;
+        "tabClass"?: string;
         "tabKey"?: string;
+        "tabTextActiveClass"?: string;
         "tabTextClass"?: string;
         "tabWidth"?: number;
         "tabs"?: (string | TiTabsOption)[];
@@ -4366,6 +4503,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface TiThumbnail {
+        "cols"?: number;
         "disabled"?: boolean;
         "extClass"?: string;
         "extCss"?: string;
@@ -4419,6 +4557,7 @@ declare namespace LocalJSX {
         "extContentStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "extCss"?: string;
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "extTextClass"?: string;
         "onEnter"?: (event: TiToastCustomEvent<void>) => void;
         "onEntered"?: (event: TiToastCustomEvent<void>) => void;
         "onExit"?: (event: TiToastCustomEvent<void>) => void;
@@ -4466,7 +4605,7 @@ declare namespace LocalJSX {
         "onExited"?: (event: TiTransitionCustomEvent<void>) => void;
         "onExiting"?: (event: TiTransitionCustomEvent<void>) => void;
         "show"?: boolean;
-        "timeout"?: Timeout | number;
+        "timeout"?: Timeout1 | number;
         "timingFunction"?: string;
     }
     interface TiTreeSelect {
@@ -4495,16 +4634,19 @@ declare namespace LocalJSX {
     }
     interface TiUploader {
         "accept"?: string;
+        "afterChoose"?: (chooseFileList: UploadFileExternal[], fileList: UploadFileExternal[]) => UploadFileExternal[];
         "afterUpload"?: (
     uploader: TiUploader,
     file: UploadFileExternal,
     fileMap: { [key: string]: UploadFileExternal },
   ) => Partial<UploadFileExternal>;
+        "beforeChoose"?: BeforeChooseType;
         "beforeUpload"?: (params: Params, file: UploadFileExternal, list: UploadFileExternal[]) => Params;
         "camera"?: `${UploadCamera}`;
         "choose"?: (list: UploadFile[]) => Promise<UploadFileExternal[]>;
         "chooseIcon"?: string;
         "chooseText"?: string;
+        "cols"?: number;
         "complete"?: (file: UploadFileExternal, list: UploadFileExternal[], action: string) => void;
         "count"?: number;
         "defaultValue"?: UploadFileParams[];
@@ -4525,13 +4667,15 @@ declare namespace LocalJSX {
         "imageResultFormat"?: (string | number)[];
         "immediately"?: boolean;
         "immediatelyChoose"?: boolean;
+        "maxSize"?: number;
         "onChange"?: (event: TiUploaderCustomEvent<{
     fileList: Omit<Required<UploadFileExternal>, 'size' | 'duration' | 'key' | 'file'>[];
     file: Omit<UploadFile, 'key'> | null;
     uploading: boolean;
   }>) => void;
         "onChoose"?: (event: TiUploaderCustomEvent<any>) => void;
-        "onError"?: (event: TiUploaderCustomEvent<{
+        "onClickPlus"?: (event: TiUploaderCustomEvent<any>) => void;
+        "onOverlimit"?: (event: TiUploaderCustomEvent<{
     status: string;
     message: string;
   }>) => void;
@@ -4544,6 +4688,19 @@ declare namespace LocalJSX {
         "value"?: unknown;
         "videoParams"?: { [key: string]: unknown };
         "videoResultFormat"?: (string | number)[];
+    }
+    interface TiVirtualList {
+        "containerHeight"?: number;
+        /**
+          * 额外的类名，添加到根节点的元素上
+         */
+        "extClass"?: string;
+        /**
+          * 额外的样式
+         */
+        "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "itemHeight"?: number;
+        "onLoad"?: (event: TiVirtualListCustomEvent<never>) => void;
     }
     interface IntrinsicElements {
         "test-container": TestContainer;
@@ -4579,6 +4736,7 @@ declare namespace LocalJSX {
         "ti-input": TiInput;
         "ti-input-number": TiInputNumber;
         "ti-loading": TiLoading;
+        "ti-navbar": TiNavbar;
         "ti-notice-bar": TiNoticeBar;
         "ti-picker": TiPicker;
         "ti-picker-column": TiPickerColumn;
@@ -4621,6 +4779,7 @@ declare namespace LocalJSX {
         "ti-transition": TiTransition;
         "ti-tree-select": TiTreeSelect;
         "ti-uploader": TiUploader;
+        "ti-virtual-list": TiVirtualList;
     }
 }
 export { LocalJSX as JSX };
@@ -4660,6 +4819,7 @@ declare module "@stencil/core" {
             "ti-input": LocalJSX.TiInput & JSXBase.HTMLAttributes<HTMLTiInputElement>;
             "ti-input-number": LocalJSX.TiInputNumber & JSXBase.HTMLAttributes<HTMLTiInputNumberElement>;
             "ti-loading": LocalJSX.TiLoading & JSXBase.HTMLAttributes<HTMLTiLoadingElement>;
+            "ti-navbar": LocalJSX.TiNavbar & JSXBase.HTMLAttributes<HTMLTiNavbarElement>;
             "ti-notice-bar": LocalJSX.TiNoticeBar & JSXBase.HTMLAttributes<HTMLTiNoticeBarElement>;
             "ti-picker": LocalJSX.TiPicker & JSXBase.HTMLAttributes<HTMLTiPickerElement>;
             "ti-picker-column": LocalJSX.TiPickerColumn & JSXBase.HTMLAttributes<HTMLTiPickerColumnElement>;
@@ -4702,6 +4862,7 @@ declare module "@stencil/core" {
             "ti-transition": LocalJSX.TiTransition & JSXBase.HTMLAttributes<HTMLTiTransitionElement>;
             "ti-tree-select": LocalJSX.TiTreeSelect & JSXBase.HTMLAttributes<HTMLTiTreeSelectElement>;
             "ti-uploader": LocalJSX.TiUploader & JSXBase.HTMLAttributes<HTMLTiUploaderElement>;
+            "ti-virtual-list": LocalJSX.TiVirtualList & JSXBase.HTMLAttributes<HTMLTiVirtualListElement>;
         }
     }
 }

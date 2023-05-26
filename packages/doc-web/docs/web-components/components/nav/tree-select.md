@@ -22,13 +22,13 @@ import TabsLink from '@site/src/components/tabsLink';
 
 #### 基础用法
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-tree-select id="ti-tree-select" />
+<ti-tree-select id="ti-tree-select"></ti-tree-select>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -50,13 +50,13 @@ window.onload=function(){
 
 #### 自定义数据项别名
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tree-select id="ti-tree-select"></ti-tree-select>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -79,15 +79,15 @@ window.onload=function(){
 
 #### 自定义右侧内容部分
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-tree-select id="ti-tree-select" onchangenav="onChangeNav(event)" />
+<ti-tree-select id="ti-tree-select">
   <div id="ti-tree-content"></div>
 </ti-tree-select>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -105,7 +105,8 @@ window.onload=function(){
   function onChangeNav(e){
     var content = document.getElementById("ti-tree-content");
     content.innerHtml = e.target.label
-  }
+  };
+  tree.addEventListener('onchangenav', onChangeNav, false);
 };
 ```
 </TabItem>
@@ -139,8 +140,8 @@ window.onload=function(){
 
 | 名称         | 参数列表                                                                                               | 描述             | 备注 |
 | ------------ | ------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
-| bind:change-nav  | `(e: WechatMiniprogram.CustomEvent<{index: number, item: Record<string, any>}>) => void`                                    | 父选项改变是触发 | -    |
-| bind:change-item | `(e: WechatMiniprogram.CustomEvent<{active-value: array, current: Record<string, any>, item: Record<string, any>}>) => void` | 子选项改变是触发 | -    |
+| change-nav  | `(e: CustomEvent) => void`                                    | 父选项改变是触发 | -    |
+| change-item | `(e: CustomEvent) => void` | 子选项改变是触发 | -    |
 
 ### 插槽 **Slots**
 
@@ -161,5 +162,5 @@ window.onload=function(){
 | 变量                         | 默认值  | 说明                       | 备注 |
 | ---------------------------- | ------- | -------------------------- | ---- |
 | --tree-select-cell-h         | `108rpx` | 右侧默认选项内容的每项高度 | - |
-| --tree-select-active-color   | `108rpx` | 右侧默认选项内容选中颜色   | - |
-| --tree-select-disabled-color | `108rpx` | 右侧默认选项内容禁用颜色   | - |
+| --tree-select-active-color   | `#fa2c19` | 右侧默认选项内容选中颜色   | - |
+| --tree-select-disabled-color | `#c4c4c4` | 右侧默认选项内容禁用颜色   | - |

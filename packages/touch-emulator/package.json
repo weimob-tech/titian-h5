@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/weimob-tech/titian-h5.git",
-    "directory": "packages/touch-emulator"
+    "url": "https://github.com/weimob-tech/titian-h5.git"
   },
   "license": "MIT",
+  "author": "",
   "main": "touch-emulator.js",
   "files": [
     "README.md",

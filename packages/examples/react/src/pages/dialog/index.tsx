@@ -129,7 +129,16 @@ const Dialog = () => {
         </div>
 
         <TiDialog {...attr} visible={visible} onCancel={onCancel1} onConfirm={onConfirm1} onClose={onClose1}>
-          {attr.useContentSlot && <div className="dialog-slot-content">插槽</div>}
+          <div slot="before-title">前缀-</div>
+          {attr.useContentSlot && (
+            <div className="dialog-slot-content">
+              插槽使
+              <br />
+              手动换行，限制宽度超出后自动折行。
+              <br />
+              文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容文字填充内容
+            </div>
+          )}
         </TiDialog>
       </Page>
     </>

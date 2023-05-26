@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRow, TiCol } from '@titian-design/mobile-react'
+import { TiRow, TiCol } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例

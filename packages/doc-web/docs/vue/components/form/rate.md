@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -45,7 +45,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -57,7 +57,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -69,7 +69,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -81,7 +81,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -93,7 +93,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -105,7 +105,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -120,7 +120,7 @@ import { TiRate } from '@titian-design/mobile-vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiRate } from '@titian-design/mobile-vue';
+import { TiRate } from '{{packageWeappVue}}';
  const value = ref(10);
   
  const onChangeHandler = (event) => {

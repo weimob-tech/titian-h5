@@ -1,0 +1,26 @@
+@import '../common/static/utils.less';
+@import '../common/static/var.less';
+@import '../common/static/mixins/index.less';
+
+@virtuallist:~ '@{project}-virtual-list';
+
+:host {
+  display: contents;
+  width: 100%;
+}
+
+.@{virtuallist} {
+  position: relative;
+  width: var(--virtual-list-width, 100%);
+  overflow-y: auto;
+
+  background-color: var(--virtual-list-background-color, #fff);
+
+  &-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}

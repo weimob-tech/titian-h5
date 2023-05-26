@@ -22,13 +22,13 @@ import TabItem from '@theme/TabItem';
 
 #### 基础用法
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabbar id="ti-tabbar"></ti-tabbar>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -44,13 +44,13 @@ window.onload=function(){
 
 #### 当前选中项
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabbar id="ti-tabbar" value="second"></ti-tabbar>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -66,13 +66,13 @@ window.onload=function(){
 
 #### 颜色
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabbar id="ti-tabbar" value="second" active-color="#FF2E2E" color="#2A6AE9"></ti-tabbar>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -128,7 +128,7 @@ window.onload=function(){
 
 | 名称        | 参数列表                                                       | 描述                                                                 | 备注 |
 | ----------- | -------------------------------------------------------------- | -------------------------------------------------------------------- | ---- |
-| bind:select | `(e: WechatMiniprogram.CustomEvent<string \| number>) => void` | tabbar选中项，返回值为TabbarItem中value的值，没有value字段，返回索引 | -    |
+| select | `(e: CustomEvent<string \| number>) => void` | tabbar选中项，返回值为TabbarItem中value的值，没有value字段，返回索引 | -    |
 
 ### 插槽 **Slots**
 

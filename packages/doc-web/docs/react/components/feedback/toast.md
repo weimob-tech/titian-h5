@@ -18,19 +18,16 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { $tiToast } from '@titian-design/mobile-vue'
+import { $tiToast } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
 
 
-```html showLineNumbers
-<template>
-</template>
+```js showLineNumbers
+import { $tiToast } from '{{packageWeappReact}}';
 
-<script setup lang="ts">
-  import { $tiToast } from '@titian-design/mobile-vue';
-
+const App = () => {
   $tiToast.info("这是一条轻提示！");
 
   $tiToast.warn({
@@ -60,7 +57,7 @@ import { $tiToast } from '@titian-design/mobile-vue'
     extPopupContentClass: "ext-toast-content-popup",
     extPopupMaskClass: "ext-toast-mask-popup",
   });
-</script>
+}
 ```
 
 ## TiToast API
@@ -77,24 +74,24 @@ import { $tiToast } from '@titian-design/mobile-vue'
 
 
 #### ToastOptions 数据结构
-| 名称             | 类型       | 必填 | 默认值  | 说明        | 备注 |
-| ---------------- | ---------- | ---- | ------- | ----------- | ---- |
-| text             | `number`   | 否   | `100`   | 文本        |      |
+| 名称              | 类型       | 必填 | 默认值  | 说明         | 备注 |
+| ----------------- | ---------- | ---- | ------- | ------------ | ---- |
+| text              | `number`   | 否   | `100`   | 文本         |      |
 | z-index           | `number`   | 否   | `30000` | z-index 层级 |      |
-| duration         | `number`   | 否   | `2000`  | 展示时长    | -    |
-| color            | `string`   | 否   | `#fff`  | 颜色        | -    |
-| icon             | `string`   | 否   | -       | 轻提示 icon | -    |
-| finished-callback | `Function` | 否   | `0`     | 回调        | -    |
+| duration          | `number`   | 否   | `2000`  | 展示时长     | -    |
+| color             | `string`   | 否   | `#fff`  | 颜色         | -    |
+| icon              | `string`   | 否   | -       | 轻提示 icon  | -    |
+| finished-callback | `Function` | 否   | `0`     | 回调         | -    |
 
 ### CSS 变量 **CSS Variables**
 
-| CSS 变量                      | 默认值                                  | 说明 |
-| ----------------------------- | --------------------------------------- | ---- |
-| `--toast-popup-mask-bg-color` | 同 `Popup` 组件 `--popup-mask-bg-color` | --   |
-| `--toast-popup-radius`        | 同 `Popup` 组件 `--popup-popup-radius`  | --   |
-| `--toast-popup-box-bg-color`  | 同 `Popup` 组件 `--popup-box-bg-color`  | --   |
-| `--toast-bg-color`            | 容器背景色                              | --   |
-| `--toast-status-width`        | icon 模式下宽度                         | --   |
-| `--toast-status-height`       | icon 模式下高度                         | --   |
-| `--toast-status-gap`          | icon 与文本之间间距                     | --   |
-| `--toast-text-color`          | 文本区颜色                              | --   |
+| CSS 变量                      | 默认值                                  | 说明                     |
+| ----------------------------- | --------------------------------------- | ------------------------ |
+| `--toast-popup-mask-bg-color` | 同 `Popup` 组件 `--popup-mask-bg-color` | -                        |
+| `--toast-popup-radius`        | 同 `Popup` 组件 `--popup-popup-radius`  | -                        |
+| `--toast-popup-box-bg-color`  | 同 `Popup` 组件 `--popup-box-bg-color`  | -                        |
+| `--toast-bg-color`            | 容器背景色                              | -                        |
+| `--toast-content-padding`     | 16px 36px                               | icon模式下内容区域内边距 |
+| `--toast-text-line-height`    | 36px                                    | icon 模式下文字行度      |
+| `--toast-status-gap`          | icon 与文本之间间距                     | -                        |
+| `--toast-text-color`          | 文本区颜色                              | -                        |

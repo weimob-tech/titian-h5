@@ -19,21 +19,6 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-picker-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-picker": "@titian-design/weapp/picker/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-picker": "platform://titian-weapp/ti-picker"
-  }
-}
-```
-
 ## 用法示例
 :::note
 options 字段数据结构：[PickerAcronymColumn](#简易模式--列数据结构-pickeracronymcolumn) 或 [PickerColomn](#列数据结构-pickercolumn)
@@ -44,25 +29,26 @@ options 字段数据结构：[PickerAcronymColumn](#简易模式--列数据结�
 **简易属性模式：**
 
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-picker options="{{ options }}" value="{{ value }}" bind:confirm="onConfirm" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data:{
-    options:['选项一', '选项二', '选项三', '选项四', '选项五'],
-    value: ['选项二']
-  },
-  onConfirm(){}
-});
+```js showLineNumbers
+window.onload = function(){
+  var value = ['选项二'];
+  var options = ['选项一', '选项二', '选项三', '选项四', '选项五'];
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.value = value;
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
  </TabItem>
 </Tabs>
 
@@ -70,30 +56,31 @@ Page({
 
 **完整属性模式：**
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-picker options="{{ options }}" value="{{value}}" bind:confirm="onConfirm" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data:{
-    options: {
-      colAlias: 'a',
-      column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
-    },
-    value: [
-      { colAlias: 'a', value: '选项二' },
-    ]
-  },
-  onConfirm(){}
-});
+```js showLineNumbers
+window.onload = function(){
+  var value = [
+    { colAlias: 'a', value: '选项二' },
+  ];
+  var options = {
+    colAlias: 'a',
+    column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
+  };
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.value = value;
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
  </TabItem>
 </Tabs>
 
@@ -103,95 +90,98 @@ Page({
 
 **简易属性模式：**
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
- <ti-picker options="{{ options }}" value="{{value}}" bind:confirm="onConfirm" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data:{
-    options:[
-      ['选项一', '选项二', '选项三', '选项四', '选项五'],
-      ['选项一', '选项二', '选项三', '选项四', '选项五']
-    ],
-    value: ['选项二', '选项三']
-  },
-  onConfirm(){}
-});
+```js showLineNumbers
+window.onload = function(){
+  var value = ['选项二', '选项三'];
+  var options = [
+    ['选项一', '选项二', '选项三', '选项四', '选项五'],
+    ['选项一', '选项二', '选项三', '选项四', '选项五']
+  ];
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.value = value;
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
  </TabItem>
 </Tabs>
 
 **完整属性模式：**
 
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
- <ti-picker options="{{ options }}" value="{{value}}" bind:confirm="onConfirm" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data:{
-    options:[
-      {
-        colAlias: 'a',
-        column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
-      },
-      {
-        colAlias: 'b',
-        column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
-      }
-    ],
-    value: [
-      { colAlias: 'a', value: '选项二' },
-      { colAlias: 'b', value: '选项三' },
-    ]
-  }
-});
+```js showLineNumbers
+window.onload = function(){
+  var value = [
+    { colAlias: 'a', value: '选项二' },
+    { colAlias: 'b', value: '选项三' },
+  ];
+  var options = [
+    {
+      colAlias: 'a',
+      column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
+    },
+    {
+      colAlias: 'b',
+      column: ['选项一', '选项二', '选项三', '选项四', '选项五'],
+    }
+  ];
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.value = value;
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
  </TabItem>
 </Tabs>
 
 #### 有禁用项
 
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
- <ti-picker options="{{ options }}" value="{{value}}" bind:confirm="onConfirm" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data:{
-    options:[
-      { text: '选项一', disabled: true },
-      { text: '选项二' },
-      { text: '选项三', disabled: true },
-      { text: '选项四' },
-      { text: '选项五', disabled: true },
-      { text: '选项六' },
-    ]
-  },
-  onConfirm(){}
-});
+```js showLineNumbers
+window.onload = function(){
+  var options = [
+    { text: '选项一', disabled: true },
+    { text: '选项二' },
+    { text: '选项三', disabled: true },
+    { text: '选项四' },
+    { text: '选项五', disabled: true },
+    { text: '选项六' },
+  ];
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
  </TabItem>
 </Tabs>
 
@@ -199,61 +189,61 @@ Page({
 #### 级联数据
 
 <Tabs>
-  <TabItem value="index.wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-picker label="name" row-alias="code" options="{{ options }}" />
+<ti-picker id="ti-picker"></ti-picker>
 ```
-
   </TabItem>
   <TabItem value="index.js" label="index.js">
 
-```typescript js showLineNumbers
-Page({
-  data:{
-    options:[
+```js showLineNumbers
+window.onload = function(){
+  var options = [
+    {
+        code: '310000',
+        name: '上海市',
+        children: [
+          {
+            code: '310100',
+            name: '直辖市',
+            children: [
+              {
+                code: '310101',
+                name: '黄浦区',
+              },
+            ],
+          },
+        ],
+      },
       {
-          code: '310000',
-          name: '上海市',
-          children: [
-            {
-              code: '310100',
-              name: '直辖市',
-              children: [
-                {
-                  code: '310101',
-                  name: '黄浦区',
-                },
-              ],
-            },
-          ],
-        },
-        {
-          code: '330000',
-          name: '浙江省',
-          children: [
-            {
-              code: '330100',
-              name: '杭州市',
-              children: [
-                {
-                  code: '330102',
-                  name: '上城区',
-                },
-                {
-                  code: '330105',
-                  name: '拱墅区',
-                },
-              ],
-            },
-          ],
-        },
-      ]
-  },
-  onConfirm(){}
-});
+        code: '330000',
+        name: '浙江省',
+        children: [
+          {
+            code: '330100',
+            name: '杭州市',
+            children: [
+              {
+                code: '330102',
+                name: '上城区',
+              },
+              {
+                code: '330105',
+                name: '拱墅区',
+              },
+            ],
+          },
+        ],
+      },
+    ];
+  var tiPicker = document.getElementById("ti-picker");
+  tiPicker.options = options;
+  tiPicker.addEventListener('confirm', function(e){
+    console.log(e);
+  }, false);
+}
 ```
-
   </TabItem>
 </Tabs>
 
@@ -349,9 +339,9 @@ Page({
 
 | 名称        | 参数                                                                       | 说明           | 备注 |
 | ----------- | -------------------------------------------------------------------------- | -------------- | ---- |
-| bind:select      | 见 [change \| select 事件返回值](#change--select--事件返回值)              | 当前选中项     | -    |
-| bind:reachTop    | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到顶时触发 | -    |
-| bind:reachBottom | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到底时触发 | -    |
+| select      | 见 [change \| select 事件返回值](#change--select--事件返回值)              | 当前选中项     | -    |
+| reachTop    | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到顶时触发 | -    |
+| reachBottom | 见 [`reachTop`/`reachBottom`事件返回值](#reachtop--reachbottom-事件返回值) | 运动到底时触发 | -    |
 
 
 ### 外部样式类 **External Classes**

@@ -1,20 +1,16 @@
+import { TiIcon } from '@titian-design/mobile-react';
 import clsx from 'clsx';
 import React from 'react';
-import { TiIcon } from '@titian-design/mobile-react';
+import myJson from './iconfont.json';
 import styles from './styles.module.scss';
 
-function requireSvgs() {
-  const ctx = require.context('../../asset/icons', true, /\.svg$/);
-  return ctx.keys().map(key => key.replace(/\.\/|\.svg/g, ''));
-}
+const iconNames = myJson.glyphs.map(el => el.font_class);
 
 export default function IconCollection() {
-  const svgs = requireSvgs();
-
   return (
     <div className={clsx(styles['titian-icon'])}>
-      {svgs.map(key => (
-        <div className={clsx(styles['titian-icon-wrapper'])}>
+      {iconNames.map(key => (
+        <div className={clsx(styles['titian-icon-wrapper'])} key={key}>
           <TiIcon name={key} style={{ fontSize: 28 }} />
           <div className={clsx(styles['titian-icon-name'])}>{key}</div>
           {/* <div className={clsx(styles['titian-icon-actions'])}>动作</div> */}

@@ -1,9 +1,9 @@
 import { Component, h, Method, Prop, State, Element } from '@stencil/core';
-import { Components } from '../../components';
 import { BasicComponentAbstract } from '../common/basic/BasicComponent';
 import { addShadowRootStyle } from '../common/utils';
 import { join } from '../common/utils/namespace';
 import { getParent } from '../common/utils/relation';
+import { TiRow } from '../row';
 
 @Component({
   tag: 'ti-col',
@@ -80,7 +80,7 @@ export class TiCol implements BasicComponentAbstract {
   }
 
   @Method()
-  async updateDataFromParent(parent$0?: HTMLTiRowElement | Components.TiRow) {
+  async updateDataFromParent(parent$0?: HTMLTiRowElement | TiRow) {
     let parent = parent$0;
 
     if (!parent) {

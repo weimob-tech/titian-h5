@@ -1,5 +1,5 @@
 import { spawn as spawn$0, SpawnOptions } from 'child_process';
-import execa, { CommonOptions } from 'execa';
+import type { CommonOptions } from 'execa';
 import logger from './logger';
 
 export const spawn = (command: string, args: string[], options: SpawnOptions) => {
@@ -13,5 +13,7 @@ export const spawn = (command: string, args: string[], options: SpawnOptions) =>
 };
 
 export function exec(bin: string, args: string[], opts: CommonOptions<'utf8'> = {}) {
+  // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+  const execa = require('execa');
   return execa(bin, args, { stdio: 'inherit', ...opts });
 }

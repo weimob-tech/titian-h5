@@ -19,55 +19,32 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-dropdown-menu-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-dropdown-item": "@titian-design/weapp/dropdown-item/index",
-    "ti-dropdown-menu": "@titian-design/weapp/dropdown-menu/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-dropdown-item": "platform://titian-weapp/ti-dropdown-item",
-    "ti-dropdown-menu": "platform://titian-weapp/ti-dropdown-menu"
-  }
-}
-```
-
 ## 用法示例
 
 ### 基本使用
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="标题1" />
+  <ti-dropdown-item id="dropdown-item2" title="标题2"/>
   <ti-dropdown-item title="自定义内容">自定义内容</ti-dropdown-item>
-</ti-dropdown-menu>
-
-<ti-dropdown-menu direction="up">
-  <ti-dropdown-item title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
 ```
 
 </TabItem>
@@ -76,28 +53,27 @@ Page({
 #### 设置选中值
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item value="{{value}}" title="有选中值" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="有选中值" />
+  <ti-dropdown-item id="dropdown-item2" title="标题" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    value: '1,2',
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownItem1.value = [1,2]
 ```
 
 </TabItem>
@@ -106,32 +82,27 @@ Page({
 #### 禁用点击
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item disabled title="禁用标题点击" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
-</ti-dropdown-menu>
-
-<ti-dropdown-menu disabled>
-  <ti-dropdown-item title="禁用所有Item点击" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="禁用所有Item点击" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="禁用标题点击" />
+  <ti-dropdown-item id="dropdown-item2" title="标题" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownItem1.disabled = true
 ```
 
 </TabItem>
@@ -140,42 +111,31 @@ Page({
 #### 操作遮罩
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
-<ti-dropdown-menu>
-  <ti-dropdown-item has-mask="{{false}}" title="不显示遮罩" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题" options="{{dropMenuOptions}}" />
-</ti-dropdown-menu>
-
-<ti-dropdown-menu has-mask="{{false}}">
-  <ti-dropdown-item title="不显示遮罩1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="不显示遮罩2" options="{{dropMenuOptions}}" />
-</ti-dropdown-menu>
-
-<ti-dropdown-menu>
-  <ti-dropdown-item close-on-mask="{{false}}" title="关闭遮罩点击事件" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题" options="{{dropMenuOptions}}" />
-</ti-dropdown-menu>
-
-<ti-dropdown-menu close-on-mask="{{false}}">
-  <ti-dropdown-item title="关闭遮罩点击事件" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题" options="{{dropMenuOptions}}" />
+<ti-dropdown-menu id="dropdown-menu">
+  <ti-dropdown-item id="dropdown-item1" title="不显示遮罩1" />
+  <ti-dropdown-item id="dropdown-item2" title="不显示遮罩2" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownMenu = document.querySelector('#dropdown-menu')
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownMenu['has-mask'] = false
+dropdownMenu['close-on-mask'] = false
+
 ```
 
 </TabItem>
@@ -184,32 +144,29 @@ Page({
 #### 修改选择后的整体色调
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
-<ti-dropdown-menu>
-  <ti-dropdown-item active-color="red" title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
-</ti-dropdown-menu>
-
-<ti-dropdown-menu active-color="red">
-  <ti-dropdown-item title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
+<ti-dropdown-menu id="dropdown-menu">
+  <ti-dropdown-item id="dropdown-item1" title="标题1" />
+  <ti-dropdown-item id="dropdown-item2" title="标题2" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownMenu = document.querySelector('#dropdown-menu')
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownMenu['active-color'] = 'red'
 ```
 
 </TabItem>
@@ -218,27 +175,32 @@ Page({
 #### submit 模式
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item bind:submit="handleSubmit" has-submit submit-text="提交" title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" submit-text="提交" title="标题1" />
+  <ti-dropdown-item id="dropdown-item2" title="标题2" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownMenu = document.querySelector('#dropdown-menu')
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownItem1['has-submit'] = true
+dropdownItem1.addEventListener('submit', function (e) {
+  console.log(e.detail)
+})
 ```
 
 </TabItem>
@@ -247,28 +209,31 @@ Page({
 #### 自定义选择后的图标、选择类型、以及是否是多选类型
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item title="自定义图标" options="{{dropMenuOptions}}" icon="plus" />
-  <ti-dropdown-item title="使用 switch" options="{{dropMenuOptions}}" type="switch" />
-  <ti-dropdown-item mode="multiple" title="多选" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="自定义图标" icon="plus" />
+  <ti-dropdown-item id="dropdown-item2" title="使用 switch" type="switch" />
+  <ti-dropdown-item id="dropdown-item3" mode="multiple" title="多选" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-   data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+const dropdownItem3 = document.querySelector('#dropdown-item3')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownItem3.options = dropMenuOptions
+
 ```
 
 </TabItem>
@@ -277,40 +242,36 @@ Page({
 #### 事件操作
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
 <ti-dropdown-menu>
-  <ti-dropdown-item bind:close="handleClose" bind:open="handleOpen" bind:change="handleChange" title="标题1" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题2" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item bind:submit="handleSubmit" has-submit submit-text="提交" title="标题2" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="标题1" />
+  <ti-dropdown-item id="dropdown-item2" title="标题2" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-  handleClose(e) {
-    console.log('关闭: ', e);
-  },
-  handleOpen(e) {
-    console.log('打开: ', e);
-  },
-  handleChange(e) {
-    console.log('切换: ', e);
-  },
-  handleSubmit(e) {
-    console.log('提交: ', e);
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+dropdownItem1.addEventListener('submit', function (e) {
+  console.log(e.detail)
+})
+dropdownItem1.addEventListener('open', function (e) {
+  console.log(e.detail)
+})
+dropdownItem1.addEventListener('change', function (e) {
+  console.log(e.detail)
+})
 ```
 
 </TabItem>
@@ -320,37 +281,32 @@ Page({
 #### 事件操作
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="wxml" label="index.html">
 
 ```html showLineNumbers
-<ti-button bind:tap="handleBtnClick">主动控制</ti-button>
+<ti-button id="btn">主动控制</ti-button>
 <ti-dropdown-menu>
-  <ti-dropdown-item id="dropdown-item" bind:close="handleClose" bind:open="handleOpen"  title="标题" options="{{dropMenuOptions}}" />
-  <ti-dropdown-item title="标题" options="{{dropMenuOptions}}" />
+  <ti-dropdown-item id="dropdown-item1" title="标题1" />
+  <ti-dropdown-item id="dropdown-item2" title="标题2" />
 </ti-dropdown-menu>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    dropMenuOptions: [
-      { title: '选项1', value: '1' },
-      { title: '选项2', value: '2' },
-    ],
-  },
-  handleClose(e) {
-    console.log('关闭: ', e);
-  },
-  handleOpen(e) {
-    console.log('打开: ', e);
-  },
-  handleBtnClick(e) {
-    this.selectComponent('#dropdown-item').toggle();
-  },
-});
+const dropMenuOptions = [
+  { title: '选项1', value: '1' },
+  { title: '选项2', value: '2' },
+]
+const btn = document.querySelector('#btn')
+const dropdownItem1 = document.querySelector('#dropdown-item1')
+const dropdownItem2 = document.querySelector('#dropdown-item2')
+dropdownItem1.options = dropMenuOptions
+dropdownItem2.options = dropMenuOptions
+btn.addEventListener('click', function () {
+  dropdownItem1.toggle()
+})
 ```
 
 </TabItem>
@@ -435,10 +391,10 @@ interface TiDropdownItemOption {
 
 | 名称   | 参数列表 | 描述             | 备注 |
 | ------ | -------- | ---------------- | ---- |
-| `bind:close`  | `(e: WechatMiniprogram.CustomEvent<never>) => void` | 关闭时触发的事件 | -    |
-| `bind:open`   | `(e: WechatMiniprogram.CustomEvent<never>) => void` | 打开时触发的事件 | -    |
-| `bind:change` | <code>(e: WechatMiniprogram.CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code> | 切换时触发的事件 | -    |
-| `bind:submit` | <code>(e: WechatMiniprogram.CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code> | 提交时触发的事件 | -    |
+| close  | `(e: CustomEvent<never>) => void` | 关闭时触发的事件 | -    |
+| open   | `(e: CustomEvent<never>) => void` | 打开时触发的事件 | -    |
+| change | <code>(e: CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code> | 切换时触发的事件 | -    |
+| submit | <code>(e: CustomEvent<string &vert; number &vert; Array<string &vert; number\>\>) => void</code> | 提交时触发的事件 | -    |
 
 #### 可扩展样式类名（class）
 

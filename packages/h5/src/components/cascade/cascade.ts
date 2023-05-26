@@ -119,10 +119,10 @@ export default class Cascade {
     const { tabs } = this;
     const currentOption = columnList[index];
     const content = columnValueList[index];
-    if (content && content[code] && content[code] === id) {
+    if (content && content[code] && content[code].toString() === id) {
       return Promise.resolve(undefined);
     }
-    const value = currentOption.find(i => i[code] === id);
+    const value = currentOption.find(i => i[code].toString() === id);
     if (!value) {
       return Promise.resolve(undefined);
     }

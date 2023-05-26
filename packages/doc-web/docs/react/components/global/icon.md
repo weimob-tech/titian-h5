@@ -25,7 +25,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiIcon } from '@titian-design/mobile-react'
+import { TiIcon } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -59,6 +59,7 @@ const App: React.FC = () => {
 <TabItem value="css" label="index.css">
 
 ```css showLineNumbers
+// 在html的head中添加link标签，引入字体css文件，或者在全局index.css文件中引入如下字体css文件内容
 @font-face {
   font-family: 'weimob-icon';
   src: url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.eot?t=1669700415255'); /* IE9*/
@@ -110,6 +111,7 @@ const App: React.FC = () => {
 <TabItem value="css" label="index.css">
 
 ```css showLineNumbers
+// 在html的head中添加link标签，引入字体css文件，或者在全局index.css文件中引入如下字体css文件内容
 @font-face {
   font-family: 'weimob-icon';
   src: url('https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/106/weimob-icon.eot?t=1669700415255'); /* IE9*/

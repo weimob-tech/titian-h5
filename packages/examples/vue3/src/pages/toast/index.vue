@@ -6,10 +6,10 @@
 import { $tiToast } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 import { mergeOptionIntoAttrs } from '../../utils/index';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     desc: '模式',
     key: 'state',

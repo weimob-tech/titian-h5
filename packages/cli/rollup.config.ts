@@ -7,7 +7,12 @@ const sharedConfig = {
     // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
     ...Object.keys(require('./package.json').dependencies),
   ],
-  plugins: [nodeResolve(), typescript()],
+  plugins: [
+    nodeResolve(),
+    typescript({
+      allowSyntheticDefaultImports: true,
+    }),
+  ],
 };
 
 const config: RollupOptions = {
@@ -15,6 +20,7 @@ const config: RollupOptions = {
   output: {
     file: `dist/index.js`,
     format: 'cjs',
+    exports: 'auto',
   },
   ...sharedConfig,
 };
@@ -24,6 +30,7 @@ const cliConfig: RollupOptions = {
   output: {
     file: 'dist/cli.js',
     format: 'cjs',
+    exports: 'auto',
   },
   ...sharedConfig,
 };

@@ -5,16 +5,28 @@
   flex-direction: column;
   flex-grow: 0;
   height: 685px;
+  @media (max-width: 996px) {
+    position: initial;
+    margin-top: 80px;
+  }
 
   .iframe {
     width: 375px;
     height: 641px;
+    margin: 0 auto;
 
-    border: 16px solid #fafafa;
+    border: 8px solid #fafafa;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
 
     background-color: #f9f9f9;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      max-width: 375px;
+      height: auto;
+      aspect-ratio: 375/640;
+    }
 
     &.radius12 {
       border-top-left-radius: 12px;
@@ -30,5 +42,8 @@
     border-top-right-radius: 12px;
 
     background: #f9f9f9;
+    @media (max-width: 996px) {
+      width: 100%;
+    }
   }
 }

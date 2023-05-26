@@ -22,11 +22,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-divider": "@titian-design/weapp/divider/index"
+    "ti-divider": "{{packageWeappName}}/divider/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-divider": "platform://titian-weapp/ti-divider"
+    "ti-divider": "platform://titian-mp/ti-divider"
   }
 }
 ```

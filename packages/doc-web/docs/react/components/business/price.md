@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPrice } from '@titian-design/mobile-react';
+import { TiPrice } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例
@@ -52,6 +52,7 @@ const App: React.FC = () => {
 | prefix   | `string` | 否   | -      | 前缀       | -    |
 | value    | `number` | 否   | 0      | 价格       | -    |
 | suffix   | `string` | 否   | -      | 后缀       | -    |
+| radix   | `number` | 否   | 2      | 小数点精度       | -    |
 | extStyle | `string` | 否   | -      | 根节点样式 | -    |
 
 ### CSS 变量 **CSS Variables**

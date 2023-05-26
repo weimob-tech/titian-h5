@@ -26,11 +26,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-cascade": "@titian-design/weapp/cascade/index"
+    "ti-cascade": "{{packageWeappName}}/cascade/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-cascade": "platform://titian-weapp/ti-cascade"
+    "ti-cascade": "platform://titian-mp/ti-cascade"
   }
 }
 ```
@@ -125,32 +125,31 @@ Page({
 Page({
   data: {
     tabs: ['省', '市', '区/县'],
-  },
-  async asyncGetOptionAPI(value: any){
-    let rawResponse;
-    if (value) {
-      rawResponse = await fetch('api3/address/tmp/getAreasByCityId', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ areaCode: value.areaCode }),
-      });
-    } else {
-      rawResponse = await fetch('api3/address/tmp/getProvinceCity', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({}),
-      });
+    asyncGetOptionAPI: async (value: any) => {
+      let rawResponse;
+      if (value) {
+        rawResponse = await fetch('api3/address/tmp/getAreasByCityId', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ areaCode: value.areaCode }),
+        });
+      } else {
+        rawResponse = await fetch('api3/address/tmp/getProvinceCity', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({}),
+        });
+      }
+      const { data } = await rawResponse.json();
+      return data;
     }
-    const { data } = await rawResponse.json();
-    return data;
   }
 });
 ```
-
   </TabItem>
 </Tabs>
 

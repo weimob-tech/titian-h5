@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { $tiDialog } from '@titian-design/mobile-vue';
+import { $tiDialog } from '{{packageWeappVue}}';
 ```
 
 
@@ -31,7 +31,7 @@ import { $tiDialog } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { $tiDialog } from '@titian-design/mobile-vue'
+import { $tiDialog } from '{{packageWeappVue}}'
 
 $tiDialog.show({
   title: "Confirm标题",
@@ -72,7 +72,7 @@ $tiDialog.close()
 </template>
 
 <script lang="ts" setup>
-import { TiDialog, ref } from '@titian-design/mobile-vue'
+import { TiDialog, ref } from '{{packageWeappVue}}'
   
 const visible = ref(false);
 
@@ -112,7 +112,7 @@ const onClose = () => {
 | title                   | `string`  | 否   | -      | 标题                                   | -    |
 | content                 | `string`  | 否   | -      | 内容，支持使用 `\n` 换行                                   | -    |
 | z-index                  | `number`  | 否   | 12000  | zIndex                                 | -    |
-| has-cancel-button       | `boolean` | 否   | false  | 是否展示确认按钮                       | -    |
+| has-cancel-button       | `boolean` | 否   | false  | 是否展示取消按钮                       | -    |
 | close-on-mask           | `boolean` | 否   | true   | 点击遮罩是否关闭对话框                 | -    |
 | close-on-actions        | `boolean` | 否   | true   | 点击`确认`和`取消`按钮，是否关闭对话框 | -    |
 | is-text-button          | `boolean` | 否   | false  | 是否为文字按钮                         | -    |
@@ -174,7 +174,7 @@ const onClose = () => {
 | `--dialog-actions-height`           | 88px                                                             | 按钮区高度           | -    |
 | `--dialog-actions-gap`              | 32px                                                             | 按钮区按钮间距       | -    |
 | `--dialog-actions-border-top-color` | var(--neutral-color-6, #f2f2f2)                                  | 按钮区上边线颜色     | -    |
-| `--dialog-actions-space`             | 56px                                                             | 按钮区按钮内边距     | -    |
+| `--dialog-actions-space`             | 48px                                                             | 按钮区按钮内边距     | -    |
 | `--dialog-actions-cancel-color`     | #757575 | 按钮区取消按钮颜色   | -    |
 | `--dialog-actions-cancel-border-color`     | #212121 | 按钮区取消按钮边线颜色   | -    |
 | `--dialog-actions-cancel-active-color`     | rgba(33, 33, 33, 0.1) | 按钮区取消按钮按压颜色   | -    |

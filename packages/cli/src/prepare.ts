@@ -1,8 +1,8 @@
 import { existsSync } from 'fs';
+import { homedir } from 'os';
 import chalk from 'chalk';
 import type { ParsedArgs } from 'minimist';
 import * as readPkgUp from 'read-pkg-up';
-import userHome from 'user-home';
 import logger from './utils/logger';
 import { getPackageRegistry } from './utils/npminfo';
 
@@ -22,6 +22,7 @@ const checkRoot = () => {
 };
 
 const checkUserHome = () => {
+  const userHome = homedir();
   logger.debug(`user home: ${userHome}`);
 
   if (!userHome || !existsSync(userHome)) {

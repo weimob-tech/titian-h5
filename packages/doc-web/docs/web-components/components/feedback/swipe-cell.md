@@ -19,21 +19,6 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-swipe-cell-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-swipe-cell": "@titian-design/weapp/swpie-cell/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-swipe-cell": "platform://titian-weapp/ti-swipe-cell"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基本使用
@@ -41,77 +26,75 @@ import TabsLink from '@site/src/components/tabsLink';
 ** 对于静态内容，组件内部会自动计算宽度 **
 ```html showLineNumbers
 <ti-swipe-cell>
-  <view>基本模式</view>
-  <view slot="left">left</view>
-  <view slot="right">right</view>
+  <div>基本模式</div>
+  <div slot="left">left</div>
+  <div slot="right">right</div>
 </ti-swipe-cell>
 ```
 
 #### 自定义左右宽度
 
 :::note
-自定义宽度的单位为 `rpx`
+自定义宽度的单位为 `px`
 :::
 
 ```html showLineNumbers
-<ti-swipe-cell left-width="{{200}}">
-  <view>自定义左侧宽度</view>
-  <view slot="left">left</view>
+<ti-swipe-cell left-width="200">
+  <div>自定义左侧宽度</div>
+  <div slot="left">left</div>
 </ti-swipe-cell>
 
-<ti-swipe-cell right-width="{{200}}">
-  <view>自定义右侧宽度</view>
-  <view slot="right">right</view>
+<ti-swipe-cell right-width="200">
+  <div>自定义右侧宽度</div>
+  <div slot="right">right</div>
 </ti-swipe-cell>
 ```
 
 #### 自动展开
 ```html showLineNumbers
-<ti-swipe-cell left-width="{{200}}" visible>
-  <view>自动展开左侧</view>
-  <view slot="left">left</view>
+<ti-swipe-cell left-width="200" visible>
+  <div>自动展开左侧</div>
+  <div slot="left">left</div>
 </ti-swipe-cell>
-<ti-swipe-cell right-width="{{200}}" visible>
-  <view >自动展开右侧</view>
-  <view slot="right">right</view>
+<ti-swipe-cell right-width="200" visible>
+  <div>自动展开右侧</div>
+  <div slot="right">right</div>
 </ti-swipe-cell>
 ```
 
 #### 禁用滑动
 ```html showLineNumbers
 <ti-swipe-cell disabled>
-  <view>禁用滑动</view>
-  <view slot="left">left</view>
-  <view slot="right">right</view>
+  <div>禁用滑动</div>
+  <div slot="left">left</div>
+  <div slot="right">right</div>
 </ti-swipe-cell>
 ```
 
 #### 异步操作控制
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="html" label="index.html">
 
 ```html showLineNumbers
-<ti-button bind:tap="handleClick">控制</ti-button>
-<ti-swipe-cell visible="{{visible}}" async-close>
-  <view>异步控制滑动</view>
-  <view slot="left">left</view>
+<ti-button id="btn">控制</ti-button>
+<ti-swipe-cell id="swipe-cell" async-close>
+  <div>异步控制滑动</div>
+  <div slot="left">left</div>
 </ti-swipe-cell>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    visible: false,
-  },
-  handleClick() {
-    this.setData({
-      visible: !this.data.visible,
-    });
-  },
+const swipeCell = document.querySelector('#swipe-cell');
+const btn = document.querySelector('#btn');
+let visible = false;
+
+btn.addEventListener('click', function () {
+  swipeCell.visible = !visible;
+  visible = !visible;
 });
 ```
 
@@ -121,30 +104,32 @@ Page({
 #### 监听事件
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml">
+<TabItem value="html" label="index.html">
 
 ```html showLineNumbers
-<ti-swipe-cell bind:open="handleOpen" bind:close="handleClose" bind:click="handleSwipeCellClick">
-  <view>基本模式</view>
-  <view slot="left">left</view>
-  <view slot="right">right</view>
+<ti-swipe-cell id="swipe-cell">
+  <div>基本模式</div>
+  <div slot="left">left</div>
+  <div slot="right">right</div>
 </ti-swipe-cell>
 ```
 
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  handleOpen(e) {
-    console.log('展开', e.detail);
-  },
-  handleClose(e) {
-    console.log('收起', e.detail);
-  },
-  handleSwipeCellClick(e) {
-    console.log('点击', e.detail);
-  },
+const swipeCell = document.querySelector('#swipe-cell');
+
+swipeCell.addEventListener('open', function (e) {
+  console.log('展开', e.detail);
+});
+
+swipeCell.addEventListener('close', function (e) {
+  console.log('展开', e.detail);
+});
+
+swipeCell.addEventListener('click', function (e) {
+  console.log('展开', e.detail);
 });
 ```
 
@@ -168,9 +153,9 @@ Page({
 
 | 事件名 | 参数 |  说明       | 备注                                                       |
 | ------ | ---------- | -------------- | -------------------------------------------- |
-| `bind:open`   | `(e: WechatMiniprogram.CustomEvent<OpenParams>) => void` | 打开时触发  | -      |
-| `bind:close`  | `(e: WechatMiniprogram.CustomEvent<CloseParams>) => void` | 关闭时触发 | - |
-| `bind:click`  | <code>(e: WechatMiniprogram.CustomEvent<left &vert; right &vert; outside &vert; cell \>) => void</code> | 点击时触发 | 关闭时的点击位置 (`left` `right` `cell` `outside`)         |
+| open   | `(e: CustomEvent) => void` | 打开时触发  | -      |
+| close  | `(e: CustomEvent) => void` | 关闭时触发 | - |
+| click  | `(e: CustomEvent) => void` | 点击时触发 | 关闭时的点击位置 (`left` `right` `cell` `outside`)         |
 
 #### OpenParams
 ```typescript showLineNumbers

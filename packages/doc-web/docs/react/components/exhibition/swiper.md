@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSwiper, TiSwiperItem } from '@titian-design/mobile-react'
+import { TiSwiper, TiSwiperItem } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -119,6 +119,30 @@ const App: React.FC = () => {
 }
 ```
 
+#### 当一屏需要展示两边内容时
+```typescript tsx showLineNumbers
+const App: React.FC = () => {
+ const images = [
+    "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default1.png",
+    "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default2.png",
+    "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default3.png",
+    "https://cdn2.weimob.com/saas/@assets/saas-fe-retail-h5-stc/image/titian/default4.png"
+  ];
+
+  return (
+    <TiSwiper loop displayMultipleItems={1.5} centeredSlides>
+      {images.map((img) => (
+        <TiSwiperItem key={img}>
+          <div className="swiper-item">
+            <TiImage width="100%" height={300} mode="cover" src={img} />
+          </div>
+        </TiSwiperItem>
+      ))}
+    </TiSwiper>
+  );
+}
+```
+
 ## TiSwiper API
 
 ### 属性 **Properties**
@@ -129,11 +153,12 @@ const App: React.FC = () => {
 | autoplay | `boolean` | 否   | `false`  | 是否自动播放                                    | -    |
 | interval | `number`  | 否   | `5000`   | 自动切换时间间隔, 当`autoplay` 值为 `true` 生效 | -    |
 | duration | `number`  | 否   | `500`    | 滑动动画时长  | -    |
-| pagination | `bullets` \| `fraction` | 否 | false  | 页码展示类型设置   | -    |
+| pagination | `bullets` \| `fraction` | 否 | `none`  | 页码展示类型设置   | -    |
 | current  | `number`  | 否 | 0 | 初始化时所在滑块的 `index`  | -    |
 | displayMultipleItems | `number` | 否 | `1` | 每屏展示个内容个数 | -  |
 | spaceBetween | `number` | 否 | `10` | 每个 `item` 之间的间距 | - |
 | loop | `boolean` | 否 | `false` | 无缝滚动 | - |
+| centeredSlides | `boolean` | 否 | `false` | 居中幻灯片, 当设置 `displayMultipleItems` 时，会居中显示，两边平分设置额外内容 | - |
 | extStyle | `string` \| `Record<string, string> ` | 否   | -      | 根节点样式                    | -    |
 
 ### 事件 **Events**

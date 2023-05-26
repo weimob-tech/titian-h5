@@ -1,12 +1,7 @@
 {
   "name": "titian-doc",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/weimob-tech/titian-h5.git",
-    "directory": "packages/doc-web"
-  },
   "license": "MIT",
   "scripts": {
     "build": "docusaurus build",
@@ -33,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@docsearch/react": "^3.3.3",
     "@docusaurus/core": "^2.1.0",
     "@docusaurus/preset-classic": "^2.1.0",
     "@docusaurus/theme-classic": "^2.1.0",
@@ -41,15 +37,19 @@
     "@mdx-js/react": "^1.6.22",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.132",
-    "@titian-design/mobile-react": "workspace:0.1.1",
     "clipboard": "^2.0.11",
     "clsx": "^1.2.1",
+    "cross-env": "^7.0.3",
     "docusaurus-plugin-sass": "^0.2.2",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^17.0.2",
     "react-router-dom": "6.4.2",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "@titian-design/mobile-react": "workspace:0.1.1",
+    "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",

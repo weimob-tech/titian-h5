@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiUploader } from '@titian-design/mobile-react'
+import { TiUploader } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例
@@ -118,6 +118,43 @@ const App: React.FC = () => {
 }
 ```
 
+#### 自定义上传, 仅使用组件样式
+
+
+```typescript tsx showLineNumbers
+const App: React.FC = () => {
+  const [fileList, setFileList] = useState([
+    {
+      path: 'https://xxxxx.png',
+      fileType: 'image',
+      status: 'done',
+    },
+  ]);
+  const afterChoose = (selectedList, existsList) => {
+    // 上传之前你可以根据需求，比如size，来过滤selectedList
+    YOUR_UPLOAD().then(() => {
+      // 在你的上传回调里设置fileList，主要设置路径path，和状态status => 成功: done，失败：fail，上传中：'upload'
+      setFileList([
+        ...existsList,
+        ...selectedList.map(el => ({
+          ...el,
+          path: 'https://xxxxx.png',
+          status: 'done', // 上传失败的话 这里设置  fail
+        })),
+      ]);
+    });
+    // 这里return出去的是走后续上传的文件
+    return selectedList.map(el => ({ ...el, status: 'upload' }));
+  };
+  const onChange = e => {
+    setFileList(e.detail.fileList);
+  };
+
+  return (
+    <TiUploader value={fileList} immediately={false} afterChoose={afterChoose} onChange={onChange}></TiUploader>
+  )
+}
+```
 
 ## TiUploader API
 
@@ -139,8 +176,8 @@ const App: React.FC = () => {
 | url               | `string`                                     | 否       | -                   | 上传地址                                                                                   | -    |
 | preview           | `Function`                                   | 否       |                     | 自定义预览组件。默认使用内置的预览工具                                                     | -    |
 | choose            | `Function`                                   | 否       |                     | 选择函数                                                                                   | -    |
-| before-choose     | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
-| after-choose      | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           | -    |
+| beforeChoose     | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
+| afterChoose      | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           | -    |
 | beforeUpload      | `Function`                                   | 否       |                     | - 上传前置方法 可用用于处理上传参数                                                        | -    |
 | upload            | `Function`                                   | 否       |                     | 自定义上传方法，不传则使用内置的上传方法                                                   | -    |
 | complete          | `Function`                                   | 否       |                     | 上传完成/删除完成后调用                                                                    | -    |

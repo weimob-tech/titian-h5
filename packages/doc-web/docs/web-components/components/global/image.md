@@ -20,49 +20,49 @@ import TabsLink from '@site/src/components/tabsLink';
 #### 基础用法
 
 ```html showLineNumbers
-<ti-image width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-image width="180" height="180" src="..."></ti-image>
 ```
 #### 填充模式
 
 ```html showLineNumbers
-<ti-image mode="contain" width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image mode="cover" width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image mode="fill" width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image mode="none" width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image mode="scaleDown" width="180" height="180" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-image mode="contain" width="180" height="180" src="..."></ti-image>
+<ti-image mode="cover" width="180" height="180" src="..."></ti-image>
+<ti-image mode="fill" width="180" height="180" src="..."></ti-image>
+<ti-image mode="none" width="180" height="180" src="..."></ti-image>
+<ti-image mode="scaleDown" width="180" height="180" src="..."></ti-image>
 ```
 
 #### 自定义圆角
 **use-global-style设置为true，可跟随全局圆角风格，即受控于css变量--base-radius-size**
 ```html showLineNumbers
-<ti-image radius="18" width="100" height="100" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image radius="100%" width="100" height="100" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image use-global-style width="100" height="100" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-image radius="18" width="100" height="100" src="..."></ti-image>
+<ti-image radius="100%" width="100" height="100" src="..."></ti-image>
+<ti-image use-global-style width="100" height="100" src="..."></ti-image>
 ```
 #### 懒加载
 
 ```html showLineNumbers
-<ti-image lazy-load src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-image lazy-load src="..."></ti-image>
 ```
 #### 图片比例（宽高比）
 **aspect-ratio设置inherit，可跟随全局比例风格，即受控于css变量--image-aspect-ratio；也可以设置具体的宽高比。**
 ```html showLineNumbers
-<ti-image aspect-ratio="2" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image aspect-ratio="inherit" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-image aspect-ratio="2" src="..."></ti-image>
+<ti-image aspect-ratio="inherit" src="..."></ti-image>
 ```
 #### 加载中提示
-**更多可用iconName详见[ti-icon组件](./icon#图标展示)**
+**更多可用iconName详见[ti-icon组件](../icon#图标展示)**
 ```html showLineNumbers
-<ti-image loading-icon="default-pic" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
-  <div slot="loading" />
+<ti-image loading-icon="default-pic" src="..."></ti-image>
+<ti-image src="...">
+  <div slot="loading"></div>
 </ti-image>
 ```
 #### 加载失败提示
-**更多可用iconName详见[ti-icon组件](./icon#图标展示)**
+**更多可用iconName详见[ti-icon组件](../icon#图标展示)**
 ```html showLineNumbers
-<ti-image error-icon="default-pic" src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
-<ti-image src="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png">
+<ti-image error-icon="default-pic" src="..."></ti-image>
+<ti-image src="...">
   <div slot="error"></div>
 </ti-image>
 ```

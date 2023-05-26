@@ -13,9 +13,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin typescript",
+    "build": "rollup -c rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "prepublishOnly": "npm run build",
-    "start": "rollup -c rollup.config.ts --configPlugin typescript -w"
+    "start": "rollup -c rollup.config.ts --configPlugin typescript -w --bundleConfigAsCjs"
   },
   "dependencies": {
     "@pnpm/find-workspace-packages": "^4.0.5",
@@ -41,7 +41,7 @@
     "@types/node": "17.0.29",
     "@types/prompts": "^2.0.14",
     "@types/semver": "^7.3.9",
-    "rollup": "^2.72.1",
+    "rollup": "^3.21.0",
     "tslib": "^2.4.0",
     "typescript": "^4.5.4"
   }

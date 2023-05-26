@@ -12,7 +12,6 @@
   position: relative;
   flex: 1;
   flex-direction: column;
-  margin: 0 28px;
   overflow: hidden;
 
   &-popup {
@@ -36,6 +35,7 @@
     align-items: center;
     justify-content: center;
     height: @calendar-week-height;
+    margin: 0 28px;
   }
 
   &-weekday {
@@ -48,8 +48,10 @@
   }
 
   &-scroll {
+    box-sizing: border-box;
     flex-grow: 1;
     height: @calendar-scroll-height;
+    padding: 0 28px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -59,7 +61,7 @@
   }
 
   &-submit {
-    margin: 60px 0;
+    --button-margin: 28px;
   }
 
   &-title {
@@ -180,6 +182,38 @@
     &-cover-round &-bottom-info,
     &-cover-round &-text {
       color: @calendar-date-select-color;
+    }
+
+    &-selected[data-status='range_start']::after {
+      content: ' ';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      border-right-width: 10px;
+      border-right-style: solid;
+      border-color: currentcolor;
+
+      opacity: 0.1;
+    }
+
+    &-selected[data-status='range_end']::before {
+      content: ' ';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      border-left-width: 10px;
+      border-left-style: solid;
+      border-color: currentcolor;
+
+      opacity: 0.1;
     }
 
     &-selected &-content {

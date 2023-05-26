@@ -19,11 +19,11 @@
 <script lang="ts" setup>
 import { TiTag } from '@titian-design/mobile-vue';
 import { CSSProperties, ref, StyleValue } from 'vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 import CustomPage from '../../components/page.vue';
 import { mergeOptionIntoAttrs } from '../../utils/index';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     type: 'radio',
     name: 'Style',

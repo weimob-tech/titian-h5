@@ -24,21 +24,6 @@ import TabsLink from '@site/src/components/tabsLink';
 3. 内置上传进度
 :::
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-uploader": "@titian-design/weapp/uploader/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-uploader": "platform://titian-weapp/ti-uploader"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基本使用方式
@@ -48,11 +33,7 @@ import TabsLink from '@site/src/components/tabsLink';
 **选择完文件后，立即执行上传操作。**
 
 ```html showLineNumbers
-<ti-uploader
-  url="https://api.bayfiles.com/upload"
-  size="small"
-  choose-text="请选择文件"
-></ti-uploader>
+<ti-uploader url="https://api.bayfiles.com/upload" size="small" choose-text="请选择文件"></ti-uploader>
 ```
 
 #### 自定义参数
@@ -60,48 +41,45 @@ import TabsLink from '@site/src/components/tabsLink';
 **自定义header**
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml" >
+<TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-uploader
-  url="https://api.bayfiles.com/upload"
-  image-params="{{ params }}"
-  afterUpload="{{ afterUpload }}"
-  bind:change="change"
-></ti-uploader>
+<ti-uploader id="ti-uploader" url="https://api.bayfiles.com/upload" onchange="change(event)"></ti-uploader>
 ```
-
   </TabItem>
-  <TabItem value="js" label="index.js">
+  <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data: {
-    params: {
-      name: 'picture',
-      header: {
-        'content-type': 'multipart/form-data'
-      }
-    },
-    afterUpload(res){
-      // 这里的res是你自定义的上传接口的返回值
-      const data = JSON.parse(res.data);
-      if (data.errcode !== '0') {
-        return {
-          status: 'fail'
-        };
-      }
+```js showLineNumbers
+window.onload = function(){
+  var params = {
+    name: 'picture',
+    header: {
+      'content-type': 'multipart/form-data'
+    }
+  };
+  var tiUploader = document.getElementById("ti-uploader");
+  tiUploader.params = params;
+
+  function afterUpload(){
+    // 这里的res是你自定义的上传接口的返回值
+    const data = JSON.parse(res.data);
+    if (data.errcode !== '0') {
       return {
-        path: data.data.url,
-        status: 'done'
+        status: 'fail'
       };
     }
-  },
-  change(file, fileList) {
+    return {
+      path: data.data.url,
+      status: 'done'
+    };
+  };
+  tiUploader.addEventListener('afterUpload', afterUpload, false);
+
+  function change(file, fileList) {
     // 上传完成/删除完成后调用
     console.log(file, fileList);
-  }
-})
+  };
+};
 ```
 
 </TabItem>
@@ -113,44 +91,76 @@ Page({
 **通过设置 `immediately` 为 `false`，并调用 `submit()` 方法，可以手动控制上传时机。**
 
 <Tabs>
-<TabItem value="wxml" label="index.wxml" >
+<TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-uploader
-  id="titian-uploader"
-  url="https://api.bayfiles.com/upload"
-  size="small"
-  count="{{ 10 }}"
-  beforeUpload="{{ beforeUpload }}"
-  immediately="{{ false }}"
-  choose-text="请选择"
-></ti-uploader>
+<ti-uploader id="ti-uploader" url="https://api.bayfiles.com/upload" size="small" choose-text="请选择"></ti-uploader>
 ```
+  </TabItem>
+  <TabItem value="index.js" label="index.js">
 
+```js showLineNumbers
+window.onload = function(){
+  var tiUploader = document.getElementById("ti-uploader");
+  tiUploader.count = 10;
+  tiUploader.immediately = false;
+  tiUploader.beforeUpload = function(event){
+    console.log("beforeUpload", event);
+  };
+
+  function doSubmit(event) {
+    tiUploader.submit();
+  };
+};
+```
+</TabItem>
+</Tabs>
+
+#### 仅使用组件样式，自定义上传
+<Tabs>
+  <TabItem value="html" label="index.html" >
+
+  ```html showLineNumbers
+  <ti-uploader id="ti-uploader"></ti-uploader>
+  ```
   </TabItem>
   <TabItem value="js" label="index.js">
 
 ```typescript tsx showLineNumbers
-Page({
-  data: {
-    value: 10,
-    uploaderRef: null,
-    beforeUpload(){
-      console.log("beforeUpload", event);
+window.onload = function () {
+  var tiUploader = document.getElementById('ti-uploader')
+  tiUploader.immediately = false
+  tiUploader.value = [
+    {
+      path: 'https://xxxxx.png',
+      fileType: 'image',
+      status: 'done'
     }
-  },
-  onReady(){
-    this.data.uploaderRef = this.selectComponent("titian-uploader");
+  ]
+  tiUploader.afterChoose = function (selectedList, existsList) {
+    // 上传之前你可以根据需求，比如size，来过滤selectedList
+    YOUR_UPLOAD().then(() => {
+      // 在你的上传回调里设置fileList，主要设置路径path，和状态status => 成功: done，失败：fail，上传中：'upload'
+      tiUploader.value = [
+        ...existsList,
+        ...selectedList.map(el => ({
+          ...el,
+          path: 'https://xxxxx.png',
+          status: 'done' // 上传失败的话 这里设置  fail
+        }))
+      ]
+    })
+    // 这里return出去的是走后续上传的文件
+    return selectedList.map(el => ({ ...el, status: 'upload' }))
   }
-  doSubmit(event){
-    this.data.uploaderRef.submit();
+  function change(event) {
+    tiUploader.value = event.detail.fileList
   }
-})
+  tiUploader.addEventListener('change', change, false)
+}
 ```
-
 </TabItem>
 </Tabs>
-
 
 ## ti-uploader API
 
@@ -195,11 +205,11 @@ Page({
 
 ### 事件 **Events**
 
-| 名称        | 参数列表                                                                                                        | 描述     | 备注 |
-| ----------- | --------------------------------------------------------------------------------------------------------------- | -------- | ---- |
-| bind:change | `(e: WechatMiniprogram.CustomEvent<{ file: UploadFile; fileList: UploadFile[];  uploading: boolean }>) => void` | 上传处理 |      |
-| bind:error  | `(e: WechatMiniprogram.CustomEvent<{ status: string; message: string; }>) => void`                              | 错误事件 |      |
-| bind:choose | `(e: WechatMiniprogram.CustomEvent<any>) => void`                                                               | 选择事件 |      |
+| 名称        | 参数列表                                    | 描述     | 备注 |
+| ----------- | ------------------------------------------ | -------- | ---- |
+| change | `(e: CustomEvent) => void`                              | 上传处理 |      |
+| error  | `(e: CustomEvent) => void`                              | 错误事件 |      |
+| choose | `(e: CustomEvent) => void`                              | 选择事件 |      |
 
 ### 外部样式类 **External Classes**
 
@@ -219,7 +229,7 @@ Page({
 | 变量                         | 默认值                                        | 说明                            | 备注 |
 | ---------------------------- | --------------------------------------------- | ------------------------------- | ---- |
 | --uploader-name-color        | var(--neutral-color-4, #c4c4c4)               | 上传文件展示区文字颜色          | -    |
-| --uploader-name-font-size    | `24rpx`                                       | 上传文件展示区文字大小          | -    |
+| --uploader-name-font-size    | 24rpx                                       | 上传文件展示区文字大小          | -    |
 | --uploader-action-bg-color   | var(--neutral-color-7, #f5f5f5)               | 上传区背景色                    | -    |
 | --uploader-action-text-color | var(--neutral-color-4, #c4c4c4)               | 上传区文字颜色                  | -    |
 | --uploader-icon-color        | var(--neutral-color-3, #9e9e9e)               | 上传区 icon 颜色                | -    |
@@ -228,12 +238,12 @@ Page({
 | --uploader-fail-bg-color     | var(--neutral-color-1, #212121)               | 上传文件失败背景颜色            | -    |
 | --uploader-loading-color     | var(--neutral-color-9, #ffffff)               | 上传文件 loading 颜色           | -    |
 | --uploader-loading-bg-color  | var(--neutral-color-1, #212121)               | 上传文件 loading 背景颜色       | -    |
-| --uploader-small-size        | `120rpx`                                      | 上传文件小尺寸容器大小          | -    |
-| --uploader-small-margin      | `24rpx`                                       | 上传文件小尺寸容器外边距        | -    |
-| --uploader-small-radius      | `calc(var(--base-radius-size, 0rpx) + 8rpx)`  | 上传文件小尺寸容器圆角          | -    |
-| --uploader-large-size        | `216rpx`                                      | 上传文件大尺寸容器大小          | -    |
-| --uploader-large-margin      | `24rpx`                                       | 上传文件大尺寸容器外边距        | -    |
-| --uploader-large-radius      | `calc(var(--base-radius-size, 0rpx) + 12rpx)` | 上传文件大尺寸容器圆角          | -    |
+| --uploader-small-size        | 120rpx                                      | 上传文件小尺寸容器大小          | -    |
+| --uploader-small-margin      | 24rpx                                       | 上传文件小尺寸容器外边距        | -    |
+| --uploader-small-radius      | calc(var(--base-radius-size, 0rpx) + 8rpx)  | 上传文件小尺寸容器圆角          | -    |
+| --uploader-large-size        | 216rpx                                      | 上传文件大尺寸容器大小          | -    |
+| --uploader-large-margin      | 24rpx                                       | 上传文件大尺寸容器外边距        | -    |
+| --uploader-large-radius      | calc(var(--base-radius-size, 0rpx) + 12rpx) | 上传文件大尺寸容器圆角          | -    |
 
 ## 数据结构 **Data Structure**
 

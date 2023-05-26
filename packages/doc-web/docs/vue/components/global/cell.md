@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCell, TiCellGroup } from '@titian-design/mobile-vue';
+import { TiCell, TiCellGroup } from '{{packageWeappVue}}';
 ```
 
 ## 基本用法
@@ -44,7 +44,7 @@ import { TiCell, TiCellGroup } from '@titian-design/mobile-vue';
 <template>
 
 <script lang="ts" setup>
-import { TiCell } from '@titian-design/mobile-vue';
+import { TiCell } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -74,7 +74,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCell } from '@titian-design/mobile-vue';
+import { TiCell } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -102,7 +102,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCell, TiCellGroup} from '@titian-design/mobile-vue';
+import { TiCell, TiCellGroup} from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -115,7 +115,7 @@ import { TiCell, TiCellGroup} from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCell } from '@titian-design/mobile-vue';
+import { TiCell } from '{{packageWeappVue}}';
 
 const handleClick = (e:Event) => {
   console.log('点击了 cell')
@@ -131,7 +131,7 @@ const handleClick = (e:Event) => {
 </template>
 
 <script lang="ts" setup>
-import { TiCell } from '@titian-design/mobile-vue';
+import { TiCell } from '{{packageWeappVue}}';
 </script>
 
 <style>
@@ -149,7 +149,7 @@ import { TiCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCell } from '@titian-design/mobile-vue';
+import { TiCell } from '{{packageWeappVue}}';
 </script>
 
 <style>

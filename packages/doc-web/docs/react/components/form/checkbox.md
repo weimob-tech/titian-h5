@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript jsx showLineNumbers
-import { TiCheckbox, TiCheckboxGroup, TiCheckboxButton } from '@titian-design/mobile-react';
+import { TiCheckbox, TiCheckboxGroup, TiCheckboxButton } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例

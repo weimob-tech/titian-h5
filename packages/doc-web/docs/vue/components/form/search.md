@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiSearch } from '@titian-design/mobile-vue'
+import { TiSearch } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -28,7 +28,7 @@ import { TiSearch } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/mobile-vue';
+import { TiSearch } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -39,7 +39,7 @@ import { TiSearch } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/mobile-vue';
+import { TiSearch } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -57,7 +57,7 @@ import { TiSearch } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/mobile-vue';
+import { TiSearch } from '{{packageWeappVue}}';
 </script>
 ```
 #### 使用插槽
@@ -82,7 +82,7 @@ import { TiSearch } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/mobile-vue';
+import { TiSearch } from '{{packageWeappVue}}';
 </script>
 ```
 #### 键盘确认按钮文字
@@ -96,7 +96,7 @@ import { TiSearch } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSearch } from '@titian-design/mobile-vue';
+import { TiSearch } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -152,7 +152,7 @@ import { TiSearch } from '@titian-design/mobile-vue';
 | ------------------------- | ---------------------------------------------- | ------------------------------------------------ | ---- |
 | --search-font-size        | `28px`                                         | 搜索文字字号                                     | -    |
 | --search-out-height       | `108px`                                        | 搜索框整体高度                                   | -    |
-| --search-out-background   | `108px`                                        | 搜索框整体背景色                                 | -    |
+| --search-out-background   | `#fff`                                        | 搜索框整体背景色                                 | -    |
 | --search-out-padding-v    | `0px`                                          | 搜索框整体垂直方向内边距                         | -    |
 | --search-out-padding-h    | `28px`                                         | 搜索框整体水平方向内边距                         | -    |
 | --search-inner-height     | `72px`                                         | 搜索框内部输入区域高度                           | -    |

@@ -227,6 +227,7 @@ export class TiDatetimePicker {
     const { colAlias, value } = e.detail;
     const { type = DateTimePickerEnum.DATE } = this;
     if (!colAlias) {
+      console.log('update 回调......', type, value);
       this.result += 1;
       if (this.result < this.max) {
         return;

@@ -14,7 +14,7 @@ side_iframe_path: '#/grid'
 
 import TabsLink from '@site/src/components/tabsLink';
 
-<TabsLink id="ti-grid-api" />
+<TabsLink id="ti-grid-api"></TabsLink>
 
 ## 用法示例
 
@@ -23,10 +23,10 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```html showLineNumbers
 <ti-grid>
-  <ti-grid-item icon="mine-to-pay" text="待付款" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
+  <ti-grid-item icon="mine-to-pay" text="待付款"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
 </ti-grid>
 ```
 
@@ -36,12 +36,12 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```html showLineNumbers
 <ti-grid columns="3">
-  <ti-grid-item icon="mine-to-pay" text="待付款" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
-  <ti-grid-item icon="to-refund" text="退货" />
-  <ti-grid-item icon="camera-point" text="拍照展示" />
+  <ti-grid-item icon="mine-to-pay" text="待付款"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
+  <ti-grid-item icon="to-refund" text="退货"></ti-grid-item>
+  <ti-grid-item icon="camera-point" text="拍照展示"></ti-grid-item>
 </ti-grid>
 ```
 
@@ -49,10 +49,10 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```html showLineNumbers
 <ti-grid gutter="16">
-  <ti-grid-item icon="mine-to-pay" text="待付款" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
+  <ti-grid-item icon="mine-to-pay" text="待付款"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
 </ti-grid>
 ```
 
@@ -60,21 +60,21 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```html showLineNumbers
 <ti-grid square>
-  <ti-grid-item icon="mine-to-pay" text="待付款" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
+  <ti-grid-item icon="mine-to-pay" text="待付款"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
 </ti-grid>
 
 <ti-grid square>
-  <ti-grid-item icon="mine-to-pay" text="待付款" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
-  <ti-grid-item icon="to-refund" text="退货" />
-  <ti-grid-item icon="camera-point" text="拍照展示" />
-  <ti-grid-item icon="to-deliver" text="待收货" />
-  <ti-grid-item icon="to-receive" text="待发货" />
+  <ti-grid-item icon="mine-to-pay" text="待付款"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
+  <ti-grid-item icon="to-refund" text="退货"></ti-grid-item>
+  <ti-grid-item icon="camera-point" text="拍照展示"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" text="待收货"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
 </ti-grid>
 ```
 
@@ -82,11 +82,11 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```html showLineNumbers
 <ti-grid title="自定义图标尺寸，颜色">
-  <ti-grid-item icon="mine-to-pay" size="60px" text="图标尺寸" />
-  <ti-grid-item icon="to-deliver" color="red" text="定义颜色" />
-  <ti-grid-item icon="to-receive" text="待发货" />
-  <ti-grid-item icon="to-comment" text="待评价" />
-  <ti-grid-item icon="to-refund" text="退货" />
+  <ti-grid-item icon="mine-to-pay" size="60px" text="图标尺寸"></ti-grid-item>
+  <ti-grid-item icon="to-deliver" color="red" text="定义颜色"></ti-grid-item>
+  <ti-grid-item icon="to-receive" text="待发货"></ti-grid-item>
+  <ti-grid-item icon="to-comment" text="待评价"></ti-grid-item>
+  <ti-grid-item icon="to-refund" text="退货"></ti-grid-item>
 </ti-grid>
 <ti-grid title="使用 slot 定义内容">
   <ti-grid-item custom-content>

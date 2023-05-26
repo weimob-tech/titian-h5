@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-tree-select": "@titian-design/weapp/tree-select/index"
+    "ti-tree-select": "{{packageWeappName}}/tree-select/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-tree-select": "platform://titian-weapp/ti-tree-select"
+    "ti-tree-select": "platform://titian-mp/ti-tree-select"
   }
 }
 ```
@@ -178,5 +178,5 @@ Page({
 | 变量                         | 默认值  | 说明                       | 备注 |
 | ---------------------------- | ------- | -------------------------- | ---- |
 | --tree-select-cell-h         | `108rpx` | 右侧默认选项内容的每项高度 | - |
-| --tree-select-active-color   | `108rpx` | 右侧默认选项内容选中颜色   | - |
-| --tree-select-disabled-color | `108rpx` | 右侧默认选项内容禁用颜色   | - |
+| --tree-select-active-color   | `#fa2c19` | 右侧默认选项内容选中颜色   | - |
+| --tree-select-disabled-color | `#c4c4c4` | 右侧默认选项内容禁用颜色   | - |

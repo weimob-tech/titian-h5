@@ -43,7 +43,7 @@ const options: OptionType[] = [
     type: 'radio',
     name: 'Word',
     list: [
-      { label: '加载', value: 1, attr: { text: '加载中', action: 'loading' } },
+      { label: '加载', value: 1, hiddenItems: ['style'], attr: { text: '加载中', action: 'loading' } },
       { label: '成功', value: 2, hiddenItems: ['style'], attr: { text: '成功信息', action: 'success' } },
       {
         label: '失败',

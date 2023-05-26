@@ -132,6 +132,10 @@ class Warehouse {
         release: true,
         data: { msgtype: 'markdown', markdown: { content: publishInfo } },
       });
+      await this.release.toPromise(this.release.hooks.releaseAsync, {
+        release: true,
+        data: { msgtype: 'markdown', markdown: { content: publishInfo } },
+      });
     } catch (e) {
       this.release.logger.error(e);
       try {
