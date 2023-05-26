@@ -1,13 +1,12 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Page, { OptionType } from '../../components/page';
-
+import './index.less';
 interface CollapseAttrsProps {
-  color: string | string[];
-  size: string;
-  spin?: boolean;
-  rotate?: string;
-  iconGroup: string[];
-  mode: string;
+  value?: any[];
+  repel?: boolean;
+  options?: any[];
+  mode?: string;
+  divider?: boolean;
 }
 const options: OptionType[] = [
   {
@@ -21,36 +20,41 @@ const options: OptionType[] = [
     ],
     value: 'base',
   },
+  {
+    key: 'divider',
+    type: 'radio',
+    desc: '分割线',
+    name: 'Divider',
+    list: [
+      { value: true, label: '有' },
+      { value: false, label: '无' },
+    ],
+    value: true,
+  },
 ];
 export const Collapse = () => {
   const [attrs, setAttrs] = useState<CollapseAttrsProps>({
-    color: '',
-    mode: '',
-    size: '',
-    iconGroup: [],
+    divider: true,
+    value: [1],
+    repel: true,
+    mode: 'accordion',
   });
-  const [active] = useState([1]);
-  const [list] = useState([
-    {
-      title: '标题文字A',
-      content: '- 标题A下的内容 -',
-    },
-    {
-      title: '标题文字B',
-      content: '- 标题B下的内容 -',
-    },
-  ]);
 
-  const change = (attrs: any) => {
-    if (attrs.mode === 'colors') {
-      attrs.color = [attrs.color1, attrs.color2];
-    }
-    setAttrs(attrs);
-  };
+  const change = useCallback(
+    (newAttrs: any) => {
+      newAttrs.repel = newAttrs.mode === 'accordion';
+
+      setAttrs({ ...attrs, ...newAttrs });
+    },
+    [attrs],
+  );
   return (
     <Page options={options} change={change}>
-      <div className="container">
-        <ti-collapse value={active} repel={attrs.mode === 'accordion'} options={list}></ti-collapse>
+      <div className="collapse-page">
+        <ti-collapse {...attrs} ext-option-class="collapse-opt" ext-option-content-class="collapse-opt-content">
+          <ti-collapse-item title="标题文字A">- 标题A下的内容 -</ti-collapse-item>
+          <ti-collapse-item title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
+        </ti-collapse>
       </div>
     </Page>
   );

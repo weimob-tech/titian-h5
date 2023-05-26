@@ -144,12 +144,12 @@ export class TiSwipeCell implements BasicComponentAbstract {
     raf(() => {
       this.visibleChange(this.visible);
     }, 5);
-    this.addEventListener();
+    this.addListener();
   }
 
   disconnectedCallback(): void {
     instances.delete(this);
-    this.removeEventListener();
+    this.removeListener();
   }
 
   private getElementRect() {
@@ -286,14 +286,14 @@ export class TiSwipeCell implements BasicComponentAbstract {
 
   swipeCell: HTMLElement;
 
-  addEventListener() {
+  addListener() {
     this.swipeCell?.addEventListener('touchstart', this.onTouchStart);
     this.swipeCell?.addEventListener('touchmove', this.onTouchMove);
     this.swipeCell?.addEventListener('touchend', this.onTouchEnd);
     this.swipeCell?.addEventListener('touchcancel', this.onTouchEnd);
   }
 
-  removeEventListener() {
+  removeListener() {
     this.swipeCell?.removeEventListener('touchstart', this.onTouchStart);
     this.swipeCell?.removeEventListener('touchmove', this.onTouchMove);
     this.swipeCell?.removeEventListener('touchend', this.onTouchEnd);

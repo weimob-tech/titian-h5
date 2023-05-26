@@ -42,11 +42,6 @@ describe('进度条', () => {
   });
 
   it('修改展示进度值、颜色等', async () => {
-    const gradientColor = {
-      from: '#108ee9',
-      to: '#87d068',
-    };
-
     const page = await newSpecPage({
       components: [TiCircleProgress, TestContainer],
       template: () => (
@@ -54,7 +49,6 @@ describe('进度条', () => {
           <ti-circle-progress value={60} strokeWidth={20} />
           <ti-circle-progress value={80} color="#2a6ae9" />
           <ti-circle-progress value={80} color="rgba(0,0,0,1)" />
-          <ti-circle-progress value={80} color="rgba(0,0,0,1)" gradientColor={gradientColor} />
         </test-container>
       ),
     });

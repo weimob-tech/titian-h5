@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiTransition } from '@titian-design/mobile-vue';
+import { TiTransition } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例
@@ -48,7 +48,7 @@ import extCss from "./index.css";
   <TabItem value="css" label="index.css">
 
 ```css showLineNumbers
-.demo-block {
+::part(demo-block) {
   position: fixed;
   top: 100px;
   left: 0px;

@@ -23,7 +23,7 @@ new window.TouchEmulator(document.body);
 ## CDN 地址
 
 ```html
-<script src="//unpkg.com/@titian-design/touchemulator@1.0.0/touch-emulator.js"></script>
+<script src="//assets.weimob.com/@titian-design/touchemulator@1.0.3/touch-emulator.js"></script>
 <script>
   TouchEmulator();
 </script>
@@ -37,7 +37,7 @@ javascript: !(function (a) {
   (b.onload = function () {
     TouchEmulator();
   }),
-    (b.src = '//unpkg.com/@titian-design/touchemulator@1.0.0/touch-emulator.js'),
+    (b.src = '//assets.weimob.com/@titian-design/touchemulatortouchemulator@1.0.3/touch-emulator.js'),
     a.body.appendChild(b);
 })(document);
 ```

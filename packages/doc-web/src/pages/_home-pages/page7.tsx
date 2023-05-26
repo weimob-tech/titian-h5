@@ -21,13 +21,15 @@ function Page({ display, leaving }: { display: string; leaving: boolean }) {
       desc: '沉淀于微盟核心的SaaS业务，对“交易场景”拥有良好的普适性。既能满足当下需求，也能有更广泛的应用。',
     },
   ];
+  const now = new Date();
+  const currentYear = now.getFullYear();
   return (
     <div className={clsx(styles.page)} style={{ display }}>
       <AnimationBox position="bottom" leaving={leaving} className={clsx(styles.bottom)}>
         <div className={clsx(styles['qrcode-box'])}>
           <img
             className={clsx(styles.qrcode)}
-            src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/erweima1.png"
+            src="https://image-c.weimobwmc.com/sass-admin/6443ced485da4cacb223a1efca598524.png"
             alt=""
           />
           <span className={clsx(styles.contact)}>联系我们</span>
@@ -48,7 +50,7 @@ function Page({ display, leaving }: { display: string; leaving: boolean }) {
         <div className={clsx(styles.footer)}>
           <div className={clsx(styles.line)} />
           <p>
-            Copyright © 2013-2022 www.weimob.com All Rights Reserved 上海微盟企业发展有限公司版权所有
+            Copyright © 2013-{currentYear} www.weimob.com All Rights Reserved 上海微盟企业发展有限公司版权所有
             沪ICP备14044897号-9
           </p>
         </div>

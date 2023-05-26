@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -32,7 +32,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -44,7 +44,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -56,7 +56,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -68,7 +68,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -80,7 +80,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -92,7 +92,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -104,7 +104,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -116,7 +116,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -128,7 +128,7 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCalendar } from '@titian-design/mobile-vue';
+import { TiCalendar } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -157,6 +157,8 @@ import { TiCalendar } from '@titian-design/mobile-vue';
 | round            | `boolean`                                          | 否   | false           | 圆角模式                                                                            | -                                             |
 | title            | `string`                                           | 否   | '选择日期'      | 标题                                                                                | -                                             |
 | formatter        | `(date: CalRenderDateProps) => CalRenderDateProps` | 否   | null            | 格式化日历函数，参数类型 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) | -                                             |
+| mask-z-index           | `number`  | 否   | 10000    | 遮罩 z-index 层级                                                                                    | -    |
+| content-z-index        | `number`  | 否   | 10001    | 内容 z-index 层级                                                                                    | -    |
 | ext-style        | `string`                                           | 否   | ''              | 容器样式                                                                            | -                                             |
 | teleport         | `Element`                                          | 否   | document.body   | DOM 挂载节点                                                                        | -                                             |
 

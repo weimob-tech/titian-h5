@@ -8,7 +8,13 @@
 
   background: #fff;
 
-  div {
+  cursor: pointer;
+  @media (max-width: 996px) {
+    top: 40px;
+  }
+
+  div,
+  a {
     width: 88px;
 
     transition: all 0.3s;
@@ -29,6 +35,7 @@
       background: #000;
 
       color: #fff;
+      text-decoration: none;
     }
 
     &:first-child {

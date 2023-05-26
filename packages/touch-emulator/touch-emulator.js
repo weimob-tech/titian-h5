@@ -129,10 +129,10 @@
    */
   function onMouse(touchType) {
     return function (ev) {
-      if (TouchEmulator.ignoreTags.indexOf(ev.target.tagName) < 0) {
-        // prevent mouse events
-        preventMouseEvents(ev);
-      }
+      // if (TouchEmulator.ignoreTags.indexOf(ev.target.tagName) < 0) {
+      //   // prevent mouse events
+      //   preventMouseEvents(ev);
+      // }
 
       if (ev.which !== 1) {
         return;

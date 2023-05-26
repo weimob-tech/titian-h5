@@ -98,11 +98,11 @@ export default class Release extends Command {
   }
 
   async createMergeRequest() {
-    const { projectId } = this.config;
-    if (projectId) {
+    const { projectId, env } = this.config;
+    if (projectId && env.TITIAN_PRIVATE_TOKEN) {
       const config = {
         method: 'post',
-        url: ``,
+        url: '',
         headers: {
           'PRIVATE-TOKEN': '',
           'Content-Type': 'application/json',
@@ -311,7 +311,8 @@ export default class Release extends Command {
     if (fs.existsSync('pnpm-workspace.yaml')) {
       this.packageManager = 'pnpm';
       this.logger.info('Manage packages with pnpm');
-      const pkgs = await findPnpmWorkspacePkg(this.root);
+      // @ts-ignore
+      const pkgs = await findPnpmWorkspacePkg.default(this.root);
       pkgs.forEach(({ dir, manifest }) => {
         if (manifest.name) {
           packagesInfo[manifest.name] = {
@@ -621,7 +622,7 @@ export default class Release extends Command {
           if (pkg.publish) {
             await this.genChangelog(pkg);
             const { stdout } = await this.exec('git', ['diff'], { stdio: 'pipe' });
-            const tag = pkgName === '@titian-design/weapp' ? `v${pkg.nextVersion}` : `${pkgName}@${pkg.nextVersion}`;
+            const tag = pkgName === this.config.mainPackage ? `v${pkg.nextVersion}` : `${pkgName}@${pkg.nextVersion}`;
             if (this.allTags.includes(tag)) {
               this.logger.warn(`${tag} 已经存在了，将删除原先的 tag`);
               await this.exec('git', ['tag', '-d', tag], { stdio: 'pipe' });

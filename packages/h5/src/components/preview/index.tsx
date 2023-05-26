@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/default-param-last */
-import { Component, h, State, Method, Element, Listen, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, h, State, Method, Element, Prop, Event, EventEmitter } from '@stencil/core';
 import { handle, join } from '../common/utils/namespace';
 import zIndexTool from '../common/utils/zIndexTool';
 import ScaleImage from './scale';
@@ -37,6 +37,8 @@ export class TiPreview {
 
   @Event({ eventName: 'change', composed: false }) changeEvent!: EventEmitter<{ current: number; item: any }>;
 
+  @Event({ bubbles: false, composed: false }) longpress: EventEmitter<{ file: IPreviewItem }>;
+
   @Method()
   async show(list: IPreviewItem[] = [], index = 0) {
     this.list = list;
@@ -44,7 +46,6 @@ export class TiPreview {
     this.visible = true;
   }
 
-  @Listen('click')
   close() {
     this.visible = false;
   }
@@ -53,12 +54,34 @@ export class TiPreview {
 
   timer;
 
+  private isLongpress = false;
+
   private handleTouchStart(e: TouchEvent) {
-    e.preventDefault();
+    this.isLongpress = false;
+    setTimeout(() => {
+      this.isLongpress = true;
+    }, 500);
     if (!this.cache.has(e.target)) {
       this.cache.set(e.target, new ScaleImage(e.target as HTMLElement));
     }
     this.cache.get(e.target)?.handleTouchStart(e);
+  }
+
+  private handleTouchMove(e: TouchEvent) {
+    e.preventDefault();
+    this.isLongpress = false;
+    this.cache.get(e.target)?.handleTouchMove(e);
+  }
+
+  private handleTouchEnd(e: TouchEvent, file: IPreviewItem) {
+    if (this.isLongpress) {
+      this.longpress.emit({ file });
+    }
+    this.isLongpress = false;
+    this.cache.get(e.target)?.handleTouchEnd(e);
+  }
+
+  private handleClick() {
     if (this.timer) {
       clearTimeout(this.timer);
       this.timer = null;
@@ -68,16 +91,6 @@ export class TiPreview {
         this.close();
       }, 300);
     }
-  }
-
-  private handleTouchMove(e: TouchEvent) {
-    e.preventDefault();
-
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
-    }
-    this.cache.get(e.target)?.handleTouchMove(e);
   }
 
   handleSwiperChange(e: CustomEvent<{ current: number }>) {
@@ -107,16 +120,20 @@ export class TiPreview {
         }}
       >
         <div class={`${handle('preview', ['file-wrap'])}`}>
-          <ti-swiper current={this.index} vertical={vertical} onChange={this.handleSwiperChange.bind(this)}>
+          <ti-swiper current={this.index} sports vertical={vertical} onChange={this.handleSwiperChange.bind(this)}>
             {list.map(file => {
               if (file.fileType === 'image') {
                 return (
                   <ti-swiper-item>
-                    <div class={join('preview', [vertical ? 'file-vertical' : 'file'])}>
+                    <div
+                      class={join('preview', [vertical ? 'file-vertical' : 'file'])}
+                      onClick={this.handleClick.bind(this)}
+                      aria-hidden="true"
+                    >
                       <img
                         onTouchStart={this.handleTouchStart.bind(this)}
                         onTouchMove={this.handleTouchMove.bind(this)}
-                        onTouchEnd={e => this.cache.get(e.target)?.handleTouchEnd(e)}
+                        onTouchEnd={e => this.handleTouchEnd(e, file)}
                         src={file.path}
                         alt={`${index}`}
                         class={join('preview', ['image'])}
@@ -142,7 +159,7 @@ export class TiPreview {
         </div>
         <div class={`${handle('preview', ['content-box'])}`}>
           {displayTitle ? (
-            <div>
+            <div style={{ display: 'inline-flex' }}>
               {list.map((file, idx) =>
                 file.title ? (
                   <div class={`${join('preview-title', [idx === index ? 'active' : 'hidden'])}`}>{file.title}</div>

@@ -31,6 +31,14 @@
   --ifm-navbar-height: 80px;
   --doc-sidebar-width: 280px !important;
   --ifm-toc-border-color: #f5f5f5;
+  --ifm-navbar-item-padding-horizontal: 42px;
+  @media (max-width: 996px) {
+    --ifm-navbar-height: 50px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -52,6 +60,16 @@ main {
 .container {
   max-width: 100% !important;
   padding: 24px 72px 48px 72px !important;
+  @media (max-width: 996px) {
+    padding: 24px 36px !important;
+    [class*='tocCollapsibleButton'] {
+      padding: 10px 15px;
+    }
+    [class*='tocCollapsibleContent'] .table-of-contents {
+      padding-top: 10px;
+      font-size: 12px;
+    }
+  }
 }
 
 .pagination-nav {
@@ -67,17 +85,37 @@ aside {
   padding: 0;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: none;
-
+  @media (max-width: 996px) {
+    --ifm-navbar-height: 50px;
+  }
   &--fixed-top {
     position: fixed;
+    top: 0;
     left: 72px;
     right: 72px;
     border-bottom: 1px solid #f2f2f2;
+    @media screen and (max-width: 996px) {
+      top: -1px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &-sidebar {
+    background: #fff;
   }
 
   .navbar__inner {
-    padding: 28px 0;
+    // padding: 28px 0;
+    @media (max-width: 996px) {
+      box-sizing: border-box;
+      height: 50px;
+      padding: 0 20px;
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+      backdrop-filter: blur(6px);
+    }
 
     &.navbar__inner--top {
       padding: 32px 48px 12px;
@@ -86,9 +124,15 @@ aside {
 
   .navbar__logo {
     height: 24px;
+    @media (max-width: 996px) {
+      height: 20px;
+    }
 
     img {
       height: 24px;
+      @media (max-width: 996px) {
+        height: 20px;
+      }
     }
   }
 
@@ -119,6 +163,19 @@ aside {
       }
     }
   }
+  .navbar-sidebar__brand {
+    box-shadow: none;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  @media (max-width: 996px) {
+    .navbar__items--right {
+      display: none;
+    }
+    .navbar__items {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
 }
 
 .dropdown > .navbar__link:after {
@@ -137,6 +194,9 @@ aside {
   .menu__list {
     margin: 0 !important;
     padding: 0 !important;
+    @media (max-width: 996px) {
+      margin-top: 15px !important;
+    }
 
     // 侧边栏 单项
     .menu__list-item {
@@ -148,12 +208,18 @@ aside {
         color: var(--ifm-color-primary-light);
         padding: 16px 0 16px 72px;
         transition: all 0.3s;
+        @media (max-width: 996px) {
+          padding: 15px 20px;
+        }
 
         svg {
           width: 18px;
           height: 18px;
           position: absolute;
           left: 46px;
+          @media (max-width: 996px) {
+            position: static;
+          }
         }
       }
 
@@ -169,6 +235,7 @@ aside {
         margin-left: 8px;
         font-weight: 400;
         color: var(--ifm-color-primary-lightest);
+        white-space: nowrap;
       }
     }
 
@@ -184,7 +251,17 @@ aside {
         font-size: 12px !important;
         line-height: 24px;
         color: var(--ifm-color-primary-lightest) !important;
+        @media (max-width: 996px) {
+          padding: 15px 20px;
+        }
       }
+    }
+  }
+
+  @media (max-width: 996px) {
+    .clean-btn.navbar-sidebar__back {
+      padding: 15px 20px;
+      top: 0;
     }
   }
 }
@@ -196,6 +273,12 @@ aside {
   margin-left: 24px;
   padding: 0;
   border-left: 2px solid var(--ifm-toc-border-color);
+  @media (max-width: 996px) {
+    width: auto;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 10px 20px;
+  }
 
   & > li > ul {
     padding: 0;
@@ -289,6 +372,12 @@ aside {
       &::before {
         color: #212121;
       }
+
+      @media (max-width: 996px) {
+        padding-left: 15px;
+        padding-right: 20px;
+        margin-right: 20px;
+      }
     }
   }
 
@@ -318,6 +407,11 @@ aside {
     border-radius: 12px;
     border-collapse: separate;
     border-spacing: 0;
+    @media (max-width: 996px) {
+      display: block;
+      width: auto;
+      overflow: auto;
+    }
 
     thead tr {
       background-color: #fafafa;
@@ -332,6 +426,11 @@ aside {
         border-bottom: 1px solid var(--ifm-toc-border-color);
         text-align: left;
         white-space: nowrap;
+        &:first-child {
+          position: sticky;
+          left: 0;
+          background-color: #fafafa;
+        }
       }
     }
 
@@ -349,6 +448,11 @@ aside {
         line-height: 22px;
         color: #757575;
         border: none;
+        &:first-child {
+          position: sticky;
+          left: 0;
+          background-color: #fff;
+        }
       }
     }
   }
@@ -450,4 +554,7 @@ body {
       color: #212121;
     }
   }
+}
+.anchor {
+  --ifm-navbar-height: 162px;
 }

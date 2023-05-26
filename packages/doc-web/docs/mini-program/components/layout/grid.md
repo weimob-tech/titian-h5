@@ -22,13 +22,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-grid": "@titian-design/weapp/grid/index",
-    "ti-grid-item": "@titian-design/weapp/grid-item/index"
+    "ti-grid": "{{packageWeappName}}/grid/index",
+    "ti-grid-item": "{{packageWeappName}}/grid-item/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-grid": "platform://titian-weapp/ti-grid",
-    "ti-grid-item": "platform://titian-weapp/ti-grid-item"
+    "ti-grid": "platform://titian-mp/ti-grid",
+    "ti-grid-item": "platform://titian-mp/ti-grid-item"
   }
 }
 ```

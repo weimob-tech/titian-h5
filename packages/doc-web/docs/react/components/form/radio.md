@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRadio, TiRadioGroup, TiRadioButton } from '@titian-design/mobile-react';
+import { TiRadio, TiRadioGroup, TiRadioButton } from '{{packageWeappReact}}';
 ```
 
 #### TiRadio 基本使用

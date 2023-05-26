@@ -1,11 +1,19 @@
 .slot-desc {
   display: flex;
   align-items: center;
+  max-height: 42px;
 
   font-size: 24px;
   font-weight: 500;
 }
 
-.container {
+.cell-container {
   --checkbox-padding-h: 0;
+  width: calc(100% - 56px);
+  margin: 0 28px;
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
 }

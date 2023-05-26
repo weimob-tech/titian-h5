@@ -17,7 +17,7 @@ function Page({ display, leaving }: { display: string; leaving: boolean }) {
         <img
           className={clsx(styles.img)}
           onClick={() => link(figmaUrl)}
-          src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/figmaruanjian.png"
+          src="https://image-c.weimobwmc.com/sass-admin/b5bc41db413b470f917fc0fe9d053083.png"
           alt=""
           onKeyDown={() => {}}
           role="presentation"
@@ -31,7 +31,7 @@ function Page({ display, leaving }: { display: string; leaving: boolean }) {
         <img
           onClick={() => link(githubUrl)}
           className={clsx(styles.img, styles['right-img'])}
-          src="https://cdn2.weimob.com/saas/saas-fe-sirius-orion-node/production/157/daimaruanjian.png"
+          src="https://image-c.weimobwmc.com/sass-admin/08d30299bc214ddaa611a350e63df996.png"
           alt=""
           onKeyDown={() => {}}
           role="presentation"

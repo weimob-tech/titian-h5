@@ -1,0 +1,19 @@
+.page {
+  width: 100vw;
+  height: var(--mobile-page-height, 100vh);
+
+  text-align: center;
+}
+
+.main {
+  margin-top: var(--mobile-page-gap, 21.33vw);
+}
+
+.img {
+  width: 74.6vw;
+  height: auto;
+}
+
+.notice {
+  margin: 11.47vw;
+}

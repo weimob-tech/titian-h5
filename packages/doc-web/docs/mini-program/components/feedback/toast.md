@@ -34,11 +34,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-toast": "@titian-design/weapp/toast/index"
+    "ti-toast": "{{packageWeappName}}/toast/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-toast": "platform://titian-weapp/ti-toast"
+    "ti-toast": "platform://titian-mp/ti-toast"
   }
 }
 ```
@@ -48,10 +48,10 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```typescript tsx showLineNumbers
 // 原生小程序
-import { $tiToast } from "@titian-design/weapp/index";
+import { $tiToast } from "{{packageWeappName}}/index";
 
 // titan-cli 搭建的项目
-const { $tiToast } = requirePlatform("@titian-design/weapp").main;
+const { $tiToast } = requirePlatform("{{packageWeappName}}").main;
 ```
 
  </TabItem>
@@ -120,33 +120,33 @@ $tiToast.loading({
 ### 方法 **Methods**
 | 方法名           | 说明         | 参数                       | 返回值 |
 | ---------------- | ------------ | -------------------------- | ------ |
-| $tiToast.success | 展示成功提示 | `ToastOptions` \| `string` |   -     |
-| $tiToast.warn    | 展示警告提示 | `ToastOptions` \| `string` |   -     |
-| $tiToast.fail    | 展示失败提示 | `ToastOptions` \| `string` |    -    |
-| $tiToast.loading | 展示加载提示 | `ToastOptions` \| `string` |   -     |
-| $tiToast.info    | 展示文本     | `ToastOptions` \| `string` |   -     |
-| $tiToast.clear   | 清除提示     | -                          |   -     |
+| $tiToast.success | 展示成功提示 | `ToastOptions` \| `string` | -      |
+| $tiToast.warn    | 展示警告提示 | `ToastOptions` \| `string` | -      |
+| $tiToast.fail    | 展示失败提示 | `ToastOptions` \| `string` | -      |
+| $tiToast.loading | 展示加载提示 | `ToastOptions` \| `string` | -      |
+| $tiToast.info    | 展示文本     | `ToastOptions` \| `string` | -      |
+| $tiToast.clear   | 清除提示     | -                          | -      |
 
 
 #### ToastOptions 数据结构
-| 名称             | 类型       | 必填 | 默认值  | 说明        | 备注 |
-| ---------------- | ---------- | ---- | ------- | ----------- | ---- |
-| text             | `number`   | 否   | `100`   | 文本        |      |
+| 名称              | 类型       | 必填 | 默认值  | 说明         | 备注 |
+| ----------------- | ---------- | ---- | ------- | ------------ | ---- |
+| text              | `number`   | 否   | `100`   | 文本         |      |
 | z-index           | `number`   | 否   | `30000` | z-index 层级 |      |
-| duration         | `number`   | 否   | `2000`  | 展示时长    | -    |
-| color            | `string`   | 否   | `#fff`  | 颜色        | -    |
-| icon             | `string`   | 否   | -       | 轻提示 icon | -    |
-| finished-callback | `Function` | 否   | `0`     | 回调        | -    |
+| duration          | `number`   | 否   | `2000`  | 展示时长     | -    |
+| color             | `string`   | 否   | `#fff`  | 颜色         | -    |
+| icon              | `string`   | 否   | -       | 轻提示 icon  | -    |
+| finished-callback | `Function` | 否   | `0`     | 回调         | -    |
 
 ### CSS 变量 **CSS Variables**
 
-| CSS 变量                      | 默认值                                  | 说明 |
-| ----------------------------- | --------------------------------------- | ---- |
-| `--toast-popup-mask-bg-color` | 同 `Popup` 组件 `--popup-mask-bg-color` | --   |
-| `--toast-popup-radius`        | 同 `Popup` 组件 `--popup-popup-radius`  | --   |
-| `--toast-popup-box-bg-color`  | 同 `Popup` 组件 `--popup-box-bg-color`  | --   |
-| `--toast-bg-color`            | 容器背景色                              | --   |
-| `--toast-status-width`        | icon 模式下宽度                         | --   |
-| `--toast-status-height`       | icon 模式下高度                         | --   |
-| `--toast-status-gap`          | icon 与文本之间间距                     | --   |
-| `--toast-text-color`          | 文本区颜色                              | --   |
+| CSS 变量                      | 默认值                                  | 说明                     |
+| ----------------------------- | --------------------------------------- | ------------------------ |
+| `--toast-popup-mask-bg-color` | 同 `Popup` 组件 `--popup-mask-bg-color` | -                        |
+| `--toast-popup-radius`        | 同 `Popup` 组件 `--popup-popup-radius`  | -                        |
+| `--toast-popup-box-bg-color`  | 同 `Popup` 组件 `--popup-box-bg-color`  | -                        |
+| `--toast-bg-color`            | 容器背景色                              | -                        |
+| `--toast-content-padding`     | 16px 36px                               | icon模式下内容区域内边距 |
+| `--toast-text-line-height`    | 36px                                    | icon 模式下文字行度      |
+| `--toast-status-gap`          | icon 与文本之间间距                     | -                        |
+| `--toast-text-color`          | 文本区颜色                              | -                        |

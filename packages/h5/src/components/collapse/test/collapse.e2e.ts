@@ -120,7 +120,6 @@ describe('折叠面板', () => {
     });
     const collapse = await page.instance.find('ti-collapse');
     const change = await collapse.spyOnEvent('change');
-    const close = await collapse.spyOnEvent('close');
     const open = await collapse.spyOnEvent('open');
 
     const collapseItemWrap = await page.instance.findAll('ti-collapse-item >>> .titian-collapse-item-warp');

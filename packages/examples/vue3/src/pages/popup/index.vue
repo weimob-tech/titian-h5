@@ -11,7 +11,7 @@
       :transition="attrs.transition"
     >
       <div :class="'popup-' + attrs.position" style="overflow-y: auto">
-        <div style="height: 500px">可滚动区域演示</div>
+        <div style="height: 500px"></div>
       </div>
     </TiPopup>
   </CustomPage>
@@ -20,10 +20,10 @@
 import { TiButtonProps, TiButton, TiPopup } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 import { mergeOptionIntoAttrs } from '../../utils';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     desc: '位置',
     key: 'position',

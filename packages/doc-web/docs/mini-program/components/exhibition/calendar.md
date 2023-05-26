@@ -22,11 +22,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-calendar": "@titian-design/weapp/calendar/index"
+    "ti-calendar": "{{packageWeappName}}/calendar/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-calendar": "platform://titian-weapp/ti-calendar"
+    "ti-calendar": "platform://titian-mp/ti-calendar"
   }
 }
 ```
@@ -112,6 +112,8 @@ import TabsLink from '@site/src/components/tabsLink';
 | round            | `boolean`                                          | 否   | false           | 圆角模式                                                                            | -                                             |
 | title            | `string`                                           | 否   | '选择日期'      | 标题                                                                                | -                                             |
 | formatter        | `(date: CalRenderDateProps) => CalRenderDateProps` | 否   | null            | 格式化日历函数，参数类型 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) | -                                             |
+| mask-z-index           | `number`  | 否   | 10000    | 遮罩 z-index 层级                                                                                    | -    |
+| content-z-index        | `number`  | 否   | 10001    | 内容 z-index 层级                                                                                    | -    |
 | ext-style        | `string`                                           | 否   | ''              | 容器样式                                                                            | -                                             |
 
 ### 事件 **Events**

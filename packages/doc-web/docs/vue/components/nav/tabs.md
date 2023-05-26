@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTabs } from '@titian-design/mobile-vue'
+import { TiTabs } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -28,7 +28,7 @@ import { TiTabs } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </script>
 ```
@@ -39,7 +39,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = [{name: '首页'}, {name: '我的'}]
 </script>
 ```
@@ -52,7 +52,7 @@ const tabs = [{name: '首页'}, {name: '我的'}]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </script>
 ```
@@ -66,7 +66,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -81,7 +81,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -96,7 +96,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs1 = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 const tabs2 = ["首页", "商品列表"]
 </script>
@@ -108,7 +108,7 @@ const tabs2 = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表"]
 </script>
 ```
@@ -119,7 +119,7 @@ const tabs = ["首页", "商品列表"]
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表", "购物车", "个人中心", "详情页", "筛选"]
 </script>
 ```
@@ -133,7 +133,7 @@ const tabs = ["首页", "商品列表", "购物车", "个人中心", "详情页"
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表"]
 const calendarTabs = [
   { label: '01', description: '周一' }, 
@@ -156,7 +156,7 @@ const multiTabs = [
 </template>
 
 <script lang="ts" setup>
-import { TiTabs } from '@titian-design/mobile-vue';
+import { TiTabs } from '{{packageWeappVue}}';
 const tabs = ["首页", "商品列表"]
 </script>
 ```
@@ -215,12 +215,14 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 
 | 名称             | 说明               | 备注                                                            |
 | ---------------- | ------------------ | --------------------------------------------------------------- |
-| tab-active-class | 选中节点样式名     | -                                                               |
-| tab-text-class   | tab 文字容器样式名 | 可设置缺省或者截断                                              |
-| swiper-class     | swiper 容器样式名  | -                                                               |
-| tabs-class       | tabs 样式名        | -                                                               |
-| tabs-mark-class  | 当前项底部标志类名 | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10px |
-| ext-class        | 根节点样式类名     | -                                                               |
+| tab-class             | tab容器样式名       | -                                                                |
+| tab-active-class      | 激活项tab容器样式名 | -                                                                |
+| tab-text-class        | tab文字样式名       | 可设置缺省或者截断                                               |
+| tab-text-active-class | 激活项tab文字样式名 |                                                                  |
+| swiper-class          | swiper 容器样式名   | -                                                                |
+| tabs-class            | tabs 样式名         | -                                                                |
+| tabs-mark-class       | 当前项底部标志类名  | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10rpx |
+| ext-class             | 根节点样式类名      | -                                                                |
 
 ### CSS 变量 **CSS Variable**
 

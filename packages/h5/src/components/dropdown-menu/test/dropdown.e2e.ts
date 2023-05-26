@@ -53,7 +53,6 @@ describe('回到顶部', () => {
         ],
       },
     });
-    const close = await page.instance.spyOnEvent('close');
     const dropdownItem = await page.instance.find('ti-dropdown-item');
     const change = await dropdownItem.spyOnEvent('change');
     await page.instance.waitForChanges();

@@ -31,17 +31,33 @@ export class TiPrice {
 
   @Prop() unit: string;
 
-  @State() integerPart = 0;
+  @Prop() radix = 2;
 
-  @State() fractionPart = 0;
+  @State() integerPart = '0';
+
+  @State() fractionPart = '0';
 
   @Watch('value')
   valueChanged(value) {
-    const integerPart = Math.floor(value);
-    const fractionPart = value.toString().split('.')[1] || '00';
+    const integerPart = Math.floor(value).toString();
+    const fractionPart = this.addPaddingZero(value.toString().split('.')[1] || '');
 
     this.integerPart = integerPart;
     this.fractionPart = fractionPart;
+  }
+
+  addPaddingZero(fractionPart: string) {
+    let { radix = 2 } = this;
+    if (radix < 0) {
+      radix = 0;
+    }
+
+    if (fractionPart.length < radix) {
+      fractionPart += '0'.repeat(radix - fractionPart.length);
+    } else if (fractionPart.length > radix) {
+      fractionPart = fractionPart.slice(0, radix);
+    }
+    return fractionPart;
   }
 
   componentWillLoad() {
@@ -50,14 +66,14 @@ export class TiPrice {
   }
 
   render() {
-    const { extClass = '', extStyle, label, prefix, suffix, fractionPart, integerPart, unit } = this;
+    const { extClass = '', extStyle, label, prefix, suffix, fractionPart, integerPart, unit, radix } = this;
     return (
       <div class={`${extClass} ${join('price')}`} style={stringToAttrStyle(extStyle)} part={extClass}>
         <span class={join('price', 'label')}>{label}</span>
         {prefix && <span class={join('price', 'prefix')}>{prefix}</span>}
         <span class={join('price', 'unit')}>{unit}</span>
         <span class={join('price', 'integer')}>{integerPart}</span>
-        <span class={join('price', 'fraction')}>.{fractionPart}</span>
+        {radix > 0 && <span class={join('price', 'fraction')}>.{fractionPart}</span>}
         {suffix && <span class={join('price', 'suffix')}>{suffix}</span>}
       </div>
     );

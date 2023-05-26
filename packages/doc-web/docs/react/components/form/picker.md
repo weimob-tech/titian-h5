@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```ts showLineNumbers
-import { TiPicker, TiPickerItem } from '@titian-design/mobile-react';
+import { TiPicker, TiPickerItem } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例

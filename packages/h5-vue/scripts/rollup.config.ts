@@ -18,6 +18,10 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       banner: `console.log('%c @titian-design/mobile-vue: ${packageJSON.version}', 'background: #222; color: #bada55');`,
     },
     external: ['vue'],
+    onwarn(warning, warn) {
+      if (warning.code === 'THIS_IS_UNDEFINED') return;
+      warn(warning);
+    },
     plugins: [
       typescript({
         tsconfig: path.join(process.cwd(), 'src/tsconfig.json'),
@@ -28,7 +32,7 @@ function basicConfig(format: OutputOptions['format'] = 'esm', extenalConfig = {}
       ...(format === 'umd'
         ? [
             commonjs({
-              include: ['titian-h5/dist/components/*.js'],
+              include: ['@titian-design/h5/dist/components/*.js'],
             }),
             nodeResolve(),
           ]

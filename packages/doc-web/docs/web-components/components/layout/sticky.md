@@ -49,7 +49,7 @@ import TabsLink from '@site/src/components/tabsLink';
 **use-pure-css模式下无需指定container，默认在父元素内生效。**
 
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <div id="container" style="height:250px;">
@@ -59,7 +59,7 @@ import TabsLink from '@site/src/components/tabsLink';
 </div>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -86,7 +86,7 @@ window.onload=function(){
 
 | 名称    | 参数列表               | 描述                 | 备注 |
 | ------- | ---------------------- | -------------------- | ---- |
-| bind:fixed |  `(e: WechatMiniprogram.CustomEvent<{isFixed: boolean}>) => void ` | 在吸顶状态改变是触发 | -    |
+| fixed |  `(e: CustomEvent<{isFixed: boolean}>) => void ` | 在吸顶状态改变是触发 | -    |
 ### 插槽 **Slots**
 
 | 名称    | 说明     | 备注 |

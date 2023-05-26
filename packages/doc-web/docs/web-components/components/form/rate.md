@@ -19,84 +19,60 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-rate-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-rate": "@titian-design/weapp/rate/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-rate": "platform://titian-weapp/ti-rate"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基础用法
 ```html showLineNumbers
-<ti-rate value="3" />
+<ti-rate value="3"></ti-rate>
 ```
 
 #### 半星
 ```html showLineNumbers
-<ti-rate value="3" allow-half />
+<ti-rate value="3" allow-half></ti-rate>
 ```
 
 #### 只读
 ```html showLineNumbers
-<ti-rate value="3" read-only />
+<ti-rate value="3" read-only></ti-rate>
 ```
 
 #### 可清空
 ```html showLineNumbers
-<ti-rate value="3" clearable />
+<ti-rate value="3" clearable></ti-rate>
 ```
 
 #### 设置星级
 ```html showLineNumbers
-<ti-rate value="3" count="{{7}}" clearable />
+<ti-rate value="3" count="7" clearable></ti-rate>
 ```
 
 #### 间距
 ```html showLineNumbers
-<ti-rate value="3" ext-style="--rate-gap: 10rpx;" />
+<ti-rate value="3" ext-style="--rate-gap: 10rpx;"></ti-rate>
 ```
 
 #### 评星尺寸
 ```html showLineNumbers
-<ti-rate value="3" icon-size="{{48}}" />
+<ti-rate value="3" icon-size="48"></ti-rate>
 ```
 
 #### 绑定事件
 
 <Tabs>
-  <TabItem value="wxml" label="index.wxml" >
+  <TabItem value="index.html" label="index.html" >
 
 ```html showLineNumbers
-<ti-rate value="{{value}}" bind:change="onChangeHandler" />
+<ti-rate value="{{value}}" onchange="onChange(event)"></ti-rate>
 ```
-
   </TabItem>
-  <TabItem value="json" label="index.js">
+  <TabItem value="index.js" label="index.js">
 
-```typescript tsx showLineNumbers
-Page({
-  data: {
-    value: 3
-  },
-  onChangeHandler(event){
-    const { value }= event.detail;
-    this.setData({
-      value
-    });
-  }
-})
+```js showLineNumbers
+var value = 0;
+function onChange(event){
+  value = event.detail?.value
+}
 ```
-
  </TabItem>
 </Tabs>
 
@@ -106,20 +82,20 @@ Page({
 
 | 属性      | 类型      | 默认值                | 说明                 |
 | --------- | --------- | --------------------- | -------------------- |
-| value     | `number`  | `0`                   | 值                   |
-| allow-half | `boolean` | `false`               | 允许半星             |
-| clearable | `boolean` | `false`               | 可清空               |
-| count     | `number`  | `5`                   | 评分数量             |
-| icon      | `string`  | `rate-star-highlight` | 评分 icon 图标       |
-| icon-size  | `string`  | `36`                  | 评分 icon 图标尺寸   |
-| empty-icon | `string`  | `rate-star-highlight` | 评分 icon 未选中图标 |
-| read-only  | `boolean` | `false`               | 是否只读             |
+| value     | `number`  | 0                   | 值                   |
+| allow-half | `boolean` | false               | 允许半星             |
+| clearable | `boolean` | false               | 可清空               |
+| count     | `number`  | 5                   | 评分数量             |
+| icon      | `string`  | rate-star-highlight | 评分 icon 图标       |
+| icon-size  | `string`  | 36                  | 评分 icon 图标尺寸   |
+| empty-icon | `string`  | rate-star-highlight | 评分 icon 未选中图标 |
+| read-only  | `boolean` | false               | 是否只读             |
 
 ### 事件 **Events**
 
 | 名称   | 参数列表                                 | 描述                 | 备注 |
 | ------ | ---------------------------------------- | -------------------- | ---- |
-| bind:change | `(e: WechatMiniprogram.CustomEvent<{value: number}>) => void` | 评分变化时触发该事件 | -    |
+| change | `(e: CustomEvent) => void` | 评分变化时触发该事件 | -    |
 
 ### CSS 变量 **CSS Variables**
 

@@ -1,5 +1,6 @@
 // import { readTask } from '@stencil/core';
 
+import { raf } from '../common/utils/raf';
 import { IDialogStaticOptions } from './types';
 
 export function resolveContainer(getContainer: HTMLElement | (() => HTMLElement) | undefined): HTMLElement {
@@ -32,7 +33,9 @@ export function $tiDialog(
       dialogDom.remove();
     });
   }
-  dialogDom.show(other);
+  raf(() => {
+    dialogDom.show(other);
+  });
   return dialogDom.close.bind(dialogDom);
 }
 

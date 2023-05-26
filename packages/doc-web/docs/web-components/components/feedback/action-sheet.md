@@ -18,42 +18,39 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-action-sheet-api" />
 
-## 安装使用
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-action-sheet": "@titian-design/weapp/action-sheet/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-action-sheet": "platform://titian-weapp/ti-action-sheet"
-  }
-}
-```
 
 ## 用法示例
 
 #### 基础用法
 <Tabs>
-<TabItem value="html" label="index.wxml">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-action-sheet title="标题" actions="{{ actions }}" bind:select="onSelect" bind:cancel="onCancel" />
+<ti-action-sheet title="标题" id="ti-action-sheet" />
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
-Page({
-  data: {
-    actions: [
-      { name: '选项1', description: '描述1' },
-      { name: '选项1', description: '描述1', icon: 'home' },
-      { name: '选项1', description: '描述1', disabled: true }
-    ]
-  }
-});
+window.onload = function(){
+  var options = [
+    { name: '选项1', description: '描述1' },
+    { name: '选项1', description: '描述1', icon: 'home' },
+    { name: '选项1', description: '描述1', disabled: true }
+  ];
+  var tiActionSheet = document.querySelector("#ti-action-sheet");
+  tiActionSheet.actions = options;
+  tiActionSheet.addEventListener('select', function (e) {
+    console.log(e.detail);
+  });
+  tiActionSheet.addEventListener('cancel', function (e) {
+    console.log(e.detail);
+  });
+  tiActionSheet.addEventListener('close', function (e) {
+    console.log(e.detail);
+  });
+} 
+
 ```
 </TabItem>
 </Tabs>
@@ -86,9 +83,9 @@ API 中的 actions 为一个对象数组，数组中的每一个对象有以下 
 
 | 名称     | 参数列表                        | 描述                                     | 备注 |
 | -------- | ------------------------------- | ---------------------------------------- | ---- |
-| bind:select | `(e: WechatMiniprogram.CustomEvent<Option>) => void` | 选中选项时触发，禁用或加载状态下不会触发，[Option类型](#option) | -    |
-| bind:cancel | `(e: WechatMiniprogram.CustomEvent) => void`            | 取消按钮点击时触发                       | -    |
-| bind:close  | `(e: WechatMiniprogram.CustomEvent) => void`            | 点击遮罩时触发                           | -    |
+| select | `(e: CustomEvent) => void` | 选中选项时触发，禁用或加载状态下不会触发，[Option类型](#option) | -    |
+| cancel | `(e: CustomEvent) => void`            | 取消按钮点击时触发                       | -    |
+| close  | `(e: CustomEvent) => void`            | 点击遮罩时触发                           | -    |
 
 ### CSS 变量 **CSS Variable**
 | 变量                                   | 默认值            | 说明                         | 备注 |

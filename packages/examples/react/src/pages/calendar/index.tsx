@@ -99,6 +99,7 @@ const Calendar = () => {
         min-date={new Date('2021-10-01').getTime()}
         max-size={attrs.maxSize}
         max-range={attrs.maxRange}
+        color={attrs.color}
         defaultValue={new Date().getTime()}
         visible={visible}
         onClose={toggleVisible}

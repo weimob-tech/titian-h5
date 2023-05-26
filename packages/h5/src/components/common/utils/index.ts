@@ -205,12 +205,19 @@ export const stringToAttrStyle = (attrStr: unknown): { [key: string]: string } =
     }, {} as { [key: string]: string });
 };
 
+export const getClientWidth = () => {
+  if (window.Titian?.mode === 'pc') {
+    return window.Titian?.screenWidth || document.documentElement.clientWidth;
+  }
+  return document.documentElement.clientWidth;
+};
+
 export const getResponsivePixel = (px: number) => {
   const mode = getTitianMode();
   if (mode === 'pc') {
     return px / 2;
   }
-  let { clientWidth } = document.documentElement;
+  let clientWidth = getClientWidth();
   if (Build.isTesting) {
     clientWidth = document.documentElement.clientWidth || 375;
   }
@@ -320,21 +327,15 @@ export function prevAvailable<T>(params: {
 
 export function addShadowRootStyle() {
   if (!this.extCss || !this.host || !this.host.shadowRoot) return;
-  const style = this.host.shadowRoot.querySelector('style') || document.createElement('style');
-  style.innerHTML = this.extCss;
-  this.host.shadowRoot.appendChild(style);
-}
-
-export function pxToVW(str) {
-  const mode = getTitianMode();
-
-  if (mode === 'pc') return str;
-
-  const res = (Number(str.replace('px', '')) * 100) / 750;
-  function toFixedFn(value, n) {
-    return Math.round(value * 10 ** n) / 10 ** n;
+  let style = this.host.shadowRoot.querySelector("style[id='ext-css']");
+  if (style) {
+    style.innerHTML = this.extCss;
+  } else {
+    style = document.createElement('style');
+    style.id = 'ext-css';
+    style.innerHTML = this.extCss;
+    this.host.shadowRoot.appendChild(style);
   }
-  return `${toFixedFn(res, 5)}vw`;
 }
 
 export function validateEvent(event, shadowRoot) {

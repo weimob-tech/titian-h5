@@ -30,11 +30,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-uploader": "@titian-design/weapp/uploader/index"
+    "ti-uploader": "{{packageWeappName}}/uploader/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-uploader": "platform://titian-weapp/ti-uploader"
+    "ti-uploader": "platform://titian-mp/ti-uploader"
   }
 }
 ```
@@ -151,6 +151,63 @@ Page({
 </TabItem>
 </Tabs>
 
+#### 仅使用组件样式，自定义上传
+<Tabs>
+  <TabItem value="wxml" label="index.wxml" >
+
+  ```html showLineNumbers
+  <ti-uploader
+    value="{{ fileList }}"
+    immediately="{{ false }}"
+    after-choose="{{ afterChoose }}"
+    bind:change="change"
+  ></ti-uploader>
+  ```
+  </TabItem>
+  <TabItem value="js" label="index.js">
+
+```typescript tsx showLineNumbers
+Page({
+  data: {
+    fileList: [{
+        path: 'https://xxxxx.png',
+        fileType: 'image',
+        status: 'done'
+      }],
+    afterChoose: null,
+  },
+  onReady() {
+    this.setData({
+      afterChoose: function(selectedList, existsList) {
+        // 上传之前你可以根据需求，比如size，来过滤selectedList
+        YOUR_UPLOAD().then(() => {
+          // 在你的上传回调里设置fileList，主要设置路径path，和状态status => 成功: done，失败：fail，上传中：'upload'
+          this.setData({
+            fileList: [
+              ...existsList,
+              ...selectedList.map((el, index) => ({
+                ...el,
+                path: 'https://xxxxx.png',
+                status: 'done' // 上传失败的话 这里设置  fail
+              }))
+            ]
+          });
+        });
+        // 这里return出去的是走后续上传的文件
+        return selectedList.map((el) => ({ ...el, status: 'upload' }));
+      }.bind(this)
+    });
+  },
+  change(e) {
+    this.setData({
+      fileList: e.detail.fileList
+    });
+  }
+});
+```
+
+</TabItem>
+</Tabs>
 
 ## ti-uploader API
 
@@ -175,6 +232,7 @@ Page({
 | count                | `number`                                     | 否       | 9                          | 选择文件/图片/视频的数量                                                                    | -    |
 | media-type           | `array`                                      | 否       | ['image', 'video']         | 文件类型，可选值 `image` / `video` / `mix`                                                  | -    |
 | url                  | `string`                                     | 否       | -                          | 上传地址                                                                                    | -    |
+| choose               | `Function`                                   | 否       |                            | 选择函数                                                                                    | -    |
 | before-choose        | `Function`                                   | 否       |                            | 选择前的处理函数                                                                            | -    |
 | after-choose         | `Function`                                   | 否       |                            | 选择后的处理函数                                                                            | -    |
 | before-upload        | `Function`                                   | 否       |                            | - 上传前置方法 可用用于处理上传参数                                                         | -    |

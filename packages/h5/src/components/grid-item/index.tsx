@@ -1,10 +1,10 @@
 import { Component, h, Host, Method, Prop, State, Element } from '@stencil/core';
-import type { Components } from '../../components';
 import { BasicComponentAbstract } from '../common/basic/BasicComponent';
 import { isString, addShadowRootStyle } from '../common/utils';
 import * as namespace from '../common/utils/namespace';
 import { getParent } from '../common/utils/relation';
 import addUnit from '../common/utils/suffix';
+import { TiGrid } from '../grid';
 
 @Component({
   tag: 'ti-grid-item',
@@ -107,7 +107,7 @@ export class TiGridItem implements BasicComponentAbstract {
   }
 
   @Method()
-  async updateDataFromParent(parent?: HTMLTiGridElement | Components.TiGrid) {
+  async updateDataFromParent(parent?: HTMLTiGridElement | TiGrid) {
     if (!parent) {
       parent = this.parent;
     }

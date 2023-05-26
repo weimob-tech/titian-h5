@@ -12,80 +12,187 @@ side_iframe_path: "#/calendar"
 
 **用于选择日期，或日期区间。**
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-calendar-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-calendar": "titian/calendar/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-calendar": "platform://titian-weapp/ti-calendar"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基础用法
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" />
+<ti-calendar id="ti-calendar"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 设置边界
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" min-date="2022-02-10" max-date="2023-02-10" />
+<ti-calendar id="ti-calendar" min-date="2022-02-10" max-date="2023-02-10"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 设置默认值
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" default-value="2022-04-10" />
+<ti-calendar id="ti-calendar" default-value="2022-04-10"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 受控模式
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" value="2022-04-10" />
+<ti-calendar id="ti-calendar" value="2022-04-10"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 多选
-```html showLineNumbers
-<ti-calendar visible="{{ true }}" mode="multiple" />
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
+```html showLineNumbers
+<ti-calendar id="ti-calendar" mode="multiple"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 多选 - 最多个数
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" mode="multiple" max-size="{{2}}" />
+<ti-calendar id="ti-calendar" mode="multiple"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+  tiCalendar.maxSize = 2;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 范围
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" mode="range" />
+<ti-calendar id="ti-calendar" mode="range"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 范围 - 最大范围
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" mode="range" max-range="{{2}}" />
+<ti-calendar id="ti-calendar" mode="range"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+  tiCalendar.maxRange = 2;
+};
+```
+</TabItem>
+</Tabs>
 
 #### 范围 - 允许起止同天
+<Tabs>
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
-<ti-calendar visible="{{ true }}" mode="range" allowSameDay="{{true}}" />
+<ti-calendar id="ti-calendar" mode="range"></ti-calendar>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiCalendar = document.getElementById("ti-calendar");
+  tiCalendar.visible = true;
+  tiCalendar.allowSameDay = true;
+};
+```
+</TabItem>
+</Tabs>
 
 ## ti-calendar API
 
@@ -113,15 +220,18 @@ import TabsLink from '@site/src/components/tabsLink';
 | title            | `string`                                           | 否   | '选择日期'      | 标题                                                                                | -                                             |
 | formatter        | `(date: CalRenderDateProps) => CalRenderDateProps` | 否   | null            | 格式化日历函数，参数类型 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) | -                                             |
 | ext-style        | `string`                                           | 否   | ''              | 容器样式                                                                            | -                                             |
+| mask-z-index           | `number`  | 否   | 10000    | 遮罩 z-index 层级                                                                                    | -    |
+| content-z-index        | `number`  | 否   | 10001    | 内容 z-index 层级                                                                                    | -    |
+
 
 ### 事件 **Events**
 
 | 名称         | 参数列表                                                                                                                      | 描述             | 备注                                                                                                                                                                             |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| bind:select  | `(e: WechatMiniprogram.CustomEvent<{date: CalDateProps; currentDate: CalRenderDateProps[];}>) => void`                        | 日历面板选择事件 | 参数类型见 [CalDateProps](#日期数据结构-caldateprops)， [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)                                                               |
-| bind:confirm | `(e: WechatMiniprogram.CustomEvent<CalRenderDateProps[]>) => void`                                                            | 日历面板确认事件 | 参数见 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)                                                                                                                |
-| bind:close   | `(e: WechatMiniprogram.CustomEvent) => void`                                                                                  | 日历面板关闭事件 | -                                                                                                                                                                                |
-| error        | `(e: WechatMiniprogram.CustomEvent<{error: CalErrorProps; date: CalDateProps; currentDate: CalRenderDateProps[]; }>) => void` | 日历面板错误事件 | 参数类型见 [CalErrorProps](#报错数据结构-calerrorprops)， [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)，[CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) |
+| select  | `(e: CustomEvent<{date: CalDateProps; currentDate: CalRenderDateProps[];}>) => void`                        | 日历面板选择事件 | 参数类型见 [CalDateProps](#日期数据结构-caldateprops)， [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)                                                               |
+| confirm | `(e: CustomEvent<CalRenderDateProps[]>) => void`                                                            | 日历面板确认事件 | 参数见 [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)                                                                                                                |
+| close   | `(e: CustomEvent) => void`                                                                                  | 日历面板关闭事件 | -                                                                                                                                                                                |
+| error        | `(e: CustomEvent<{error: CalErrorProps; date: CalDateProps; currentDate: CalRenderDateProps[]; }>) => void` | 日历面板错误事件 | 参数类型见 [CalErrorProps](#报错数据结构-calerrorprops)， [CalRenderDateProps](#日期渲染数据结构-calrenderdateprops)，[CalRenderDateProps](#日期渲染数据结构-calrenderdateprops) |
 
 ### 外部样式类 **External Classes**
 
@@ -199,16 +309,16 @@ interface CalErrorProps {
 ```
 #### 日期状态枚举 `DateStatusEnum`
 
-| 枚举值            | 说明                                 |
-| ----------------- | ------------------------------------ |
-| null              | 无状态                               |
-| `disabled`        | 禁用                                 |
-| `single`          | 单选选中状态                         |
-| `range_start`     | 范围选择：起始状态                   |
-| `range_full`      | 范围选择：起始时间与结束时间为同一天 |
-| `range_end`       | 范围选择：结束状态                   |
-| `multiple`        | 孤立多选（无连接）                   |
-| `multiple_start`  | 多选（有连接） 起始状态              |
-| `multiple_middle` | 多选（有连接） 中间状态              |
-| `mulitiple_end`   | 多选（有连接） 结束状态              |
+| 枚举值           | 说明                                 |
+| --------------- | ------------------------------------ |
+| null            | 无状态                               |
+| disabled        | 禁用                                 |
+| single          | 单选选中状态                         |
+| range_start     | 范围选择：起始状态                   |
+| range_full      | 范围选择：起始时间与结束时间为同一天 |
+| range_end       | 范围选择：结束状态                   |
+| multiple        | 孤立多选（无连接）                   |
+| multiple_start  | 多选（有连接） 起始状态              |
+| multiple_middle | 多选（有连接） 中间状态              |
+| mulitiple_end   | 多选（有连接） 结束状态              |
 

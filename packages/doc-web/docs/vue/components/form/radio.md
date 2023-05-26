@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRadio, TiRadioGroup, TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadio, TiRadioGroup, TiRadioButton } from '{{packageWeappVue}}';
 ```
 
 #### TiRadio 基本使用
@@ -34,7 +34,7 @@ import { TiRadio, TiRadioGroup, TiRadioButton } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -48,7 +48,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -62,7 +62,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -78,7 +78,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -93,7 +93,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -105,7 +105,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 
 const handleChange = (e: CustomEvent<boolean>) => {
   console.log(`组件选中状态: ${e.detail ? '选中' : '未选中'}`);
@@ -126,7 +126,7 @@ const handleChange = (e: CustomEvent<boolean>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -141,7 +141,7 @@ import { TiRadioButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -174,7 +174,7 @@ import { TiRadio } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadioButton, TiImage } from '@titian-design/mobile-vue';
+import { TiRadioButton, TiImage } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -190,7 +190,7 @@ import { TiRadioButton, TiImage } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioButton } from '{{packageWeappVue}}';
 
 const styles: any = {
   "--radio-button-checked-border-color": "rgba(30, 128, 255, 40%)",
@@ -208,7 +208,7 @@ const styles: any = {
 </template>
 
 <script lang="ts" setup>
-import { TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioButton } from '{{packageWeappVue}}';
 
 const handleChange = (e: CustomEvent<boolean>) => {
   console.log(`组件选中状态: ${e.detail ? '选中' : '未选中'}`);
@@ -236,7 +236,7 @@ const handleChange = (e: CustomEvent<boolean>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioGroup, TiRadio, TiRadioButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -265,7 +265,7 @@ import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioGroup, TiRadio, TiRadioButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -299,7 +299,7 @@ import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue';
+import { TiRadioGroup, TiRadio, TiRadioButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -312,7 +312,7 @@ import { TiRadioGroup, TiRadio, TiRadioButton } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiRadioGroup } from '@titian-design/mobile-vue';
+import { TiRadioGroup } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -334,7 +334,7 @@ import { TiRadioGroup } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiRadio } from '@titian-design/mobile-vue';
+import { TiRadio } from '{{packageWeappVue}}';
 const handleChange = (e: CustomEvent<string | number>) => {
   console.log('选中了 %s', e.detail);
 };

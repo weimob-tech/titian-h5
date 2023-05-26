@@ -34,11 +34,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-dialog": "@titian-design/weapp/dialog/index"
+    "ti-dialog": "{{packageWeappName}}/dialog/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-dialog": "platform://titian-weapp/ti-dialog"
+    "ti-dialog": "platform://titian-mp/ti-dialog"
   }
 }
 ```
@@ -48,10 +48,10 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ```typescript tsx showLineNumbers
 // 原生小程序
-import { $tiDialog } from "@titian-design/weapp/index";
+import { $tiDialog } from "{{packageWeappName}}/index";
 
 // titan-cli 搭建的项目
-const { $tiDialog } = requirePlatform("@titian-design/weapp").main;
+const { $tiDialog } = requirePlatform("{{packageWeappName}}").main;
 ```
 
  </TabItem>
@@ -174,7 +174,7 @@ Page({
 | title                   | `string`  | 否   | -      | 标题                                   | -    |
 | content                 | `string`  | 否   | -      | 内容                                   | -    |
 | z-index                 | `number`  | 否   | 12000  | z-index                                | -    |
-| has-cancel-button       | `boolean` | 否   | false  | 是否展示确认按钮                       | -    |
+| has-cancel-button       | `boolean` | 否   | false  | 是否展示取消按钮                       | -    |
 | close-on-mask           | `boolean` | 否   | true   | 点击遮罩是否关闭对话框                 | -    |
 | close-on-actions        | `boolean` | 否   | true   | 点击`确认`和`取消`按钮，是否关闭对话框 | -    |
 | is-text-button          | `boolean` | 否   | false  | 是否为文字按钮                         | -    |
@@ -235,7 +235,7 @@ Page({
 | `--dialog-actions-height`              | 88rpx                           | 按钮区高度             | -    |
 | `--dialog-actions-gap`                 | 32rpx                           | 按钮区按钮间距         | -    |
 | `--dialog-actions-border-top-color`    | var(--neutral-color-6, #f2f2f2) | 按钮区上边线颜色       | -    |
-| `--dialog-actions-space`               | 56px                            | 按钮区按钮内边距       | -    |
+| `--dialog-actions-space`               | 48rpx                            | 按钮区按钮内边距       | -    |
 | `--dialog-actions-cancel-color`        | #757575                         | 按钮区取消按钮颜色     | -    |
 | `--dialog-actions-cancel-border-color` | #212121                         | 按钮区取消按钮边线颜色 | -    |
 | `--dialog-actions-cancel-active-color` | rgba(33, 33, 33, 0.1)           | 按钮区取消按钮按压颜色 | -    |

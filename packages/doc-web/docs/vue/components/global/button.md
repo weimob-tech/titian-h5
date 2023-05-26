@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiButton } from '@titian-design/mobile-vue'
+import { TiButton } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -36,7 +36,7 @@ import { TiButton } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -51,7 +51,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -67,7 +67,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -82,7 +82,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -96,7 +96,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -108,7 +108,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -120,7 +120,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -134,7 +134,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -147,7 +147,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -162,7 +162,7 @@ import { TiButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiButton } from '@titian-design/mobile-vue';
+import { TiButton } from '{{packageWeappVue}}';
 </script>
 ```
 

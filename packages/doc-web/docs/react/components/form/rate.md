@@ -20,7 +20,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiRate } from '@titian-design/mobile-react';
+import { TiRate } from '{{packageWeappReact}}';
 ```
 
 ## 用法示例

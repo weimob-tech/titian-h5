@@ -20,11 +20,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-notice-bar": "@titian-design/weapp/notice-bar/index"
+    "ti-notice-bar": "{{packageWeappName}}/notice-bar/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-notice-bar": "platform://titian-weapp/ti-notice-bar"
+    "ti-notice-bar": "platform://titian-mp/ti-notice-bar"
   }
 }
 ```

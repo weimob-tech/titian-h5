@@ -141,6 +141,8 @@ export const TiCascade = ComponentWrap<JSX.TiCascade>(components.TiCascade);
 export const TiConfigProvider = ComponentWrap<JSX.TiConfigProvider, HTMLTiConfigProviderElement>(
   components.TiConfigProvider,
 );
+export const TiVirtualList = ComponentWrap<JSX.TiVirtualList>(components.TiVirtualList);
+export const TiNavbar = ComponentWrap<JSX.TiNavbar>(components.TiNavbar);
 
 export type TiCellProps = JSX.TiCell;
 export type TiCellGroupProps = JSX.TiCellGroup;
@@ -204,7 +206,9 @@ export type TiTabsProps = JSX.TiTabs;
 export type TiScrollViewProps = JSX.TiScrollView;
 export type TiPortalProps = JSX.TiPortal;
 export type TiCascadeProps = JSX.TiCascade;
-export type TiConfigProvierProps = JSX.TiConfigProvider;
+export type TiConfigProviderProps = JSX.TiConfigProvider;
+export type TiVirtualListProps = JSX.TiVirtualList;
+export type TiNavbarProps = JSX.TiNavbar;
 
 export interface InjectPortalProps<T> {
   teleport?: Element;

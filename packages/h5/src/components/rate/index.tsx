@@ -238,6 +238,7 @@ export class TiRate implements BasicComponentAbstract {
                 this.getClass(scoreValue <= this.inputScore),
               ])}`}
               onClick={this.onTapItem.bind(this)}
+              size={this.iconSize}
               data-score={scoreValue}
             />
             {this.allowHalf && (
@@ -247,6 +248,7 @@ export class TiRate implements BasicComponentAbstract {
                   this.getClass(scoreValue <= this.inputScore + 0.5),
                 ])}`}
                 data-score={scoreValue - 0.5}
+                size={this.iconSize}
                 onClick={this.onTapItem.bind(this)}
               />
             )}

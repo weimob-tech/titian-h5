@@ -17,3 +17,5 @@ packages/doc-web/.docusaurus
 *.md
 docs
 packages/touch-emulator/tests/*
+packages/doc-web/src/theme/SearchBar/
+packages/ffsend/*

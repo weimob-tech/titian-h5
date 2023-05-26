@@ -71,9 +71,3 @@ dist
 # next.js
 .next/
 out/
-
-# eslint
-.eslintcache
-
-# stylelint
-.stylelintcache

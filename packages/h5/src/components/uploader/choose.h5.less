@@ -62,4 +62,50 @@
   &-text {
     color: @uploader-action-text-color;
   }
+
+  &&-cols {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+
+    &::after {
+      content: '';
+
+      display: block;
+      padding-bottom: 100%;
+    }
+    @supports (aspect-ratio: 1) {
+      & {
+        aspect-ratio: 1;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    .@{uploader}-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .@{uploader}-text-big {
+      margin-top: 14px;
+
+      font-size: 24px;
+    }
+    .@{uploader}-text-middle {
+      margin-top: 10px;
+
+      font-size: 22px;
+    }
+    .@{uploader}-text-small {
+      margin-top: 6px;
+
+      font-size: 20px;
+    }
+  }
 }

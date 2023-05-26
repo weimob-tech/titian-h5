@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTreeSelect } from '@titian-design/mobile-vue'
+import { TiTreeSelect } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiTreeSelect } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect } from '@titian-design/mobile-vue';
+import { TiTreeSelect } from '{{packageWeappVue}}';
 const options = [
   {
     label: "侧边导航",
@@ -49,7 +49,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect } from '@titian-design/mobile-vue';
+import { TiTreeSelect } from '{{packageWeappVue}}';
 const alias = { label: 'name', value: 'id', children: 'list' };
 const options = [
   {
@@ -73,7 +73,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiTreeSelect , ref } from '@titian-design/mobile-vue';
+import { TiTreeSelect , ref } from '{{packageWeappVue}}';
 const options = [
   { label: "侧边导航1", value: "a1" },
   { label: "侧边导航2", value: "a2" }
@@ -134,5 +134,5 @@ const onChangeNav = (e: CustomEvent<{index: number, item: Record<string, any>}>)
 | 变量                         | 默认值  | 说明                       | 备注 |
 | ---------------------------- | ------- | -------------------------- | ---- |
 | --tree-select-cell-h         | `108px` | 右侧默认选项内容的每项高度 | - |
-| --tree-select-active-color   | `108px` | 右侧默认选项内容选中颜色   | - |
-| --tree-select-disabled-color | `108px` | 右侧默认选项内容禁用颜色   | - |
+| --tree-select-active-color   | `#fa2c19` | 右侧默认选项内容选中颜色   | - |
+| --tree-select-disabled-color | `#c4c4c4` | 右侧默认选项内容禁用颜色   | - |

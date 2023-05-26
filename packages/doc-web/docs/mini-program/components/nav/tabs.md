@@ -23,11 +23,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-tabs": "@titian-design/weapp/tabs/index"
+    "ti-tabs": "{{packageWeappName}}/tabs/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-tabs": "platform://titian-weapp/ti-tabs"
+    "ti-tabs": "platform://titian-mp/ti-tabs"
   }
 }
 ```
@@ -316,14 +316,16 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 
 ### 外部样式类 **External Classes**
 
-| 名称             | 说明               | 备注                                                             |
-| ---------------- | ------------------ | ---------------------------------------------------------------- |
-| tab-active-class | 选中节点样式名     | -                                                                |
-| tab-text-class   | tab 文字容器样式名 | 可设置缺省或者截断                                               |
-| swiper-class     | swiper 容器样式名  | -                                                                |
-| tabs-class       | tabs 样式名        | -                                                                |
-| tabs-mark-class  | 当前项底部标志类名 | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10rpx |
-| ext-class        | 根节点样式类名     | -                                                                |
+| 名称                  | 说明                | 备注                                                             |
+| --------------------- | ------------------- | ---------------------------------------------------------------- |
+| tab-class             | tab容器样式名       | -                                                                |
+| tab-active-class      | 激活项tab容器样式名 | -                                                                |
+| tab-text-class        | tab文字样式名       | 可设置缺省或者截断                                               |
+| tab-text-active-class | 激活项tab文字样式名 |                                                                  |
+| swiper-class          | swiper 容器样式名   | -                                                                |
+| tabs-class            | tabs 样式名         | -                                                                |
+| tabs-mark-class       | 当前项底部标志类名  | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10rpx |
+| ext-class             | 根节点样式类名      | -                                                                |
 
 ### CSS 变量 **CSS Variable**
 | 变量                           | 默认值    | 说明                               | 备注 |

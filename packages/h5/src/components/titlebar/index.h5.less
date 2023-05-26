@@ -26,17 +26,26 @@
   }
 
   &-left {
-    text-align: left;
+    margin: var(--title-bar-left-btn-margin, initial);
+    padding: var(--title-bar-left-btn-padding, initial);
+
+    color: var(--title-bar-left-btn-color, inherit);
+    text-align: var(--title-bar-left-btn-align, left);
   }
 
   &-right {
-    text-align: right;
+    margin: var(--title-bar-right-btn-margin, initial);
+    padding: var(--title-bar-right-btn-padding, initial);
+    float: var(--title-bar-float, initial);
+
+    color: var(--title-bar-right-btn-color, inherit);
+    text-align: var(--title-bar-right-btn-align, right);
   }
 
   &-title {
     flex: 1;
 
-    text-align: center;
+    text-align: var(--title-bar-title-align, center);
   }
 
   &-main-title {

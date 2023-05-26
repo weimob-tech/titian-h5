@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiDivider } from '@titian-design/mobile-react'
+import { TiDivider } from '{{packageWeappReact}}'
 ```
 
 ## 用法示例

@@ -26,10 +26,10 @@
 import CustomPage from '../../components/page.vue';
 import { TiCascade, TiButton, TiPopup } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 import city from './city';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     type: 'radio',
     key: 'mode',

@@ -177,4 +177,11 @@
   &-large &-loading-text {
     margin: 8px 0 0;
   }
+
+  &&-cols {
+    display: grid;
+    grid-gap: var(--uploader-gap, 24px);
+    grid-template-columns: repeat(var(--uploader-columns-count), 1fr);
+    padding: var(--uploader-padding, 28px);
+  }
 }

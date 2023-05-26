@@ -20,11 +20,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-badge": "@titian-design/weapp/badge/index"
+    "ti-badge": "{{packageWeappName}}/badge/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-badge": "platform://titian-weapp/ti-badge"
+    "ti-badge": "platform://titian-mp/ti-badge"
   }
 }
 ```

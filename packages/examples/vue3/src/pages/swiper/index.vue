@@ -24,9 +24,9 @@
 import { TiSwiper, TiSwiperItem, TiSwiperProps, TiImage } from '@titian-design/mobile-vue';
 import { ref } from 'vue';
 import CustomPage from '../../components/page.vue';
-import { OptionType } from '../../components/page.interface';
+import { IOptionType } from '../../components/page.interface';
 
-const options: OptionType[] = [
+const options: IOptionType[] = [
   {
     key: 'vertical',
     type: 'radio',

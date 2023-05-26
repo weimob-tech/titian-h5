@@ -10,7 +10,7 @@ import { normalizePath } from '../utils';
 import logger from '../utils/logger';
 import { getPackageRegistry } from '../utils/npminfo';
 
-export interface PacakgeOptions {
+export interface PackageOptions {
   targetPath: string;
   storeDir?: string;
   version?: string;
@@ -45,7 +45,7 @@ export default class Package {
 
   registryUrl: string;
 
-  constructor(options: PacakgeOptions) {
+  constructor(options: PackageOptions) {
     this.targetPath = options.targetPath;
     this.storeDir = options.storeDir || `${this.targetPath}/node_modules`;
     this.name = options.name;

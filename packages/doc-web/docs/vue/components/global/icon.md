@@ -22,7 +22,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiIcon } from '@titian-design/mobile-vue'
+import { TiIcon } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -34,7 +34,7 @@ import { TiIcon } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/mobile-vue';
+import { TiIcon } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -48,7 +48,7 @@ import { TiIcon } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/mobile-vue';
+import { TiIcon } from '{{packageWeappVue}}';
 </script>
 <style>
 @font-face {
@@ -95,7 +95,7 @@ import { TiIcon } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiIcon } from '@titian-design/mobile-vue';
+import { TiIcon } from '{{packageWeappVue}}';
 </script>
 <style>
 @font-face {

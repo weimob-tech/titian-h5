@@ -13,7 +13,7 @@ side_iframe_path: "#/tabs"
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTabs } from '@titian-design/mobile-react'
+import { TiTabs } from '{{packageWeappReact}}'
 ```
 
 import TabsLink from '@site/src/components/tabsLink';
@@ -219,14 +219,16 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 
 ### 外部样式类 **External Classes**
 
-| 名称           | 说明               | 备注                                                            |
-| -------------- | ------------------ | --------------------------------------------------------------- |
-| tabActiveClass | 选中节点样式名     | -                                                               |
-| tabTextClass   | tab 文字容器样式名 | 可设置缺省或者截断                                              |
-| swiperClass    | swiper 容器样式名  | -                                                               |
-| tabsClass      | tabs 样式名        | -                                                               |
-| tabsMarkClass  | 当前项底部标志类名 | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10px |
-| extClass       | 根节点样式类名     | -                                                               |
+| 名称               | 说明                | 备注                                                            |
+| ------------------ | ------------------- | --------------------------------------------------------------- |
+| tabClass           | tab容器样式名       | -                                                               |
+| tabActiveClass     | 激活项tab容器样式名 | -                                                               |
+| tabTextClass       | tab 文字样式名      | 可设置缺省或者截断                                              |
+| tabTextActiveClass | 激活项tab文字样式名 |                                                                 |
+| swiperClass        | swiper 容器样式名   | -                                                               |
+| tabsClass          | tabs 样式名         | -                                                               |
+| tabsMarkClass      | 当前项底部标志类名  | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10px |
+| extClass           | 根节点样式类名      | -                                                               |
 
 ### CSS 变量 **CSS Variable**
 

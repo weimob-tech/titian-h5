@@ -17,65 +17,50 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-empty-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-empty": "titan-ui/empty/index"
-  },
-  // titan-cli 搭建的项目
-  "usingComponents": {
-    "ti-empty": "platform://titian-weapp/ti-empty"
-  }
-}
-```
-
 ## 用法示例
 
 #### 基本用法
 
 ```html showLineNumbers
-<ti-empty />
+<ti-empty></ti-empty>
 ```
 
 #### 设置标题
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" />
+<ti-empty title="空态页说明文案"></ti-empty>
 ```
 
 #### 设置标题,副标题
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" sub-title="补充说明文案请尽量简短" />
+<ti-empty title="空态页说明文案" sub-title="补充说明文案请尽量简短"></ti-empty>
 ```
 
 #### 设置 ext-style 样式
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" ext-style="margin:20rpx 0 " />
+<ti-empty title="空态页说明文案" ext-style="margin:20rpx 0 "></ti-empty>
 ```
 
 
 #### 设置 ext-class
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" ext-class="ext-class" />
+<ti-empty title="空态页说明文案" ext-class="ext-class"></ti-empty>
 ```
 
 
 #### 设置 size
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" size="big" />
+<ti-empty title="空态页说明文案" size="big"></ti-empty>
 ```
 
 #### 设置 image
 
 ```html showLineNumbers
-<ti-empty title="空态页说明文案" image="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png" />
+<ti-empty title="空态页说明文案" image="https://image-c-dev.weimobwmc.com/qa-On6X/8b97cd488593474ba4a8ccaa3c1a493f.png"></ti-empty>
 ```
 
 ## ti-empty API

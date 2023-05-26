@@ -15,41 +15,27 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-textarea-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-textarea": "@titian-design/weapp/textarea/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-textarea": "platform://titian-weapp/ti-textarea"
-  }
-}
-```
 ## 用法示例
 
 #### 基本用法
 ```html showLineNumbers
-<ti-textarea placeholder="请输入评论文字，限200字以内…" />
+<ti-textarea placeholder="请输入评论文字，限200字以内…"></ti-textarea>
 ```
 #### 高度自适应
 ```html showLineNumbers
-<ti-textarea auto-height />
+<ti-textarea auto-heigh></ti-textarea>
 ```
 #### 字数统计
 ```html showLineNumbers
-<ti-textarea show-count />
+<ti-textarea show-count></ti-textarea>
 ```
 #### 键盘确认按钮文字
 ```html showLineNumbers
-<ti-textarea confirm-type="done" placeholder="完成" />
-<ti-textarea confirm-type="send" placeholder="发送" />
-<ti-textarea confirm-type="search" placeholder="搜索" />
-<ti-textarea confirm-type="next" placeholder="下一项" />
-<ti-textarea confirm-type="go" placeholder="前往" />
+<ti-textarea confirm-type="done" placeholder="完成"></ti-textarea>
+<ti-textarea confirm-type="send" placeholder="发送"></ti-textarea>
+<ti-textarea confirm-type="search" placeholder="搜索"></ti-textarea>
+<ti-textarea confirm-type="next" placeholder="下一项"></ti-textarea>
+<ti-textarea confirm-type="go" placeholder="前往"></ti-textarea>
 ```
 ## ti-textarea API
 ### 属性 **Properties**
@@ -80,12 +66,12 @@ import TabsLink from '@site/src/components/tabsLink';
 | confirm-hold	 | `boolean` | 否 | `false` | 点击键盘右下角按钮时是否保持键盘不收起 | - |
 ### 事件 **Events**
 
-| 名称      | 参数列表                                    | 描述                 | 备注 |
-| --------- | ------------------------------------------- | -------------------- | ---- |
-| bind:input   | `(e: WechatMiniprogram.CustomEvent<{value: string}>) => void` | 键盘输入时触发，     | -    |
-| bind:focus   | `(e: WechatMiniprogram.CustomEvent) => void`                  | 输入框聚焦时触发，   | -    |
-| bind:blur    | `(e: WechatMiniprogram.CustomEvent<{value: string}>) => void` | 输入框失去焦点时触发 | -    |
-| bind:confirm | `(e: WechatMiniprogram.CustomEvent<{value: string}>) => void` | 点击完成按钮时触发   | -    |
+| 名称      | 参数列表          | 描述                 | 备注 |
+| --------- | ---------------- | -------------------- | ---- |
+| input   | `(e: CustomEvent) => void` | 键盘输入时触发，     | -    |
+| focus   | `(e: CustomEvent) => void` | 输入框聚焦时触发，   | -    |
+| blur    | `(e: CustomEvent) => void` | 输入框失去焦点时触发 | -    |
+| confirm | `(e: CustomEvent) => void` | 点击完成按钮时触发   | -    |
 
 ### 外部样式类 **External Classes**
 
@@ -98,9 +84,9 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 变量                   | 默认值  | 说明                           | 备注 |
 | ---------------------- | ------- | ------------------------------ | ---- |
-| --textarea-height      | `220rpx` | 文本域高度                     | -    |
-| --textarea-padding-v   | `24rpx`  | 文本域垂直方向内边距           | -    |
-| --textarea-padding-h   | `28rpx`  | 文本域水平方向内边距           | -    |
-| --textarea-min-height  | `172rpx` | 文本域最新高度，自增模式下有效 | -    |
-| --textarea-font-size   | `28rpx`  | 文本域字号                     | -    |
-| --textarea-line-height | `42rpx`  | 文本域行高                     | -    |
+| --textarea-height      | 220rpx | 文本域高度                     | -    |
+| --textarea-padding-v   | 24rpx  | 文本域垂直方向内边距           | -    |
+| --textarea-padding-h   | 28rpx  | 文本域水平方向内边距           | -    |
+| --textarea-min-height  | 172rpx | 文本域最新高度，自增模式下有效 | -    |
+| --textarea-font-size   | 28rpx  | 文本域字号                     | -    |
+| --textarea-line-height | 42rpx  | 文本域行高                     | -    |

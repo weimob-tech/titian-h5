@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiCheckbox, TiCheckboxGroup, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckbox, TiCheckboxGroup, TiCheckboxButton } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -38,7 +38,7 @@ import { TiCheckbox, TiCheckboxGroup, TiCheckboxButton } from '@titian-design/mo
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -53,7 +53,7 @@ import { TiCheckbox } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -68,7 +68,7 @@ import { TiCheckbox } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -85,7 +85,7 @@ import { TiCheckbox } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -101,7 +101,7 @@ import { TiCheckbox } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -113,7 +113,7 @@ import { TiCheckbox } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckbox } from '@titian-design/mobile-vue';
+import { TiCheckbox } from '{{packageWeappVue}}';
 
 const handleChange = (e: CustomEvent<boolean>) => {
   console.log(`组件选中状态: ${e.detail ? '选中' : '未选中'}`);
@@ -134,7 +134,7 @@ const handleChange = (e: CustomEvent<boolean>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -149,7 +149,7 @@ import { TiCheckboxButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -183,7 +183,7 @@ import { TiCheckboxButton } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton, TiImage } from '@titian-design/mobile-vue';
+import { TiCheckboxButton, TiImage } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -201,7 +201,7 @@ import { TiCheckboxButton, TiImage } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton } from '{{packageWeappVue}}';
 
 const styles: Record<string, string> = {
   "--checkbox-button-checked-border-color": "rgba(30, 128, 255, 40%)",
@@ -219,7 +219,7 @@ const styles: Record<string, string> = {
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton } from '{{packageWeappVue}}';
 
 const handleChange = (e: CustomEvent<boolean>) => {
   console.log(`组件选中状态: ${e.detail ? '选中' : '未选中'}`);
@@ -246,7 +246,7 @@ const handleChange = (e: CustomEvent<boolean>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -276,7 +276,7 @@ import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mo
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -310,7 +310,7 @@ import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mo
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -324,7 +324,7 @@ import { TiCheckboxGroup, TiCheckbox, TiCheckboxButton } from '@titian-design/mo
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxGroup } from '@titian-design/mobile-vue';
+import { TiCheckboxGroup } from '{{packageWeappVue}}';
 const options = [
   { value: "a", label: "选项 A" },
   { value: "b", label: "选项 B" },
@@ -351,7 +351,7 @@ const options = [
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton, TiCheckbox, TiCheckboxButton } from '{{packageWeappVue}}';
 const handleChange = (e: CustomEvent<Array<string | number>>) => {
   console.log(`组件选中: ${e.detail.join(', ')}`);
 };
@@ -376,7 +376,7 @@ const handleChange = (e: CustomEvent<Array<string | number>>) => {
 </template>
 
 <script lang="ts" setup>
-import { TiCheckboxButton, TiCheckbox, TiCheckboxButton } from '@titian-design/mobile-vue';
+import { TiCheckboxButton, TiCheckbox, TiCheckboxButton } from '{{packageWeappVue}}';
 </script>
 ```
 

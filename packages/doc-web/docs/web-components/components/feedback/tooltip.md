@@ -15,11 +15,6 @@ import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-tooltip-api" />
 
-## 安装使用
-
-```js showLineNumbers
-import { TiTooltip } from '@titian-design/h5';
-```
 
 ## 用法示例
 

@@ -21,13 +21,13 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 用法示例
 #### 基础用法
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -40,13 +40,13 @@ window.onload=function(){
 
 #### 自定义字段名称
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs" tab-key="name"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -59,13 +59,13 @@ window.onload=function(){
 
 #### 主体内容使用插槽，内置swiper
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs" use-slot></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -85,7 +85,7 @@ window.onload=function(){
 #### 设置单屏平铺显示的tab数量
 **当实际tabs总量小于设置的count值时，默认按当前总数平分整个屏幕。可以设置autoGap为false, 取消默认效果。**
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs1"></ti-tabs>
@@ -93,7 +93,7 @@ window.onload=function(){
 <ti-tabs id="ti-tabs3"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -118,7 +118,7 @@ window.onload=function(){
 #### 设置每个tab的宽度
 **当实际tabs总宽度小于屏幕宽度时，默认按当前总数平分整个屏幕。可以设置autoGap为false, 取消默认效果。**
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs1"></ti-tabs>
@@ -126,7 +126,7 @@ window.onload=function(){
 <ti-tabs id="ti-tabs3"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -151,7 +151,7 @@ window.onload=function(){
 #### 设置相邻tab之间的间隔
 **当实际tabs总宽度小于屏幕宽度时，默认会增加tab之间间隙，到达撑满一屏。可以设置autoGap为false, 取消默认效果。**
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs1"></ti-tabs>
@@ -159,7 +159,7 @@ window.onload=function(){
 <ti-tabs id="ti-tabs3"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -183,13 +183,13 @@ window.onload=function(){
 
 #### tabs组件内置吸顶
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -205,13 +205,13 @@ window.onload=function(){
 
 #### 禁用项
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -227,7 +227,7 @@ window.onload=function(){
 
 #### 风格设置
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs1" variant="pure"></ti-tabs>
@@ -236,7 +236,7 @@ window.onload=function(){
 <ti-tabs id="ti-tabs4" variant="multi"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -266,7 +266,7 @@ window.onload=function(){
 
 #### 风格线设置
 <Tabs>
-<TabItem value="html" label="index.html">
+<TabItem value="index.html" label="index.html">
 
 ```html showLineNumbers
 <ti-tabs id="ti-tabs1" divider="default"></ti-tabs>
@@ -274,7 +274,7 @@ window.onload=function(){
 <ti-tabs id="ti-tabs3" divider="shadow"></ti-tabs>
 ```
 </TabItem>
-<TabItem value="js" label="index.js">
+<TabItem value="index.js" label="index.js">
 
 ```js showLineNumbers
 window.onload=function(){
@@ -332,10 +332,10 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 ### 事件 **Events**
 | 名称          | 参数列表                                                                                    | 描述                               | 备注 |
 | ------------- | ------------------------------------------------------------------------------------------- | ---------------------------------- | ---- |
-| bind:change   | `(e: WechatMiniprogram.CustomEvent<{index: number, item: Record<string, string>}>) => void` | 当前激活的标签                     | -    |
-| bind:fixed    | `(e: WechatMiniprogram.CustomEvent<{isFixed: boolean}>) => void`                            | 使用吸顶功能是，吸顶状态改变是触发 | -    |
-| bind:click    | `(e: WechatMiniprogram.CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击tab项时触发                    | -    |
-| bind:disabled | `(e: WechatMiniprogram.CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击禁用的tab项时触发              | -    |
+| change   | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 当前激活的标签                     | -    |
+| fixed    | `(e: CustomEvent<{isFixed: boolean}>) => void`                            | 使用吸顶功能是，吸顶状态改变是触发 | -    |
+| click    | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击tab项时触发                    | -    |
+| disabled | `(e: CustomEvent<{index: number, item: Record<string, string>}>) => void` | 点击禁用的tab项时触发              | -    |
 
 ### 插槽 **Slots**
 
@@ -347,12 +347,14 @@ API 中的 tabs 可以为一个对象数组，数组中的每一个对象有以�
 
 | 名称             | 说明               | 备注                                                             |
 | ---------------- | ------------------ | ---------------------------------------------------------------- |
-| tab-active-class | 选中节点样式名     | -                                                                |
-| tab-text-class   | tab 文字容器样式名 | 可设置缺省或者截断                                               |
-| swiper-class     | swiper 容器样式名  | -                                                                |
-| tabs-class       | tabs 样式名        | -                                                                |
-| tabs-mark-class  | 当前项底部标志类名 | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10rpx |
-| ext-class        | 根节点样式类名     | -                                                                |
+| tab-class             | tab容器样式名       | -                                                                |
+| tab-active-class      | 激活项tab容器样式名 | -                                                                |
+| tab-text-class        | tab文字样式名       | 可设置缺省或者截断                                               |
+| tab-text-active-class | 激活项tab文字样式名 |                                                                  |
+| swiper-class          | swiper 容器样式名   | -                                                                |
+| tabs-class            | tabs 样式名         | -                                                                |
+| tabs-mark-class       | 当前项底部标志类名  | 如果修改下划线的宽度，在自定义样式类里加--tabs-mark-width: 10rpx |
+| ext-class             | 根节点样式类名      | -                                                                |
 
 ### CSS 变量 **CSS Variable**
 | 变量                           | 默认值    | 说明                               | 备注 |

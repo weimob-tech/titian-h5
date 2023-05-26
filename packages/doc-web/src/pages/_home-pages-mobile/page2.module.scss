@@ -1,0 +1,23 @@
+.page {
+  width: 100vw;
+  height: var(--mobile-page-height, 100vh);
+}
+
+.main {
+  margin-top: var(--mobile-page-gap, 21.33vw);
+}
+
+.notice {
+  width: 100vw;
+  padding: 0 9.6vw;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 13.33vw;
+}
+
+.img {
+  margin-top: 13.33vw;
+}

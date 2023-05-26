@@ -11,4 +11,3 @@ packages/touch-emulator/tests/*
 packages/touch-emulator/touch-emulator.js
 coverage
 packages/h5/dist-custom-elements
-

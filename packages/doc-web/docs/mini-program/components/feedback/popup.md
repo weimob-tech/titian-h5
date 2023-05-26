@@ -22,13 +22,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-popup": "@titian-design/weapp/popup/index",
-    "ti-popup-titlebar": "@titian-design/weapp/popup-titlebar/index"
+    "ti-popup": "{{packageWeappName}}/popup/index",
+    "ti-popup-titlebar": "{{packageWeappName}}/popup-titlebar/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-popup": "platform://titian-weapp/ti-popup",
-    "ti-popup-titlebar": "platform://titian-weapp/ti-popup-titlebar"
+    "ti-popup": "platform://titian-mp/ti-popup",
+    "ti-popup-titlebar": "platform://titian-mp/ti-popup-titlebar"
   }
 }
 ```

@@ -83,6 +83,8 @@ export const { TiPortal } = components;
 
 export const { TiCascade } = components;
 export const { TiConfigProvider } = components;
+export const { TiVirtualList } = components;
+export const { TiNavbar } = components;
 
 export interface InjectPortalProps {
   teleport?: string | HTMLElement;
@@ -150,6 +152,8 @@ export type TiShareSheetOriginalProps = JSX.TiShareSheet;
 export const TiShareSheet = injectPortal(TiShareSheetOriginal);
 export type TiShareSheetProps = JSX.TiShareSheet; // export const TiShareSheetOriginal = components.TiShareSheet;
 
+export type TiVirtualListProps = JSX.TiVirtualList;
+
 export type TiCellProps = JSX.TiCell;
 export type TiCellGroupProps = JSX.TiCellGroup;
 export type TiIconProps = JSX.TiIcon;
@@ -210,3 +214,4 @@ export type TiTabsProps = JSX.TiTabs;
 export type TiScrollViewProps = JSX.TiScrollView;
 export type TiPortalProps = JSX.TiPortal;
 export type TiCascadeProps = JSX.TiCascade;
+export type TiNavbarProps = JSX.TiNavbar;

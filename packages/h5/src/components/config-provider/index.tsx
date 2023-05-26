@@ -13,6 +13,8 @@ import { IStore, store } from '../common/basic/store';
 export class TiConfigProvider implements BasicComponentAbstract {
   @Prop() locale: IStore['locale'] = store.get('locale');
 
+  @Prop() iconClassPrefix: IStore['iconClassPrefix'] = store.get('iconClassPrefix');
+
   @Prop() enableTitianIcon: IStore['enableTitianIcon'] = store.get('enableTitianIcon');
 
   @Watch('locale')

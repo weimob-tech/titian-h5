@@ -11,53 +11,58 @@ side_iframe_path: "#/input"
 # 输入框 _Input_
 **输入框用于通过键盘输入内容，适用于单行文本**
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import TabsLink from '@site/src/components/tabsLink';
 
 <TabsLink id="ti-input-api" />
 
-## 安装使用
-
-```json showLineNumbers
-{
-  // 原生小程序
-  "usingComponents": {
-    "ti-input": "@titian-design/weapp/input/index"
-  },
-  // titan-cli搭建的项目
-  "usingComponents": {
-    "ti-input": "platform://titian-weapp/ti-input"
-  }
-}
-```
 ## 用法示例
 
 #### 基本用法
+<Tabs>
+<TabItem value="index.html" label="index.html">
+
 ```html showLineNumbers
-<ti-input label="左侧标题" placeholder="用户输入中文案" />
-<ti-input disabled label="禁用" />
-<ti-input read-only label="只读" />
-<ti-input maxlength="{{20}}" label="最大输入长度20" />
-<ti-input divider="{{false}}" label="不显示底部分割线" />
-<ti-input required label="必填" />
-<ti-input clearable="{{false}}" label="不显示清除按钮" />
+<ti-input label="左侧标题" placeholder="用户输入中文案"></ti-input>
+<ti-input disabled label="禁用"></ti-input>
+<ti-input read-only label="只读"></ti-input>
+<ti-input maxlength="20" label="最大输入长度20"></ti-input>
+<ti-input id="ti-input1" label="不显示底部分割线"></ti-input>
+<ti-input required label="必填"></ti-input>
+<ti-input id="ti-input2" label="不显示清除按钮"></ti-input>
 ```
+</TabItem>
+<TabItem value="index.js" label="index.js">
+
+```js showLineNumbers
+window.onload = function(){
+  var tiInput1 = document.getElementById("ti-input1");
+  tiInput1.divider = false;
+  var tiInput2 = document.getElementById("ti-input2");
+  tiInput2.clearable = false;
+};
+```
+</TabItem>
+</Tabs>
+
 
 #### 输入类型
 ```html showLineNumbers
-<ti-input type="text" label="文本" />
-<ti-input type="number" label="数字" />
-<ti-input type="safe-password" label="密码安全输入键盘" />
-<ti-input type="digit" label="带小数点的数字键盘" />
+<ti-input type="text" label="文本"></ti-input>
+<ti-input type="number" label="数字"></ti-input>
+<ti-input type="safe-password" label="密码安全输入键盘"></ti-input>
+<ti-input type="digit" label="带小数点的数字键盘"></ti-input>
 ```
 #### 输入对齐方式
 ```html showLineNumbers
-<ti-input text-align="left" label="标题" />
-<ti-input text-align="right" label="标题" />
+<ti-input text-align="left" label="标题"></ti-input>
+<ti-input text-align="right" label="标题"></ti-input>
 ```
 
 #### label左侧搭配图标
 ```html showLineNumbers
-<ti-input prefix-icon="home" label="标题" />
+<ti-input prefix-icon="home" label="标题"></ti-input>
 ```
 
 #### 输入框左右使用插槽
@@ -71,23 +76,23 @@ import TabsLink from '@site/src/components/tabsLink';
 ```
 #### 错误提示
 ```html showLineNumbers
-<ti-input error value="输错了" label="标题" />
-<ti-input error-message="手机号格式错误" value="123213" label="手机号" />
+<ti-input error value="输错了" label="标题"></ti-input>
+<ti-input error-message="手机号格式错误" value="123213" label="手机号"></ti-input>
 ```
 #### 键盘确认按钮文字
 ```html showLineNumbers
-<ti-input confirm-type="done" label="完成" />
-<ti-input confirm-type="send" label="发送" />
-<ti-input confirm-type="search" label="搜索" />
-<ti-input confirm-type="next" label="下一项" />
-<ti-input confirm-type="go" label="前往" />
+<ti-input confirm-type="done" label="完成"></ti-input>
+<ti-input confirm-type="send" label="发送"></ti-input>
+<ti-input confirm-type="search" label="搜索"></ti-input>
+<ti-input confirm-type="next" label="下一项"></ti-input>
+<ti-input confirm-type="go" label="前往"></ti-input>
 ```
 ## ti-input API
 ### 属性 **Properties**
 
 | 名称         | 类型      | 必填 | 默认值  | 说明                                                                                                                                                                 | 备注    |
 | ------------ | --------- | ---- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| type                      | string  | 否   | 'text' | input 的类型,可选值为 `text` `number` `idcard` `digit` `safe-password` `nickname`                     | -    |
+| type                      | string  | 否   | text | input 的类型,可选值为 `text` `number` `idcard` `digit` `safe-password` `nickname`                     | -    |
 | value                     | string  | 否   | -      | 当前输入的值, 支持简易双向绑定 model:value（仅微信渠道支持）                                          | -    |
 | password                  | boolean | 否   | false  | 是否是密码类型                                                                                        | -    |
 | placeholder               | string  | 否   | -      | 输入框为空时占位符                                                                                    | -    |
@@ -100,7 +105,7 @@ import TabsLink from '@site/src/components/tabsLink';
 | required                  | boolean | 否   | false  | 是否显示必填星号                                                                                      | -    |
 | clearable                 | boolean | 否   | true   | 是否启用清除控件                                                                                      | -    |
 | read-only                 | boolean | 否   | false  | 是否只读                                                                                              | -    |
-| text-align                | string  | 否   | 'left' | 输入框内容对齐方式，可选值为 `left` `right`                                                           | -    |
+| text-align                | string  | 否   | left | 输入框内容对齐方式，可选值为 `left` `right`                                                           | -    |
 | error                     | boolean | 否   | false  | 是否将输入内容标红                                                                                    | -    |
 | error-message             | string  | 否   | -      | 底部错误提示文案，为空时不展示                                                                        | -    |
 | cursor-spacing            | number  | 否   | 0      | 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 | -    |
@@ -124,12 +129,12 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 名称      | 参数列表                                                                       | 描述                 | 备注 |
 | --------- | ------------------------------------------------------------------------------ | -------------------- | ---- |
-| bind:input   | <code>(e: WechatMiniprogram.CustomEvent<{value: number \| string, keyCode: string}>) => void</code> | 键盘输入时触发       | -    |
-| bind:focus   | <code>(e: WechatMiniprogram.CustomEvent<{value: number \| string}>) => void</code>                  | 输入框聚焦时触发     | -    |
-| bind:blur    | <code>(e: WechatMiniprogram.CustomEvent<{value: number \| string}>) => void</code>                | 输入框失去焦点时触发 | -    |
-| bind:confirm | <code>(e: WechatMiniprogram.CustomEvent<{value: number \| string}>) => void</code>                  | 点击完成按钮时触发   | -    |
-| bind:clear   | `(e: WechatMiniprogram.CustomEvent) => void`                                                                              | 点击清除图标是触发   | -    |
-| bind:change  | <code>(e: WechatMiniprogram.CustomEvent<{value: number \| string}>) => void</code>                | 输入值改变时触发     | -    |
+| input   | `(e: CustomEvent) => void`                  | 键盘输入时触发       | -    |
+| focus   | `(e: CustomEvent) => void`                  | 输入框聚焦时触发     | -    |
+| blur    | `(e: CustomEvent) => void`                  | 输入框失去焦点时触发 | -    |
+| confirm | `(e: CustomEvent) => void`                  | 点击完成按钮时触发   | -    |
+| clear   | `(e: CustomEvent) => void`                  | 点击清除图标是触发   | -    |
+| change  | `(e: CustomEvent) => void`                  | 输入值改变时触发     | -    |
 
 ### 插槽 **Slots**
 
@@ -151,12 +156,12 @@ import TabsLink from '@site/src/components/tabsLink';
 
 | 变量                            | 默认值    | 说明                                     | 备注 |
 | ------------------------------- | --------- | ---------------------------------------- | ---- |
-| --input-line-height             | `42rpx`    | 文字行高                                 | -    |
-| --input-padding-v               | `32rpx`    | 垂直方向内边距                           | -    |
-| --input-padding-h               | `28rpx`    | 水平方向内边距                           | -    |
-| --input-font-size               | `28rpx`    | 字体大小                                 | -    |
-| --input-label-width             | `168rpx`   | 左侧 label，包括间隙。输入框距最左侧宽度 | -    |
-| --input-title-max-width         | `140rpx`   | 左侧文字局域最大宽度                     | -    |
-| --input-placeholder-color       | `#9e9e9e` | placeholder 颜色                         | -    |
-| -input-font-color               | `#212121` | 输入文字颜色                             | -    |
-| --input-placeholder-error-color | `#ff2e2e` | 错误提示下 placeholder 颜色              | -    |
+| --input-line-height             | 42rpx    | 文字行高                                 | -    |
+| --input-padding-v               | 32rpx    | 垂直方向内边距                           | -    |
+| --input-padding-h               | 28rpx    | 水平方向内边距                           | -    |
+| --input-font-size               | 28rpx    | 字体大小                                 | -    |
+| --input-label-width             | 168rpx   | 左侧 label，包括间隙。输入框距最左侧宽度 | -    |
+| --input-title-max-width         | 140rpx   | 左侧文字局域最大宽度                     | -    |
+| --input-placeholder-color       | #9e9e9e | placeholder 颜色                         | -    |
+| -input-font-color               | #212121 | 输入文字颜色                             | -    |
+| --input-placeholder-error-color | #ff2e2e | 错误提示下 placeholder 颜色              | -    |

@@ -59,12 +59,30 @@ export class TiUploader {
 
   @Prop() extThumOtherClass?: string = '';
 
+  @Prop() cols?: number;
+
   @Event({ eventName: 'delete' }) deleteEvent!: EventEmitter;
 
   @Event({ eventName: 'preview' }) previewEvent!: EventEmitter;
 
   onPreview = () => {
     this.previewEvent.emit();
+  };
+
+  getIconSize = (size, cols) => {
+    let iconSize = size === 'large' ? 40 : 30;
+    let textSizeName = null;
+    if (cols > 4) {
+      iconSize = 40;
+      textSizeName = 'text-small';
+    } else if (cols === 4) {
+      iconSize = 44;
+      textSizeName = 'text-middle';
+    } else if (cols > 0) {
+      iconSize = 48;
+      textSizeName = 'text-big';
+    }
+    return { iconSize, textSizeName };
   };
 
   renderItem() {
@@ -130,12 +148,14 @@ export class TiUploader {
       uploadExercise = defaultProps.uploadExercise,
       uploadExerciseText = defaultProps.uploadExerciseText,
       progress = defaultProps.progress,
+      cols,
     } = this;
     if (uploadExercise === UploadLoadComponentType.LOADING) {
+      const { iconSize, textSizeName } = this.getIconSize(size, cols);
       return (
         <div class={handle('thum', ['loading'])}>
-          <ti-loading size={size === 'large' ? 40 : 30} class={handle('thum', ['loading-icon'])} />
-          {uploadExerciseText && <div class={handle('thum', ['loading-text'])}>{uploadExerciseText}</div>}
+          <ti-loading size={iconSize} class={handle('thum', ['loading-icon'])} />
+          {uploadExerciseText && <div class={handle('thum', ['loading-text', textSizeName])}>{uploadExerciseText}</div>}
         </div>
       );
     }
@@ -144,16 +164,12 @@ export class TiUploader {
   }
 
   renderFail() {
-    const { size = defaultProps.size, uploadFailText = defaultProps.uploadFailText } = this;
+    const { size = defaultProps.size, uploadFailText = defaultProps.uploadFailText, cols } = this;
+    const { iconSize, textSizeName } = this.getIconSize(size, cols);
     return (
       <div class={handle('thum', ['fail'])}>
-        <ti-icon
-          name="error"
-          size={size === 'large' ? 40 : 30}
-          ext-class={handle('thum', ['fail-icon'])}
-          onClick={this.onDelete}
-        />
-        {uploadFailText && <div class={handle('thum', ['fail-text'])}>{uploadFailText}</div>}
+        <ti-icon name="error" size={iconSize} ext-class={handle('thum', ['fail-icon'])} onClick={this.onDelete} />
+        {uploadFailText && <div class={handle('thum', ['fail-text', textSizeName])}>{uploadFailText}</div>}
       </div>
     );
   }
@@ -177,9 +193,10 @@ export class TiUploader {
       tip,
       extClass = '',
       extThumTipClass = '',
+      cols,
     } = this;
     return (
-      <div class={`${join('thum', [size])} ${extClass}`} part={extClass}>
+      <div class={`${join('thum', [size, cols ? 'cols' : ''])} ${extClass}`} part={extClass}>
         {tip && (
           <div part={extThumTipClass} class={extThumTipClass}>
             {tip}

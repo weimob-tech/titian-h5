@@ -25,11 +25,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-picker": "@titian-design/weapp/picker/index"
+    "ti-picker": "{{packageWeappName}}/picker/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
-    "ti-picker": "platform://titian-weapp/ti-picker"
+    "ti-picker": "platform://titian-mp/ti-picker"
   }
 }
 ```

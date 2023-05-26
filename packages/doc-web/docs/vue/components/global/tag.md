@@ -18,7 +18,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiTag } from '@titian-design/mobile-vue'
+import { TiTag } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -33,7 +33,7 @@ import { TiTag } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiTag } from '@titian-design/mobile-vue';
+import { TiTag } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -46,7 +46,7 @@ import { TiTag } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTag } from '@titian-design/mobile-vue';
+import { TiTag } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -58,7 +58,7 @@ import { TiTag } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTag } from '@titian-design/mobile-vue';
+import { TiTag } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -71,7 +71,7 @@ import { TiTag } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiTag } from '@titian-design/mobile-vue';
+import { TiTag } from '{{packageWeappVue}}';
 </script>
 ```
 

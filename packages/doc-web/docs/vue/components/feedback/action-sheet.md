@@ -17,7 +17,7 @@ import TabsLink from '@site/src/components/tabsLink';
 
 ## 安装使用
 ```typescript showLineNumbers
-import { TiActionSheet } from '@titian-design/mobile-vue'
+import { TiActionSheet } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -29,7 +29,7 @@ import { TiActionSheet } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiActionSheet } from '@titian-design/mobile-vue';
+import { TiActionSheet } from '{{packageWeappVue}}';
 const actions = [
   { name: '选项1', description: '描述1' },
   { name: '选项1', description: '描述1', icon: 'home' },

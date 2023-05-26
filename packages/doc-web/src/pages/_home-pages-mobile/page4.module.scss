@@ -1,0 +1,10 @@
+.page {
+  width: 100vw;
+  height: var(--mobile-page-height, 100vh);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--mobile-page-gap, 21.33vw);
+}

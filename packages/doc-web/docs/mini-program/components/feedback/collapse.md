@@ -25,13 +25,13 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-collapse": "@titian-design/weapp/collapse/index",
-    "ti-collapse-item": "@titian-design/weapp/collapse-item/index",
+    "ti-collapse": "{{packageWeappName}}/collapse/index",
+    "ti-collapse-item": "{{packageWeappName}}/collapse-item/index",
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-collapse": "platform://titian-weapp/ti-collapse",
-    "ti-collapse-item": "platform://titian-weapp/ti-collapse-item"
+    "ti-collapse": "platform://titian-mp/ti-collapse",
+    "ti-collapse-item": "platform://titian-mp/ti-collapse-item"
   }
 }
 ```
@@ -133,7 +133,7 @@ Page({
 <TabItem value="html" label="index.wxml">
 
 ```html showLineNumbers
-<ti-collapse bindlose="{{handleClose}}" bind:open="{{handleOpen}}" bind:change="{{handleChange}}">
+<ti-collapse bind:close="{{handleClose}}" bind:open="{{handleOpen}}" bind:change="{{handleChange}}">
   <ti-collapse-item value="a" title="标题文字A">- 标题A下的内容 -</ti-collapse-item>
   <ti-collapse-item value="b" title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
 </ti-collapse>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './page.less';
+
 interface OptionProps {
   key: string;
   desc: string;
@@ -7,11 +8,13 @@ interface OptionProps {
   show?: boolean;
   attr?: { [key: string]: unknown };
 }
+
 interface ColorType extends OptionProps {
   type: 'color';
-  value: string;
+  value?: string;
   list?: { label: string; value: string; [key: string]: unknown }[];
 }
+
 interface RadiusType extends OptionProps {
   type: 'radius';
   value: number;
@@ -31,7 +34,9 @@ interface RadioType extends OptionProps {
   }[];
   currentIndex?: number;
 }
+
 export type OptionType = ColorType | RadiusType | (RadioType & { [key: string]: unknown });
+
 function formatOption(data: OptionType[]): OptionType[] {
   const options: (OptionType & { show?: boolean })[] = data;
   options.forEach(item => {
@@ -66,7 +71,9 @@ const App = ({
   children,
   options,
   change,
+  pageClass = '',
 }: {
+  pageClass?: string;
   center?: boolean;
   options: OptionType[];
   children?: React.ReactNode;
@@ -99,9 +106,9 @@ const App = ({
     change(attr);
   };
   const onClick: React.MouseEventHandler<HTMLElement> = event => {
-    if (event.target instanceof HTMLElement) {
+    if (event.currentTarget instanceof HTMLElement) {
       const {
-        target: {
+        currentTarget: {
           dataset: { value, key },
         },
       } = event;
@@ -147,35 +154,37 @@ const App = ({
   }, [options]);
 
   return (
-    <div className="page">
+    <div className={`page ${pageClass}`}>
       <div className={`page-container ${center ? 'center' : ''}`}>{children}</div>
       <div className="menu">
-        <div style={{ height: '50px' }} />
-        {newOption.map((item, idx) => {
-          if (!item.show) {
-            return null;
-          }
-          return (
-            <div className="drawer" key={idx}>
-              <div className="title">
-                <div className="desc">{item.desc}</div>
-                <div className="name">{item.name}</div>
+        <div className="inner-menu">
+          <div style={{ height: '25px' }} />
+          {newOption.map((item, idx) => {
+            if (!item.show) {
+              return null;
+            }
+            return (
+              <div className="drawer" key={idx}>
+                <div className="title">
+                  <div className="desc">{item.desc}</div>
+                  <div className="name">{item.name}</div>
+                </div>
+                {item.type === 'radio' && <Radio id={item.key} list={item.list} value={item.value} onClick={onClick} />}
+                {item.type === 'color' && <Color id={item.key} list={item.list} value={item.value} onClick={onClick} />}
+                {item.type === 'radius' && (
+                  <Radius
+                    id={item.key}
+                    min={item.min}
+                    max={item.max}
+                    value={item.value as unknown as number}
+                    onChange={onChangeRadius}
+                  />
+                )}
               </div>
-              {item.type === 'radio' && <Radio id={item.key} list={item.list} value={item.value} onClick={onClick} />}
-              {item.type === 'color' && <Color id={item.key} list={item.list} value={item.value} onClick={onClick} />}
-              {item.type === 'radius' && (
-                <Radius
-                  id={item.key}
-                  min={item.min}
-                  max={item.max}
-                  value={item.value as unknown as number}
-                  onChange={onChangeRadius}
-                />
-              )}
-            </div>
-          );
-        })}
-        <div className="footer" />
+            );
+          })}
+          <div className="footer" />
+        </div>
       </div>
     </div>
   );
@@ -193,22 +202,39 @@ const Radio = ({
   value: unknown;
   onClick: React.MouseEventHandler<HTMLElement>;
 }) => {
+  let myScrollView: HTMLDivElement | null;
+  const handler = (e: React.MouseEvent<HTMLElement, MouseEvent>, idx: number) => {
+    if (myScrollView) {
+      myScrollView.scrollTo({
+        left: 76 * (idx - 1),
+        behavior: 'smooth',
+      });
+    }
+    onClick(e);
+  };
   return (
     <div className="radio-box">
-      {list.map((radio, idx) => {
-        return (
-          <div
-            key={idx}
-            id={`item-${idx}`}
-            data-key={id}
-            data-value={radio.value}
-            className={`radio ${value === radio.value ? 'checked' : ''}`}
-            onClick={onClick}
-          >
-            {radio.label}
-          </div>
-        );
-      })}
+      <div
+        className="inner-radio-box"
+        ref={ref => {
+          myScrollView = ref;
+        }}
+      >
+        {list.map((radio, idx) => {
+          return (
+            <div
+              key={idx}
+              id={`item-${idx}`}
+              data-key={id}
+              data-value={radio.value}
+              className={`radio ${value === radio.value ? 'checked' : ''}`}
+              onClick={e => handler(e, idx)}
+            >
+              {radio.label}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -241,7 +267,7 @@ const Color = ({
             data-key={id}
             onClick={onClick}
             style={{ color: color.value, background: color.value }}
-          ></div>
+          />
         );
       })}
     </div>
@@ -268,6 +294,7 @@ const Radius = ({
       ref.current?.removeEventListener('change', onChange);
     };
   }, []);
+
   return (
     <div className="radius" data-key={id}>
       <ti-slider ref={elem => (ref.current = elem)} max={max || 100} min={min || 0} value={value} data-key={id} />

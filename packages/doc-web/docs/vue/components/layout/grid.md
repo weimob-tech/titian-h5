@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue'
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}'
 ```
 
 ## 用法示例
@@ -39,7 +39,7 @@ import { TiGrid, TiGridItem } from '@titian-design/mobile-vue'
 </template>
 
 <script lang="ts" setup>
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -58,7 +58,7 @@ import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -75,7 +75,7 @@ import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -92,7 +92,7 @@ import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}';
 </script>
 ```
 
@@ -125,7 +125,7 @@ import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiGrid, TiGridItem } from '@titian-design/mobile-vue';
+import { TiGrid, TiGridItem } from '{{packageWeappVue}}';
 </script>
 ```
 

@@ -19,7 +19,7 @@ import TabsLink from '@site/src/components/tabsLink';
 ## 安装使用
 
 ```typescript showLineNumbers
-import { TiSwipeCell } from '@titian-design/mobile-vue';
+import { TiSwipeCell } from '{{packageWeappVue}}';
 ```
 
 ## 用法示例
@@ -35,7 +35,7 @@ import { TiSwipeCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwipeCell } from '@titian-design/mobile-vue';
+import { TiSwipeCell } from '{{packageWeappVue}}';
 </script>
 
 <style>
@@ -67,7 +67,7 @@ import { TiSwipeCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwipeCell } from '@titian-design/mobile-vue';
+import { TiSwipeCell } from '{{packageWeappVue}}';
 </script>
 
 <style>
@@ -94,7 +94,7 @@ import { TiSwipeCell } from '@titian-design/mobile-vue';
 </template>
 
 <script lang="ts" setup>
-import { TiSwipeCell } from '@titian-design/mobile-vue';
+import { TiSwipeCell } from '{{packageWeappVue}}';
 </script>
 
 <style>
@@ -122,7 +122,7 @@ import { TiSwipeCell } from '@titian-design/mobile-vue';
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TiSwipeCell, TiButton } from '@titian-design/mobile-vue';
+import { TiSwipeCell, TiButton } from '{{packageWeappVue}}';
 
 const visible = ref<boolean>(false)
 
@@ -158,7 +158,7 @@ const handleClick = () => {
 </template>
 
 <script lang="ts" setup>
-import { TiSwipeCell } from '@titian-design/mobile-vue';
+import { TiSwipeCell } from '{{packageWeappVue}}';
 
 const handleOpen = (e: CustomEvent<OpenParams>) => {
   console.log("打开", e);

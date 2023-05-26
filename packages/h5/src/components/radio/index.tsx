@@ -66,6 +66,8 @@ export class TiRadio implements BasicComponentAbstract {
 
   @State() privateChecked = false;
 
+  firstRender = false;
+
   @Event({ bubbles: true, composed: false }) change: EventEmitter<boolean>;
 
   @Method()
@@ -105,7 +107,7 @@ export class TiRadio implements BasicComponentAbstract {
         privateChecked = checked;
       }
 
-      this.handleToggleClass(privateChecked);
+      this.handleToggleClass(privateChecked, this.firstRender);
       this.checked = checked;
       this.defaultChecked = defaultChecked;
       this.privateChecked = privateChecked;
@@ -146,7 +148,7 @@ export class TiRadio implements BasicComponentAbstract {
     if (this.checked !== null) {
       checked = this.checked;
     }
-    this.handleToggleClass(checked);
+    this.handleToggleClass(checked, false);
     this.privateChecked = checked;
 
     addShadowRootStyle.call(this);
@@ -161,12 +163,16 @@ export class TiRadio implements BasicComponentAbstract {
     return classList.join(' ');
   }
 
-  private handleToggleClass(checked: boolean) {
-    this.toggleClass = checked ? 'zoom-in' : 'zoom-out';
+  private handleToggleClass(checked: boolean, hasZoomOut = true) {
+    const nextClass = checked ? 'zoom-in' : hasZoomOut ? 'zoom-out' : '';
+    if (this.toggleClass !== nextClass) {
+      this.toggleClass = nextClass;
+    }
   }
 
   private handleChange() {
     const { privateChecked, checked, value, parent: parentEl } = this;
+    this.firstRender = true;
     if (parentEl) {
       parentEl.getInstance().then((parent: ParentAttrs) => {
         parent.change.emit(value);

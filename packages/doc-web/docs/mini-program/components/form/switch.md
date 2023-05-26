@@ -20,11 +20,11 @@ import TabsLink from '@site/src/components/tabsLink';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-switch": "@titian-design/weapp/switch/index"
+    "ti-switch": "{{packageWeappName}}/switch/index"
   },
   // titan-cli搭建的项目
   "usingComponents": {
-    "ti-switch": "platform://titian-weapp/ti-switch"
+    "ti-switch": "platform://titian-mp/ti-switch"
   }
 }
 ```

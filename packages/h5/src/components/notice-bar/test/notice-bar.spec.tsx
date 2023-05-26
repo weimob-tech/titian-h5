@@ -1,8 +1,8 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { h } from '@stencil/core';
 import { TiNoticeBar } from '../index';
-import { TiPopup } from '../../popup';
-import { TestContainer } from '../../common/test/container';
+// import { TiPopup } from '../../popup';
+// import { TestContainer } from '../../common/test/container';
 
 describe('渲染 ti-notice-bar', () => {
   it('基本用法', async () => {

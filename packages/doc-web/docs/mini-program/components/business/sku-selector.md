@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 {
   // 原生小程序
   "usingComponents": {
-    "ti-sku-selector": "@titian-design/weapp/sku-selector/index"
+    "ti-sku-selector": "{{packageWeappName}}/sku-selector/index"
   },
   // titan-cli 搭建的项目
   "usingComponents": {
@@ -202,8 +202,8 @@ const mockSkuData = {
 
 | 名称             | 参数列表                                                 | 描述                    | 备注 |
 | ---------------- | -------------------------------------------------------- | ----------------------- | ---- |
-| ti-change        | `(e: CustomEvent<{value: Sku}>) => void`                 | 选中的 SKU 值变化时出发 | -    |
-| ti-option-change | `(e: CustomEvent<{options: [], optionIds: []}>) => void` | 选中的规则变化时触发    | -    |
+| ti-change        | `(e: WechatMiniprogram.CustomEvent<{value: Sku}>) => void`                 | 选中的 SKU 值变化时出发 | -    |
+| ti-option-change | `(e: WechatMiniprogram.CustomEvent<{options: [], optionIds: []}>) => void` | 选中的规则变化时触发    | -    |
 
 ### 外部样式类 **External Classes**
 
