@@ -51,8 +51,8 @@
     }
   },
   "devDependencies": {
-    "@titian-design/cli": "workspace:0.1.0",
-    "@titian-design/eslint-plugin": "workspace:0.1.0",
+    "@titian-design/cli": "workspace:0.2.0",
+    "@titian-design/eslint-plugin": "workspace:0.2.0",
     "@types/node": "^18.11.3",
     "commitizen": "^4.2.4",
     "cz-customizable": "^6.3.0",

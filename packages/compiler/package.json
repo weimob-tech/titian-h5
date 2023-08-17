@@ -1,6 +1,6 @@
 {
   "name": "@titian-design/compiler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Titian compiler basic",
   "keywords": [
     "titian",
@@ -20,7 +20,7 @@
   "dependencies": {
     "@pnpm/find-workspace-packages": "^4.0.5",
     "@pnpm/logger": "^4.0.0",
-    "@titian-design/cli": "workspace:0.1.0",
+    "@titian-design/cli": "workspace:0.2.0",
     "axios": "^0.27.2",
     "chalk": "^4.1.2",
     "esbuild": "^0.14.39",
