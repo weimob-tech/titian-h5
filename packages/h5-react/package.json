@@ -1,6 +1,6 @@
 {
   "name": "@titian-design/mobile-react",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "react h5 component with webcomponent",
   "keywords": [
     "h5",
@@ -22,7 +22,7 @@
     "start": "rollup -c scripts/rollup.config.ts --configPlugin typescript -w --bundleConfigAsCjs"
   },
   "dependencies": {
-    "@titian-design/h5": "workspace:0.1.1"
+    "@titian-design/h5": "workspace:0.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",

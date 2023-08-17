@@ -37,6 +37,7 @@
     "@mdx-js/react": "^1.6.22",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.132",
+    "@titian-design/mobile-react": "workspace:0.2.0",
     "clipboard": "^2.0.11",
     "clsx": "^1.2.1",
     "cross-env": "^7.0.3",
@@ -48,7 +49,6 @@
     "react-router-dom": "6.4.2",
     "sass": "^1.55.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "@titian-design/mobile-react": "workspace:0.1.1",
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
