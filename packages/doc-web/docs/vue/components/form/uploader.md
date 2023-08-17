@@ -25,14 +25,31 @@ import { TiUploader } from '{{packageWeappVue}}'
 
 #### 基础用法
 
-选择完文件后，立即执行上传操作。
-
+**选择完文件后，立即执行上传操作。**
 
 ```html showLineNumbers
 <template>
   <TiUploader
     url="https://api.bayfiles.com/upload"
     size="small"
+    choose-text="请选择文件"
+     />
+</template>
+
+<script lang="ts" setup>
+import { TiUploader } from '{{packageWeappVue}}';
+</script>
+```
+
+
+#### 网格布局
+**控制每行显示的数量**
+
+```html showLineNumbers
+<template>
+  <TiUploader
+    url="https://api.bayfiles.com/upload"
+    :cols="{{3}}"
     choose-text="请选择文件"
      />
 </template>
@@ -173,6 +190,7 @@ const onChange = e => {
 | immediately        | `boolean`                                    | 否       | true                | 是否立刻上传                                                                               | -    |
 | immediately-choose | `boolean`                                    | 否       | true                | 点击后立即选择                                                                             | -    |
 | size               | `small`                           \| `large` | 否       | small               | 组件尺寸                                                                                   | -    |
+| cols                  | `number`                                     | 否       | -                          | 多列布局，可代替size                                                                        | -    |
 | choose-text        | `string`                                     | 否       |                     | 选择器文案                                                                                 | -    |
 | choose-icon        | `string`                                     | 否       | plus                | 选择器 icon                                                                                | -    |
 | source-type        | `array`                                      | 否       | ['album', 'camera'] | 选择图片的来源                                                                             | -    |

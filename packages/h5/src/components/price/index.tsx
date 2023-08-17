@@ -39,6 +39,7 @@ export class TiPrice {
 
   @Watch('value')
   valueChanged(value) {
+    if (Number.isNaN(Math.floor(value))) return;
     const integerPart = Math.floor(value).toString();
     const fractionPart = this.addPaddingZero(value.toString().split('.')[1] || '');
 

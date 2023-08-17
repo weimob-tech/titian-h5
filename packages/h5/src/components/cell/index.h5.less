@@ -40,11 +40,32 @@
 
   --icon-line-height: 1;
 
-  &-divider::after {
-    .hairline(bottom, @neutral-color-6);
+  &-divider {
+    &.titian-border-top::after {
+      .hairline(top, @neutral-color-6);
 
-    right: @gap-28;
-    left: @gap-28;
+      right: @gap-28;
+      left: @gap-28;
+    }
+
+    &.titian-border-bottom::after {
+      .hairline(bottom, @neutral-color-6);
+
+      right: @gap-28;
+      left: @gap-28;
+    }
+
+    &.titian-border-left::after {
+      .hairline(left, @neutral-color-6);
+    }
+
+    &.titian-border-right::after {
+      .hairline(right, @neutral-color-6);
+    }
+
+    &.titian-border-all::after {
+      .hairline(all, @neutral-color-6);
+    }
   }
 
   &-disabled {

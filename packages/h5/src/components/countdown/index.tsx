@@ -38,7 +38,7 @@ export class TiCountdown implements BasicComponentAbstract {
 
   @Prop() time = 1200;
 
-  @Prop() format: string;
+  @Prop() format = 'HH:mm:ss';
 
   @Prop() autoplay = false;
 
@@ -55,8 +55,6 @@ export class TiCountdown implements BasicComponentAbstract {
   @State() formattedTime = '';
 
   @State() timeData: TimeGroup = {};
-
-  formatStr = 'HH:mm:ss';
 
   status: CountdownStatus = CountdownStatus.pause;
 
@@ -76,7 +74,6 @@ export class TiCountdown implements BasicComponentAbstract {
   @Watch('format')
   watchFormat(newValue: string, oldValue?: string) {
     if (newValue !== oldValue) {
-      this.formatStr = newValue;
       this.watchTime(this.time);
     }
   }
@@ -93,8 +90,6 @@ export class TiCountdown implements BasicComponentAbstract {
   }
 
   componentDidLoad(): void {
-    this.formatStr = 'HH:mm:ss';
-    if (this.format) this.formatStr = this.format;
     if (this.time !== undefined) {
       this.reset();
     }
@@ -113,7 +108,7 @@ export class TiCountdown implements BasicComponentAbstract {
     this.timeId = setTimeout(() => {
       const remainTime = Math.max(this.endTime - Date.now(), 0);
       if (remainTime > 0) {
-        if (isDifferentTime(remainTime, this.remainTime, this.formatStr)) {
+        if (isDifferentTime(remainTime, this.remainTime, this.format)) {
           this.setClock(remainTime);
           this.remainTime = remainTime;
         }
@@ -133,10 +128,10 @@ export class TiCountdown implements BasicComponentAbstract {
     const timeGroup = formatDuration(remainTime);
     this.change.emit(timeGroup);
     if (['block', 'mixture'].includes(this.variant)) {
-      this.timeData = formatDate(timeGroup, this.formatStr, 'group') as TimeGroup;
+      this.timeData = formatDate(timeGroup, this.format, 'group') as TimeGroup;
     }
     if (!this.useSlot) {
-      this.formattedTime = formatDate(timeGroup, this.formatStr) as string;
+      this.formattedTime = formatDate(timeGroup, this.format) as string;
     }
   }
 

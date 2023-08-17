@@ -55,6 +55,17 @@ import TabsLink from '@site/src/components/tabsLink';
 ></ti-uploader>
 ```
 
+#### 网格布局
+**控制每行显示的数量**
+
+```html showLineNumbers
+<ti-uploader
+  url="https://api.bayfiles.com/upload"
+  cols="{{2}}"
+  choose-text="请选择文件"
+></ti-uploader>
+```
+
 #### 自定义参数
 
 **自定义header**
@@ -222,6 +233,7 @@ Page({
 | immediately          | `boolean`                                    | 否       | true                       | 是否立刻上传                                                                                | -    |
 | immediately-choose   | `boolean`                                    | 否       | true                       | 点击后立即选择                                                                              | -    |
 | size                 | `small`                           \| `large` | 否       | small                      | 组件尺寸                                                                                    | -    |
+| cols                  | `number`                                     | 否       | -                          | 多列布局，可代替size                                                                        | -    |
 | choose-text          | `string`                                     | 否       |                            | 选择器文案                                                                                  | -    |
 | use-choose-slot      | `boolean`                                    | 否       | false                      | 是否使用选择器插槽                                                                          | -    |
 | choose-icon          | `string`                                     | 否       | plus                       | 选择器 icon                                                                                 | -    |

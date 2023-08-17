@@ -25,7 +25,7 @@ import { TiUploader } from '{{packageWeappReact}}'
 
 #### 基础用法
 
-选择完文件后，立即执行上传操作。
+**选择完文件后，立即执行上传操作。**
 
 ```typescript tsx showLineNumbers
 const App: React.FC = () => {
@@ -40,6 +40,24 @@ const App: React.FC = () => {
   )
 }
 ```
+
+#### 网格布局
+**控制每行显示的数量**
+
+```typescript tsx showLineNumbers
+const App: React.FC = () => {
+  return (
+    <>
+       <TiUploader
+          url="https://api.bayfiles.com/upload"
+          cols={3}
+          chooseText="请选择文件"
+        />
+    </>
+  )
+}
+```
+
 
 #### 自定义参数
 
@@ -168,6 +186,7 @@ const App: React.FC = () => {
 | immediately       | `boolean`                                    | 否       | true                | 是否立刻上传                                                                               | -    |
 | immediatelyChoose | `boolean`                                    | 否       | true                | 点击后立即选择                                                                             | -    |
 | size              | `small`                           \| `large` | 否       | small               | 组件尺寸                                                                                   | -    |
+| cols              | `number`                                     | 否       | -                   | 多列布局，可代替size                                                                       | -    |
 | chooseText        | `string`                                     | 否       |                     | 选择器文案                                                                                 | -    |
 | chooseIcon        | `string`                                     | 否       | plus                | 选择器 icon                                                                                | -    |
 | sourceType        | `array`                                      | 否       | ['album', 'camera'] | 选择图片的来源                                                                             | -    |
@@ -176,8 +195,8 @@ const App: React.FC = () => {
 | url               | `string`                                     | 否       | -                   | 上传地址                                                                                   | -    |
 | preview           | `Function`                                   | 否       |                     | 自定义预览组件。默认使用内置的预览工具                                                     | -    |
 | choose            | `Function`                                   | 否       |                     | 选择函数                                                                                   | -    |
-| beforeChoose     | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
-| afterChoose      | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           | -    |
+| beforeChoose      | `Function`                                   | 否       |                     | 选择前的处理函数                                                                           | -    |
+| afterChoose       | `Function`                                   | 否       |                     | 选择后的处理函数                                                                           | -    |
 | beforeUpload      | `Function`                                   | 否       |                     | - 上传前置方法 可用用于处理上传参数                                                        | -    |
 | upload            | `Function`                                   | 否       |                     | 自定义上传方法，不传则使用内置的上传方法                                                   | -    |
 | complete          | `Function`                                   | 否       |                     | 上传完成/删除完成后调用                                                                    | -    |

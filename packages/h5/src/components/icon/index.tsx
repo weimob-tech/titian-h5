@@ -63,9 +63,9 @@ function completedClasses(data) {
 const defaultIconsUrl = `
 @font-face {
   font-family: ${join('icon')}; /* Project id 2512151 */
-  src: url('//at.alicdn.com/t/c/font_2512151_v1crhlxl0k.woff2?t=1670393250377') format('woff2'),
-    url('//at.alicdn.com/t/c/font_2512151_v1crhlxl0k.woff?t=1670393250377') format('woff'),
-    url('//at.alicdn.com/t/c/font_2512151_v1crhlxl0k.ttf?t=1670393250377') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_2512151_eu59mfp12y.woff2?t=1687683949476') format('woff2'),
+    url('//at.alicdn.com/t/c/font_2512151_eu59mfp12y.woff?t=1687683949476') format('woff'),
+    url('//at.alicdn.com/t/c/font_2512151_eu59mfp12y.ttf?t=1687683949476') format('truetype');
 }
 
 @font-face {
