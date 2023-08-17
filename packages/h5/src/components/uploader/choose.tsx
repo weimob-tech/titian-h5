@@ -200,6 +200,7 @@ export class TiUploader {
       choose,
       extClass = '',
       cols,
+      immediatelyChoose,
     } = this;
     let iconSize = size === 'large' ? 40 : 30;
     let textSizeName = null;
@@ -213,7 +214,7 @@ export class TiUploader {
       iconSize = 48;
       textSizeName = 'big';
     }
-    if (typeof choose === 'function') {
+    if (typeof choose === 'function' || !immediatelyChoose) {
       return (
         <div class={join('choose', [size])} onClick={this.onSelect.bind(this)} aria-hidden="true" part={extClass}>
           {chooseIcon && <ti-icon name={chooseIcon} size={iconSize} ext-class={handle('choose', ['icon'])} />}

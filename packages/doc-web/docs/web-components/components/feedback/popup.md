@@ -197,6 +197,7 @@ popup.addEventListener('close', function (e) {
 
 | 值             | 含义           |
 | -------------- | -------------- |
+| `back-title-cancel` | 返回 + 标题 + 取消 |
 | `with-confirm` | 标题+确定+取消 |
 | `cancel-only`  | 标题+关闭      |
 | `mini-close`   | 仅关闭         |
@@ -205,10 +206,10 @@ popup.addEventListener('close', function (e) {
 
 | 事件名       | 返回值 | 描述               | 备注 |
 | ------------ | ------ | ------------------ |
-| cancel  | -      | 点击关闭按钮时触发 | -    |
-| confirm | -      | 点击确认按钮时触发 | -    |
-| close   | -      | 点击关闭按钮时触发 | -    |
-
+| cancel  | -      | 对应 `with-confirm` 的左侧按钮点击事件 | -    |
+| confirm | -      | 对应 `with-confirm` 的右侧按钮点击事件 | -    |
+| close   | -      | 对应 `mini-close` \| `cancel-only` \|  `back-title-cancel` 的右侧按钮点击事件 | -    |
+| back | - |对应 `back-title-cancel` 的左侧按钮点击事件 |  - |
 
 ### CSS 变量 **CSS Variables**
 

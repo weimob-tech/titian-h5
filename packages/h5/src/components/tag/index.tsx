@@ -98,6 +98,7 @@ export class Tag {
         </div>
         <slot name="suffix" />
         {rightIcon && <ti-icon name={rightIcon} />}
+        {shape === 'coupon' && variant === 'outlined' && <div class={join('tag-coupon-outline-box')} />}
       </div>
     );
   }

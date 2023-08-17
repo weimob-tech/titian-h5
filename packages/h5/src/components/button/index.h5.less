@@ -159,29 +159,29 @@
   }
 
   &.@{button}-disabled {
-    background: @neutral-color-5 !important;
+    background: var(--button-disabled-background-color, @neutral-color-5) !important;
 
-    color: #fff !important;
+    color: var(--button-disabled-text-color, #fff) !important;
   }
 
   &-outlined.@{button}-disabled {
-    border-color: @neutral-color-4 !important;
+    border-color: var(--button-disabled-text-color, @neutral-color-4) !important;
 
-    background: transparent !important;
+    background: var(--button-disabled-background-color, transparent) !important;
 
-    color: @neutral-color-4 !important;
+    color: var(--button-disabled-text-color, @neutral-color-4) !important;
 
-    --button-border-color: @neutral-color-4 !important;
+    --button-border-color: var(--button-disabled-text-color, @neutral-color-4) !important;
 
     &::after {
-      border-color: @neutral-color-4 !important;
+      border-color: var(--button-disabled-text-color, @neutral-color-4) !important;
     }
   }
 
   &-text.@{button}-disabled {
     background: transparent !important;
 
-    color: @neutral-color-4 !important;
+    color: var(--button-disabled-text-color, @neutral-color-4) !important;
   }
 
   &-content {

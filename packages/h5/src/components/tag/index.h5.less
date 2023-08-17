@@ -8,7 +8,7 @@
   display: contents;
 }
 .@{tag} {
-  display: inline-flex;
+  display: var(--tag-display, inline-flex);
   position: relative;
   box-sizing: border-box;
   align-items: center;
@@ -112,60 +112,28 @@
   // 优惠券
   &-shape-coupon {
     padding: var(--tag-padding, 0 16px);
-
-    background: radial-gradient(
-          circle at center left,
-          transparent 0 var(--coupon-side-radius),
-          var(--coupon-border-color) var(--coupon-side-radius)
-            calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px)),
-          var(--coupon-background-color) calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px) + 0.5px)
-        )
-        border-box,
-      radial-gradient(
-          circle at center right,
-          transparent 0 var(--coupon-side-radius),
-          var(--coupon-border-color) var(--coupon-side-radius)
-            calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px)),
-          var(--coupon-background-color) calc(var(--coupon-side-radius) + var(--coupon-border-width, 0.5px) + 0.5px)
-        )
-        border-box;
-    background-repeat: no-repeat, no-repeat;
-    background-position: 0% 100%, 100% 100%;
-    background-size: 50% 100%, 50% 100%;
-
-    mask-image: radial-gradient(
-        circle at center left,
-        transparent 0,
-        transparent var(--coupon-side-radius),
-        #fff calc(var(--coupon-side-radius) + 0.5px)
-      ),
-      radial-gradient(
-        circle at center right,
-        transparent 0,
-        transparent var(--coupon-side-radius),
-        #fff calc(var(--coupon-side-radius) + 0.5px)
-      );
-    mask-size: 50% 100%, 50% 100%;
-    mask-position: 0% 100%, 100% 100%;
-    mask-repeat: no-repeat, no-repeat;
+    mask-image: radial-gradient(circle at left, transparent var(--coupon-side-radius), #fff 0),
+      radial-gradient(circle at right, transparent var(--coupon-side-radius), #fff 0);
+    mask-size: 80%;
+    mask-position: 0, 100%;
+    mask-repeat: no-repeat;
   }
 
   &-shape-coupon&-variant-outlined {
+    background: transparent;
+
     --coupon-background-color: var(--tag-background-color, transparent);
     --coupon-border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
-    --coupon-border-width: 0.3px;
   }
 
   &-shape-coupon&-variant-contained {
     --coupon-background-color: var(--tag-background-color, var(--tag-color, @tag-theme));
     --coupon-border-color: var(--tag-border-color, var(--tag-color, @tag-theme));
-    --coupon-border-width: 1px;
   }
 
   &-shape-coupon&-variant-filled {
     --coupon-background-color: var(--tag-background-color, var(--tag-color-10, rgba(@tag-r, @tag-g, @tag-b, 10%)));
     --coupon-border-color: var(--tag-background-color, var(--tag-color-10, rgba(@tag-r, @tag-g, @tag-b, 10%)));
-    --coupon-border-width: 1px;
   }
 
   &-shape-coupon&-size-small {
@@ -186,4 +154,43 @@
 
 .tag-tag-icon-left {
   margin-right: 30px;
+}
+
+.@{tag} {
+  &-shape-coupon&-variant-outlined {
+    &::before {
+      content: none;
+    }
+  }
+
+  &-coupon-outline-box {
+    .hairline(all, currentColor);
+    border-radius: @tag-radius-hairline;
+
+    &::after,
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      box-sizing: border-box;
+      width: calc(var(--coupon-side-radius) * 4 + 4px);
+      height: calc(var(--coupon-side-radius) * 4 + 4px);
+
+      border: 1px solid red;
+      border-radius: 100%;
+    }
+
+    &::after {
+      left: 0;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      right: 0;
+
+      transform: translate(50%, -50%);
+    }
+  }
 }

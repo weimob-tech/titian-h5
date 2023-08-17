@@ -53,6 +53,8 @@ export class TiCollapseItem {
 
   @Prop() clickable?: boolean = true;
 
+  @Prop() useCellSlot?: boolean;
+
   @Prop() extStyle?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
 
   @State() status: `${CollapseItemStateEnum}` = CollapseItemStateEnum.FOLD;
@@ -239,38 +241,45 @@ export class TiCollapseItem {
       extClass,
       extContentClass,
       useRightIconSlot,
+      useCellSlot,
     } = this;
     return (
       <div class={this.getClassName()} style={stringToAttrStyle(extStyle)} part={extClass}>
-        <ti-cell
-          title={title}
-          label={label}
-          desc={desc}
-          icon={innerIcon}
-          arrow={false}
-          clickable={innerClickable}
-          disabled={innerDisabled}
-          onClick={this.onClick}
-          divider={innerDivider}
-          class={handle('collapse-item', ['cell'])}
-        >
-          <slot name="title" slot="title" />
-          <slot name="icon" slot="icon" />
-          <slot name="desc" slot="desc" />
-          <slot name="label" slot="label" />
+        {useCellSlot ? (
+          <div onClick={this.onClick} aria-hidden="true">
+            <slot name="cell" />
+          </div>
+        ) : (
+          <ti-cell
+            title={title}
+            label={label}
+            desc={desc}
+            icon={innerIcon}
+            arrow={false}
+            clickable={innerClickable}
+            disabled={innerDisabled}
+            onClick={this.onClick}
+            divider={innerDivider}
+            class={handle('collapse-item', ['cell'])}
+          >
+            <slot name="title" slot="title" />
+            <slot name="icon" slot="icon" />
+            <slot name="desc" slot="desc" />
+            <slot name="label" slot="label" />
 
-          {useRightIconSlot ? (
-            <slot slot="right-icon" name="right-icon" />
-          ) : (
-            <ti-icon
-              slot="right-icon"
-              name={innerRightIcon || 'arrow-up'}
-              rotate={!completedStatus(status) ? '180deg' : ''}
-              ext-class={handle('collapse-item', ['icon', isReady ? 'icon-transition' : ''])}
-            />
-          )}
-          <slot name="sub-desc" slot="sub-desc" />
-        </ti-cell>
+            {useRightIconSlot ? (
+              <slot slot="right-icon" name="right-icon" />
+            ) : (
+              <ti-icon
+                slot="right-icon"
+                name={innerRightIcon || 'arrow-up'}
+                rotate={!completedStatus(status) ? '180deg' : ''}
+                ext-class={handle('collapse-item', ['icon', isReady ? 'icon-transition' : ''])}
+              />
+            )}
+            <slot name="sub-desc" slot="sub-desc" />
+          </ti-cell>
+        )}
         <div
           class={handle('collapse-item', ['wrap', isReady ? 'wrap-transition' : ''])}
           onTransitionEnd={this.onTransitionend}

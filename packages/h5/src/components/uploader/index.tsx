@@ -601,6 +601,7 @@ export class TiUploader {
       extActionClass = '',
       cols,
       computedStyle,
+      immediatelyChoose,
     } = this;
     const total = fileKeyList.length;
     return (
@@ -654,6 +655,7 @@ export class TiUploader {
               choose={choose}
               afterChoose={afterChoose}
               beforeChoose={beforeChoose}
+              immediatelyChoose={immediatelyChoose}
               maxSize={maxSize}
               accept={accept}
               camera={camera}

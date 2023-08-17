@@ -116,6 +116,7 @@ export const TiNoticeBar = ComponentWrap<JSX.TiNoticeBar, HTMLTiNoticeBarElement
 
 export const TiInputNumber = ComponentWrap<JSX.TiInputNumber, HTMLTiInputNumberElement>(components.TiInputNumber);
 export const TiSteps = ComponentWrap<JSX.TiSteps, HTMLTiStepsElement>(components.TiSteps);
+export const TiStepItem = ComponentWrap<JSX.TiStepItem, HTMLTiStepItemElement>(components.TiStepItem);
 export const TiSafeArea = ComponentWrap<JSX.TiSafeArea, HTMLTiSafeAreaElement>(components.TiSafeArea);
 export const TiSticky = ComponentWrap<JSX.TiSticky, HTMLTiStickyElement>(components.TiSticky);
 
@@ -191,6 +192,7 @@ export type TiInputNumberProps = JSX.TiInputNumber;
 export type TiBadgeProps = JSX.TiBadge;
 export type TiNoticeBarProps = JSX.TiNoticeBar;
 export type TiStepsProps = JSX.TiSteps;
+export type TiStepItemProps = JSX.TiStepItem;
 export type TiStickyProps = JSX.TiSticky;
 export type TiSearchProps = JSX.TiSearch;
 

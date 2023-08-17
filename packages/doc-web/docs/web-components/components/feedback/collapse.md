@@ -35,6 +35,17 @@ import TabsLink from '@site/src/components/tabsLink';
 </ti-collapse>
 ```
 
+#### 自定义标题部分，即cell组件区域
+```html showLineNumbers
+<ti-collapse>
+  <ti-collapse-item use-cell-slot>
+    <div slot="cell">我是标题</div>
+    - 标题A下的内容 -
+  </ti-collapse-item>
+  <ti-collapse-item title="标题文字B">- 标题B下的内容 -</ti-collapse-item>
+</ti-collapse>
+```
+
 #### 设置默认展开
 <Tabs>
 <TabItem value="index.html" label="index.html">
@@ -239,6 +250,7 @@ interface Options {
 
 | 名称      | 说明           | 备注 |
 | --------- | -------------- | ---- |
+| cell       | 常显示区域插槽，配合use-cell-slot使用 | -    |
 | title     | 文档           | -    |
 | icon      | 左侧 icon      | -    |
 | right-icon | 右侧 icon      | -    |

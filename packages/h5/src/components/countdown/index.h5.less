@@ -20,8 +20,10 @@
 
   &-block {
     display: flex;
+    box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    padding: 0 4px;
 
     border-radius: var(--countdown-border-radius, 8px);
 
@@ -50,7 +52,7 @@
 
   &-box-small {
     .@{countdown}-block {
-      width: var(--countdown-size, @T32);
+      min-width: var(--countdown-size, @T32);
       height: var(--countdown-size, @T32);
 
       font-size: var(--countdown-font-size, @T24);
@@ -80,7 +82,7 @@
 
   &-box-medium {
     .@{countdown}-block {
-      width: var(--countdown-size, @T40);
+      min-width: var(--countdown-size, @T40);
       height: var(--countdown-size, @T40);
 
       font-size: var(--countdown-font-size, @T26);
@@ -110,7 +112,7 @@
 
   &-box-big {
     .@{countdown}-block {
-      width: var(--countdown-size, @T44);
+      min-width: var(--countdown-size, @T44);
       height: var(--countdown-size, @T44);
 
       font-size: var(--countdown-font-size, @T28);
@@ -140,7 +142,7 @@
 
   &-box-large {
     .@{countdown}-block {
-      width: var(--countdown-size, @T48);
+      min-width: var(--countdown-size, @T48);
       height: var(--countdown-size, @T48);
 
       font-size: var(--countdown-font-size, @T30);

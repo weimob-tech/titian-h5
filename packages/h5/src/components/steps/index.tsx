@@ -1,8 +1,9 @@
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element, Method, Watch } from '@stencil/core';
 import { JSXBase } from '@stencil/core/internal';
 import { BasicComponentAbstract } from '../common/basic/BasicComponent';
-import { addShadowRootStyle, stringToAttrStyle } from '../common/utils';
-import { join, handle } from '../common/utils/namespace';
+import { addShadowRootStyle, stringToAttrStyle, isPlainArray } from '../common/utils';
+import { join } from '../common/utils/namespace';
+import { getChildren } from '../common/utils/relation';
 
 export interface TiStepOption {
   title?: string;
@@ -17,10 +18,6 @@ export interface TiStepOption {
 
 @Component({
   tag: 'ti-steps',
-  styleUrls: {
-    pc: 'index.pc.less',
-    h5: 'index.h5.less',
-  },
   shadow: true,
 })
 export class TiSteps implements BasicComponentAbstract {
@@ -43,6 +40,36 @@ export class TiSteps implements BasicComponentAbstract {
   @Prop() subtitleAlign: 'left' | 'right';
 
   @Prop() alias?: Record<string, string> = {};
+
+  get children() {
+    return getChildren({
+      host: this.host,
+      useSlot: this.options.length === 0,
+      tag: 'ti-step-item',
+      relations: 'descendant', // 'parent' ,'ancestor',
+    });
+  }
+
+  @Watch('current')
+  updateChildren(value, oldValue) {
+    if (this.isCurrentSame(value, oldValue)) return;
+    this.children.forEach(child => {
+      child.updateDataFromParent();
+    });
+  }
+
+  private isCurrentSame(a: number | number[], b: number | number[]) {
+    if (isPlainArray(a) && isPlainArray(b)) {
+      return a.length === b.length && a.sort().toString() === b.sort().toString();
+    }
+    return a === b;
+  }
+
+  @Method()
+  async getImperativeHandle() {
+    const { children } = this;
+    return { children };
+  }
 
   private computedStyle() {
     const { activeColor, extStyle } = this;
@@ -68,35 +95,17 @@ export class TiSteps implements BasicComponentAbstract {
   private renderItem(item: TiStepOption, index: number) {
     const { current, icon, subtitleAlign, options, checkCurrent, alias } = this;
     return (
-      <div
-        class={join('steps-item', [{ active: item.checked || checkCurrent(current, index) }])}
-        style={{ ...stringToAttrStyle(item.style) }}
-      >
-        <div class={handle('steps-item', ['left'])}>
-          <div class={handle('steps-item', ['icon-box'])}>
-            {item[alias.icon || 'icon'] || icon ? (
-              <ti-icon name={item[alias.icon || 'icon'] || icon} />
-            ) : (
-              <div class={handle('steps-item', ['dot'])} />
-            )}
-          </div>
-          {index !== options.length - 1 && <div class={handle('steps-item', ['line'])} />}
-        </div>
-        <div class={handle('steps-item', ['content'])}>
-          {(item[alias.title || 'title'] || item[alias.subtitle || 'subtitle']) && (
-            <div class={handle('steps-item', ['title-box'])}>
-              <div class={handle('steps-item', ['title'])}>{item[alias.title || 'title']}</div>
-              <div class={join('steps-item-subtitle', [{ right: subtitleAlign === 'right' }])}>
-                {item[alias.subtitle || 'subtitle']}
-              </div>
-            </div>
-          )}
-          {item[alias.description || 'description'] && (
-            <div class={handle('steps-item', ['desc'])}>{item[alias.description || 'description']}</div>
-          )}
-          {item[alias.time || 'time'] && <div class={handle('steps-item', ['time'])}>{item[alias.time || 'time']}</div>}
-        </div>
-      </div>
+      <ti-step-item
+        title={item[alias.title || 'title']}
+        subtitle={item[alias.subtitle || 'subtitle']}
+        description={item[alias.description || 'description']}
+        time={item[alias.time || 'time']}
+        checked={item[alias.checked || 'checked'] ?? checkCurrent(current, index)}
+        icon={item[alias.icon || 'icon'] || icon}
+        extStyle={item[alias.style || 'style']}
+        hasLine={index !== options.length - 1}
+        subtitleAlign={item[alias.subtitleAlign || 'subtitleAlign'] || subtitleAlign}
+      />
     );
   }
 
@@ -107,7 +116,7 @@ export class TiSteps implements BasicComponentAbstract {
   render() {
     return (
       <div part={this.extClass} class={`${join('steps')} ${this.extClass}`} style={this.computedStyle()}>
-        {this.options.map((item, index) => this.renderItem(item, index))}
+        {this.options.length > 0 ? this.options.map((item, index) => this.renderItem(item, index)) : <slot />}
       </div>
     );
   }

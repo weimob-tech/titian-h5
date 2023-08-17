@@ -59,6 +59,8 @@ export class TiSearch implements BasicComponentAbstract {
 
   @State() showSearch = false;
 
+  @Prop() maxlength?: number = 140;
+
   @State() showVirtualPlaceholder = false;
 
   @Event({ bubbles: false, composed: false }) clear: EventEmitter<never>;
@@ -176,6 +178,7 @@ export class TiSearch implements BasicComponentAbstract {
       alwaysShowPrefix,
       alwaysShowSuffix,
       alwaysShowRightIcon,
+      maxlength,
     } = this;
     return (
       <div class={`${namespace.join('search')} ${extClass}`} part={extClass} style={stringToAttrStyle(extStyle)}>
@@ -188,7 +191,7 @@ export class TiSearch implements BasicComponentAbstract {
               onClick={this.onClickVirtualInput}
               onKeyPress={this.onClickVirtualInput}
             >
-              <ti-icon name="search" size="32" ext-class="search-icon" />
+              <ti-icon name="search" size="36" ext-class="search-icon" />
               <div
                 class={namespace.handle('search', [
                   'placeholder-text',
@@ -201,7 +204,7 @@ export class TiSearch implements BasicComponentAbstract {
           ) : (
             <div style={{ display: 'contents' }}>
               {leftIcon !== 'none' ? (
-                <ti-icon name={leftIcon} size="32" ext-class="search-icon" />
+                <ti-icon name={leftIcon} size="36" ext-class="search-icon" />
               ) : (
                 <slot name="left-icon" />
               )}
@@ -220,6 +223,7 @@ export class TiSearch implements BasicComponentAbstract {
                 read-only={readOnly}
                 disabled={disabled}
                 divider={false}
+                maxlength={maxlength}
                 onClear={this.onClear}
                 onInput={this.onInput}
                 onBlur={this.onBlur}
