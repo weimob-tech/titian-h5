@@ -10,7 +10,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@titian-design/mobile-vue": "workspace:0.2.1",
+    "@titian-design/mobile-vue": "workspace:0.2.4",
     "less": "^4.1.3",
     "normalize.css": "^8.0.1",
     "vue": "^3.2.37",
