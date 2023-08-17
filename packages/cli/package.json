@@ -26,8 +26,7 @@
     "prepublishOnly": "run-p build-*",
     "build": "run-p build-*",
     "build-bundle": "rollup -c rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
-    "watch": "rollup -c rollup.config.ts --configPlugin typescript -w --bundleConfigAsCjs",
-    "build-types": "tsc -p src --emitDeclarationOnly"
+    "watch": "rollup -c rollup.config.ts --configPlugin typescript -w --bundleConfigAsCjs"
   },
   "dependencies": {
     "chalk": "^4.1.2",
