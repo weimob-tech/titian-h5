@@ -173,7 +173,7 @@ const onClose = () => {
 | content-z-index        | `number`  | 否   | 10001    | 内容 z-index 层级                                                                                    | -    |
 | has-mask               | `boolean` | 否   | true     | 是否显示遮罩                                                                                         | -    |
 | visible                | `boolean` | 否   | false    | 是否显示弹出层                                                                                       | -    |
-| preventScroll          | `boolean` | 否   | true     | 是否锁定背景滚动。实现上采用 document.body.style.overflow = 'hidden' 方式，内部可以滚动。            | -    |
+| prevent-scroll          | `boolean` | 否   | true     | 是否锁定背景滚动。实现上采用 document.body.style.overflow = 'hidden' 方式，内部可以滚动。            | -    |
 | disableGlobalTouchMove | `boolean` | 否   | false    | 是否锁定背景滚动。实现上禁用了全局 touch 事件方式；内部需要配合 `<TiScrollView/>` 组件实现滚动能力。 | -    |
 | close-on-mask          | `boolean` | 否   | true     | 是否在点击遮罩层后关闭                                                                               | -    |
 | timeout                | `number`  | 否   | 300      | 动画时间，默认单位为 ms                                                                              | -    |
@@ -246,6 +246,7 @@ const onClose = () => {
 
 | 值             | 含义           |
 | -------------- | -------------- |
+| `back-title-cancel` | 返回 + 标题 + 取消 |
 | `with-confirm` | 标题+确定+取消 |
 | `cancel-only`  | 标题+关闭      |
 | `mini-close`   | 仅关闭         |
@@ -254,9 +255,10 @@ const onClose = () => {
 
 | 事件名  | 返回值 | 描述               | 备注 |
 | ------- | ------ | ------------------ |
-| cancel  | -      | 点击关闭按钮时触发 | -    |
-| confirm | -      | 点击确认按钮时触发 | -    |
-| close   | -      | 点击关闭按钮时触发 | -    |
+| cancel  | -      | 对应 `with-confirm` 的左侧按钮点击事件 | -    |
+| confirm | -      | 对应 `with-confirm` 的右侧按钮点击事件 | -    |
+| close   | -      | 对应 `mini-close` \| `cancel-only` \|  `back-title-cancel` 的右侧按钮点击事件 | -    |
+| back | - |对应 `back-title-cancel` 的左侧按钮点击事件 |  - |
 
 
 ### CSS 变量 **CSS Variables**

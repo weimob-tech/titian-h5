@@ -255,6 +255,14 @@ export namespace Components {
         "desc"?: string;
         "descClass"?: string;
         /**
+          * 分割线方位
+          * @type boolean
+          * @default bottom
+          * @example <TiCell divider={false} title="没有分割线" />
+          * @since 0.1.0
+         */
+        "direction"?: 'bottom' | 'top' | 'left' | 'right' | 'all';
+        /**
           * 是否禁用单元格
           * @type boolean
           * @default false
@@ -547,6 +555,7 @@ export namespace Components {
          */
         "label": string;
         "leftIcon": string;
+        "tagClass"?: string;
         "updateDataFromParent": (parent: ParentAttrs) => Promise<void>;
         /**
           * 根据 value 进行比较，判断是否选中
@@ -752,6 +761,7 @@ export namespace Components {
         "rightIcon"?: string;
         "title": string;
         "updateDataFromParent": () => Promise<void>;
+        "useCellSlot"?: boolean;
         "useRightIconSlot"?: boolean;
         "value"?: string | number;
     }
@@ -846,6 +856,7 @@ export namespace Components {
         "extTitleClass"?: string;
         "hasCancelButton"?: boolean;
         "isTextButton"?: boolean;
+        "preventScroll"?: boolean;
         "show": (opts: IDialogStaticOptions) => Promise<void>;
         "timeout"?: number | Timeout;
         "title": string;
@@ -1505,6 +1516,7 @@ export namespace Components {
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "inputClass": string;
         "leftIcon": string;
+        "maxlength"?: number;
         "placeholder": string;
         "readOnly": boolean;
         "searchButtonClass": string;
@@ -1573,6 +1585,30 @@ export namespace Components {
         "trackClass"?: string;
         "value": number | number[];
     }
+    interface TiStepItem {
+        "checked": boolean;
+        "description": string;
+        /**
+          * 额外的类名，添加到根节点的元素上
+         */
+        "extClass"?: string;
+        "extCss": string;
+        /**
+          * 额外的样式
+         */
+        "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "hasLine": boolean;
+        "icon": string;
+        "subtitle": string;
+        "subtitleAlign": string;
+        "time": string;
+        "title": string;
+        "updateDataFromParent": () => Promise<void>;
+        "useDescriptionSlot": boolean;
+        "useSubtitleSlot": boolean;
+        "useTimeSlot": boolean;
+        "useTitleSlot": boolean;
+    }
     interface TiSteps {
         "activeColor": string;
         "alias"?: Record<string, string>;
@@ -1586,6 +1622,7 @@ export namespace Components {
           * 额外的样式
          */
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "getImperativeHandle": () => Promise<{ children: HTMLTiStepItemElement[]; }>;
         "icon": string;
         "options": TiStepOption[];
         "subtitleAlign": 'left' | 'right';
@@ -2473,6 +2510,12 @@ declare global {
         prototype: HTMLTiSliderElement;
         new (): HTMLTiSliderElement;
     };
+    interface HTMLTiStepItemElement extends Components.TiStepItem, HTMLStencilElement {
+    }
+    var HTMLTiStepItemElement: {
+        prototype: HTMLTiStepItemElement;
+        new (): HTMLTiStepItemElement;
+    };
     interface HTMLTiStepsElement extends Components.TiSteps, HTMLStencilElement {
     }
     var HTMLTiStepsElement: {
@@ -2651,6 +2694,7 @@ declare global {
         "ti-sku": HTMLTiSkuElement;
         "ti-sku-selector": HTMLTiSkuSelectorElement;
         "ti-slider": HTMLTiSliderElement;
+        "ti-step-item": HTMLTiStepItemElement;
         "ti-steps": HTMLTiStepsElement;
         "ti-sticky": HTMLTiStickyElement;
         "ti-svg-path-view": HTMLTiSvgPathViewElement;
@@ -2890,6 +2934,14 @@ declare namespace LocalJSX {
          */
         "desc"?: string;
         "descClass"?: string;
+        /**
+          * 分割线方位
+          * @type boolean
+          * @default bottom
+          * @example <TiCell divider={false} title="没有分割线" />
+          * @since 0.1.0
+         */
+        "direction"?: 'bottom' | 'top' | 'left' | 'right' | 'all';
         /**
           * 是否禁用单元格
           * @type boolean
@@ -3184,6 +3236,7 @@ declare namespace LocalJSX {
         "label"?: string;
         "leftIcon"?: string;
         "onChange"?: (event: TiCheckboxButtonCustomEvent<boolean>) => void;
+        "tagClass"?: string;
         /**
           * 根据 value 进行比较，判断是否选中
           * @type string
@@ -3394,6 +3447,7 @@ declare namespace LocalJSX {
         "label"?: string;
         "rightIcon"?: string;
         "title"?: string;
+        "useCellSlot"?: boolean;
         "useRightIconSlot"?: boolean;
         "value"?: string | number;
     }
@@ -3496,6 +3550,7 @@ declare namespace LocalJSX {
         "onEntered"?: (event: TiDialogCustomEvent<void>) => void;
         "onExit"?: (event: TiDialogCustomEvent<void>) => void;
         "onExited"?: (event: TiDialogCustomEvent<void>) => void;
+        "preventScroll"?: boolean;
         "timeout"?: number | Timeout;
         "title"?: string;
         "transition"?: TransitionName;
@@ -4201,6 +4256,7 @@ declare namespace LocalJSX {
         "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
         "inputClass"?: string;
         "leftIcon"?: string;
+        "maxlength"?: number;
         "onBlur"?: (event: TiSearchCustomEvent<never>) => void;
         "onChange"?: (event: TiSearchCustomEvent<{ value: string | number }>) => void;
         "onClear"?: (event: TiSearchCustomEvent<never>) => void;
@@ -4285,6 +4341,29 @@ declare namespace LocalJSX {
         "thumbClass"?: string;
         "trackClass"?: string;
         "value": number | number[];
+    }
+    interface TiStepItem {
+        "checked"?: boolean;
+        "description"?: string;
+        /**
+          * 额外的类名，添加到根节点的元素上
+         */
+        "extClass"?: string;
+        "extCss"?: string;
+        /**
+          * 额外的样式
+         */
+        "extStyle"?: string | JSXBase.HTMLAttributes<Record<string, unknown>>['style'];
+        "hasLine"?: boolean;
+        "icon"?: string;
+        "subtitle"?: string;
+        "subtitleAlign"?: string;
+        "time"?: string;
+        "title"?: string;
+        "useDescriptionSlot"?: boolean;
+        "useSubtitleSlot"?: boolean;
+        "useTimeSlot"?: boolean;
+        "useTitleSlot"?: boolean;
     }
     interface TiSteps {
         "activeColor"?: string;
@@ -4760,6 +4839,7 @@ declare namespace LocalJSX {
         "ti-sku": TiSku;
         "ti-sku-selector": TiSkuSelector;
         "ti-slider": TiSlider;
+        "ti-step-item": TiStepItem;
         "ti-steps": TiSteps;
         "ti-sticky": TiSticky;
         "ti-svg-path-view": TiSvgPathView;
@@ -4843,6 +4923,7 @@ declare module "@stencil/core" {
             "ti-sku": LocalJSX.TiSku & JSXBase.HTMLAttributes<HTMLTiSkuElement>;
             "ti-sku-selector": LocalJSX.TiSkuSelector & JSXBase.HTMLAttributes<HTMLTiSkuSelectorElement>;
             "ti-slider": LocalJSX.TiSlider & JSXBase.HTMLAttributes<HTMLTiSliderElement>;
+            "ti-step-item": LocalJSX.TiStepItem & JSXBase.HTMLAttributes<HTMLTiStepItemElement>;
             "ti-steps": LocalJSX.TiSteps & JSXBase.HTMLAttributes<HTMLTiStepsElement>;
             "ti-sticky": LocalJSX.TiSticky & JSXBase.HTMLAttributes<HTMLTiStickyElement>;
             "ti-svg-path-view": LocalJSX.TiSvgPathView & JSXBase.HTMLAttributes<HTMLTiSvgPathViewElement>;

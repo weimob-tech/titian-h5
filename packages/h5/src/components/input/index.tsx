@@ -125,6 +125,8 @@ export class TiInput implements BasicComponentAbstract {
   };
 
   private onInput = event => {
+    // 兼容vue版本会冒泡多触发一次input
+    event.stopPropagation();
     const value = this.formatValue(event.target.value);
     this.setData({
       showClearIcon: value.toString().length > 0,

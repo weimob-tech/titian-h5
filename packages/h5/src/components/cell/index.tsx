@@ -167,6 +167,17 @@ export class TiCell implements BasicComponentAbstract {
   @Prop() divider?: boolean = true;
 
   /**
+   * 分割线方位
+   *
+   * @type boolean
+   * @default bottom
+   * @example
+   * <TiCell divider={false} title="没有分割线" />
+   * @since 0.1.0
+   */
+  @Prop() direction?: 'bottom' | 'top' | 'left' | 'right' | 'all' = 'bottom';
+
+  /**
    * 是否开启点击反馈
    *
    * @type boolean
@@ -186,7 +197,7 @@ export class TiCell implements BasicComponentAbstract {
    * <TiCell alignItems="center" />
    * @since 0.1.0
    * */
-  @Prop() alignItems: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch' | 'start' | 'end';
+  @Prop() alignItems: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch' | 'start' | 'end' = 'center';
 
   @Prop() titleClass?: string;
 
@@ -217,8 +228,8 @@ export class TiCell implements BasicComponentAbstract {
   }
 
   private getClassName(): string {
-    const { disabled, divider, extClass, clickable } = this;
-    const classList = [join('cell', { disabled, divider, clickable }), extClass];
+    const { disabled, divider, extClass, clickable, direction } = this;
+    const classList = [join('cell', { disabled, divider, clickable }), `titian-border-${direction}`, extClass];
 
     return classList.filter(Boolean).join(' ');
   }

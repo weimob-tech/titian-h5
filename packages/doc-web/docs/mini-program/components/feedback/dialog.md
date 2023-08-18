@@ -186,6 +186,7 @@ Page({
 | cancel-button-bg-color  | `string`  | 否   | -      | 取消按钮的背景颜色     -               |
 | use-content-slot        | `string`  | 否   | -      | 使用自定义内容的 slot                  | -    |
 | use-actions-slot        | `string`  | 否   | -      | 使用自定义按钮的 slot                  | -    |
+| prevent-scroll    | `string`  | 否   | true     | 是否锁定背景滚动                                          | -    |
 
 ### 事件 **Events**
 

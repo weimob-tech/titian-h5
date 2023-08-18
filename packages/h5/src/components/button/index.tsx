@@ -57,7 +57,7 @@ export class TiButton implements BasicComponentAbstract {
 
   @Prop() loadingSize?: number = 30;
 
-  @Prop() loadingType?: 'circular' | 'spinner';
+  @Prop() loadingType?: 'circular' | 'spinner' = 'circular';
 
   @Prop() loadingText?: string;
 

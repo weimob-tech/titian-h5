@@ -29,6 +29,8 @@ export class TiCheckboxButton {
 
   @Prop() extClass?: string;
 
+  @Prop() tagClass?: string;
+
   /**
    * 根据 value 进行比较，判断是否选中
    *
@@ -234,7 +236,7 @@ export class TiCheckboxButton {
   }
 
   render() {
-    const { label, icon, color, leftIcon } = this;
+    const { label, icon, color, leftIcon, tagClass } = this;
 
     const styles: Record<string, string> = color
       ? {
@@ -254,11 +256,11 @@ export class TiCheckboxButton {
           style={{ ...styles, ...stringToAttrStyle(this.extStyle) }}
           onClick={this.handleTagClick.bind(this)}
         >
-          <ti-tag leftIcon={leftIcon} rightIcon={icon}>
+          <ti-tag leftIcon={leftIcon} rightIcon={icon} extCss={this.extCss} exportparts={tagClass} extClass={tagClass}>
             <slot name="prefix" slot="prefix" />
             {label || <slot />}
             <slot name="suffix" slot="suffix" />
-          </ti-tag>{' '}
+          </ti-tag>
         </div>
       </Host>
     );

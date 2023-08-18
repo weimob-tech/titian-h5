@@ -112,6 +112,7 @@ const App: React.FC = () => {
 | useContentSlot       | `string`  | 否   | -      | 使用自定义内容的 slot                  | -    |
 | useActionsSlot       | `string`  | 否   | -      | 使用自定义按钮的 slot                  | -    |
 | teleport        | `Element` | 否   | document.body     | DOM 挂载节点                                            | -    |
+| preventScroll   | `boolean`  | 否   | true     | 是否锁定背景滚动；实现上采用 document.body.style.overflow = 'hidden' 方式，内部可以滚动。                                          | -    |
 
 
 ### 事件 **Events**

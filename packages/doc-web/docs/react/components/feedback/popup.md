@@ -242,6 +242,7 @@ const App: React.FC = () => {
 
 | 值             | 含义           |
 | -------------- | -------------- |
+| `back-title-cancel` | 返回 + 标题 + 取消 |
 | `with-confirm` | 标题+确定+取消 |
 | `cancel-only`  | 标题+关闭      |
 | `mini-close`   | 仅关闭         |
@@ -250,9 +251,10 @@ const App: React.FC = () => {
 
 | 事件名    | 返回值 | 描述               | 备注 |
 | --------- | ------ | ------------------ |
-| onCancel  | -      | 点击关闭按钮时触发 | -    |
-| onConfirm | -      | 点击确认按钮时触发 | -    |
-| onClose   | -      | 点击关闭按钮时触发 | -    |
+| onCancel  | -      | 对应 `with-confirm` 的左侧按钮点击事件 | -    |
+| onConfirm | -      | 对应 `with-confirm` 的右侧按钮点击事件 | -    |
+| onClose   | -      | 对应 `mini-close` \| `cancel-only` \|  `back-title-cancel` 的右侧按钮点击事件 | -    |
+| onBack | - |对应 `back-title-cancel` 的左侧按钮点击事件 |  - |
 
 
 ### CSS 变量 **CSS Variables**

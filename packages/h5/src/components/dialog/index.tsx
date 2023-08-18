@@ -90,6 +90,8 @@ export class TiDialog {
 
   @Prop() closeOnMask?: boolean = true;
 
+  @Prop() preventScroll?: boolean = true;
+
   @Event({ eventName: 'cancel', bubbles: false, composed: false }) cancelEvent!: EventEmitter<void>;
 
   @Event({ eventName: 'confirm', bubbles: false, composed: false }) confirmEvent!: EventEmitter<void>;
@@ -244,11 +246,13 @@ export class TiDialog {
       extActionCancelClass = '',
       extActionConfirmClass = '',
       extStyle = '',
+      preventScroll = true,
     } = this;
 
     return (
       <ti-popup
         visible={innerVisible}
+        preventScroll={preventScroll}
         position="center"
         has-mask
         class={join('dialog-popup')}

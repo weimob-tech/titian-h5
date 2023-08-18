@@ -15,10 +15,10 @@ export function handleBox(size: number, color: string, activeColor: string) {
   const br = addUnit(size);
   let style = `width:${width};height:${br};padding:0 ${padding};border-radius:${br};`;
   if (color) {
-    style += `--switch-bg-color: ${color}`;
+    style += `--switch-bg-color: ${color};`;
   }
   if (activeColor) {
-    style += `--switch-active-bg-color: ${activeColor}`;
+    style += `--switch-active-bg-color: ${activeColor};`;
   }
   return style;
 }

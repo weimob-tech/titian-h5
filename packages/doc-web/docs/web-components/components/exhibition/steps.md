@@ -151,6 +151,31 @@ window.onload = function(){
 </TabItem>
 </Tabs>
 
+#### 配合ti-step-item使用
+**对于需要自定义title、subtitle、description、time区域内容的场景，推荐配合使用ti-step-item**
+```html showLineNumbers
+<ti-steps>
+  <ti-step-item
+    title="标题文字"
+    subtitle="副标题"
+    use-description-slot
+  >
+    <view slot="description">详细内容文字</view>  
+  </ti-step-item>
+  <ti-step-item
+    use-title-slot
+    use-subtitle-slot
+    use-description-slot
+    use-time-slot
+  >
+    <view slot="title">标题文字</view>  
+    <view slot="subtitle">副标题文字</view>  
+    <view slot="description">详细内容文字</view>  
+    <view slot="time">时间</view>  
+  </ti-step-item>
+</ti-steps>
+```
+
 ## ti-steps API
 ### 属性 **Properties**
 
@@ -182,42 +207,69 @@ window.onload = function(){
 | ext-class | 根节点样式类名 | -    |
 
 ### CSS 变量 **CSS Variable**
-| 变量                            | 默认值  | 说明               | 备注 |
-| ------------------------------- | ------- | ------------------ | ---- |
-| --steps-padding-h         | `28rpx` | 步骤条整体水平方向，左右内边距 | -    |
-| --steps-padding-bottom         | `40rpx` | 步骤条整体下方内边距 | -    |
-| --steps-text-vertical-gap         | `8rpx` | 步骤条右侧内容部分，文字竖项的间距 | -    |
-| --steps-line-width        | `2rpx` | 步骤条左侧图标下方的竖线的宽度，默认横向缩放50% | -    |
-| --steps-line-color        | `2rpx` | 步骤条左侧图标下方的竖线的颜色 | -    |
-| --steps-icon-margin-right         | `36rpx` | 步骤条左侧图标和右侧内容之间的间距 | -    |
-| --steps-icon-size        | `40rpx` | 步骤条左侧自定义的图标尺寸 | -    |
-| --steps-dot-size        | `40rpx` | 步骤条左侧圆点的尺寸 | -    |
-| --steps-dot-color        | `40rpx` | 步骤条左侧圆点的颜色 | -    |
-| --steps-title-color        | `#9e9e9e` | 步骤条标题颜色 | -    |
-| --steps-title-font-size        | `30rpx` | 步骤条标题字号 | -    |
-| --steps-title-font-weight        | `600` | 步骤条标题字重 | -    |
-| --steps-title-line-height        | `36rpx` | 步骤条标题行高 | -    |
-| --steps-subtitle-color        | `#9e9e9e` | 步骤条副标题颜色 | -    |
-| --steps-subtitle-font-size        | `24rpx` | 步骤条副标题字号 | -    |
-| --steps-subtitle-font-weight        | `400` | 步骤条副标题字重 | -    |
-| --steps-subtitle-line-height        | `28rpx` | 步骤条副标题行高 | -    |
-| --steps-subtitle-margin-left        | `8rpx` | 步骤条副标题左侧间距 | -    |
-| --steps-subtitle-text-align        | `left` | 步骤条副标题对齐方式 | -    |
-| --steps-desc-color        | `#9e9e9e` | 步骤条描述内容颜色 | -    |
-| --steps-desc-font-size        | `26rpx` | 步骤条描述内容字号 | -    |
-| --steps-desc-font-weight        | `400` | 步骤条描述内容字重 | -    |
-| --steps-desc-line-height        | `40rpx` | 步骤条描述内容行高 | -    |
-| --steps-desc-text-align        | `justify` | 步骤条描述内容文字对齐方式 | -    |
-| --steps-time-color        | `#9e9e9e` | 步骤条最下方内容颜色 | -    |
-| --steps-time-font-size        | `24rpx` | 步骤条最下方内容字号 | -    |
-| --steps-time-font-weight        | `400` | 步骤条最下方内容字重 | -    |
-| --steps-time-line-height        | `28rpx` | 步骤条最下方内容行高 | -    |
-| --steps-time-text-align        | `left` | 步骤条最下方内容文字对齐方式 | -    |
-| --steps-active-color        | - | 步骤条高亮项颜色，此变量整体设置，不同内容部分高亮项不一样，可以用其他变量分开设置 | -    |
-| --steps-line-active-color        | `#e0e0e0` | 步骤条竖线高亮项颜色，默认和不高亮颜色一致 | -    |
-| --steps-icon-active-color        | `#fa2c19` | 步骤条图标高亮颜色，默认跟随主题色 | -    |
-| --steps-dot-active-color        | `#fa2c19` | 步骤条圆点图标高亮颜色，默认跟随主题色 | -    |
-| --steps-title-active-color        | `#fa2c19` | 步骤条标题高亮颜色，默认跟随主题色 | -    |
-| --steps-subtitle-active-color        | `#fa2c19` | 步骤条副标题高亮颜色，默认跟随主题色 | -    |
-| --steps-desc-active-color        | `#212121` | 步骤条描述内容高亮颜色 | -    |
-| --steps-time-active-color        | `#212121` | 步骤条最下方内容高亮颜色 | -    |
+| 变量                          | 默认值    | 说明                                                                               | 备注 |
+| ----------------------------- | --------- | ---------------------------------------------------------------------------------- | ---- |
+| --steps-padding-h             | `28rpx`   | 步骤条整体水平方向，左右内边距                                                     | -    |
+| --steps-padding-bottom        | `40rpx`   | 步骤条整体下方内边距                                                               | -    |
+| --steps-text-vertical-gap     | `8rpx`    | 步骤条右侧内容部分，文字竖项的间距                                                 | -    |
+| --steps-line-width            | `2rpx`    | 步骤条左侧图标下方的竖线的宽度，默认横向缩放50%                                    | -    |
+| --steps-line-color            | `2rpx`    | 步骤条左侧图标下方的竖线的颜色                                                     | -    |
+| --steps-icon-margin-right     | `36rpx`   | 步骤条左侧图标和右侧内容之间的间距                                                 | -    |
+| --steps-icon-size             | `40rpx`   | 步骤条左侧自定义的图标尺寸                                                         | -    |
+| --steps-dot-size              | `40rpx`   | 步骤条左侧圆点的尺寸                                                               | -    |
+| --steps-dot-color             | `40rpx`   | 步骤条左侧圆点的颜色                                                               | -    |
+| --steps-title-color           | `#9e9e9e` | 步骤条标题颜色                                                                     | -    |
+| --steps-title-font-size       | `30rpx`   | 步骤条标题字号                                                                     | -    |
+| --steps-title-font-weight     | `600`     | 步骤条标题字重                                                                     | -    |
+| --steps-title-line-height     | `36rpx`   | 步骤条标题行高                                                                     | -    |
+| --steps-subtitle-color        | `#9e9e9e` | 步骤条副标题颜色                                                                   | -    |
+| --steps-subtitle-font-size    | `24rpx`   | 步骤条副标题字号                                                                   | -    |
+| --steps-subtitle-font-weight  | `400`     | 步骤条副标题字重                                                                   | -    |
+| --steps-subtitle-line-height  | `28rpx`   | 步骤条副标题行高                                                                   | -    |
+| --steps-subtitle-margin-left  | `8rpx`    | 步骤条副标题左侧间距                                                               | -    |
+| --steps-subtitle-text-align   | `left`    | 步骤条副标题对齐方式                                                               | -    |
+| --steps-desc-color            | `#9e9e9e` | 步骤条描述内容颜色                                                                 | -    |
+| --steps-desc-font-size        | `26rpx`   | 步骤条描述内容字号                                                                 | -    |
+| --steps-desc-font-weight      | `400`     | 步骤条描述内容字重                                                                 | -    |
+| --steps-desc-line-height      | `40rpx`   | 步骤条描述内容行高                                                                 | -    |
+| --steps-desc-text-align       | `justify` | 步骤条描述内容文字对齐方式                                                         | -    |
+| --steps-time-color            | `#9e9e9e` | 步骤条最下方内容颜色                                                               | -    |
+| --steps-time-font-size        | `24rpx`   | 步骤条最下方内容字号                                                               | -    |
+| --steps-time-font-weight      | `400`     | 步骤条最下方内容字重                                                               | -    |
+| --steps-time-line-height      | `28rpx`   | 步骤条最下方内容行高                                                               | -    |
+| --steps-time-text-align       | `left`    | 步骤条最下方内容文字对齐方式                                                       | -    |
+| --steps-active-color          | -         | 步骤条高亮项颜色，此变量整体设置，不同内容部分高亮项不一样，可以用其他变量分开设置 | -    |
+| --steps-line-active-color     | `#e0e0e0` | 步骤条竖线高亮项颜色，默认和不高亮颜色一致                                         | -    |
+| --steps-icon-active-color     | `#fa2c19` | 步骤条图标高亮颜色，默认跟随主题色                                                 | -    |
+| --steps-dot-active-color      | `#fa2c19` | 步骤条圆点图标高亮颜色，默认跟随主题色                                             | -    |
+| --steps-title-active-color    | `#fa2c19` | 步骤条标题高亮颜色，默认跟随主题色                                                 | -    |
+| --steps-subtitle-active-color | `#fa2c19` | 步骤条副标题高亮颜色，默认跟随主题色                                               | -    |
+| --steps-desc-active-color     | `#212121` | 步骤条描述内容高亮颜色                                                             | -    |
+| --steps-time-active-color     | `#212121` | 步骤条最下方内容高亮颜色                                                           | -    |
+
+## ti-step-item API
+### 属性 **Properties**
+
+| 名称                 | 类型                                  | 必填 | 默认值  | 说明                      | 备注 |
+| -------------------- | ------------------------------------- | ---- | ------- | ------------------------- | ---- |
+| title                | `string`                              | 否   | -       | 标题文字                  | -    |
+| subtitle             | `string`                              | 否   | -       | 标题右侧区域，副标题文字  | -    |
+| description          | `string`                              | 否   | -       | 主体，描述文字            | -    |
+| time                 | `string`                              | 否   | -       | 最下方区域，如时间        | -    |
+| icon                 | `string`                              | 否   | -       | 图标名称                  | -    |
+| checked              | `boolean`                             | 否   | -       | 是否高亮，权重比current高 | -    |
+| subtitle-align       | `left`          \| `right`            | 否   | -       | 副标题的对齐方式          | -    |
+| use-title-lot        | `boolean`                             | 否   | `false` | 是否使用标题区域插槽      | -    |
+| use-subtitle-slot    | `boolean`                             | 否   | `false` | 是否使用副标题区域插槽    | -    |
+| use-description-slot | `boolean`                             | 否   | `false` | 是否使用描述文字区域插槽  | -    |
+| use-time-slot        | `boolean`                             | 否   | `false` | 是否使用最下方区域插槽    | -    |
+| ext-style            | `string` \| `Record<string, string> ` | 否   | -       | 根节点样式                | -    |
+
+### 插槽 **Slots**
+
+| 名称        | 说明             | 备注 |
+| ----------- | ---------------- | ---- |
+| title       | 标题区域插槽     | -    |
+| subtitle    | 副标题区域插槽   | -    |
+| description | 描述文字区域插槽 | -    |
+| time        | 最下方区域插槽   | -    |

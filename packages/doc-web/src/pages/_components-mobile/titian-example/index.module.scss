@@ -255,7 +255,7 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 // tag
-.tag {
+.section.tag {
   display: flex;
   box-sizing: border-box;
   grid-row: 1/3;
@@ -269,7 +269,7 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 // input-number
-.input-number {
+.section.input-number {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,7 +292,7 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 // rate
-.rate {
+.section.rate {
   display: flex;
   align-items: center;
   justify-content: center;

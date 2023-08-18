@@ -110,6 +110,32 @@ const App: React.FC = () => {
   )
 }
 ```
+
+#### 配合TiStepItem使用
+**对于需要自定义title、subtitle、description、time区域内容的场景，推荐配合使用ti-step-item**
+```html showLineNumbers
+<TiSteps>
+  <TiStepItem
+    title="标题文字"
+    subtitle="副标题"
+    useDescriptionSlot
+  >
+    <div slot="description">详细内容文字</div>  
+  </TiStepItem>
+  <TiStepItem
+    useTitleSlot
+    useSubtitleSlot
+    useDescriptionSlot
+    useTimeSlot
+  >
+    <div slot="title">标题文字</div>  
+    <div slot="subtitle">副标题文字</div>  
+    <div slot="description">详细内容文字</div>  
+    <div slot="time">时间</div>  
+  </TiStepItem>
+</TiSteps>
+```
+
 ## TiSteps API
 ### 属性 **Properties**
 
@@ -181,3 +207,30 @@ const App: React.FC = () => {
 | --steps-subtitle-active-color        | `#fa2c19` | 步骤条副标题高亮颜色，默认跟随主题色 | -    |
 | --steps-desc-active-color        | `#212121` | 步骤条描述内容高亮颜色 | -    |
 | --steps-time-active-color        | `#212121` | 步骤条最下方内容高亮颜色 | -    |
+
+## TiStepItem API
+### 属性 **Properties**
+
+| 名称               | 类型                                  | 必填 | 默认值  | 说明                      | 备注 |
+| ------------------ | ------------------------------------- | ---- | ------- | ------------------------- | ---- |
+| title              | `string`                              | 否   | -       | 标题文字                  | -    |
+| subtitle           | `string`                              | 否   | -       | 标题右侧区域，副标题文字  | -    |
+| description        | `string`                              | 否   | -       | 主体，描述文字            | -    |
+| time               | `string`                              | 否   | -       | 最下方区域，如时间        | -    |
+| icon               | `string`                              | 否   | -       | 图标名称                  | -    |
+| checked            | `boolean`                             | 否   | -       | 是否高亮，权重比current高 | -    |
+| subtitleAlign      | `left`          \| `right`            | 否   | -       | 副标题的对齐方式          | -    |
+| useTitleSlot       | `boolean`                             | 否   | `false` | 是否使用标题区域插槽      | -    |
+| useSubtitleSlot    | `boolean`                             | 否   | `false` | 是否使用副标题区域插槽    | -    |
+| useDescriptionSlot | `boolean`                             | 否   | `false` | 是否使用描述文字区域插槽  | -    |
+| useTimeSlot        | `boolean`                             | 否   | `false` | 是否使用最下方区域插槽    | -    |
+| extStyle          | `string` \| `Record<string, string> ` | 否   | -       | 根节点样式                | -    |
+
+### 插槽 **Slots**
+
+| 名称        | 说明             | 备注 |
+| ----------- | ---------------- | ---- |
+| title       | 标题区域插槽     | -    |
+| subtitle    | 副标题区域插槽   | -    |
+| description | 描述文字区域插槽 | -    |
+| time        | 最下方区域插槽   | -    |

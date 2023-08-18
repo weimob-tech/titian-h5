@@ -40,6 +40,10 @@ import TabsLink from '@site/src/components/tabsLink';
 ```
 
 #### 沉浸式
+:::info 获取组件实例：
+1. 非titan-cli项目，可以使用微信原生this.selectComponent()；
+2. titan-cli项目，必须使用this.selectComponentAsync；
+:::
 方式一：监听页面的onPageScroll
 <Tabs>
 <TabItem value="html" label="index.wxml">
@@ -53,7 +57,10 @@ import TabsLink from '@site/src/components/tabsLink';
 ```js showLineNumbers
 Page({
   onReady() {
-    this._navbar = this.selectComponent('#titian-navbar');
+    // titian-cli项目，请使用titan-cli的异步获取组件方法this.selectComponentAsync()
+    this.selectComponentAsync('#titian-navbar').then(navbar => this._navbar = navbar);
+    // 非titian-cli项目可使用微信原生this.selectComponent()
+    // this._navbar = this.selectComponent('#titian-navbar');
   },
   onPageScroll(e) {
     this._navbar.updateOpacity({ scrollTop: e.scrollTop });
@@ -63,7 +70,9 @@ Page({
 </TabItem>
 </Tabs>
 
-方式二：配合scroll-view，使用微信小程序[滚动驱动动画](https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html#%E6%BB%9A%E5%8A%A8%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%8A%A8%E7%94%BB)，避免了onPageScroll监听，此方式性能更好。
+方式二：配合scroll-view，使用scroll-view的bindscroll替换方式一中的onPageScroll，都是需要将滚动高度传入this._navbar.updateOpacity方法。  
+如果仅仅在微信小程序使用，建议使用微信小程序[滚动驱动动画](https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html#%E6%BB%9A%E5%8A%A8%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%8A%A8%E7%94%BB)，此方式性能更好。<font color="#ff2e2e">如下示例只有微信小程序有效！！！</font>
+
 <Tabs>
 <TabItem value="html" label="index.wxml">
 
@@ -80,8 +89,12 @@ Page({
 ```js showLineNumbers
 Page({
   onReady() {
-    this._navbar = this.selectComponent('#titian-navbar');
-    this._navbar.scrollAnimate(this, '#titian-navbar', '#scroller');
+    // titian-cli项目，请使用titan-cli的异步获取组件方法this.selectComponentAsync()
+    this.selectComponentAsync('#titian-navbar').then(navbar => 
+      navbar.scrollAnimate(this, '#titian-navbar', '#scroller');
+    );
+    // 非titian-cli项目可使用微信原生this.selectComponent()
+    // this.selectComponent('#titian-navbar').scrollAnimate(this, '#titian-navbar', '#scroller');
   }
 })
 ```
@@ -165,9 +178,9 @@ Page({
 <TabItem value="html" label="index.wxml">
 
 ```html showLineNumbers
-<ti-navbar title="标题" />
+<ti-navbar id="titian-navbar" title="标题" />
 <view>
-  滚动区域
+  <view style="height: 70vh">滚动区域...</view>
   <ti-input id="titian-input" adjust-position="{{ false }}" bind:keyboardheightchange="bindkeyboardheightchange" bind:blur="bindblur" />
   <view style="height: {{ placeholderHeight }}px" />
 </view>
@@ -181,7 +194,10 @@ Page({
     placeholderHeight: 0
   },
   onReady() {
-    this._navbar = this.selectComponent('#titian-navbar');
+    // titian-cli项目，请使用titan-cli的异步获取组件方法this.selectComponentAsync()
+    this.selectComponentAsync('#titian-navbar').then(navbar => this._navbar = navbar);
+    // 非titian-cli项目可使用微信原生this.selectComponent()
+    // this._navbar = this.selectComponent('#titian-navbar');
   },
   onPageScroll(e) {
     this._currentScrollTop = e.scrollTop;
@@ -202,7 +218,7 @@ Page({
   updateScrollTop(detail) {
     this._navbar.getScrollTop(detail).then(({ scrollTop, placeholderHeight }) => {
       // 如果页面的滚动高度足够，没有添加占位元素。这里不需要设置placeholderHeight，可以直接wx.pageScrollTo({ scrollTop })
-      this.setData({ height: placeholderHeight }, () => {
+      this.setData({ placeholderHeight }, () => {
         wx.pageScrollTo({ scrollTop });
       });
     });
@@ -217,7 +233,7 @@ Page({
 <TabItem value="html" label="index.wxml">
 
 ```html showLineNumbers
-<ti-navbar title="标题" />
+<ti-navbar id="titian-navbar" title="标题" />
 <scroll-view scroll-top="{{ scrollTop }}" bind:scroll="bindscroll">
   滚动区域
   <ti-input id="titian-input" adjust-position="{{ false }}" bind:keyboardheightchange="bindkeyboardheightchange" bind:blur="bindblur" />
@@ -234,11 +250,14 @@ Page({
     scrollTop: 0
   },
   onReady() {
-    this._navbar = this.selectComponent('#titian-navbar');
+    // titian-cli项目，请使用titan-cli的异步获取组件方法this.selectComponentAsync()
+    this.selectComponentAsync('#titian-navbar').then(navbar => this._navbar = navbar);
+    // 非titian-cli项目可使用微信原生this.selectComponent()
+    // this._navbar = this.selectComponent('#titian-navbar');
   },
   bindscroll(e) {
     this._currentScrollTop = e.detail.scrollTop;
-  }
+  },
   bindkeyboardheightchange(e) {
     const detail = {
       selector: `#${e.target.id}`,
@@ -255,7 +274,7 @@ Page({
   updateScrollTop(detail) {
     this._navbar.getScrollTop(detail).then(({ scrollTop, placeholderHeight }) => {
       // 如果页面的滚动高度足够，没有添加占位元素。这里不需要设置placeholderHeight，可以直接wx.pageScrollTo({ scrollTop })
-      this.setData({ height: placeholderHeight }, () => {
+      this.setData({ placeholderHeight }, () => {
         this.setData({ scrollTop });
       });
     });
@@ -287,7 +306,10 @@ Page({
 ```js showLineNumbers
 Page({
   onReady() {
-    this._navbar = this.selectComponent('#titian-navbar');
+    // titian-cli项目，请使用titan-cli的异步获取组件方法this.selectComponentAsync()
+    this.selectComponentAsync('#titian-navbar').then(navbar => this._navbar = navbar);
+    // 非titian-cli项目可使用微信原生this.selectComponent()
+    // this._navbar = this.selectComponent('#titian-navbar');
   },
   bindkeyboardheightchange(e) {
     const detail = {

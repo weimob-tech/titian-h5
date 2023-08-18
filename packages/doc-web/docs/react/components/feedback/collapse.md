@@ -43,6 +43,21 @@ const App: React.FC = () => {
 }
 ```
 
+#### 自定义标题部分，即cell组件区域
+```typescript tsx showLineNumbers
+const App: React.FC = () => {
+  return (
+    <TiCollapse>
+      <TiCollapseItem useCellSlot>
+        <div slot="cell">我是标题</div>
+        - 标题A下的内容 -
+      </TiCollapseItem>
+      <TiCollapseItem title="标题文字B">- 标题B下的内容 -</TiCollapseItem>
+    </TiCollapse>
+  )
+}
+```
+
 #### 设置默认展开
 ```typescript tsx showLineNumbers
 const App: React.FC = () => {
@@ -234,6 +249,7 @@ interface Options {
 
 | 名称      | 说明           | 备注 |
 | --------- | -------------- | ---- |
+| cell       | 常显示区域插槽，配合useCellSlot使用 | -    |
 | title     | 文档           | -    |
 | icon      | 左侧 icon      | -    |
 | rightIcon | 右侧 icon      | -    |

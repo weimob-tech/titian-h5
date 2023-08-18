@@ -216,6 +216,7 @@ export class TiTabs {
 
   @Watch('tabWidth')
   @Watch('gap')
+  @Watch('tabs')
   updateTabWidth() {
     let { count } = this;
     if (this.tabs.length <= count && this.autoGap) {
